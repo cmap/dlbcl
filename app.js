@@ -1,30 +1,25 @@
 //get all of the libraries we need to run the app
-var engines = require("consolidate");
-var express = require('express');
-var port = process.env.PORT || 9090;
-//var mongoose = require('mongoose');
-//var passport = require('passport');
-var fs = require('fs');
-var flash = require('connect-flash');
-var session = require('express-session');
-//var MongoStore = require('connect-mongo/es5')(session);
-var bodyParser = require('body-parser');
-var cookieParser = require('cookie-parser');
-var compress = require('compression');
+const engines = require("consolidate");
+const express = require('express');
+let port = process.env.PORT || 9090;
+const fs = require('fs');
+const flash = require('connect-flash');
+const session = require('express-session');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const compress = require('compression');
 require('./config/kafejo_config.js');
-//var configDB = require('./config/database');
-var cookie_secret = require("config").cookie_secret;
-var session_secret = require("config").session_secret;
-var cookieDuration = require("config").cookie_duration;
-var favicon = require('serve-favicon');
-//mongoose.connect(configDB.url);
-//require('./config/passport')(passport); // pass passport for configuration
 
-var http = require('http');
-var path = require('path');			//work with paths
-var pjax = require('express-pjax');	//express pjax (partial reloads)
+const cookie_secret = require("config").cookie_secret;
+const session_secret = require("config").session_secret;
+const cookieDuration = require("config").cookie_duration;
+const favicon = require('serve-favicon');
 
-var app = express();
+const http = require('http');
+const path = require('path');			//work with paths
+const pjax = require('express-pjax');	//express pjax (partial reloads)
+
+const app = express();
 //pjax middleware for partials
 app.use(pjax());
 //send session info to handlebars, check OS used to send correct stylesheet
@@ -51,9 +46,6 @@ app.use(session({
         maxAge: cookieDuration
     }
 }));
-
-//app.use(passport.initialize());
-//app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in
 
 app.use(function (req, res, next) {
@@ -67,10 +59,7 @@ app.use(function (req, res, next) {
 
     res.locals.session = req.session;
     res.locals.moment = require('moment');
-
-
-
-    var include_headers_in_children = true;
+    let include_headers_in_children = true;
     if (req.headers["x-pjax"]) {
         include_headers_in_children = false;
     }

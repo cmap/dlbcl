@@ -1,6 +1,6 @@
 // utils.js
 // ========
-var self = module.exports = {
+const self = module.exports = {
 
     logErrors: function (error, callback) {
         console.log("error", error);
