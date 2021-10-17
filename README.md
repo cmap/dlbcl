@@ -4,19 +4,14 @@
 Node.js application for CLUE web apps
 
 ## Website Links
-* [Development](https://dev.clue.io) (developer access only)
-* [Sandbox](https://sandbox.clue.io) (Clue team access only)
-* [QA](https://qa.clue.io) (admin access only)
 * [Production](https://clue.io)
-* [Jenkins tests](https://jenkins.clue.io/)
+
 
 # Table of Contents
 * [Installation/Quickstart Guide](#installationquickstart-guide)
-* [Directory Structure](#directory-structure)
 * [Usage](#usage)
 * [Deployment](#deployment)
-* [Update Touchstone Cache](#update-touchstone-cache)
-* [Compiling Command to bundle.js](#compiling-command-to-bundlejs)
+
 
 # Installation/Quickstart Guide
 
