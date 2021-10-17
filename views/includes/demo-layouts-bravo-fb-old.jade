@@ -1,0 +1,174 @@
+.row
+    //- left uber column
+    .col-xs-12.col-sm-4.col-md-3.depad.pad-left-0
+
+        //- filters
+        .row#filters(style="display:flex;")
+            .visible-xs(style="width:15px;")
+
+            .filter-group.col-sm-offset-1.col-xs-11.col-sm-10(style="display:block;")
+                .row
+                    .col-xs-4.text-button-copy#reset-all-facets
+                        | Reset All
+
+                //- Perturbagen type
+                .filter-group-title.border-top
+                    | Filter Group Title
+                    .filter-chunk.margin-top-4
+                        div
+                            label(for="compound")
+                                input#compound(type="checkbox" value="cp" name="pert_type")
+                                | &nbsp;
+                                .glyphicon.glyphicon-adjust.text-center.touchstone-cp(aria-hidden="true")                         
+                                | &nbsp;Compound&nbsp;
+                                span
+                                    | (0)
+                        div
+                            label(for="gene_kd")
+                                input#gene_kd(type="checkbox" value="kd" name="pert_type")
+                                | &nbsp;
+                                .glyphicon.glyphicon-minus-sign.text-center.touchstone-kd(aria-hidden="true")                                                             
+                                | &nbsp;Gene knock-down&nbsp;
+                                span
+                                    | (0)
+                        div
+                            label(for="gene_oe")
+                                input#gene_oe(type="checkbox" value="oe" name="pert_type")
+                                | &nbsp;
+                                .glyphicon.glyphicon-plus-sign.text-center.touchstone-oe(aria-hidden="true")                                                                                                 
+                                | &nbsp;Gene over-expression&nbsp; 
+                                span
+                                    | (0)
+
+                //- Cell Line Specificity
+                .filter-group-title.border-top
+                    | Filter Group Title
+
+                    .filter-chunk
+                        .filter-group-sub-head
+                            | Filter group sub head
+                        .filter-line
+                            label(for="a375")
+                                input#a375(type="checkbox" value="a375" name="cell_line_specificity")
+                                | &nbsp;A375&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="ha1e")
+                                input#ha1e(type="checkbox" value="ha1e" name="cell_line_specificity")
+                                | &nbsp;HA1E&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="hepg2")
+                                input#hepg2(type="checkbox" value="hepg2" name="cell_line_specificity")
+                                | &nbsp;HEPG2&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="ht29")
+                                input#ht29(type="checkbox" value="ht29" name="cell_line_specificity")
+                                | &nbsp;HT29&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="mcf7")
+                                input#mcf7(type="checkbox" value="mcf7" name="cell_line_specificity")
+                                | &nbsp;MCF7&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="pc3")
+                                input#pc3(type="checkbox" value="pc3" name="cell_line_specificity")
+                                | &nbsp;PC3&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="vcap")
+                                input#vcap(type="checkbox" value="vcap" name="cell_line_specificity")
+                                | &nbsp;VCAP&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="a549")
+                                input#a549(type="checkbox" value="a549" name="cell_line_specificity")
+                                | &nbsp;A549&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="hcc515")
+                                input#hcc515(type="checkbox" value="hcc515" name="cell_line_specificity")
+                                | &nbsp;HCC515&nbsp;
+                                span
+                                    | (0)
+                        .filter-line
+                            label(for="none_selective")
+                                input#none_selective(type="checkbox" value="none_selective" name="cell_line_specificity")
+                                | &nbsp;None Selective&nbsp;
+                                span
+                                    | (0)
+
+
+
+    //- middle column - stuff on top
+    .col-xs-11.col-sm-8.col-md-6.pad-right-0.depad
+        row.title-copy.pad-bottom-8
+            .title-copy.pad-bottom-8.hidden-xs
+                | Explore the CMap Touchstone Reference </br>database of gene expression signatures&nbsp;
+            .title-copy.pad-bottom-8.visible-xs(style='white-space: pre-line;')
+                | Explore the CMap Touchstone Reference <wbr>database of gene expression signatures&nbsp;
+
+            .body-copy.pad-bottom-8
+                | Select Index signature(s)
+                | (&nbsp;
+                span
+                    i.fa.fa-bookmark(style="color: #AF182A")
+                | &nbsp;)
+                | to see similar and opposing signatures.
+
+        //- tableview
+        .row.pad-top-32.search-copy.pad-right-15
+            .visible-xs(style="width:15px;")
+
+        .row.table-administrativa-copy.pad-top-8.pad-right-15(style="display:flex;")
+            .col-xs-12.pad-bottom-6.flex-even-wrap-on-mobile
+                .flexbox.margin-v-auto(style="min-width:350px;")
+                    .btn-group.pad-left-5.margin-v-auto
+                        button.btn.btn-primary.btn-sm#selected-row-count(data-toggle='modal', data-target='#selected-signatures-modal')
+                            | Continue with selection (0)
+
+    //- middle column - tableview
+    .col-xs-6.col-sm-4.col-md-6.depad
+        .row
+            .visible-xs(style="width:15px;")
+            .col-xs-12
+                //div(class="container-fluid clue-padding")
+                    div(id="content" class="col-xs-6 col-xs-offset-3")
+                //script.
+                    $(document).one('clueReady', function () {
+                        new clue.TableExample();
+                        });
+
+
+
+                table(style='border: solid black 1px;')
+                    tr
+                        th(style='border: solid gray 1px; padding-left: 5px;') Header
+                        th(style='border: solid gray 1px;padding-left: 5px;') Header
+                        th(style='border: solid gray 1px;padding-left: 5px;') Header
+                    tr
+                        //td.sideMargin(width="10")
+                        td(width="160", valign="top", padding-left="5px") Some text paragraph
+                        //td.middleMargin(width="20")
+                        td(width="160", valign="top", padding-left="5px") Middle text paragraph
+                        //td.sideMargin(width="10")
+                    tr
+                        td.hr(width="680", colspan="5")
+                            hr
+
+
+    //- right uber column
+    .col-xs-6.col-sm-4.col-md-3.depad.push-down-xxs
+        .row
+            .col-xs-12
+                //include includes/deprecated/pertcard

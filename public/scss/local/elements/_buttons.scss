@@ -1,0 +1,639 @@
+
+
+// Text Buttons
+// rounded
+
+.button {
+	font-family: $sans;
+}
+.click-me {
+    cursor: pointer;
+}
+.btn-xs {
+	padding: 2px 5px 1px 5px;
+	border-color: $gray6;
+	border-radius:1.5px;
+}
+
+
+
+
+
+.analysis-btn {
+    width: 100%;
+}
+
+
+
+.hidden-1142 { //needed to collapse buttons to icon-only display
+    display: none;
+    @media (min-width: 1143px) {
+        display: inline-block;
+     }
+}
+
+
+
+
+
+// Text Buttons 
+
+.text-button-copy {
+    font-weight: 400;
+    color: $link;
+    
+    &:hover,
+    &:focus,
+    &:active  {
+        cursor: pointer;
+        color: $link-hover;
+    }
+}
+
+
+.btn-blue-text-ui {
+    color: $link;
+    border: none;
+    font-family: $sans;
+    font-size: inherit;
+    &:hover,
+    &:focus,
+    &:active  {
+        cursor: pointer;
+        color: $link-hover;
+        text-decoration: none;
+        background-color: white;
+    }
+}
+
+
+.blue-text-btn-undrl {
+	border-radius: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	
+	border-bottom: 1px solid #497fce;
+	color: #497fce;
+}
+.btn-undrl {
+	border-radius: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+
+.btn-rounded-touch {
+    border-radius: 3px;
+    width: 100%;
+    height: 32px;
+    box-shadow: none;
+}
+
+
+
+
+
+
+
+
+
+/* NEW STUFF */
+
+button, .btn, .btn-default {
+    margin-bottom: 8px;
+    user-select: none;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    height: 25px;
+    font-family: "Istok Web", "Open Sans", sans-serif;
+    border: 1px solid $button-border;
+    color: $gray9;
+
+    padding: 4px 12px 6px 12px;
+    line-height: 1.42857143; // look for value in sass
+    white-space: nowrap;
+
+    //background-color: inherit;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#faf7f7+0,eaeaea+100 */
+    background: #faf7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #faf7f7 0%, #eaeaea 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #faf7f7 0%,#eaeaea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #faf7f7 0%,#eaeaea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faf7f7', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+}
+
+/*
+btn {
+    //display: inline-block;
+
+    //margin-bottom: 0;
+    
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.btn_default {
+    display: inline-block;
+    padding: 4px 12px 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143; // look for value in sass 
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 25px;
+    font-family: "Istok Web", "Open Sans", sans-serif;
+    border: 1px solid black;
+}
+
+
+.btn_basic {
+    background-color: #497fce; // replace with $
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    &:hover,
+    &:focus,
+    &:active  {
+        text-decoration: none;
+        background-color: $link-hover;
+    }
+}
+
+.btn_action {
+    background-color: $dark-blue-base; // #013b4a;  replace with $ 
+    color: white;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+
+    &:hover,
+    &:focus,
+    &:active  {
+        background-color:$link-hover;
+        color: #ffffff;
+    }
+}
+*/
+
+
+.btn-primary, 
+.btn-secondary, 
+.btn-send-to-app,
+.btn-text {
+    background: unset; /*removes gradient*/
+}
+
+.btn-primary, 
+.btn-secondary, 
+.btn-send-to-app,
+.btn_utility,
+.btn-text {
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+
+.btn-primary{
+    background-color: $link;//#497fce; 
+    color: white;
+    border: none;
+    padding: 5px 12px 5px 12px;
+
+}
+
+.btn-secondary {
+    border-color: $link; //rgb(73, 127, 206); 
+	color: $link; //rgb(73, 127, 206);
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+    letter-spacing: 1.02px;
+}
+
+.btn-send-to-app {
+    background-color: $dark-blue-base;
+    border-color: $dark-blue-base;
+    color: white;
+}
+
+.btn_utility {
+    background-color: #c0c0c0; /* replace with $ */
+    color: black;
+    border: none;
+}
+
+.btn-text {
+    border: none;
+    padding: 6px 10px !important;
+}
+
+.btn-sm, .btn-xs {
+    font-weight:400;
+    height: 22px;
+    padding: 2px 6px 1px 7px; //- Padding for sentence case
+    border-radius: 2px;
+    line-height: 1.4; //- 1.42857143;
+
+    &.btn-send-to-app,
+    &.btn-primary,
+    &.btn-secondary {
+        font-size: 11px;
+        padding: 4px 6px 2px 7px; //- Padding for allcaps
+        text-align: center;
+    }
+
+    &.btn-text {
+        i {
+            font-size: 10px;
+        }
+    }
+}
+
+.btn-lg {
+    height: 34px;
+}
+.lowercase {
+    text-transform: unset;
+    letter-spacing: normal;
+    font-family: $sans;
+    padding: 2px 6px 1px 7px !important; //- Padding for sentence case
+    line-height: 16px;
+    font-weight: 400;
+}
+.btn-block {
+    display: inline-block;
+    
+}
+
+/*.mod{
+    &.btn-primary, &.btn-secondary {
+        height: 30px;
+        padding: 6px 12px 6px 12px;
+    }
+    &.btn-primary {
+        background-color: $dark-blue-base;
+    }
+    &.btn-secondary {
+
+    }
+}*/
+
+.utility-dialog{
+    background: unset; /*removes gradient*/
+    background-color: $gray1;
+    .btn-primary, .btn-secondary {
+        border-color: $gray8;
+        color: $gray8;
+    }
+    .btn-primary {
+        background-color: $gray05;
+        border-width: 1px;
+        border-style: solid;
+        padding: 4px 12px 6px 12px;
+    }
+    .btn-secondary {
+        background-color: $gray2;
+    }
+}
+.utility-dialog {
+    button ~ button, 
+    button.btn-primary + button.btn-secondary {
+        margin-bottom: 8px !important;
+        }
+}
+
+
+.btn-row-sorter, .btn-column-sorter {
+    border: 1px solid $gray3;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.btn-row-sorter {
+    display:flex;
+    flex-direction: column;
+    width: 16px;
+    height: 30px;
+    padding: 2px 0;
+}
+
+.btn-column-sorter {
+    width: 30px;
+    height: 16px;
+    padding: 0 2px;
+}
+
+//Button states
+button,
+a.btn {
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.btn-active {
+        text-decoration: none;
+        background-color: $button-active-background; 
+        color: black;
+        //-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+        //-outline: ;
+    }
+    &.btn-disabled,
+    &:disabled,
+    &[disabled] {
+        opacity: 0.4 !important;
+        pointer-events: none;
+    }
+    &.btn-send-to-app,
+    &.btn-primary {
+        &.btn-disabled,
+        &:disabled,
+        &[disabled] {
+            opacity: 0.3 !important;
+        }
+    }
+    &.btn-primary, 
+    &.btn-secondary, 
+    &.btn-send-to-app {
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.btn-active {
+            text-decoration: none;
+            background-color: $link-hover;
+            border-color: $link-hover;
+            color: white;
+            //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+} 
+
+
+.utility-dialog {
+    .btn-primary,
+    .btn-secondary {
+        &:hover,
+        &:focus,
+        &:active,
+        &.active
+        &.btn-active {
+            text-decoration: none;
+            background-color: $button-dialog-active-background;
+            border-color: $button-border;
+            color: black;
+            //-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        }
+    } 
+}
+
+
+
+.btn-group {
+    & {
+        margin-right: 5px;
+    }
+    &>label + .btn:last-child:not(:first-child), 
+    &>label + .btn:not(:first-child):not(:last-child):not(.dropdown-toggle),
+    &>.toolbar-text + .btn:last-child:not(:first-child),
+    &>.toolbar-text + .btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+        border-top-left-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+    
+}
+
+
+
+/*
+.btn-group-vertical>.btn, .btn-group>.btn {
+    position: relative;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+}
+.btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group, .btn-group-vertical .btn+.btn, .btn-group-vertical .btn+.btn-group, .btn-group-vertical .btn-group+.btn, .btn-group-vertical .btn-group+.btn-group {
+    margin-left: -1px;
+}
+.btn-group > .btn:first-child {
+    margin-left: 0;
+}
+.btn-group > .btn:first-child:not(:last-child):not(.dropdown-toggle) {
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+}
+.btn-group>.btn:last-child:not(:first-child), .btn-group>.dropdown-toggle:not(:first-child) {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+}
+.btn-group>.btn:not(:first-child):not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0;
+}
+*/
+
+// BUTTON ICON AND TEXT
+button, 
+a.btn {
+    span + span,
+    i + span {
+        margin-left: 5px;
+    }
+    & > .fa.fa-square-o, 
+    & > .fa-check-square-o, 
+    & > .fa-minus-square-o {
+        //-padding-top: 3px;
+        color: $gray7;
+        &:hover {
+            color: $gray12;
+        }
+        & + span {
+            margin-left: 5px;
+        }
+    }
+    &.btn-sm > i.fa {
+        padding-top: 2px;
+    }
+    &.btn-sm > .fa.fa-square-o, 
+    &.btn-sm > .fa-check-square-o, 
+    &.btn-sm > .fa-minus-square-o {
+        padding-top: 3px;
+        & + span {
+            display: inline-block;
+            margin-left: 4px;
+            position: relative;
+            top: -1px;
+        }
+    }
+    &.btn-send-to-app.btn-sm > i.fa {
+        padding-top: 0px;
+    } 
+}
+
+//- TOOLBAR
+//- FIX TEXT STYLING IN TOOLBAR !!!!!!!!!!!!
+
+.btn-group label,
+.btn-group .toolbar-text {
+    display: inline-block;
+    font-family: $sans;
+    font-size: 13px;
+    font-weight: 400;
+    padding: 5px 8px;
+        margin-top: -1px;
+}
+.btn-toolbar {
+    .toolbar-text,
+    label {
+        display: inline-block;
+        font-family: $sans;
+        font-size: 13px;
+        font-weight: 400;
+        padding: 5px 8px;
+        margin-top: -1px;
+        margin-left: 4px;
+        margin-right: 4px;
+        & + button {
+            margin-left: 0 !important;
+        }
+        &.btn-sm {
+            font-size: 12px;
+        }
+        &[class*="col-"] {
+            
+            margin-left: -4px;
+        }
+    }
+    &.labels-first {
+        margin-left: -10px;
+    }
+}
+
+label.pull-left {
+    text-align: right;
+    padding-right: 2px;
+}
+.btn-group > label[class*="col-"] {
+    text-align: right;
+    padding-right: 0;
+    margin-right: 4px;
+    margin-left: -4px;
+}
+
+
+.toolbar {
+    @media (max-width: $screen-sm-min) {
+        .col-xs-12 ~ .col-xs-12 {
+            padding-left: 0;
+            margin-top: 8px;
+        }
+    }
+}
+
+//- CUSTOM BUTTONS
+
+.dropdown-toggle.row-selector-btn {
+    margin-right: 8px;
+}
+
+#touchstone_table {
+    .dropdown-toggle.row-selector-btn {
+        margin-right: 4px;
+        margin-bottom: 0;
+        padding-right: 7px;
+        padding-left: 7px;
+        padding-top: 2px;
+        height: 22px;
+    }
+}
+
+
+//- Button group layout within toolbar
+//- Unset bootstrap margins
+
+.btn-toolbar > .btn-group,
+.btn-group > .btn-group,
+.btn-toolbar > .btn-toolbar,
+.btn-group > .btn-toolbar { 
+    &[class*="col-"] {
+        @include  gridMargins(1, 4px, 0px);
+        margin-right: 0;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+.btn-toolbar {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+// Bootstrap grid for toolbars
+.btn-toolbar > button[class*="col-"],
+.btn-toolbar > button
+//.btn-toolbar > [class*="col-"] > button 
+{
+    @include  gridMargins(1, 4px, 0px);
+}
+
+// look at _mixins.scss
+
+.btn-toolbar > button,
+.btn-toolbar > label,
+.btn-toolbar > .toolbar-text,
+.btn-toolbar > [class*="col-"] { 
+    @include columnWidths(1, 4px);
+    @include  gridMargins(1, 4px, 0px);
+}
+
+
+
+// Bootstrap grid for button groups
+
+.btn-toolbar>.btn-group {
+    & {
+        margin-right: 0;
+        @include  gridMargins(1, 4px, 0px);
+    }
+}
+
+.btn-group > button,
+.btn-group > label,
+.btn-group > .toolbar-text {
+    @include btngroupWidths(1, 0px);
+}
+
+/* .col-xs-12.btn-group[class*="col-"] {
+    @media (max-width: $screen-sm-min) {
+        padding-left: 0;
+        padding-right: 0;
+        .btn-toolbar {
+            padding-right: 2px;
+        }
+    }
+} */
+.row.btn-toolbar {
+    margin-right: 0;
+}
+

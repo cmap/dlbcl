@@ -1,0 +1,2382 @@
+[
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A375",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A375",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "1 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "1 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "10 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "10 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A549",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "A673",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "AGS",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "CL34",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "CORL23",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "COV644",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "DV90",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "EFO27",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "H1299",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HA1E",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HA1E",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HCC15",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HCC515",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HCC515",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HCT116",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HEC108",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HEPG2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HT115",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HT29",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "HT29",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "JHUEM2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "LOVO",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "1 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "1 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "10 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "10 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MCF7",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "MDST8",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "NCIH1694",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "NCIH1836",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "NCIH2073",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "NCIH508",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "NCIH596",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "NOMO1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "OV7",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "PC3",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "PC3",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "PL21",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "RKO",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "RMGI",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "RMUGS",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SKLU1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SKM1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SKMEL1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SKMEL28",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SNGM",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SNU1040",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SNUC4",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SNUC5",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SW480",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SW620",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "SW948",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "T3M10",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "THP1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "TYKNU",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "U937",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "VCAP",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "VCAP",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A01145011",
+		"pert_iname": "zebularine",
+		"cell_id": "WSUDLCL2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A375",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A549",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "A673",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "AGS",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "ASC",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CD34",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CL34",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "CORL23",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "COV644",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "DV90",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "EFO27",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "FIBRNPC",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "FIBRNPC",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "H1299",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HA1E",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC15",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCC515",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HCT116",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEC108",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEK293T",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HEPG2",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HL60",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT115",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HT29",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HUH7",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "HUH7",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JHUEM2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "JURKAT",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "LOVO",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "5 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "5 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MCF7",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "MDST8",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NCIH1694",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NCIH1836",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NCIH2073",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NCIH508",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NCIH596",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU.KCL",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h & 4 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NEU.KCL",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h & 4 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NKDBA",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NKDBA",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NKDBA",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NOMO1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NPC",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NPC",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NPC",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NPC",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "NPC",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "OV7",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "0.04 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "0.12 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "0.37 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "1.11 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "3.33 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "5 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "5 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PC3",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PHH",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PHH",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "PL21",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "RKO",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "RMGI",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "RMUGS",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SKB",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SKLU1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SKM1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SKMEL1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SKMEL28",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SNGM",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SNU1040",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SNUC4",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SNUC5",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SW480",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SW620",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "SW948",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "T3M10",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "THP1",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "TYKNU",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U266",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "3 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "U937",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "1 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "1 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "1 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "100 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "100 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "20 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "20 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "3 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "5 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "5 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "500 nM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "VCAP",
+		"pert_idose": "500 nM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-A19037878",
+		"pert_iname": "trichostatin-a",
+		"cell_id": "WSUDLCL2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "A375",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "A549",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "A549",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "HA1E",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "HCC515",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "HEPG2",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "HT29",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "MCF7",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "MCF7",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "PC3",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "PC3",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "VCAP",
+		"pert_idose": "10 uM",
+		"pert_itime": "24 h\r"
+	},
+	{
+		"pert_id": "BRD-K61993165",
+		"pert_iname": "niacin",
+		"cell_id": "VCAP",
+		"pert_idose": "10 uM",
+		"pert_itime": "6 h\r"
+	}
+]

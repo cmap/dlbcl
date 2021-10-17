@@ -1,0 +1,260 @@
+include metadata-includes.jade
+
+// metadata card - Touchstone (Compound)
+
+.metadata-card-vert-container.cp-card
+
+    // --------------- CARD HEADER ---------------
+    .metadata-card-header
+
+        // Card type and symbol
+        .card-type
+            span.pert-info-pert-chip
+                .glyphicon.glyphicon-adjust
+            | &nbsp;
+            span.value.pert-info-pert-type
+                | CP 
+            span.pipe.demo-only
+            span.pert-use.value.demo-only Launched
+        .card-title-and-icon
+            .metadata-card-title
+                | Sirolimus
+            .favorite-indicator.demo-only
+                .fa.fa-star-o
+
+        // Alternative names
+        
+        .metadata-line.alt-names
+            span.label Synonym:
+            span.value Rapamune,
+                | Rapamycin
+
+        // Description
+        
+        .description
+            //75 character cutoff
+            span.description-concat A macrolide produced by the bacterium Streptomyces hygroscopicus, Sirolimus...
+            a(onclick="toggleDesc('more')").more-less-toggle  [ More&nbsp
+                span.fa.fa-angle-down
+                |&nbsp]
+            span.description-full A macrolide produced by the bacterium Streptomyces hygroscopicus, Sirolimus has immunosuppressant functions in humans and is used to prevent rejection in organ transplantation. Sirolimus is also used as a coronary stent coating.
+            a(onclick="toggleDesc('less')").more-less-toggle  [ Less&nbsp
+                span.fa.fa-angle-up
+                |&nbsp]
+
+    // ------------------------------------------
+
+
+    // ID Section
+    .metadata-card-tabs.metadata-card-id-section
+        ul.nav.nav-tabs
+            li
+                .nav-label ID:
+            li.active
+                a(data-toggle="tab" href=".Broad-ID.TC") Broad
+            li
+                a(data-toggle="tab" href=".PubChem-ID.TC") PubChem
+            li
+                //a(data-toggle="tab" href=".ChEMBL-ID.TC") ChEMBL
+                a(style="opacity: 0.5; cursor: default") &nbsp ChEMBL
+            li
+                a(data-toggle="tab" href=".InChIKey.TC") InChIKey
+            li
+                a(data-toggle="tab" href=".SMILES.TC") SMILES
+
+    .tab-content.small-print
+        .metadata-line.Broad-ID.TC.tab-pane.active
+            //span.label Broad ID:
+            span.value BRD-K84937637
+        .metadata-line.PubChem-ID.TC.tab-pane
+            //span.label PubChem:
+            a(href="" target="source") 5284616
+        .metadata-line.ChEMBL-ID.TC.tab-pane
+            //span.label ChEMBL:
+            a(href="" target="source") 429892
+        .metadata-line.InChIKey.TC.tab-pane
+            //span.label InChIKey:
+            span#pert-info-inchi-key.value QFJCIRLUMZQUOT-HPLJOQBZSA-N
+        .metadata-line.SMILES.TC.tab-pane
+            //span.label SMILES:
+            span#pert-info-smiles.value CO[C@@H]1C[C@H](C[C@@H](C)[C@@H]2CC(=O)[C@H](C)\C=C(C)\[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)\C=C\C=C\C=C(C)\[C@H](C[C@@H]3CC[C@@H](C)[C@@](O)(O3)C(=O)C(=O)N3CCCC[C@H]3C(=O)O2)OC)CC[C@H]1O
+
+    // Overview Section
+
+    .pert-info-body-image.graphic
+        img(src="https://s3.amazonaws.com/data.clue.io/trimmed_perts/BRD-A79768653.png")
+
+    // Biological Function Section
+
+    .metadata-section.collapsible.biological-function
+        a(data-toggle="collapse" data-target="#cp-bio").metadata-section-h1 Biological function
+        #cp-bio.biological-TSCP.collapse.in
+            .metadata-line
+                span.label MOA:
+                span.value.abreviation mTOR inhibitor, mTOR inhibitor, mTOR inhibitor, mTOR inhibitor, mTOR inhibitor...
+
+            .metadata-line
+                span.label CMap class:
+                span.value.abreviation mTOR inhibitor
+
+
+            .metadata-line
+                span.label Protein target
+                span.value
+                
+            // Table and Legend
+            
+            .metadata-card-table-and-legend.demo-only
+                table.metadata-card-table.icon-table
+                    thead
+                        tr
+                            th.row-name Target/Source
+                            th
+                                a(data-toggle="tooltip" title="ChEMBL") Ch
+                            th
+                                a(data-toggle="tooltip" title="DrugBank") Dr
+                            th
+                                a(data-toggle="tooltip" title="IUPHAR") IU
+                            th
+                                a(data-toggle="tooltip" title="TTD") TT
+                            th
+                                a(data-toggle="tooltip" title="Pharmacoprojects") Ph
+                            th.border-left
+                                a(data-toggle="tooltip" title="L1000") L1
+                            //th
+                                a(data-toggle="tooltip" title="Proteomics") Pr
+                            //th
+                                a(data-toggle="tooltip" title="PRISM") PR
+
+                    tbody
+                        tr
+                            th.row-name mTOR
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th.border-left
+                            //th
+                            //th
+
+                        tr
+                            th.row-name FKBP1A
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th.border-left
+                            //th
+                            //th
+                                .cmap.cmap-icons_target
+
+                        tr
+                            th.row-name FGF2
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th
+                            th.border-left
+                            //th
+                                .cmap.cmap-icons_target
+                            //th
+                            
+                            
+                //.metadata-table-legend
+                    .metadata-section-h3 Sources
+                    ol.metadata-list
+                        li
+                            a() ChEMBL
+                        li
+                            a() DrugBank
+                        li
+                            a() IUPHAR
+                        li
+                            a() TTD
+                        li
+                            a() L1000
+                    span.dev-instructions &nbsp(For export version only - Phase 2)
+
+
+    // Profile Status Section
+    
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target="#cp-profiled").metadata-section-h1 Profile status
+        #cp-profiled.profiled-TSCP.collapse.in
+        
+        
+            .metadata-line
+                i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" style="color: #F5A623;" onclick="showTooltip('#q_cp_profile', '#tt_profile')")#q_cp_profile
+                | &nbsp
+                span.label Profiled in:
+                //span.vaue Achilles
+                    span.comma ,
+                    |CellPainting
+                    span.comma ,
+                    |CCLE
+                    span.comma ,
+                    |L1000
+                    span.comma ,
+                    |Huron
+                    span.comma ,
+                    |PCCSE
+                    span.comma ,
+                    |PRISM
+                    
+                table.metadata-card-table.profile-table
+                    thead
+                        tr
+                            //th.row-name Assay
+                            th.profiled
+                                a(data-toggle="tooltip" title="L1000") L1000
+                            th.profiled
+                                a(data-toggle="tooltip" title="PCCSE") PCCSE
+                            th
+                                a(data-toggle="tooltip" title="CellPainting") CPaint
+                            th
+                                a(data-toggle="tooltip" title="PRISM") PRISM
+            .metadata-section
+                .metadata-line.pad-top-8.pad-bottom-4.demo-only
+                    span.label L1000 profiling
+
+                .metadata-section-h1
+                    //no plot description
+                    i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" style="color: #F5A623;" onclick="showTooltip('#q_cp_dose', '#tt_dose')")#q_cp_dose
+                    | &nbsp
+                    span Dose
+                //no tagline?
+                //.metadata-line
+                    span.label Dose
+
+                .graphic.placeholder
+                    .vis-container
+                        .chartAndTooltips
+                            #chart_cp
+
+                .metadata-section-h1
+                    i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" style="color: #F5A623;" onclick="showTooltip('#q_cp_tas', '#tt_tas')")#q_cp_tas
+                    | &nbsp
+                    span Average transcriptional impact
+                .metadata-line
+                    span.label Transcriptional impact summarized across core cell lines
+
+                .graphic.metadata-section
+                    .tas-chart#card_tas_chart_cp(style="height:200px;")
+
+                .metadata-section-h1
+                    i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" onclick="showTooltip('#q_cp_introspect', '#tt_introspect')" style="color: #F5A623;")#q_cp_introspect
+                    | &nbsp
+                    span Introspect
+                .metadata-line
+                    span.label Cell Line-specific responses to perturbagens
+                    // Graphic
+                    #intro_cp.introspect-vis(style="height: 200px;")

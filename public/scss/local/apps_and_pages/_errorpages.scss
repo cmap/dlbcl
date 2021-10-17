@@ -1,0 +1,23 @@
+.error h1 { 	
+	font-family: 'Roboto Slab', Thin;
+    font-weight: 100;
+	font-size: 90px;
+    line-height: 80px;
+}
+
+.error h2, .error > h2 {
+    font-weight:300;
+    font-size:35px;
+    text-transform: none;
+}
+.error h3 {
+    font-weight:300;
+    font-size:24px
+}
+.mobiltxt.error h1 {
+    font-size: 60px;
+    line-height: 60px;
+}
+.mobiltxt.error h2 {
+    font-size: 28px;
+}

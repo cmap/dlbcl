@@ -1,0 +1,30 @@
+- var app = { title:'DLBCL Dashboard' }
+include ../dlbcl/template-dashboard
+block append scripts
+    script.
+        //Entry point for code to populate website
+        $(document).ready(function () {
+            (async function(){
+                const config_url = "//s3.amazonaws.com/data.clue.io/dlbcl/dlbcl_config.json";
+                const promises = [
+                    str8_cash.cache(config_url, {
+                        signurl: false
+                    })
+                ];
+                await Promise.all(promises).then(async function (responseValues) {
+                    const dataset_config = await responseValues[0].json();
+                    await loadTabs(dataset_config);
+                }
+            ).catch(function (err) {
+                    console.log(err);
+                })
+            })();
+            $(".closebtn").on("click", function (e) {
+                $("#img_container").css("display","none");
+            });
+            $(document).on('keydown', function (event) {
+                if (event.key === 'Escape') {
+                    $("#img_container").css("display", "none");
+                }
+            });
+        });

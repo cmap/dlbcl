@@ -1,0 +1,63 @@
+.linkicon {
+    color: #F15A22;
+    font-size: 11px;
+    margin-right: 5px;
+}
+
+.big-icon {
+    display: block;
+    margin-left: 24px;
+    margin-right: auto;
+    max-width: 80px;  
+}
+
+.glyph-cp {
+    color: $CP;
+}
+
+.glyph-kd {
+    color: $KD;
+}
+
+.glyph-oe {
+    color: $OE;
+}
+
+.fa-cmap-class,
+.fa-cmap-moa {
+    font-size: 10px;
+    margin: -1px 1px 3px 2px;
+    color: $cmap-class;
+    /* Safari */
+    -webkit-transform: rotate(45deg);
+
+    /* Firefox */
+    -moz-transform: rotate(45deg);
+
+    /* IE */
+    -ms-transform: rotate(45deg);
+
+    /* Opera */
+    -o-transform: rotate(45deg);
+
+}
+
+
+.fa-stroked,
+.fa-cmap-moa {
+    -webkit-text-stroke: 1px #005d99;
+}
+
+
+.fa-cmap-gene {
+    color: $genetic;
+}
+.fa-cell {
+    color: $cell;
+}
+.fa-pert {
+    color: #FF1212;
+}
+.fa-dose, .fa-sig {
+    color: #67B2B3;
+}

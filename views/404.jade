@@ -1,0 +1,37 @@
+extends ../templates/page_layout.jade
+- var app = { title:'Not Found' }
+
+block content
+    .container-fluid.static-page
+        .row
+            // hero
+            block hero
+        .row
+            //- add some spacing
+            div(style="height: 20px")
+        .row
+            .col-sm-offset-1.col-md-offset-2.col-xs-12.col-sm-10.col-md-8
+                .max-wide-962.margin-h-auto
+                    .row.text-center
+                        .col-sm-12.hidden-xs.error
+                            div(style="height:100px")
+                            img.img-responsive(src="//assets.clue.io/clue/public/img/errorCloud.png", style="margin: auto; max-width:400px; margin-bottom:45px;")
+                            h1 404
+                            h2 Page not found.
+                            //- add some spacing
+                            div(style="height: 20px")
+                            h3 <a href="/" data-turbolinks="false">Home</a>
+                            div(style="height:90px")
+                        .col-xs-12.visible-xs.mobiltxt.error
+                            div(style="height:30px")
+                            img.img-responsive(src="//assets.clue.io/clue/public/img/errorCloud.png", style="margin: auto; max-width:200px; margin-bottom:15px;")
+                            h1 404
+                            h2 Page not found.
+                            //- add some spacing
+                            div(style="height: 10px")
+                            h3 <a href="/" data-turbolinks="false">Home</a>
+                            div(style="height:10px")
+
+        div.hidden-xs(style="height: 4rem")
+        div.visible-xs(style="height: 20px")
+

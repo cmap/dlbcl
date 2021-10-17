@@ -1,0 +1,40 @@
+.btn_default {
+    display: inline-block;
+    padding: 4px 12px 6px 12px;
+    margin-bottom: 0;
+    line-height: 1.42857143; /* look for value in sass */
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 25px;
+    font-family: "Istok Web", "Open Sans", sans-serif;
+}
+
+.btn_basic {
+    background-color: #497fce; /* replace with $ */
+    color: white;
+}
+
+.btn_action {
+    background-color: #013b4a; /* replace with $ */
+    color: white;
+}
+
+.btn_utility {
+    background-color: #dddddd; /* replace with $ */
+    color: black;
+}
+
+.btn_disabled {
+    opacity: 0.5;
+}
+
+/* REMEMBER HOVER STATES */

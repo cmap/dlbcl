@@ -1,0 +1,39 @@
+#class-summary, #class-celllines, #class-heatmap {
+    color: #000000;
+    font-family: 'Roboto condensed';
+    font-size: 11px;
+}
+
+#class-summary-vis, #class-heatmap-vis, #class-celllines-vis {
+    cursor: default;
+}
+#class-celllines, #class-heatmap  {
+    position: relative;
+}
+#class-celllines-info {
+    height: 15px;
+    width: 276px;
+    text-align: right;
+}
+#class-celllines-name {
+    position: absolute;
+    top: 20;
+    left: 120;
+}
+#class-heatmap-info {
+    position: absolute;
+    bottom: 13px;
+    left: 60px;
+}
+.item-text {
+    font-family: 'Roboto condensed';
+    font-size: 11px;
+    color: #005D99;
+    display: inline-block;
+}
+.value-text {
+    font-family: 'Roboto condensed';
+    font-size: 13px;
+    color: #000000;
+    display: inline-block;
+}

@@ -1,0 +1,31 @@
+//- Login form
+form.modal-form-copy#login-form(style="display:none;" name="login-form" role="form" method="post")
+	.form-group(style="display:none;" name="messageGroup")
+		.text-warning(name="messageText")
+			| The email address or password you entered is incorrect.
+			| Please try again or create an account.
+	.form-group
+		input.form-control#emailInput(name="email" type="email" placeholder="Email" data-error="Email address required" required)
+		.help-block.with-errors
+	.form-group
+		input.form-control#passwordInput(name="password" type="password" data-error="Password required" placeholder="Password" required)
+		.help-block.with-errors
+	.row#forgotPasswordRow
+		.col-xs-offset-8.col-xs-4
+			.form-group(style="margin-bottom:5px;")
+				a(href="#" name="forgot")
+					| Forgot your password?
+	.row
+		.col-xs-offset-8.col-xs-4
+			.form-group
+				button.btn.btn-primary#loginbutton(type="submit") LOG IN
+	.row
+		.text-warning#expiredwarning
+	.row#createAccountRow
+		.col-xs-12
+			.form-group.border-thin-top
+				.pad-top-8
+					.modal-title-copy
+						| Don't have an account?
+					a(href="#" name="create-account")
+						| Create an account

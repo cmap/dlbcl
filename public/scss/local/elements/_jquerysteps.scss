@@ -1,0 +1,512 @@
+/*
+    Common 
+*/
+
+.wizard,
+.tabcontrol
+{
+    display: block;
+    width: 100%;
+    overflow: hidden;
+}
+
+.wizard a,
+.tabcontrol a
+{
+    outline: 0;
+}
+
+.wizard ul,
+.tabcontrol ul
+{
+    list-style: none !important;
+    padding: 0;
+    margin: 0;
+}
+
+.wizard ul > li,
+.tabcontrol ul > li
+{
+    display: block;
+    padding: 0;
+}
+
+/* Accessibility */
+.wizard > .steps .current-info,
+.tabcontrol > .steps .current-info
+{
+    position: absolute;
+    left: -999em;
+}
+
+.wizard > .content > .title,
+.tabcontrol > .content > .title
+{
+    position: absolute;
+    left: -999em;
+}
+
+
+
+/*
+    Wizard
+*/
+
+.wizard > .steps
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.wizard.vertical > .steps
+{
+    display: inline;
+    float: left;
+    width: 30%;
+}
+
+.wizard > .steps .number
+{
+    //font-size: 1.429em;
+}
+
+.wizard > .steps > ul > li
+{
+    width: 25%;
+
+    &.disabled {
+        opacity:1;
+    }
+}
+#requestForm > .wizard > .steps > ul > li, #requestFormSignup > .wizard > .steps > ul > li {
+    width: 33.333333%;
+}
+
+.wizard > .steps > ul > li,
+.wizard > .actions > ul > li
+{
+    float: left;
+}
+
+.wizard.vertical > .steps > ul > li
+{
+    float: none;
+    width: 100%;
+}
+
+.wizard > .steps a,
+.wizard > .steps a:hover,
+.wizard > .steps a:active
+{
+    display: block;
+    width: auto;
+    margin: 0 1px;
+    padding: 2px;
+    text-decoration: none;
+    font-size: 14px;
+    
+
+    //-webkit-border-radius: 4px;
+    //-moz-border-radius: 4px;
+    //border-radius: 4px;
+    border-bottom: $gray1 solid 4px;
+}
+
+.wizard > .steps .disabled a,
+.wizard > .steps .disabled a:hover,
+.wizard > .steps .disabled a:active
+{
+    //background: #eee;
+    //color: #aaa;
+    color: $orange;
+    cursor: default;
+}
+
+.wizard > .steps .current a,
+.wizard > .steps .current a:hover,
+.wizard > .steps .current a:active
+{
+    //background: #2184be;
+    //color: #fff;
+    color: black;
+    border-color: black;
+    font-weight: 600;
+    cursor: default;
+}
+
+.wizard > .steps .done a,
+.wizard > .steps .done a:hover,
+.wizard > .steps .done a:active
+{
+    //background: #9dc8e2;
+    //color: #fff;
+    font-weight: 600;
+    color: $orange;
+    border-color: $orange;
+}
+
+.wizard > .steps .error a,
+.wizard > .steps .error a:hover,
+.wizard > .steps .error a:active
+{
+    //background: #ff3111;
+    //color: #fff;
+    color: $error-bright;
+    border-color: $error-bright;
+}
+
+.wizard > .content
+{
+    background: #fff;
+    display: block;
+    //margin: 5px 0;
+    margin: 5px 0 40px 0;
+    min-height: 500px;
+    //overflow: hidden;
+    position: relative;
+    width: auto;
+
+     &.has-resulttext {
+         //TODO: need to write this class into clue.build.requester.js
+        margin-bottom: 50px;
+     }
+
+}
+
+.wizard.vertical > .content
+{
+    display: inline;
+    float: left;
+    margin: 0 2.5% 0.5em 2.5%;
+    width: 65%;
+}
+
+.wizard > .content > .body
+{
+    float: left;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 10px 2px;
+}
+
+/*.wizard > .content > .body ul
+{
+    list-style: disc !important;
+}*/
+
+.wizard > .content > .body ul > li
+{
+    display: list-item;
+}
+
+.wizard > .content > .body > iframe
+{
+    border: 0 none;
+    width: 100%;
+    height: 100%;
+}
+
+/*.wizard > .content > .body input
+{
+    display: block;
+    border: 1px solid #ccc;
+}*/
+
+.wizard > .content > .body input[type="checkbox"]
+{
+    display: inline-block;
+}
+
+.wizard > .content > .body input.error
+{
+    background: rgb(251, 227, 228);
+    border: 1px solid #fbc2c4;
+    color: #8a1f11;
+}
+
+.wizard > .content > .body label
+{
+    display: inline-block;
+    //margin-bottom: 0.5em;
+    font-size: 13px;
+}
+
+.wizard > .content > .body label.error
+{
+    color: #8a1f11;
+    display: inline-block;
+    margin-left: 1.5em;
+}
+
+.wizard > .actions
+{
+    position: relative;
+    display: block;
+    text-align: right;
+    width: 100%;
+}
+
+.wizard.vertical > .actions
+{
+    display: inline;
+    float: right;
+    margin: 0 2.5%;
+    width: 95%;
+}
+
+.wizard > .actions > ul
+{
+    //display: inline-block;
+    //text-align: right;
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 0;
+}
+
+.wizard > .actions > ul > li
+{
+    //margin: 0 0.5em;
+    margin: 0 4px;
+}
+
+.wizard.vertical > .actions > ul > li
+{
+    margin: 0 0 0 1em;
+}
+.wizard > .actions a {
+    padding: 4px 12px 6px 12px;
+    text-decoration: none;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.wizard > .actions a,
+{
+    height: 25px;
+    font-size: 13px;
+    line-height: 14px;
+
+    border: 1px solid $button-border;
+    color: $gray9;
+    display: block;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#faf7f7+0,eaeaea+100 */
+    background: #faf7f7; /* Old browsers */
+    background: -moz-linear-gradient(top, #faf7f7 0%, #eaeaea 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #faf7f7 0%,#eaeaea 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #faf7f7 0%,#eaeaea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faf7f7', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
+    &.btn-primary, 
+    &.btn-secondary, 
+    &.btn-send-to-app,
+    &.btn-text {
+        background: unset; /*removes gradient*/
+    }
+    &.btn-primary, 
+    &.btn-secondary, 
+    &.btn-send-to-app,
+    &.btn_utility,
+    &.btn-text {
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        font-size: 12px;
+        line-height: 1.42857143; 
+    }
+    &.btn-primary{
+        background-color: $link;//#497fce; 
+        color: white;
+        border: none;
+        padding: 5px 12px 5px 12px;
+    }
+    &.btn-secondary {
+        border-color: $link; //rgb(73, 127, 206); 
+        color: $link; //rgb(73, 127, 206);
+        background-color: white;
+        border-width: 1px;
+        border-style: solid;
+        letter-spacing: 1.02px;
+    }
+    &.btn-send-to-app {
+        background-color: $dark-blue-base;
+        border-color: $dark-blue-base;
+        color: white;
+    }
+    
+    &.btn_utility {
+        background-color: #c0c0c0; /* replace with $ */
+        color: black;
+        border: none;
+    }
+    
+    &.btn-text {
+        border: none;
+        padding: 6px 10px !important;
+    }
+
+
+    //Wizard button states
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    &.btn-active {
+        text-decoration: none;
+        background-color: $button-active-background; 
+        color: black;
+        //-box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        transition: all 0.2s cubic-bezier(.25,.8,.25,1);
+        //-outline: ;
+    }
+    &.btn-disabled,
+    &:disabled,
+    &[disabled] {
+        opacity: 0.4 !important;
+        pointer-events: none;
+    }
+    &.btn-send-to-app,
+    &.btn-primary {
+        &.btn-disabled,
+        &:disabled,
+        &[disabled] {
+            opacity: 0.3 !important;
+        }
+    }
+    &.btn-primary, 
+    &.btn-secondary, 
+    &.btn-send-to-app {
+        &:hover,
+        &:focus,
+        &:active,
+        &.active,
+        &.btn-active {
+            text-decoration: none;
+            background-color: $link-hover;
+            border-color: $link-hover;
+            color: white;
+            //box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+        }
+    }
+}
+
+
+.wizard > .actions .disabled a,
+.wizard > .actions .disabled a:hover,
+.wizard > .actions .disabled a:active
+{
+    background: #eee;
+    color: #aaa;
+}
+
+.wizard > .loading
+{
+}
+
+.wizard > .loading .spinner
+{
+}
+
+
+
+/*
+    Tabcontrol
+*/
+
+.tabcontrol > .steps
+{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.tabcontrol > .steps > ul
+{
+    position: relative;
+    margin: 6px 0 0 0;
+    top: 1px;
+    z-index: 1;
+}
+
+.tabcontrol > .steps > ul > li
+{
+    float: left;
+    margin: 5px 2px 0 0;
+    padding: 1px;
+
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.tabcontrol > .steps > ul > li:hover
+{
+    background: #edecec;
+    border: 1px solid #bbb;
+    padding: 0;
+}
+
+.tabcontrol > .steps > ul > li.current
+{
+    background: #fff;
+    border: 1px solid #bbb;
+    border-bottom: 0 none;
+    padding: 0 0 1px 0;
+    margin-top: 0;
+}
+
+.tabcontrol > .steps > ul > li > a
+{
+    color: #5f5f5f;
+    display: inline-block;
+    border: 0 none;
+    margin: 0;
+    padding: 10px 30px;
+    text-decoration: none;
+}
+
+.tabcontrol > .steps > ul > li > a:hover
+{
+    text-decoration: none;
+}
+
+.tabcontrol > .steps > ul > li.current > a
+{
+    padding: 15px 30px 10px 30px;
+}
+
+.tabcontrol > .content
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 35em;
+    overflow: hidden;
+    border-top: 1px solid #bbb;
+    padding-top: 20px;
+}
+
+.tabcontrol > .content > .body
+{
+    float: left;
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    padding: 2.5%;
+}
+
+.tabcontrol > .content > .body ul
+{
+    list-style: disc !important;
+}
+
+.tabcontrol > .content > .body ul > li
+{
+    display: list-item;
+}
+

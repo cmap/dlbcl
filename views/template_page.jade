@@ -1,0 +1,20 @@
+- var app = { title:'' }
+include includes/header_deprecated
+body
+	.container-fluid.static-page
+		.row 
+			// hero
+			block hero
+		.row
+			//- add some spacing
+			div(style="height: 20px")
+		.row
+			.col-sm-offset-1.col-md-offset-2.col-xs-12.col-sm-10.col-md-8
+				.max-wide-962.margin-h-auto
+					block content  
+
+		div.hidden-xs(style="height: 4rem")
+		div.visible-xs(style="height: 20px")
+footer
+	include includes/footer.jade
+block scripts

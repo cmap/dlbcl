@@ -1,0 +1,70 @@
+.modal#hero-menu-modal(tabindex='-1', role='dialog', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header(style="border:none;")
+
+                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                    span(aria-hidden="true")
+                        | &times;
+
+            .modal-body
+                .row
+                    .col-xs-12.col-md-4(style="padding:0px; z-index: 5")
+                        .col-xs-6.col-md-12.hero-menu-item
+                            .modal-form-copy-bold
+                                | PROJECTS
+
+                            .row
+                                ul.col-xs-12.modal-form-copy
+                                    ul
+                                        li
+                                            a(href="/repurposing" data-turbolinks="false") Drug Repurposing Hub
+                                        li
+                                            a(href="/proteomics" data-turbolinks="false") Proteomics
+                                        li
+                                            a(href="/morphology" data-turbolinks="false") Morphology
+                                         li
+                                             a(href="/tox" data-turbolinks="false") Tox
+
+                        .col-xs-6.col-md-12.hero-menu-item
+                            .modal-form-copy-bold
+                                | PARTNERING
+                            .row
+                                .col-xs-12.modal-form-copy
+                                    ul
+                                        li
+                                            a(href="/nominate" data-turbolinks="false")
+                                                | Nominate compounds and cell lines
+                                        li
+                                            a(href="/subscribe")
+                                                | Subscribe to CLUE
+                                        li
+                                            a(href="/careers")
+                                                | Join our team
+
+                        .col-xs-6.col-md-12.hero-menu-item
+                            .modal-form-copy-bold
+                             | SUPPORT
+                            .row
+                                .col-xs-12.modal-form-copy
+                                    a(href="/connectopedia" data-turbolinks="false") Connectopedia: Clue Knowledge Base
+
+                    .col-md-8(style="z-index: 0")
+                        .modal-form-copy-bold.pad-0 TOOLS
+                        .row.pad-top-0
+                            .col-xs-12
+                                hr.hero-menu(data-turbolinks="false")
+
+                        div#Apps(style="max-height:40ex;overflow-y:auto;overflow-x:hidden;" data-turbolinks="false")
+                        div.login-section(style="display:none;")
+                            div.please-login
+                                | Please Login
+                            div.login-text
+                                a.loginFromMenuModal
+                                    |Login
+                                |&nbsp;with your clue.io account
+                            div.login-text to access the Tools
+                .row
+                    .col-xs-12
+                        .flex-center
+                            div#menu-hotkey-hint

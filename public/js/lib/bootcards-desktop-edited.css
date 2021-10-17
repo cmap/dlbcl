@@ -1,0 +1,59 @@
+.bootcards-list .form-group {
+  position: relative;
+  margin-bottom: 0; }
+  @media (min-width: 768px) {
+    .bootcards-list .form-group {
+      margin-bottom: 0; } }
+.bootcards-list form input,
+.bootcards-list .search-form input {
+  padding-left: 32px; }
+.bootcards-list form .btn,
+.bootcards-list .search-form .btn {
+  color: white; }
+
+a.list-group-item:before {
+  font-family: 'FontAwesome';
+  content: '';
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  font-size: 14px;
+  line-height: 14px;
+  margin-top: -7px;
+  color: #ccc; }
+
+#editModal .select2, #addModal .select2 {
+  width: 445px !important;
+}
+
+#addModal .select2-search__field {
+  width: 350px !important;
+}
+
+.modal-title {
+  text-align: center;
+}
+
+.control-label {
+  text-align: left !important;
+}
+
+#resulttextadd, #resulttextedit {
+  color: red;
+  display: none;
+  text-align: center;
+}
+
+.bootcards-container.push-right, #editModal, #addModal, .list-group-item, li, .list-group-item-heading {
+  font-family: "Open Sans", Arial, sans-serif !important;
+  font-size: 14px !important;
+}
+
+.modal-title {
+  font-family: "Open Sans", Arial, sans-serif !important;
+  font-size: 18px !important;
+}
+
+li {
+  color: black !important;
+}

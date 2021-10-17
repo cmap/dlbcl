@@ -1,0 +1,59 @@
+.scrollbar {
+
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        background: rgba(0,0,0,0.1);
+        border: 1px solid #ccc;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: linear-gradient(left, #fff, #e4e4e4);
+        border: 1px solid #aaa;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: #fff;
+    }
+    
+    ::-webkit-scrollbar-thumb:active {
+        background: linear-gradient(left, #22ADD4, #1E98BA);
+    }
+}
+
+
+/// Mixin to customize scrollbars
+/// Beware, this does not work in all browsers
+/// @author Hugo Giraudel
+/// @param {Length} $size - Horizontal scrollbar's height and vertical scrollbar's width
+/// @param {Color} $foreground-color - Scrollbar's color
+/// @param {Color} $background-color [mix($foreground-color, white, 50%)] - Scrollbar's color
+/// @example scss - Scrollbar styling
+///   @include scrollbars(.5em, slategray);
+@mixin scrollbars(
+    $size, 
+    $foreground-color, 
+    $background-color: mix($foreground-color, white,  50%)) {
+
+    // For Google Chrome
+    ::-webkit-scrollbar {
+        width:  $size !important; 
+        height: $size;
+    }
+  
+    ::-webkit-scrollbar-thumb {
+        background: $foreground-color;
+
+    }
+  
+    ::-webkit-scrollbar-track {
+        background: $background-color;
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    }
+  
+    // For Internet Explorer
+    body {
+      scrollbar-face-color: $foreground-color;
+      scrollbar-track-color: $background-color;
+    }
+  }

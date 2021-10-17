@@ -1,0 +1,345 @@
+#platemaptool {
+    h1 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        margin: 0 0 20px 0;
+        color: #F15A22;
+    }
+    h2 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0 0 20px 0;
+    }
+    h3 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 2px 0;
+    }
+    p {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 0 10px;
+    }
+    .legendCategory {
+        width: 120px;
+    }
+    .rightalign {
+        text-align: right;
+        width: 100px;
+        font-weight: 600;
+    }
+    #platelayout, #platelegend {
+        display: inline-block;
+        vertical-align: top;
+    }
+    #plateIntro {
+        width: 700px;
+    }
+    #platelayout {
+        width: 200px;
+    }
+    #platelegend {
+        width: 290px;
+    }
+    #platelegend div {
+        margin: 0 0 4px 0;
+    }
+    #platelegend svg, #platelegend p {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #platemapVis {
+        width: 500px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    input {
+        width: 80px;
+        border-radius: 0;
+        box-shadow: none;
+        display: block;
+        height: 16px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+    }
+    select {
+        width: 135px;
+        height: 30px;
+        font-size: 14px;
+        color: #555;
+    }
+    rect.bordered {
+        stroke: #bbb;
+        stroke-width: 3px;
+    }
+    text.mono {
+        font-size: 9pt;
+        font-family: "Open Sans", sans-serif;
+        fill: #aaa;
+    }
+
+    #platemapNums {
+        width: 700px;
+        margin-top: 0;
+        vertical-align: top;
+    }
+    .parameterGroupA, .parameterGroupB {
+        display: inline-block;
+        width: 106px;
+    }
+    .parameterGroupB {
+        margin-left: 10px;
+    }
+    .parameterGroupB select {
+        width: 106px;
+    }
+    .parameterGroupB .plateNumber::before {
+        position: absolute;
+        content: "\00d7";
+        top: 0;
+        left: -10px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #F15A22;
+    }
+    .plateNumber {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 10px;
+    }
+    .parameterGroupB .plateNumber {
+        position: relative;
+    }
+    .inputBox {
+        display: block;
+    }
+    .parameterGroupC {
+        width: 470px;
+        text-align: center;
+    }
+    #totalPlates {
+        text-align: center;
+        font-size: 24px;
+        font-weight: 700;
+        margin-top: 10px;
+        position: relative;
+        color: white;
+        padding: 2px 10px;
+        background-color: black;
+        display: inline-block;
+        border-radius: 2px;
+    }
+    #totalPlates::before {
+        position: absolute;
+        content: "=";
+        top: 0;
+        left: -40px;
+        font-size: 24px;
+        font-weight: 400;
+        color: #F15A22;
+    }
+
+    @media screen and (min-width: 720px) {
+        #platemapNums {
+            width: 190px;
+            display: inline-block;
+        }
+        .parameterGroupA, .parameterGroupB, .parameterGroupC {
+            display: inline-block;
+            width: 190px;
+            margin-left: 0;
+        }
+        .inputBox, .plateNumber {
+            display: inline-block;
+        }
+        .inputBox {
+            width: 106px;
+        }
+        .plateNumber {
+            margin-left: 40px;
+            text-align: right;
+        }
+        .parameterGroupB .plateNumber::before {
+            left: -20px;
+        }
+        .parameterGroupC {
+            text-align: right;
+            border-top: 1px solid black;
+            margin-top: 10px;
+        }
+        #totalPlates {
+            text-align: right;
+            margin-right: 20px;
+        }
+        #totalPlates::before {
+            left: -30px;
+        }
+    }
+}
+
+/*
+#platemaptool {
+    h1 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 24px;
+        font-weight: 400;
+        margin: 0 0 20px 28px;
+    }
+
+    h2 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 0 0 20px 28px;
+    }
+
+    h3 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin: 0 0 2px 0;
+        text-transform: initial;
+    }
+
+    h4 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 20px 0 5px 0;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    #inputs {
+        //margin: 0 0 20px 28px;
+    }
+
+    .inputDiv {
+        display: inline-block;
+        margin: 0 30px 0 0;
+    }
+
+    #platemapVis, #summaryContainer {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    #legend {
+        opacity: 0;
+
+        svg {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+        p {
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0 3px 0 0;
+            text-transform: initial;
+            font-weight: 400;
+            font-size: 14px;
+            font-family: "Open Sans", sans-serif;
+            line-height: initial;
+        }
+    }
+
+    #summary p {
+        display: block;
+        vertical-align: middle;
+        margin: 0;
+        text-transform: initial;
+        font-weight: 400;
+        font-size: 14px;
+        font-family: "Open Sans", sans-serif;
+        line-height: initial;
+        width: 150px;
+    }
+
+    rect.bordered {
+        stroke: #bbb;
+        stroke-width: 3px;
+    }
+
+    text.mono {
+        font-size: 9pt;
+        font-family: "Open Sans", sans-serif;
+        fill: #aaa;
+    }
+
+    input {
+        width: 80px;
+        border-radius: 0;
+        box-shadow: none;
+        display: block;
+        //height: 16px;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857143;
+        color: #555;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #ccc;
+    }
+
+    select {
+        width: 104px;
+        height: 30px;
+        font-size: 14px;
+        color: #555;
+    }
+
+    .btn {
+        user-select: none;
+        border-radius: 2px;
+        font-weight: 500;
+        font-family: "Istok Web", "Open Sans", sans-serif;
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        font-size: 10px;
+        margin: 0px 10px 8px 0px;
+    }
+
+    .btn:focus {
+        outline: 0;
+    }
+
+    .btn-primary {
+        background-color: #497fce;
+        color: white;
+        border: none;
+        padding: 5px 12px 5px 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+    }
+
+    .btn-primary:hover {
+        text-decoration: none;
+        background-color: #00C6F5;
+        border-color: #00C6F5;
+        color: white;
+    }
+
+    .btn-primary:active {
+        color: #fff;
+        background-color: #204d74;
+        border-color: #122b40;
+    }
+}
+*/

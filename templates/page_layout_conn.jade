@@ -1,0 +1,131 @@
+doctype
+html( lang="en" )
+    head
+        meta(charset='utf-8')
+        meta(http-equiv='X-UA-Compatible', content='IE=edge')
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name="google-site-verification" content="qpiygib7oAZsD4rfeIa2NrdI0CyHVN0MlNteNW4cmaI")
+        // Favicon
+        link(href="//clue.io/public/img/favicon.ico", rel="shortcut icon", type="image/x-icon")
+        link(href='https://fonts.googleapis.com/css?family=Istok+Web:400,700|Open+Sans:400,300,600,700|Roboto:400,100,300,500,700|Roboto+Condensed:400,300,700|Roboto+Slab:100,300,400,700|Source+Serif+Pro:400,600|Roboto+Mono:400,500' rel='stylesheet' type='text/css')
+        link(href='//clue.io/public/css/dist/clue.all.min.css', rel="stylesheet")
+        link(href='//clue.io/public/css/dist/clue.css', rel="stylesheet")
+
+        title#cluecmap Connectopedia
+
+    body
+        .container-fluid.header-container.navbar-fixed-top.col-xs-12(style="padding-left:0px;padding-right:0px;padding-top:-1px;")
+            .row(style="margin:0")
+                .col-xs-12#header-thin-bar(style="display:none")
+            .row(style="margin:0")
+                .col-xs-12#header-bar(style="padding-left:0;padding-right:0;")
+                    .col-xs-5.col-sm-6.col-md-9
+                        //Used in app header
+                        .flex#main-header-bar
+                            a(href="/")
+                                img(src="//clue.io/public/img/logos/banner-logo.svg" style="padding-right:5px;")
+                            span.clue_app.hidden-xs#header-app-location(style="display:none;")
+                                span#header-clue-app(style="display:none;") CLUE APP&nbsp;
+                                span.app_name#header-app-title(style="display:none")
+
+                    .col-xs-7.col-sm-6.col-md-3
+                        .flex-end
+                            .click-me#header-menu
+                                span.fa.fa-bars
+                                span#header-menu-label Menu
+                                    span.pipe |
+                            span
+                                span.click-me.header-login.not-loggedin#header-login
+                                span.click-me.fa.fa-angle-down.header-pop-down#header-pop-down(style="margin-left: -5px;display:none;")
+
+                            span#header-question
+                                //span(id="header-vertical-bar")
+                                a.fa.fa-question-circle-o.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus" style="padding-left:10px" accesskey="H")#help-dropdown-link
+                                //ul.dropdown-menu.dropdown-menu-right
+                                    include header-help-dropdown.jade
+        .container-fluid.static-page
+            .row
+
+            .row
+                //- add some spacing
+
+            .row
+                //- page TOC
+                .col-xs-12.col-md-push-8.col-md-3
+                    ul.nav.TOC#TOC-m1
+                        button.TOC-toggle(type="button" data-toggle="collapse" data-target=".TOC-items" data-spy="affix")
+                            i.fa.fa-arrow-right &nbsp
+                            span Jump to section
+                        .TOC-heading.collapse
+                            i.fa.fa-arrow-right &nbsp
+                            span Jump to:
+                        .TOC-items.collapse
+                            //temp solution for onclick
+                            a.nav-link.active(href="#TOC-m1" onclick="navClick(this)") Review of usage of the Connectivity Map
+                            a.nav-link(href="#inference" onclick="navClick(this)") Inference model
+                            a.nav-link(href="#protocol" onclick="navClick(this)") L1000 assay protocol
+                            a.nav-link(href="#validation" onclick="navClick(this)") L1000 assay validation
+                            a.nav-link(href="#infeval" onclick="navClick(this)") Evaluating gene inference
+                            a.nav-link(href="#1mprofile" onclick="navClick(this)") 1M profile L1000 Dataset details
+                            a.nav-link(href="#rawdata" onclick="navClick(this)") Data pre-processing: raw data to signatures
+                            a.nav-link(href="#connectiondatabase" onclick="navClick(this)") Tested Connection Dataset
+                            a.nav-link(href="#methods" onclick="navClick(this)") Analytical methods
+                //- main content
+                .col-xs-12.col-md-pull-3.col-md-offset-1.col-md-7
+                    .page-title.after-TOC Connectivity Map 2.0 resource guide
+                        //add content here
+
+
+            div.hidden-xs(style="height: 4rem")
+            div.visible-xs(style="height: 20px")
+
+        .footer
+            //Logos and Links
+            .row
+                //Logos
+                .col-sm-7.col-md-offset-1.col-md-6.col-lg-7
+                    .row
+                        .col-xs-10.col-sm-12.col-md-8(style="display:flex;")
+                            div(style="width:140px")
+                                a(href="http://www.broadinstitute.org")
+                                    img(src="//clue.io/public/img/logos/broad-logo-white.svg")
+
+                            div.pad-top-8(style="width: 130px; padding-left:16px;")
+                                a(href="http://www.broadinstitute.org/vis")
+                                    img(src="//clue.io/public/img/logos/skunkworks-logo.svg")
+                //Links - hidden-lg
+                .col-xs-11.col-sm-4.col-md-4
+                    .row.footer-menu
+                        .col-xs-4.col-md-offset-2
+                            .footer-title About
+                            a(href="clue") CLUE
+                            br
+                            a(href="team") Team
+                            br
+                            a(href="careers") Careers
+                            br
+                            a(href="acknowledgements") Acknowledgements
+
+                        .col-xs-6.col-sm-8.col-md-6
+                            .row
+                                .col-xs-8.col-sm-6.col-md-8
+                                    .footer-title Support
+                                    a(data-toggle='modal', data-target='#contactModal') Contact Us
+                                    br
+                                    a(href="/connectopedia" data-turbolinks="false") Connectopedia: Clue Knowledge Base
+                                    br
+                                    a(href="/office-hours" data-turbolinks="false") Office hours
+
+                                .col-xs-3
+                                    a(href="https://twitter.com/CMap_Broad")
+                                        i.fa.fa-twitter
+
+
+            //Copyright
+            .row.footer-copyright
+                .col-md-10.col-md-offset-1.hidden-xs
+                    | Copyright &copy; #{new Date().getFullYear()} Broad Institute. All rights reserved. <a href="privacy">Privacy</a> | <a href="terms">Terms of Use</a>
+                .col-md-10.col-md-offset-1.visible-xs
+                    | Copyright &copy; #{new Date().getFullYear()} Broad Institute. All rights reserved.
+                    wbr
+                    a(href="privacy") Privacy | <a href="terms">Terms of Use</a>

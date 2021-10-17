@@ -1,0 +1,30 @@
+// metadata card - ERROR
+
+include cards-layout.jade
+
+    // --------------- CARD HEADER ---------------
+    .metadata-card-header
+
+        .card-type
+            span.pert-info-pert-chip
+                .fa.fa-exclamation-triangle
+            | &nbsp;
+            span.value.pert-info-pert-type
+                | ERROR
+        .card-title-and-icon
+            .metadata-card-title
+                span#error_name ERROR
+
+        // Description
+
+        .description
+            span#error_description The card could not be retrieved
+
+    // ------------------------------------------
+
+    .metadata-section
+        span.label Stack Trace
+        span.value#error_trace
+
+    .metadata-section
+        .fa.fa-exclamation-triangle(style="width: 100%; font-size: 100px; text-align: center; color: #a94442")

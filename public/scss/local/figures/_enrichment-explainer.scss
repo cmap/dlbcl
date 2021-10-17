@@ -1,0 +1,204 @@
+#interactiveEnrichment {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    width: 750px;
+
+    p {
+        font-size: 13px;
+    }
+    #instructions p {
+        display: inline-block;
+        vertical-align: top;
+    }
+    .heading-noborder {
+        font-weight: 600;
+        margin: 0;
+    }
+    .heading-ex1, .heading-ex2, .heading-ex3 {
+        font-weight: 600;
+        margin: 0 0 0 5px;
+        position: relative;
+    }
+    #p1 {
+        width: 116px;
+    }
+    #p2 {
+        width: 280px;
+    }
+    #p3 {
+        width: 200px;
+    }
+    #enrichmentLeft {
+        display: inline-block;
+        width: 80px;
+        vertical-align: top;
+        margin-right: 30px;
+    }
+    #enrichmentMiddle {
+        display: inline-block;
+        width: 500px;
+        vertical-align: top;
+    }
+    #enrichmentRight {
+        display: inline-block;
+        width: 100px;
+        vertical-align: top;
+    }
+    .enrichmentResult {
+        height: 182px;
+        margin-top: 40px;
+    }
+    #queryGeneContainer {
+        display: inline-block;
+        width: 80px;
+        cursor: pointer;
+        margin-bottom: 10px;
+    }
+    .queryGene {
+        display: inline-block;
+        text-align: center;
+        padding: 3px;
+        width: 20px;
+        margin: 3px;
+        border: 1px dashed #c6961e;
+        background-color: white;
+    }
+    .queryGene.selectedGene {
+        border: 1px solid #c6961e;
+        background-color: #f9f4c7;
+    }
+    #sig_0, #sig_1, #sig_2 {
+        position: relative;
+    }
+    .heading-ex1::before {
+        content: "";
+        background-color: red;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -10px;
+        z-index: -1;
+    }
+    .heading-ex2::before {
+        content: "";
+        background-color: dodgerblue;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -10px;
+        z-index: -1;
+    }
+    .heading-ex3::before {
+        content: "";
+        background-color: limegreen;
+        width: 5px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: -10px;
+        z-index: -1;
+    }
+    .bar {
+        stroke: #c6961e;
+        stroke-width: 1px;
+        stroke-dasharray: 3;
+        fill: white;
+    }
+    .bar.selectedBar {
+        stroke-dasharray: 100%;
+        fill: #f9f4c7;
+    }
+
+    .arrowContainer {
+        height: 110px;
+        display: inline-block;
+        vertical-align: bottom;
+        padding-right: 8px;
+    }
+    .arrow {
+        position: relative;
+        box-sizing: border-box;
+        width: 30px;
+        display: inline-block;
+    }
+    .arrow-01 {
+        position: absolute;
+        width: 33%;
+        top: -3px;
+        right: -2px;
+        transform: rotate(45deg);
+        border: 2px solid #b3b3b3;
+    }
+    .arrow-02 {
+        position: absolute;
+        width: 33%;
+        top: 3px;
+        transform: rotate(-45deg);
+        right: -2px;
+        border: 2px solid #b3b3b3;
+    }
+    .arrow-03 {
+        position: absolute;
+        width: 94%;
+        top: 50%;
+        left: 0;
+        border: 2px solid #b3b3b3;
+    }
+
+    .btn {
+        /*margin-bottom: 8px;*/
+        user-select: none;
+        border-radius: 2px;
+        font-weight: 500;
+        /*font-size: 12px;*/
+        /*height: 25px;*/
+        font-family: "Istok Web", "Open Sans", sans-serif;
+        display: inline-block;
+        text-align: center;
+        /*white-space: nowrap;*/
+        vertical-align: middle;
+        touch-action: manipulation;
+        cursor: pointer;
+        background-image: none;
+        font-size: 10px;
+        margin: 0px 10px 8px 0px;
+    }
+    .btn:focus {
+        outline: 0;
+    }
+    .btn-primary {
+        background-color: #497fce;
+        color: white;
+        border: none;
+        padding: 5px 12px 5px 12px;
+        text-transform: uppercase;
+        letter-spacing: 1.3px;
+    }
+    .btn-primary:hover {
+        text-decoration: none;
+        background-color: #00C6F5;
+        border-color: #00C6F5;
+        color: white;
+    }
+    .btn-primary:active {
+        color: #fff;
+        background-color: #204d74;
+        border-color: #122b40;
+    }
+
+    .axis path, .axis line {
+        fill: none;
+        shape-rendering: crispEdges;
+    }
+    .area {
+        fill: #c6961e;
+        opacity: 0.5;
+    }
+    .dot {
+        fill: #c6961e;
+        stroke: steelblue;
+        stroke-width: 1.5px;
+    }
+}

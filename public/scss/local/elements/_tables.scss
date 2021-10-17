@@ -1,0 +1,941 @@
+/*
+    1. jqueryui custom overrides
+    2. slickgrid custom styles
+        a. Wrappers
+        b. Borders
+        c. Backgrounds
+        d. Margins, paddings, and sizes
+        e. Text styling
+        f. Checkbox lists
+        g. Sorting indicator
+        h. Stacking
+        i. Icons
+        j. Custom columns
+    3. .roomy-table (uses slickgrid)
+    4. .table-simlpe-lines
+    5. .table-link-description
+    6. .table-code-libraries
+    7. old touchstone grid styles - deprecated?
+    8. slickgrid table in static page
+*/
+
+
+
+/* jqueryui */
+.ui-state-default, .ui-widget-content, .ui-widget-header, .ui-widget {
+    font-family: unset;
+    border: unset;
+    background: unset;
+    background-color: unset;
+    color: unset;
+    font-weight: unset;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus {
+    background-color: $gray2;
+    color: $gray12;
+}
+.ui-menu-item {
+    background-color: white;
+}
+.ui-menu-item:hover {
+    background-color: $gray2;
+    color: $gray12;
+}
+
+.ui-autocomplete.ui-front.ui-menu.ui-widget.ui-widget-content{
+    list-style: none;
+    padding-left: 0;
+    
+}
+.dropdown-checkbox {
+    margin-left: -16px !important;
+}
+.ui-helper-hidden-accessible {
+    display: none;
+}
+
+// SLICKGRID TABLE
+
+// Wrappers
+
+.slick-table {
+    font-family: $condensed;
+    //margin-top: 6px;
+    position: relative;
+}
+
+.slick-cell-wrapper {
+    max-width: 0;
+    overflow: hidden;
+    vertical-align: middle;
+    display: table-cell;
+    text-overflow: ellipsis;
+}
+
+.slick-table-wrapper {
+    display: table;
+    height: 100%;
+    padding-left: 2px;
+    width: 100%;
+}
+
+// Administrativa/Header: includes buttons and searchbar
+.slick-table-header {
+    font-family: $condensed;
+}
+
+// Borders
+
+/** Border around outside edge */
+.slick-bordered-table {
+    border: thin solid $gray6; //#4A4A4A;
+}
+//THIS SHOULD NOT BE GETTING APPLIED TO ALL TABLES!
+
+/** Border between rows */
+.slick-horizontal-divider-table,
+.slick-lined-rows-table,
+.history-grid .slick-table{
+    .slick-cell {
+        border-bottom: thin solid $gray2;
+    }
+
+}
+
+/** Force border between rows when collapsed */
+.slick-stacked .slick-cell {
+    border-bottom: 1px solid $gray2;
+}
+.slick-header {
+    border: unset;
+    border-bottom: thin solid $gray6;
+}
+.slick-header-column, .slick-header-column.ui-state-default {
+    border-right: thin solid $gray1;
+    border-left-color: $gray1;
+
+}
+.slick-header-column:last-child, .slick-header-column.ui-state-default:last-child {
+    border-right: none;
+}
+
+
+// Backgrounds
+
+.slick-cell {
+    background-color: inherit;
+}
+.slick-hover-table .slick-row:hover {
+    background-color: $gray2//#F7F9FA;
+}
+.slick-cell.selected {
+    background-color: #E3F2FF;
+    .slick-row.active & {
+        background-color: #E3F2FF;
+    }
+}
+.slick-viewport, .slick-table .slick-row {
+    background-color: white;
+}
+.slick-header, .slick-header-columns, .slick-table .ui-widget-content {
+    background-color: unset;
+}
+.slick-striped-table .slick-row.odd {
+    background-color: #fafafa;
+}
+.slick-header-column, .slick-header-column.ui-state-default {
+    background: none;
+    background-color: unset;
+}
+
+
+// Margins, paddings, and sizes
+
+.slick-viewport {
+    .grid-canvas:first-child {margin-top: 4px;}
+}
+.slick-cell {
+    margin: 0;
+    padding: 0px 2px 0px 4px;
+    /*white-space: normal !important;*/
+}
+.slick-row {
+    padding: 0px;
+    margin: 0px;
+}
+.slick-header-column, .slick-header-column.ui-state-default {
+    height: 24px;
+    padding: 0px;
+    padding-top: 2px;
+    padding-left: 2px;
+    vertical-align: middle;
+}
+.slick-column-name {
+    margin-left: 4px;
+}
+
+// Text styling
+
+.slick-row {
+    font-size: 13px;
+    line-height: 17px;
+    color: $gray11;
+}
+.slick-table-compact .slick-row {
+    font-size: 12px;
+}
+
+.slick-cell, .slick-column-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.slick-header-column, .slick-header-column.ui-state-default {
+    line-height: 24px;
+    color: $gray11;
+}
+.slick-header-column-sorted {
+    font-weight: 700;
+    font-style: normal;
+}
+.table-legs-align-center {
+    text-align: center;
+}
+
+
+// check box lists
+.slick-table-compact .slick-row {
+    font-size: 12px;
+}
+
+// Sorting indicator
+.slick-header-sortable, slick-header-column.ui-state-default {
+    display: flex;
+}
+.slick-column-name {
+    flex-shrink: 2;
+}
+.slick-sort-indicator {
+    float: none !important; //moves carret to the right
+    font-family: FontAwesome;
+    content: "\f0dc";
+    margin-top: 0;
+    margin-right: 4px;
+    margin-left: 4px;
+    flex-shrink: 0;
+    flex-basis: auto;
+    height: 100%;
+}
+.slick-sort-indicator::after {
+    content: "\f0dc";
+    color: white; //invisible content is needed to keep alignment
+    font-size: 11px;
+    
+    display: block;
+    overflow: visible;
+    margin-top: 0;
+    margin-right: 4px;
+    width:100%;
+}
+.slick-sort-indicator-desc, .slick-sort-indicator-asc {
+    color: $gray6;
+    background: none;
+    overflow: visible;
+    min-width: 8px;
+    flex-shrink: 0;
+}
+.slick-sort-indicator-desc {
+    padding-bottom: 4px;
+}
+.slick-sort-indicator-asc{
+    padding-bottom: 10px;
+}
+.slick-sort-indicator-desc::after {
+    content: "\f0d7";
+    color: $gray11;
+    font-size: 13px;
+    display: block;
+
+
+}
+.slick-sort-indicator-asc::after {
+    content: "\f0d8";
+    color: $gray11;
+    font-size: 13px;
+    vertical-align: middle;
+    display: block;
+}
+
+// Add Column button
+.slick-table {
+    .btn.btn-sm,
+    //.btn.btn-default.btn-xs,.light-btn-xs
+     {
+        margin: -1px -1px 0 0;
+        padding: 2px 6px 1px 6px;
+        border-radius: 0;
+        border-color: $gray6;
+        height: 26px;
+        width: 25px;
+    }
+}
+
+/*
+    .slick-sort-indicator-desc::after {
+        content: "\f0dd";
+        font-family: FontAwesome;
+        margin-right: 3px;
+        margin-left: 4px;
+        margin-top: -3px;
+    }
+    .slick-sort-indicator-asc::after {
+        content: "\f0de";
+        font-family: FontAwesome;
+        margin-right: 3px;
+        margin-left: 4px;
+        margin-top: -3px;
+        float: none;
+    }
+    
+
+*/
+
+
+// Stacking
+
+.slick-visible-not-stacked {
+    display: none;
+}
+
+.slick-visible-stacked {
+    display: none;
+}
+
+.slick-stacked .slick-visible-stacked {
+    display: block;
+}
+
+.slick-table:not(.slick-stacked) .slick-visible-not-stacked {
+    display: block;
+}
+
+// Icons
+.slick-cell-wrapper {
+    .glyphicon {
+        line-height: unset;
+        top: 1.2px;
+    }
+    span > input[type=checkbox] {
+        margin: 0;
+    }
+    
+}
+
+// Custom columns
+
+.clmn-nondragabble.slick-header-column.ui-state-default {
+    border-right: none;
+}
+.check-clmn-header {
+    border-right: none;
+}
+.check-clmn-cells {
+    .slick-table-wrapper .slick-cell-wrapper {
+        span input {
+            margin-top: 4px;
+        }
+    }
+}
+.perttype-clmn-header[style] {
+    overflow: visible;
+    width: 40px;
+}
+.perttype-clmn-header {
+    .slick-column-name {
+        overflow: visible;
+        width: 40px;
+        margin: -5px;
+    }
+    .slick-sort-indicator{
+        margin-left: 6px;
+    }
+}
+
+.rank-clmn-header {
+
+}
+.rank-clmn-cells {
+    padding-right: 12px !important;
+}
+
+
+//--------------------------------------------
+
+// ROOMY TABLE
+
+.roomy-table {
+    height: 75vh !important;
+    .slick-table-header {
+        padding-bottom: 3px;
+    }
+    .slick-header, .slick-header-column, .slick-header-column.ui-state-default {
+        font-size: 12px;
+        color:$gray6;
+        border-right: none;
+        border-bottom-color: $gray3;
+
+
+        
+    }
+    .slick-header-column-sorted {
+        color: $gray11 !important;
+    }
+    // Table Widths
+    
+    
+    .rmtb-icon-clmn {} // for stars, checkboxes, folder and file icons
+    .rmtb-name-clmn {
+        font-size: 15.5px;
+        padding-left: 10px;
+        &.ui-state-default.slick-header-column.slick-header-sortable.ui-sortable-handle {
+            $w: calc(100% - 1000px);
+            width: calc(.27*#{$w})!important;
+        }
+        & *.slick-cell-wrapper {
+            text-overflow: ellipsis;}
+    }
+    .rmtb-description-clmn {
+        font-size: 13px;
+        padding-right: 10px;
+        padding-left: 10px;
+        &.ui-state-default.slick-header-column.slick-header-sortable.ui-sortable-handle {
+            
+            $w: calc(100% - 1000px);
+            width: calc(.46*#{$w})!important;
+        }
+        & * .slick-cell-wrapper {
+            text-overflow: unset;
+            word-wrap: normal;
+            overflow: auto;
+            white-space: normal;
+        }
+    }
+    .rmtb-details-clmn {
+        font-size: 11px;
+        line-height: 13px;
+        text-align: center;
+        &.ui-state-default.slick-header-column.slick-header-sortable.ui-sortable-handle {
+            $w: calc(100% - 1000px);
+            width: calc(.135*#{$w})!important;
+            padding-top: 8px;
+        }
+        & *.slick-cell-wrapper {
+            text-overflow: unset;
+            word-wrap: normal;
+            overflow: auto;
+            white-space: normal;
+        }
+    }
+    
+    
+
+    .slick-header-columns.ui-sortable {
+        //width: ($rm-table-width) + 1000px;
+    }
+
+    .slick-cell {
+        padding-left: 10px;
+        padding-right: 10px;
+        //this is a horrible way to set column widths as it doesnt allow for window resizing and is a nightmare to set up. Need to redo!
+        &.l0.r0 {
+            //left: unset !important;
+            right:unset !important;
+            width: 27%;
+        }
+        &.l1.r1 {
+            left: 27% !important;
+            right:unset !important;
+            width: 46%;
+        }
+        &.l2.r2 {
+            left: 73% !important;
+            right:unset !important;
+            width: 13.5%;
+            //right: 130px !important; //130px
+        }
+        &.l3.r3 {
+            left: 85% !important;
+            &::first-letter {text-transform: capitalize;}
+            
+        }
+    }
+    
+    .slick-row .ui-state-default, .ui-widget-content, .ui-widget-header, .ui-widget{
+        border-bottom: solid 1px $gray2;
+    }
+    .slick-row .ui-state-default:hover, , .ui-widget-content:hover {
+        background-color: $gray2;
+    }
+    .rmtb-subfolder-tr {} // row class for use in Transfer
+}
+
+
+
+
+
+
+//  SIMPLE LINES TABLE
+
+.table-simple-lines {
+    width: 100%;
+    font-family: $sans;
+    margin-bottom: 20px;
+    .code-box {
+        border: none;
+    }
+    tr{
+        height: 36px;
+        border-bottom: solid 1px $gray3;
+        //- &:first-child {
+            //- border-top: solid 1px $gray3;
+        //- }
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+    thead th{
+        //color: $section-color;
+        font-weight: 500;
+        font-size: 16px !important;
+        padding-right: 15px;
+        padding-left: 5px;
+        //background-color: $section-color;
+        //color: white;
+        tr {
+            border-bottom-color: $gray6;
+
+        }
+    }
+    td {
+        display: table-cell;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 12.5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        p {
+            font-family: $sans;
+            font-size: 12.5px;
+            line-height: 1rem;
+        }
+        * {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        a.btn, button.btn {
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+    }
+    tfoot {
+        tr {
+            //border:none;
+        }
+        th {
+            padding-left: 5px;
+            padding-right: 5px;
+            
+            font-weight: 600;
+        }
+    }
+}
+
+.table-link-description {
+    td {
+        font-size: 14px;
+        vertical-align: top;
+    }
+    td:first-child {
+        width: 33%;
+        strong {
+            
+        }
+    }
+    tr:last-child {
+        border-bottom: none;
+    }
+}
+.table-figure-link-description {
+    td {
+        font-size: 14px;
+        vertical-align: top;
+    }
+    td:first-child {
+        width: 0;
+        padding: 0;
+        @media (min-width: $screen-sm-min) {
+            width:10%;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+        }
+        img {
+            display: none;
+            //for replacing with icon on mobile
+            @media (min-width: $screen-sm-min) { 
+                display: block;
+                border: solid 1px $gray1;
+                width: 100%;
+            }
+        }
+        }
+    td:nth-child(2) {
+        width:33%;
+        i.fa.fa-bar-chart {
+            //for replacing with icon on mobile
+            @media (min-width: $screen-sm-min) {
+                display: none;
+            }
+        }
+        }
+    tr:last-child {
+        border-bottom: none;
+    }
+}
+.table-code-libraries {
+    td:first-child {
+        min-width: 130px;
+    }
+    td:nth-child(2) {
+        min-width: 480px;
+        padding-right: 20px;
+    }
+    td:nth-child(3) {
+        width: 100px;
+        margin-left: 15px;
+    }
+    td:nth-child(4) {
+        width: 230px;
+        margin-left: 15px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// _______________________________________________________
+
+// Deprecated?
+
+    #touchstone_table_header {
+        position: relative;
+        padding-top: 2px;
+
+        display: inline-block;
+        overflow: hidden;
+
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 13px;
+        font-weight: 700;
+
+        vertical-align: middle;
+        line-height: 24px;
+
+        width: 100%;
+        height: 24px;
+
+        border: thin solid #4A4A4A;
+
+        color: #4A4A4A;
+        /*background-color: rgba(75, 242, 83, 0.24);*/
+
+    }
+
+    #touchstone_table_header span {
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+
+    #touchstone_table, #connection-table {
+        //height: $table-height;
+        .slick-table, .slick-viewport {
+            width: $table-width !important;
+        }
+    }
+    
+    @media (max-width: $screen-sm-min) {
+        .app-table-container {
+            //height: calc(100vh - 376px) !important;
+            height: calc(100vh - 326px) !important;
+        }
+        #touchstone_table, #connection-table {
+            height: calc(100vh - 400px) !important;
+            //height: calc(100vh - 180px) !important;
+            
+        }
+    }
+    @media (min-width: $screen-sm-min) {
+        .app-table-container {
+            height: calc(100vh - 145px) !important;
+        }
+        #touchstone_table, #connection-table {
+            //height: calc(100vh - 150px) !important;
+            height: calc(100vh - 220px) !important;
+            
+        }
+    }
+   
+    @media screen and (min-width: 620px) and (max-width: 768px) {
+        #touchstone_table, #connection-table {
+            //width: 300px;
+            //$table-height: 628px;
+        }
+        #touchstone_table_header, .slick-table-header {
+            $table-height: 300px;
+        }
+    }
+    @media screen and (max-width: 620px) {
+        //.push-down-xxs {
+            //width:100%;
+            //padding-top:15px;
+        //}
+        
+        #touchstone_table, #connection-table {
+            //$table-height: calc(100vw - 200px);
+        }
+        #touchstone_table_header, .slick-table-header {
+            width: 100%;//300px;
+        }
+    }
+
+    .tableview {
+        overflow-y: auto;
+        width:100%;
+    }
+
+    .tableview-row {
+
+        display: table-row;
+
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+
+
+        width: 100%;
+        height: 21px;
+
+        vertical-align: middle;
+        line-height: 17px;
+        padding-top: 3px;
+
+        color: #4A4A4A;
+
+        background-color: #ffffff;
+
+    }
+
+    .tableview-row:hover,
+    .tableview-row:focus,
+    .tableview-row:active  {
+        /*cursor: pointer;*/
+        cursor: default;
+        background-color: #efefef;
+    }
+
+    .tableview-row a {
+        color: #4A4A4A;
+    }
+
+    .tableview-row a:hover,
+    .tableview-row a:focus,
+    .tableview-row a:active  {
+        font-weight: 700;
+    }
+
+    .tableview-row-checkbox {
+        display: table-cell;
+
+        height: 17px;
+        min-width: 32px;
+        max-width: 32px;
+
+        vertical-align: top;
+        padding-top: 1px;
+        line-height: 17px;
+
+        /*background-color: rgba(0, 185, 242, 0.11);*/
+    }
+
+    .tableview-row-pert-chip {
+
+        display: table-cell;
+
+        height: 17px;
+        min-width: 32px;
+        max-width: 32px;
+
+        vertical-align: middle;
+
+        line-height: 17px;
+    }
+
+    .tableview-row-pert-chip > div {
+        cursor: pointer;
+    }
+
+    .tableview-row-pert-chip > .glyphicon {
+        padding-top: 3px;
+        vertical-align: baseline;
+    }
+
+    .tableview-row-brd {
+        display: table-cell;
+
+        height: 17px;
+        min-width: 34px;
+        max-width: 34px;
+
+        vertical-align: baseline;
+        line-height: 17px;
+
+    }
+
+    .tableview-row-brd > div {
+        cursor: default;
+    }
+
+    .tableview-row-iname {
+        display: table-cell;
+
+        height: 17px;
+
+        min-width: 108px;
+        max-width: 108px;
+
+        vertical-align: baseline;
+        line-height: 17px;
+
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-left: 0;
+        margin-right: 0;
+        padding-top:2px;
+
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+
+    }
+
+    .tableview-row-iname > div {
+        cursor: pointer;
+    }
+
+    .tableview-row-description {
+        display: table-cell;
+
+        height: 17px;
+
+        min-width: 460px;
+        max-width: 460px;
+
+        vertical-align: baseline;
+        line-height: 17px;
+
+        padding-left: 4px;
+        padding-right: 5px;
+        margin-left: 0;
+        margin-right: 0;
+
+        white-space: nowrap;
+
+    }
+
+    .tableview-row-description > div {
+        cursor: pointer;
+    }
+
+    .tableview-row-description span {
+        text-overflow: ellipsis;
+        overflow: hidden;
+        display:table-cell;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+
+    .tableview-rowcount {
+        font-family: $condensed;
+        font-size: 13px;
+        padding: 2px 0 0 5px;;
+        display: inline-block;
+        line-height: 21px;
+        margin: 0;
+        vertical-align: middle;
+    
+    }
+
+// _____________________________________________________________________
+
+// slickgrid table in static page
+
+
+.static-page {
+    .slick-table-header {
+        display: none;  // TEMPORARY! WHAT IF WE NEED IT? HIDE IT WITH JAVASCRIPT
+    }
+
+
+    .slick-table.ui-widget, .slick-bordered-table {
+        font-family: $sans;
+        border: none !important;
+        border-bottom: solid 1px #ccc;
+    }
+    .slick-header {
+        height: 36px;
+    }
+    .slick-header-column, .slick-header-column.ui-state-default {
+        border: none;
+        height: 36px;
+    }
+    .slick-column-name {
+        font-size: 16px;
+        font-weight: 400;
+        height: 36px;
+        line-height: 34px;
+        margin: 0;
+        padding: 8px 2px;
+    }
+    .slick-row {
+        border-bottom: solid 1px #ccc;
+    }
+    .slick-row, .slick-table-wrapper, .slick-cell {
+        //height: 36px !important;
+        //line-height: 34px;
+        // HEIGHT IS SET WITH JAVASCRIPT
+    }
+}

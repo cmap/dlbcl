@@ -1,0 +1,9 @@
+if(css_class)
+    - var head_class = "metadata-card-vert-container " + css_class
+else
+    - var head_class = "metadata-card-vert-container error-card"
+
+
+div
+    div(class="#{head_class}")
+        block content

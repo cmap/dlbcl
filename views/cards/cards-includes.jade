@@ -1,0 +1,20 @@
+block append scripts
+    script(src='//d3js.org/d3.v3.min.js')
+    script(src="//cdn.plot.ly/plotly-latest.min.js")
+    script(src='/public/js/local/cards/dose_timepoint.js')
+    script(src='/public/js/local/cards/introspect.js')
+    script(src='/public/js/local/cards/class-celllines.js')
+    script(src='/public/js/local/cards/class-heatmap.js')
+    script(src='/public/js/local/cards/class-summary.js')
+    script(src='/public/js/lib/d3.layout.chord.sort.js')
+    script(src='/public/js/local/cards/cards.js')
+    script(src="//cdnjs.cloudflare.com/ajax/libs/jquery.pjax/2.0.1/jquery.pjax.min.js")
+    script(src='/public/js/lib/jquery-ui.min.js')
+    script(src='//cdnjs.cloudflare.com/ajax/libs/select2/4.0.2/js/select2.min.js' integrity="sha256-04G2Dnj+apKwEmFACpe+2vz/yh4YM6+FDQ2qhLyQX/s=" crossorigin="anonymous")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js")
+
+block append styles
+    link(href="/public/css/lib/jquery-ui.min.css" rel="stylesheet")
+    link(href='/public/css/local/introspect.css', rel='stylesheet')
+    link(href='/public/css/local/class-card.css', rel='stylesheet')
+    link(href='/public/css/local/cards/cards.css' rel="stylesheet")

@@ -1,0 +1,174 @@
+extends ../../templates/page_layout.jade
+
+block content
+    .loading-box.cell-app-page#loading
+        .loading
+            img(src="//assets.clue.io/clue/public/img/clueLoadingAnimation.gif")
+            .load-message-title
+                | Loading…
+
+    style.
+        #cardsection_dev h6 {
+            font-size: 24px !important;
+            font-weight: bold !important;
+            font-family: "Open Sans", Arial, sans-serif !important;
+        }
+
+        #cardsection_dev h7 {
+            font-size: 16px !important;
+            font-weight: bold !important;
+            font-family: "Open Sans", Arial, sans-serif !important;
+        }
+
+        #cardsection_dev a {
+            color: #007bff !important;
+        }
+
+        .bg-clue {
+            background-color: #cbe9f2 !important;
+        }
+    #app-tabs-nav.app-tabs-nav-wrapper
+        ul.nav.nav-tabs.compact.morpheus-nav.ui-sortable.app-tabs-light
+            li.morpheus-tab-addon.dropdown.pull-right.tabdrop(style='')
+                .btn-group
+                    button.morpheus-drop-tab-toggle.btn.btn-link.dropdown-toggle(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                        span.fa.fa-angle-double-down
+                    ul.dropdown-menu.dropdown-menu-right(role='menu')
+                        li.active
+                            a#dashboard_tab_id(data-link='morpheus-tab1', data-toggle='tab', href='#morpheus-tab1') Dashboard
+                        li
+                            a#umap_explorer_tab_id(data-link='morpheus-tab2', data-toggle='tab', href='#morpheus-tab2') UMap Explorer
+                        li
+                            a#connectivity_tab_id(data-link='morpheus-tab3', data-toggle='tab', href='#morpheus-tab3') View Correlation
+                        li
+                            a#selectivity_tab_id(data-link='morpheus-tab4', data-toggle='tab', href='#morpheus-tab4') View Selectivity
+                        li
+                            a#download_tab_id(data-link='morpheus-tab5', data-toggle='tab', href='#morpheus-tab5') Downloads
+
+            li.morpheus-sortable.active(role='presentation')
+                a(data-morpheus-rename='dashboard', data-toggle='tab', data-link='morpheus-tab1', href='#morpheus-tab1', aria-expanded='true')
+                    | Dashboard
+                    span.fa.fa-home.home-icon
+                    i(style='color:black;')
+                    button.close(style='font-size: 18px;', type='button', aria-label='Close', data-target='#morpheus-tab1')
+                        span(aria-hidden='true') ×
+            li.morpheus-sortable(role='presentation')
+                a(data-morpheus-rename='umap_explorer', data-toggle='tab', data-link='morpheus-tab2', href='#morpheus-tab2')
+                    | UMap Explorer
+                    span.fa.fa-home.home-icon
+                    i(style='color:black;')
+                    button.close(style='font-size: 18px;', type='button', aria-label='Close', data-target='#morpheus-tab2')
+                        span(aria-hidden='true') ×
+            li.morpheus-sortable(role='presentation')
+                a(data-morpheus-rename='Correlation', data-toggle='tab', data-link='morpheus-tab3', href='#morpheus-tab3')
+                    | Correlation
+                    span.fa.fa-home.home-icon
+                    i(style='color:black;')
+                    button.close(style='font-size: 18px;', type='button', aria-label='Close', data-target='#morpheus-tab3')
+                        span(aria-hidden='true') ×
+            li.morpheus-sortable(role='presentation')
+                a(data-morpheus-rename='Selectivity', data-toggle='tab', data-link='morpheus-tab4', href='#morpheus-tab4')
+                    | Selectivity
+                    span.fa.fa-home.home-icon
+                    i(style='color:black;')
+                    button.close(style='font-size: 18px;', type='button', aria-label='Close', data-target='#morpheus-tab4')
+                        span(aria-hidden='true') ×
+            li.morpheus-sortable(role='presentation')
+                a(data-morpheus-rename='Downloads', data-toggle='tab', data-link='morpheus-tab5', href='#morpheus-tab5')
+                    | Downloads
+                    span.fa.fa-home.home-icon
+                    i(style='color:black;')
+                    button.close(style='font-size: 18px;', type='button', aria-label='Close', data-target='#morpheus-tab5')
+                        span(aria-hidden='true') ×
+
+    .container-fluid.app-container-fluid.cell-app-page.bordered-app-content#outputContainer
+        .clue-app-margin-top
+
+        div#tab_census_db(data-clue-tab='annotations', style='display: none')
+        div#connectivity_ready_id(data-connectivity-ready='', style='display: none')
+        div#correlation_ready_id(data-correlation-ready='', style='display: none')
+
+
+        #img_container.container(style='display: none')
+            button.closebtn.close(type="button"  aria-label="Close" style="background: black;color: white;")
+                span(aria-hidden="true")
+                    | &times; Close
+            figure(style='width:100%')
+                img#expandedImg(src='', title='', alt='')
+                figurecaption#imgtext Fusion heat map
+
+        div#app-content
+            .tab-content.app-tabs-content
+                #morpheus-tab1.tab-pane.active(tabindex='0', style='outline:0;cursor:default;', role='tabpanel')
+                    .row.pad-top-10
+                        .col-md-2.col-lg-2.col-sm-6.col-xs-12(style='max-width: 583px; padding-right: 15px;')
+                        .col-md-7.col-lg-7.col-sm-12.col-xs-12
+                    .row.pad-top-10
+                        #c1.filter-group.col-md-2.col-lg-2.col-sm-6.col-xs-12(style='max-width: 583px; padding-right: 15px;')
+
+                        #c2.col-md-7.col-lg-7.col-sm-12.col-xs-12
+
+                        #c3.col-md-3.col-lg-3.col-sm-6.col-xs-12
+
+                #morpheus-tab2.tab-pane(tabindex='1', style='outline:0;cursor:default;', role='tabpanel')
+                    .col-md-1.col-lg-1.col-sm-6.col-xs-12
+                    .col-md-10.col-lg-6.col-sm-12.col-xs-12
+                        #umap_output.umap-output
+
+                #morpheus-tab3.tab-pane(tabindex='0', style='outline:0;cursor:default;', role='tabpanel')
+                    .clue-app-margin-top
+                    .row.pad-top-12.hidden-xs
+                    .row#correlation-morpheus
+                #morpheus-tab4.tab-pane(tabindex='0', style='outline:0;cursor:default;', role='tabpanel')
+                    .clue-app-margin-top
+                    .row
+                        | &nbsp; <h3>Some text goes here if you want</h3>
+                    .row.pad-top-12.hidden-xs
+                    .row#selectivity-morpheus
+                #morpheus-tab5.tab-pane(tabindex='0', style='outline:0;cursor:default;', role='tabpanel')
+                    .clue-app-margin-top
+                    .row.pad-top-12.hidden-xs
+                    .row#download_data
+                        #c5.filter-group.col-md-1.col-lg-1.col-sm-6.col-xs-12(style='max-width: 583px; padding-right: 15px;')
+                        #c6.col-md-8.col-lg-8.col-sm-12.col-xs-12
+                        #c7.col-md-3.col-lg-3.col-sm-6.col-xs-12
+
+
+
+
+
+block append scripts
+    // May need to import additional scripts related to cell card visuals
+    link(href='/public/css/local/touchstone/touchstone.css', rel="stylesheet")
+    link(href='/public/css/local/dlbcl/prism-dashboard.css', rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700" rel="stylesheet")
+    style.
+        @media (min-width: 1200px) {
+            .modal-xlg {
+                width: 90%;
+            }
+        }
+    script(src="/public/js/local/dlbcl/DLBCLConstants.js")
+    script(src="/public/js/local/utils/clue.filter.js")
+    include ../cards/cards-includes.jade
+    script(src='//cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.2.0/js/ion.rangeSlider.min.js', integrity='sha256-GGaHen9mYvJ38qyPttMXoqnMfEGpc5QgjPcWp5u4oBM=', crossorigin='anonymous')
+    script(src='/public/js/lib/d3.v4.min.js')
+    script(src='/public/js/local/tsne/lasso-v4.js')
+    script(src="/public/js/local/utils/CLUE-cache.js")
+    script(src="/public/js/lib/morpheus.js")
+    script(src="/public/js/local/dlbcl/umap.js")
+    script(src="/public/js/local/dlbcl/dlbcl-download-card.js")
+    script(src="/public/js/local/dlbcl/dlbcl-downloads.js")
+    script(src="/public/js/local/dlbcl/dlbcl-dashboard-card.js")
+    script(src="/public/js/local/dlbcl/volcano.js")
+    script(src="/public/js/local/dlbcl/initialize.js")
+    script(src="/public/js/lib/d3.v4.min.js")
+    script(src="/public/js/local/cards/cards.js")
+    script(src="/public/js/local/dlbcl/dlbcl-dashboard.js")
+    script(src="/public/js/local/dlbcl/plot1.js")
+    script(src="/public/js/local/dlbcl/plot2.js")
+    script(src="https://d3js.org/d3.v7.min.js")
+
+
+block footer
+    include ../includes/footerapp.jade

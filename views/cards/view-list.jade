@@ -1,0 +1,96 @@
+div#list_card(style="display: none")
+    div.metadata-card-vert-container.build
+        block content
+            #card_content
+
+                // --------------- CARD HEADER ---------------
+                .metadata-card-header
+                    // Card type and symbol
+                    //need to stop the icon from inheriting the color, can't overwrite
+                    button#edit_button.btn.pull-right(onclick="addListEntry(event, 'LAUNCH_EDIT')")
+                        i.fa.fa-pencil
+                        span Edit
+                    .card-type
+                        #list_type
+                        //| &nbsp;
+                        //span.value.pert-info-pert-type#list_group
+                    .card-title-and-icon
+                        .metadata-card-title
+                            #list_name
+                            //| &nbsp;
+                            //span.value.pert-info-pert-type#list_group
+
+                    //.pert-info-pert-type#list_group
+
+                    // Description
+
+                    .description
+                        span.description-full#list_description
+
+                    //.metadata-section-h1
+                    //    | List Details
+
+                    .itemtype.addmargintop
+                        | Collection: &nbsp;
+                        span.value.pert-info-pert-type#list_collection
+
+                    .itemtype.addmargintop.addmarginbottom
+                        | Tags: &nbsp;
+                        list.value#list_tags
+
+                // ------------------------------------------
+                .metadata-section
+                    //.metadata-section-h1
+                    //    | List Details
+                    //.itemtype.addmargintop
+                    //    | Tags
+                    //    list.value#list_tags
+                    .itemtype.addmargintop
+                        //| Content
+                        list.value#list_content
+                    .label
+                        | Last modified&nbsp;
+                        span.value#list_modified
+            #card_form(style='display:none')
+                div.pad-bottom-12
+                    i
+                        | File types supported: .tsv, .txt, .grp, and .gmt.
+                div
+                    .col-xs-12.resulttextfail(style="color: red")
+                    .col-xs-12.resulttextsuccess(style="color: green")
+                div
+                    .form-group
+                        .col-xs-12
+                            input#editID.form-control(type='hidden')
+                            .help-block.with-errors
+                    .form-group
+                        .col-xs-12
+                            select#editCollection.form-control.collectionSelect
+                                option
+                            .help-block.with-errors
+                    .form-group
+                        .col-xs-12
+                            input#editName.form-control(type='text' placeholder="Name")
+                            .help-block.with-errors
+                    .form-group
+                        .col-xs-12
+                            select#editType.form-control.typeSelects(placeholder="Type")
+                                option
+                            .help-block.with-errors
+                    .form-group
+                        .col-xs-12
+                            textarea#editDescription.form-control(placeholder="Description")
+                    .form-group
+                        .col-xs-12(style="margin-top: 10px")
+                            select#editTags.form-control.tagSelects(placeholder="Tags" multiple)
+                    .form-group
+                        .col-xs-12(style="margin-top: 10px; margin-bottom: 5px")
+                            div Enter a list of items (one entry per line), or drag and drop a single-column file to load data from it.  GMT files cannot be loaded here.
+                            textarea#editData.form-control.drag-over-form(placeholder="Data" style="min-height: 100px" ondrop='drop_handlerEdit(event);' ondragover='Utils.dragover_handler(event);' ondragend='Utils.dragend_handler(event);')
+                div
+                    .btn-group.pull-left(style="margin-top: 10px")
+                        button#cancelListEdit.btn.btn-secondary(onclick="addListEntry(event, 'CANCELEDIT')") Cancel
+                    .btn-group.pull-right(style="margin-top: 10px")
+                        button#saveListEdit.btn.btn-primary(onclick="addListEntry(event, 'EDIT')") Save Changes
+
+

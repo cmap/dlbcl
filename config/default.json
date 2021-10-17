@@ -1,0 +1,85 @@
+{
+  "zendesk": {
+    "token": "XXXXXXXXXXX",
+    "username":"***********",
+    "uri": "https://connectivitymap.zendesk.com/api/v2"
+  },
+
+  "jwtTokenSecret":"Contact_CLUE_Admin",
+  "cookie_secret":"something_bogus",
+  "session_secret":"something_bogus",
+  "cookie_duration" : 86400000,
+  "clue": {
+      "ips": [
+      "mongo-dev.clue.io:27017"
+    ],
+    "database":"/clue"
+  },
+  "s3_config": {
+    "Only for dev":"Only for dev",
+    "s3_access_key": "Contact_CLUE_Admin",
+    "s3_secret_key": "Contact_CLUE_Admin"
+  },
+  "nodemailer_config": {
+    "ses_access_key": "Contact_CLUE_Admin",
+    "ses_secret_key": "Contact_CLUE_Admin"
+  },
+  "whitelist_db_key": "development",
+  "defaultRole": "CMAP_CORE",
+  "emailNotification": {
+    "to": "clue-admin@broadinstitute.org",
+    "from": "clue@broadinstitute.org",
+    "prefixSubject": "Development"
+  },
+
+  "api": {
+    "url": "https://dev-api.clue.io"
+  },
+  "organization": {
+    "name": "public",
+    "url": "clue.io",
+    "logo": ""
+  },
+  "slack":{
+    "clue_errors" :{
+      "username": "clue_errors",
+      "channel":"#ntf-clue-error-trace",
+      "web_hook":"bogus"
+    },
+    "macchiato_errors" :{
+      "username": "macchiato-errors",
+      "channel":"#ntf_macchiato_errors",
+      "web_hook":"bogus"
+    },
+    "clue_reg_failure" :{
+      "username": "registration_failure",
+      "icon_emoji": ":disappointed:",
+      "channel":"#ntf-clue-messages",
+      "web_hook":"bogus"
+    },
+    "clue_reg_success": {
+      "username": "registration_success",
+      "icon_emoji": ":simple_smile:",
+      "channel":"#ntf-clue-messages",
+      "web_hook":"bogus"
+    },
+    "clue_email_sent": {
+      "username": "clue_email",
+      "icon_emoji": ":mailbox_with_mail:",
+      "channel":"#ntf-clue-messages",
+      "web_hook":"bogus"
+    },
+    "clue_email_error": {
+      "username": "clue_email",
+      "icon_emoji": ":mailbox_with_no_mail:",
+      "channel":"#ntf-clue-messages",
+      "web_hook":"bogus"
+    },
+    "clue_slack_messages" :{
+      "username": "new_curation_event",
+      "icon_emoji": ":new:",
+      "channel":"#ntf-clue-messages",
+      "web_hook":"bogus"
+    }
+  }
+}

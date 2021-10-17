@@ -1,0 +1,43 @@
+.modal.fade#selected-signatures-modal(tabindex='-1', role='dialog', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content.white(style="max-width: 800px; border-radius:0; padding-bottom:32px;")
+			.container-fluid
+					.row.model-header
+						.col-xs-offset-10.col-xs-2
+							button.close(type='button', data-dismiss='modal')
+								.pad-top-8 &times;
+							
+			.modal-body
+				.container-fluid
+					.row
+						.col-xs-12
+							.title-copy
+								| Selected Signatures
+					.row.pad-top-8
+						.col-xs-12
+							.body-copy
+								| Click on a signature name to view its connections
+								| as a detailed list or evaluate connections for multiple
+								| selected signatures as a heatmap.
+					.row(style="height: 300px")
+						.col-xs-12
+							#selected-signatures-table(style="height: 256px")
+								
+					.row.pad-top-8.pad-left-15.margin-v-auto(style="display:flex;")
+						.body-copy
+							| View connections as:&nbsp;
+
+						#show-detailed-list-ss-modal
+							button.btn-send-to-app(type="button")
+								i.fa.fa-align-left 
+								span Detailed list
+
+						#show-heatmap-ss-modal.pad-left-5
+							button.btn-send-to-app(type="button")
+								i.fa.fa-th 
+								span Heatmap
+
+						//- #export-ss-modal.pad-left-5
+						//- 	button.btn.drk-btn-xs(type="button")
+						//- 		span &nbsp;Export
+

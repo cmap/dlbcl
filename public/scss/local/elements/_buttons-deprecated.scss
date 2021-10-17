@@ -1,0 +1,231 @@
+// Blue Button
+// Happy Sky blue button
+// Dark Button
+// Blue Button
+// Pink button
+
+// Blue-to-gray button
+// Gray Table Button 
+
+// Light Button
+
+.blue-btn {
+    border-radius:2px;
+    background-color: $link;
+    color: white;
+    border-style: none;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 25px;
+    padding-top: 4px;
+}
+.blue-btn:focus, .blue-btn:hover {
+    color:white;
+    background-color: $link-hover;
+}
+.blue-btn:active {
+    background-color: $link-hover;
+    //border-color: #204d74;
+}
+.blue-btn-xs {
+    border-style: none;
+    font-family: $istok;
+    letter-spacing: 1.21px;
+	margin-top: 1px;
+    height: 22px;
+    padding-top: 3px;
+    color:white;
+    
+    & + & {
+        margin-left: 8px;
+    }
+    
+}
+// Happy Sky blue button
+.happy-blue-btn {
+    border-radius:2px;
+    background-color: $happy-sky;
+    border-style: none;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 25px;
+    padding-top: 4px;
+}
+.happy-blue-btn:focus, .happy-blue-btn:hover {
+    color:white;
+    background-color: $link-hover;
+}
+.happy-blue-btn:active {
+    background-color: $link-hover;
+    //border-color: #204d74;
+}
+
+// Dark Button
+
+.drk-btn {
+    border-radius:2px;
+    background-color:rgb(1, 59, 74);
+    border-style: none;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    height: 25px;
+    padding-top: 5px;
+    color:white;
+    
+    &:hover,
+    &:focus,
+    &:active  {
+        background-color:$link-hover;
+        color: #ffffff;
+    }
+}
+.drk-btn-xs {
+	border-radius:2px;
+    background-color:rgb(1, 59, 74);
+    border-style: none;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.21px;
+	margin-top: 1px;
+    height: 22px;
+    padding-top: 3px;
+    color:white;
+    
+    &:hover,
+    &:focus,
+    &:active  {
+        background-color:$link-hover;
+        color: #ffffff;
+    }
+    
+    & + & {
+        margin-left: 8px;
+    }
+    
+}
+
+// Pink button
+.pink-btn-xs {
+    border-radius:2px;
+    background-color:rgb(252, 92, 94);
+    border-style: none;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 14px;
+    letter-spacing: 1.21px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:white;
+      white-space: normal;
+  
+    &:hover,
+    &:focus,
+    &:active  {
+      background-color:#ff3333;
+      color: #ffffff;
+    }
+      &:disabled {
+          border: 1px solid #7c7c7c;
+          background-color: #ffffff;
+          color: #7c7c7c
+      }
+  
+    & + & {
+      margin-left: 8px;
+    }
+  
+  }
+
+// Blue-to-gray button
+.blue-to-gray-btn-xs {
+    border-radius:2px;
+    background-color:rgb(1, 59, 74);
+    border-style: none;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 14px;
+    letter-spacing: 1.21px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color:white;
+    white-space: normal;
+
+    &:hover,
+    &:focus,
+    &:active  {
+        background-color:$link-hover;
+        color: #ffffff;
+    }
+    &:disabled {
+        border: 1px solid #7c7c7c;
+        background-color: #ffffff;
+        color: #7c7c7c
+    }
+
+    & + & {
+        margin-left: 8px;
+    }
+
+}
+
+// Gray Table Button
+.gray-table-btn-xs {
+    background-color: #dddddd;
+    color: #000000;
+    border: 1px solid #7c7c7c;
+    border-radius:2px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 14px;
+    letter-spacing: 1.21px;
+    padding: 0px 12px;
+    white-space: normal;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:disabled {
+        border: 1px solid #7c7c7c;
+        background-color: #ffffff;
+        color: #7c7c7c;
+    }
+
+    & + & {
+        margin-left: 8px;
+    }
+
+}
+
+// Light Button
+
+.light-btn {
+    font-family: $sans;
+    border-color: $link; //rgb(73, 127, 206); 
+	color: $link; //rgb(73, 127, 206);
+    background-color: white;
+    border-width: 1px;
+    border-style: solid;
+}
+.light-btn-xs{
+	
+	font-weight:400;
+    height: 22px;
+	padding: 1px 5px 1px 5px;
+	
+}
+.light-btn-xs:hover, .light-btn-xs:focus, .light-btn:hover, .light-btn:focus {
+	border-color: #497fce; 
+	color: #497fce;
+	background-color: #ddeafc;
+    border-style: solid;
+    text-decoration: none;
+}

@@ -1,0 +1,89 @@
+.proteomics {
+    .prot-title {
+        font-weight: 300;
+        font-size: 24px;
+        white-space: pre-line;
+        max-width: 560px;
+        color: #4b4b4b;
+    }
+    .prot-textblock {
+        line-height: 24px;
+        color:#4b4b4b;
+        white-space: pre-line;
+    }
+    .appimg {
+        width: 150px;
+        height: 150px;
+        margin: 0 0 20px 20px;
+    }
+    .add-space-btm {
+        margin-bottom: 20px;
+    }
+    .add-space-top {
+        margin-top: 10px;
+    }
+    .question-text {
+        color: #92278f;
+    }
+    .question-icon {
+        padding: 0 4px;
+    }
+    .prot-subheading {
+        white-space: nowrap;
+        font-weight: 700;
+        font-size: 16px;
+    }
+    hr {
+        border-top: 1px solid #E5E6E7;
+        margin-top: 10px;
+    }
+    .prot-link {
+        display: inline-block;
+        margin-right: 20px;
+    }
+    .prot-icon {
+        width: 40px;
+        margin-right: 6px;
+    }
+    .num {
+        color: $gray6;
+    }
+    .input-right {
+        margin-right: 10px;
+    }
+    .input-left {
+        margin-left: 20px;
+    }
+    label {
+        font-weight: 400;
+        margin-top: 10px;
+    }
+    .prot-query-name {
+        margin-left: 40px;
+    }
+    .prot-subtext {
+        font-size: 13px;
+        line-height: 24px;
+        color: #4b4b4b;
+        margin-top: 10px;
+    }
+    .prot-error {
+        line-height: normal;
+        color:#d0021b;
+        margin-bottom: 0;
+    }
+    #pqn {
+        max-width: 674px;
+        border-radius: 0;
+    }
+    #pq-result {
+        height: 25px;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+    @media (max-width: 767px) {
+        .prot-title, .prot-textblock, .prot-error {
+            max-width: 90%;
+        }
+    }
+}

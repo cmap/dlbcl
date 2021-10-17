@@ -1,0 +1,171 @@
+
+
+.homepage-header-blue {
+	color: #00B9F2;
+	font-weight: bold;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+.homepage-header-red {
+	color: #ED1C24;
+	font-weight: bold;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+#title div {
+	max-width: 700px;
+}
+
+#title, #faketitle {
+	font-weight: normal;
+	font-family: 'Open Sans', thin, sans-serif;
+	font-size: 1.96rem;
+	padding-top: 10px;
+	margin-bottom: 0.2rem;
+	line-height: 2.8rem;
+}
+
+#subtitle {
+	text-align: justify;
+}
+
+#fakesearchbar {
+	margin: auto;
+	//border-color: #00C6F5;
+	//border-width: 3px;
+	width: 100%;
+}
+
+#fakebutton {
+	color: white;
+	font-family: 'Open Sans', sans-serif;
+	width: 50%;
+	min-width: 175px;
+	margin-left: 25%;
+}
+
+#fakesearcharea {
+	text-align: center;
+	margin: 0 auto; 
+}
+
+#nav, #conn, #meta, #full_oekd_card, #full_cp_card, .slick-resizable-handle, .slick-table-header, #dynamicsearch {
+	display: none
+}
+
+#connectiontop, #connectionbottom {
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+#topten {
+	margin-bottom: 16px;
+}
+
+.slick-header {
+	font-weight: 100;
+	border-style: none;
+	border-top: 1px solid gray;
+}
+
+.slick-table {
+	border-style: none;
+}
+
+.slick-header-column, .slick-header-column.ui-state-default
+{
+	border-right: none;
+}
+
+.slick-cell {
+	border-top: 1px solid #EBEBEB;
+}
+
+.slick-table {
+	border-left: 1px solid #EBEBEB;
+	border-right: 1px solid #EBEBEB;
+	border-bottom: 1px solid #EBEBEB;
+}
+
+#news1 span[style],  #news2 span[style], #news3 span[style] {
+	font-family: "Open Sans", Arial, sans-serif !important;
+	font-size: 1.08rem !important;
+	line-height: 1.7rem !important;
+	background: none !important;
+}
+
+.realbar {
+	width: 100%;
+	display: inline-block;
+	font-family: Roboto mono;
+	padding: 10px;
+	resize: none;
+	padding-left: 60px;
+	box-sizing: border-box;
+	background-color: #F8F9F9;
+	border: 2px solid #083B48;
+	font-weight: 600;
+	font-size: 14px;
+}
+
+#hint {
+	font-family: Roboto mono;
+	background-color: #F8F9F9;
+	font-weight: lighter;
+	font-size: 10px;
+	position: absolute;
+	right: 22px;
+	top: 15px;
+	display: none;
+}
+
+#prompt {
+	font-family: Roboto mono;
+	font-weight: 600;
+	font-size: 14px;
+	color: black;
+	background-color: #F8F9F9;
+	position: absolute;
+	left: 32px;
+	top: 12px;
+}
+
+#nav {
+	font-weight: 300;
+	font-size: 14px;
+	font-family: "Open Sans", Arial, sans-serif;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+
+#navlabel, #command1, #command2 {
+	font-weight: bold;
+	font-size: 14px;
+	font-family: "Open Sans", Arial, sans-serif;
+}
+
+#bar {
+	background-color: #EFEFEF;
+}
+
+p, a b {
+	font-family: "Open Sans", Arial, sans-serif !important;
+}
+
+.col-header {
+	font-family: "Source Serif Pro", serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.col-header i {
+	color: #F15A22;
+}
+
+i {
+	cursor: default !important;
+}
+
+#data p b {
+	color: #F15A22;
+}
+

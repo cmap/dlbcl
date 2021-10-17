@@ -1,0 +1,152 @@
+
+p[name=appliedFilters] {
+	font-family: $condensed;
+	color:$dark-blue-base;
+} 
+a[name=reset] {
+	font-family: $condensed;
+}
+
+.filter-group {
+    padding-bottom: 14px;
+    @media (max-width: $screen-sm-min) {
+        padding-bottom: 8px;
+    }
+    line-height: 16px;
+    padding-right: 0;
+	display:block;
+	.slick-viewport {
+		margin-bottom: 0;
+	}
+}
+
+.filter-group-title {
+    font-family: 'Open Sans', sans-serif;    
+    font-weight: 700;
+    font-size: 15px;
+    padding-top: 8px;
+	margin-top: 12px;
+}
+.filter-group-title { 
+	a i.fa {
+		font-size: 22px;
+		color: $gray6;
+	} 
+}
+.mobile-button-row {
+    margin-top: 0;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    * {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    *:first-child {
+        margin-left: 0;
+    }
+    *:last-child {
+        margin-right: 0;
+        align-self: flex-end;
+    }
+    .spacer.flexible {
+        width: 50px;
+        flex-grow: 2 1 auto;
+    }
+    #reset-all-facets {
+        @media (min-width: $screen-sm-min) { 
+            margin-left: 0;
+        }
+    }
+}
+.filter-chunk{
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.filter-group label {
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+}
+
+.filter-group span {
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+	
+	&[name=selectedCount]{
+		font-family: $condensed;
+	}
+}
+
+.filter-group input {
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    padding-right: 4px;
+    margin-top: 0px;
+    padding-bottom: 4px;
+}
+.filter-category-label {
+    color: #27AAE0;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+	padding-bottom: 4px;
+}
+.filter-group-sub-head {
+    color: black;
+    font-family: 'Open Sans', sans-serif;    
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 8px;
+	white-space: pre-line;
+    line-height: 17px;
+}
+.filter-group-title.border-top {
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-top-color: $gray6;
+}
+
+
+.filter-line label{
+	padding-left: 18px;
+    text-indent: -18px;
+	margin-bottom: 4px;
+	span {
+		font-family: $condensed;
+		color: $gray9;
+	}
+}
+
+.filter-line label input {
+    margin-right: 2px;
+}
+
+.filter-line label div {
+    margin-right: 2px;
+}
+
+.filter-no-op {
+  font-family: 'Istok Web', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+}
+
+.irs {
+		margin-top: 12px;
+		margin-bottom: 10px;
+	}
+#filterby {
+    @media (min-width: $screen-sm-min) { 
+        display: block;
+    }
+}
+
+.slick-table.filter-group {
+    width: auto !important;
+}

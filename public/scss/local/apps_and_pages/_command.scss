@@ -1,0 +1,456 @@
+//- Notes on using CSS with Canvas:
+//- A useful solution:
+//- https://stackoverflow.com/questions/29675279/how-to-style-canvas-elements-with-css
+
+
+.command {
+    .app-tabs-nav-wrapper {
+        border-bottom: solid 2px $teal3;
+        color: $teal3;
+    }
+    .available-command-body {
+        padding:5px 15px;
+        text-align: left;
+    }
+    .commands-table {
+        border-collapse: separate !important;
+
+    }
+    .table-col-margin {
+        width: 6%;
+    }
+    .table-row-margin {
+        height: 30px;
+    }
+    .extra-info-text {
+        font-weight: 400;
+        font-size: 12px;
+    }
+    /*  REMOVE BUTTON INCLUDE LINK */
+    .available-command-button {
+        border: solid 2px $gray3;
+        border-radius: 6px !important;
+        vertical-align: top;
+        padding-top: 6px;
+        width: 47%;
+        height: 200px;
+    }
+    .empty-command-button{
+        display: none;
+    }
+
+    @media (min-width: 1200px) {
+        .available-command-button {
+            min-height: 200px;
+        }
+    }
+    .available-command-button:hover {
+        background-color: $gray1;
+    }
+    .available-command-text {
+        margin-left: 10px;
+    }
+    body.command-app {
+        display: flex;
+        flex-direction: column;
+        border-bottom: solid 2px $teal3;
+    }
+    .bordered-app-content {
+        padding-top: 0;
+        border-left: solid 2px $teal3;
+        border-right: solid 2px $teal3;
+        border-top: solid 0 $teal3;
+        flex: 1;
+        min-height: calc(100vh - 180px) !important;
+    }
+    @media (min-width: 1500px) {
+        .bordered-app-content {
+            min-height: calc(100vh - 200px) !important;
+        }
+    }
+    button {
+        border-radius: 2px;
+    }
+    button.accordion {
+        //background-color: $tab-light-background;
+        //color: $gray11;
+        cursor: pointer;
+        //padding: 11px 16px;
+        margin-top: 8px;
+        width: 100%;
+        text-align: left;
+        //border: none;
+        outline: none;
+        transition: 0.4s;
+    }
+    button.accordion.active:after {
+        content: "\2212";
+    }
+    button.accordion:after {
+        content: '\002B';
+        color: $gray8;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+    button.accordion:hover {
+        //background-color: $gray3;
+    }
+    .btn-view-scores {
+        margin-top: 5px;
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .cmap-commandline {
+        margin-right: 0;
+        margin-left: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin-bottom: 5px
+    }
+    @media (min-width: 1500px) {
+        .cmap-commandline {
+            margin-top: 10px;
+            margin-bottom: 5px; } }
+    .cmap-commandline .commandline-box {
+        width: 100%;
+        height: 40px;
+        background-color: $white;
+        border: 1px solid $gray2;
+        position: relative; }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-box {
+            height: 45px; } }
+    .cmap-commandline .commandline-tick {
+        height: 6px;
+        width: 1px;
+        display: block;
+        z-index: 10;
+        background-color: $dark-blue-base;
+        position: absolute;
+        top: 0;
+        left: 35px; }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-tick {
+            height: 7px;
+            left: 40px; } }
+    .cmap-commandline .commandline-tick.command-tick {
+        left: 41px; }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-tick.command-tick {
+            left: 50px; } }
+    .cmap-commandline .commandline-input {
+        font-family: "Roboto Mono";
+        color: $black;
+        font-weight: 600;
+        font-size: 14px; }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-input {
+            font-size: 18px; } }
+    .cmap-commandline .commandline-hints {
+        font-family: "Istok Web", "Open Sans", sans-serif;
+        font-size: 10px;
+        padding: 0px 5px;
+    }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-hints {
+            font-size: 12px; } }
+    .cmap-commandline .commandline-separator {
+        font-family: "Roboto Mono";
+        font-size: 10px;
+        color: $gray3;
+        height: 10px;
+        overflow: hidden; }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-separator {
+            font-size: 14px; } }
+    .cmap-commandline .commandline-version-links {
+        font-family: "Roboto Mono";
+        font-size: 9px;
+        font-weight: 600;
+        padding: 12px 10px; }
+    @media (min-width: 1500px) {
+        .cmap-commandline .commandline-version-links {
+            font-size: 11px; } }
+    .command-out-links {
+        color: $link;
+        //- margin-right:10px;
+    }
+    .commandline-args-error {
+        color: $red;
+        display: none;
+    }
+    /* - Moved to _tabse.css
+
+    .app-tab-header,
+    .commandline-tab-header {
+        background-color: $gray1;
+        font-family: 'Istok Web', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .commandline-tab-header-options,
+    .app-tab-header-options {
+        background-color: $gray1;
+        min-height: 30px;
+        border-bottom: solid 1px $gray2;
+        //border: solid 1px #000000;
+        font-family: 'Istok Web', sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+    }
+    .commandline-tab-title, 
+    .app-tab-title {
+        word-wrap: break-word;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 22pt;
+    }*/
+    .display-selector-button {
+        padding: 3px;
+        //width: auto;
+        //max-width: 200px;
+    }
+    .display-label {
+        font-weight: 300;
+        font-size: 12px;
+    }
+    .dropdown-button {
+        //display: block;
+        //padding: 4px 12px;
+        font-size: 15px;
+        font-weight: 500;
+        background-color: $gray05;
+        border: solid 1px $gray7;
+        border-radius: 0px;
+        //color: $gray7;
+        width: 230px;
+        height: 30px;
+        margin-bottom: 0;
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $gray2;
+            color: $gray7;
+        }
+
+        .caret {
+            &:before {
+                margin-left: 0;
+            }
+        }
+    }
+    ul#inputInterpretationDropdown.dropdown-menu {
+        width: 230px;
+        
+    }
+    //.dropdown-option {
+        //DEPRECATE CLASS
+        //padding: 5px;
+        //height: 85px;
+        //width: 248px;
+    //}
+    .dropdown-menu {
+        margin-top:3px;
+    }
+    //.dropdown-text {
+        //color: $gray13
+        //margin-left: 6px
+    //}
+    //   held for potential later implementation, images in dropdown
+    //.dropdown-option {
+    //    padding: 5px;
+    //    min-height: 60px;
+    //    width: 195px;
+    //}
+    //.dropdown-text {
+    //    color:#222222;
+    //    margin-left:60px
+    //}
+    //.dropdown-image {
+    //    height: 50px;
+    //    width: 50px;
+    //    float: left;
+    //    border-radius: 6px
+    //}
+
+    .export-btn {
+        background-color: inherit;
+        color: $gray13;
+        margin-left: 8px;
+    }
+    .export-btn-cancel {
+        margin-right: 10%;
+        width: 45%
+    }
+    .export-btn-confirm {
+        width: 45%
+    }
+    .export-filename-prompt {
+        margin-bottom: 10px;
+        width: 100%
+    }
+    .export-radio {
+        margin-right: 10px;
+        margin-bottom: 5px
+    }
+    .export-title {
+        padding-left: 15px ;
+        padding-right: 15px;
+        font-size: 16px;
+    }
+    .command-example {
+        color: $app-Command;
+        //background-color: #f5f5f5;
+        padding: 0px 1px;
+        border-radius: 2px;
+        //border: solid 1px #D4D4D4;
+        //font-weight: 600;
+    }
+    /*.command-example-full {
+        color: $app-Command; //#50e3c2;
+        font-size: 16px;
+        background-color: #f5f5f5;
+        padding: 1px 3px;
+        border-radius: 2px;
+        margin-top: 3px;
+        margin-bottom: 3px;
+        border: solid 1px #D4D4D4;
+        font-weight: 600;
+    }*/
+    .home-title {
+        color: $app-Command; //#50e3c2;
+    }
+    .font-turquoise {
+        color: $app-Command;
+        font-weight: 600;
+    }
+    .conn-heatmap-no-search-terms {
+        margin-left: 30px;
+    }
+    .conn-heatmap-subsection {
+        margin-left: 85px;
+    }
+    .conn-heatmap-title {
+        word-wrap: break-word;
+        margin-top: 10px;
+        margin-left: 50px;
+        margin-bottom: 5px;
+        font-family: 'Open Sans', Helvetica, sans-serif;
+        font-weight: 700;
+        font-size: 14pt;
+    }
+    .home-icon {
+        font-size: 1.5em;
+        margin-top: -2px;
+        padding-right: 8px;
+        float: left;
+    }
+    li.home-tab {
+        a.home-tab {
+            min-width: 30px !important;
+            width: 30px;
+        }
+    }
+    .home-tab.active {
+        background-color: $white;
+        color: $red;
+    }
+    .home-tab-content {
+        padding-top: 40px;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .home-title {
+        margin-left: 15px;
+        font-weight: 700;
+        font-size: 24px;
+    }
+    .home-title-image {
+        vertical-align: middle;
+        margin-bottom: 0.55em;
+    }
+    .text-18 {
+        font-size: 14px;
+    }
+    .home-title-section {
+        padding-top: 12px;
+        padding-bottom: 4px;
+        font-size:24px;
+        font-weight:600;
+    }
+    .init-hide {
+        display: none;
+    }
+    .launch-panel {
+        min-height: 250px;
+        margin: 5px;
+        padding: 0 15px 15px 15px;
+    }
+    ul.input-types {
+        padding-top: 10px;
+    }
+    .panel {
+         background-color: $white;
+         border: solid 1px $tab-light-background;
+         max-height: 0;
+         overflow: hidden;
+         transition: max-height 0.4s ease-out;
+         margin-bottom:5px;
+     }
+    .panel p {
+        padding-left: 25px;
+    }
+    .select-view-option {
+        width: 200px;
+        padding: 5px;
+    }
+    .selector-header {
+        min-height: 50px;
+        margin-bottom: 10px;
+    }
+    .toggle-button-active {
+        color: $dark-blue-base;
+        background-color: white;
+        border: 1px solid $dark-blue-base;
+    }
+    //.slick-viewport {
+    //    border: solid 1px #cccccc;
+    //}
+
+
+    ul.nav.nav-tabs.app-tabs-light > li.active > a, ul.nav.nav-tabs.app-tabs-light > li.active > a:focus, ul.nav.nav-tabs.app-tabs-light li.active > a:hover {
+        height: 29px;
+        color: $teal3;
+        border: solid 2px $teal3;
+        border-bottom: 0;
+        border-bottom: none;
+        background-color: $gray1; 
+    }
+    ul.nav.nav-tabs.app-tabs-light > li.active > a button.close, ul.nav.nav-tabs.app-tabs-light > li.active > a button.close > span {
+        color: $teal3; }
+    ul.nav.nav-tabs.app-tabs-light > li.active > a button.close, ul.nav.nav-tabs.app-tabs-light > li.active > a button.close > span {
+        color: $teal3; }
+    ul.nav.nav-tabs.app-tabs-light > li.active > a:focus button.close, ul.nav.nav-tabs.app-tabs-light > li.active > a:focus button.close > span, ul.nav.nav-tabs.app-tabs-lightli.active > a:hover button.close, ul.nav.nav-tabs.app-tabs-lightli.active > a:hover button.close > span {
+        color: $teal3; }
+    ul.nav.nav-tabs.app-tabs-light > li.active:hover button.close, ul.nav.nav-tabs.app-tabs-light > li.active:hover button.close > span {
+        color: $teal3; }
+    ul.nav.nav-tabs.app-tabs-light > li.active:hover button.close:hover, ul.nav.nav-tabs.app-tabs-light > li.active:hover button.close > span:hover {
+        font-weight: 700;
+        color: $teal3; }
+
+
+        
+    .home-tab.active, .home-tab.active > a, .home-tab.active > a:focus, .home-tab.active > a:hover {
+        background-color: $white !important;
+    }
+    .always-visible-hr {
+        border-bottom: solid 1px #BBBBBB;
+        height: 2px;
+        margin-top: 8px;
+        margin-bottom: 10px;
+    }
+}

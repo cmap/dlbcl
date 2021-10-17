@@ -1,0 +1,19 @@
+.footerapp
+
+    //Copyright
+    .footer-copyright
+        | Copyright &copy; #{new Date().getFullYear()} Broad Institute. All rights reserved.&nbsp;
+        wbr
+        span
+            a(href="privacy" target="_blank") Privacy
+        span  | 
+        span
+            a(href="terms" target="_blank") Terms of Use
+    .footer-support Support:&nbsp;
+        //Support: Contact us | Connectopedia | Office hours
+        a(data-toggle="modal" data-target="#contactModal") Contact us
+        span &nbsp;|&nbsp;
+        a(href="/connectopedia" target="_blank") Connectopedia
+        span &nbsp;|&nbsp;
+        a(href="office-hours" target="_blank") Office hours
+    //script(src="/public/js/local/mouseflow/mouseflow.js")

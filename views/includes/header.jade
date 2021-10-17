@@ -1,0 +1,78 @@
+header
+    include ../cards/popovers.jade
+    .container-fluid.header-container.navbar-fixed-top.col-xs-12(style="padding-left:0px;padding-right:0px;padding-top:-1px;")
+        .row(style="margin:0")
+            .col-xs-12#header-bar(style="padding-left:0;padding-right:0;").header-dark
+                .col-xs-4.col-sm-6.col-md-5
+                    //Used in app header
+                    .flex#main-header-bar(style="display:flex; height: 50px")
+                        a(href="/" data-turbolinks="false")#cmap-header-logo
+                            img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg" style="padding-right:5px; height: 50px")
+                        span.clue_app.hidden-xs#header-app-location
+                            span#header-clue-app CLUE &nbsp;
+                            span.app_name#header-app-title(style="cursor: pointer")
+                    //Used in dynamic homepage
+                    div#icons2(style="display:none").pad-top-12
+
+
+                .col-xs-8.col-sm-6.col-md-7.header-bar-buttons.flex-end
+                        span
+                            div(style="padding-right: 10px; display: none")#header_search_area
+                                form#connectopedia_search(action='/connectopedia/')
+                                    label.sr-only(for='connectopedia-search-bar')
+                                    - var search_string = ( search ? search : '')
+                                    input.form-control#connectopedia-search-bar(type='search', name='search', size='30', value=search_string, placeholder='search connectopedia' style="opacity: 0.5; height: 25px !important;color: black; margin-bottom: 0px !important")
+
+                        .hidden-xs.hidden-sm
+                            span.click-me.toolbar-menu-header.header-menu-font#header-tools Tools
+                            div.header-arrow-down.tools-arrow(style="display: none")
+                            div.toolbar-menu(style="display:none;")#menu-tools-modal
+                                .header-dropdown(style="top: 50px;right: 270px;")
+
+
+                        .hidden-xs.hidden-sm
+                            span.click-me.toolbar-menu-header.header-menu-font#header-projects Projects
+                            div.header-arrow-down.projects-arrow(style="display: none")
+                            div.toolbar-menu(style="display:none;")#menu-projects-modal
+                                .header-dropdown(style="top: 50px;right: 410px;")
+
+
+                        .hidden-xs.hidden-sm
+                            span.click-me.toolbar-menu-header.header-menu-font#header-developer Developer
+                            div.header-arrow-down.developer-arrow(style="display: none")
+                            div.toolbar-menu(style="display:none;")#menu-developer-modal
+                                .header-dropdown(style="top: 50px;right: 320px;")
+
+
+                        .hidden-xs.hidden-sm
+                            span.click-me.toolbar-menu-header.header-menu-font#header-partnering Partnering
+                            div.header-arrow-down.partnering-arrow(style="display: none")
+                            div.toolbar-menu(style="display:none;")#menu-partnering-modal
+                                .header-dropdown(style="top: 50px;right: 230px;")
+
+
+                        div
+                            span.click-me.toolbar-menu-header.header-menu-font#header-help Help
+                            div.header-arrow-down.help-arrow(style="display: none")
+                            div.toolbar-menu(style="display:none;")#menu-help-modal
+                                .header-dropdown(style="top: 50px;right: 160px;")
+
+
+                        #internal_menu_header
+
+                        .hamburger.click-me#header-menu
+                            span.fa.fa-bars.visible-xs.visible-sm.header-menu-font
+                            span.visible-xs.visible-sm.hidden-xxs.header-menu-font#header-menu-label Menu
+                        .pipe.hidden-xxs |
+                        .account-name
+                            .click-me.header-login.not-loggedin.toolbar-menu-header.header-menu-font#header-login
+                            .click-me.fa.fa-angle-down.header-pop-down.toolbar-menu-header.header-menu-font#header-pop-down(style="display:none;")
+                            .toolbar-menu#header-drop-down(style="display:none;")
+                                .header-dropdown(style="top: 50px;")
+
+
+                        #header-announcement
+                            a.fa.fa-bell#notification-link.toolbar-menu-header.header-menu-font
+                                span.badge.badge-notify#notification_number(style="display: none")
+                            .toolbar-menu(style="display:none; padding: 0px !important;")#notification-modal
+                                .notification-dropdown.header-dropdown(style="top: 50px;")

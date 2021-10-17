@@ -1,0 +1,14 @@
+doctype
+html( lang="en" )
+    head
+        include ../views/includes/head.jade
+    body
+        block cmap_header
+            include ../views/includes/header
+        block content
+        block footer
+            include ../views/includes/footer.jade
+
+        block scripts
+            include ../views/includes/clue_js.jade
+            script(src="//cdnjs.cloudflare.com/ajax/libs/turbolinks/5.0.3/turbolinks.js")

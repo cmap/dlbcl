@@ -1,0 +1,306 @@
+.row.form-group.query-module-nameDiv
+    p 1) Name your query
+    p.list-upload-instructions Please note that names must contain only alphanumeric characters.  Any non-alphanumeric characters will be stripped.
+    input.query-module-rpt.form-control#rpt(style="border-radius: 0px;" maxlength="256" name="name" type="text" value="" placeholder="Name (e.g., Trichostatin A in MCF7)")
+
+
+.row.form-group.query-module-parameters
+    p
+        | 2) Query parameters
+    //find out why this gets col-sm-7
+    .col-sm-5.query-module-select_type.pad-left-0.pad-right-xs-0
+        select.select_type(name="select_type")
+            option
+    .col-sm-4.query-module-select_assay.pad-left-0.pad-right-xs-0(style="display: none")
+        select.select_assay(name="select_assay")
+            option
+    .col-sm-3.query-module-select_mode.pad-left-0.pad-right-0(style="display: none")
+        select.select_mode(name="select_mode")
+            option
+    .col-sm-3.query-module-select_version.pad-left-0.pad-right-0(style="display: none")
+        select.select_version(name="select_version")
+    //todo: get rid of ids here
+    .row.introspectRow(style="display: none;")
+        form-group.col-xs-12
+            label(for="introspectProt")#prot_query_1
+                input#introspectProt(type="checkbox" name="introspectProt" value="introspect_checked" checked).input-right.introspectProt
+                |  Compute introspect &nbsp;
+    .row.fastRow(style="display: none;")
+        form-group.col-xs-12
+            label(for='fast')
+                input#fast.fast(type='checkbox', value='fast', name='fast')
+                |  Compute with sig_fastgutc_tool?&nbsp;
+            span#fastTip.dashed-hover-underline.tooltip_trigger(data-container='body', role="button", data-toggle='popover', data-trigger='click focus', data-popover-config='[{"target_self":"true","content_id":"tt_query_fast_tip","placement":"top"}]', data-tooltip-class='', style='color: #005D99;') Learn more
+//hr
+.row.query-module-query_form(autocomplete="off" style="display: none")
+    .row.form-group.pad-right-15
+        p.col-xs-12.query-module-query_tip#query_tip(style="white-space:pre; white-space: pre-line;max-width:560px;")
+            | 3) Load a collection of Entrez Gene IDs from Listmaker for up-regulated gene sets (and optionally a collection for down-regulated gene sets). At any time you may choose an&nbsp;
+            span#show_query_example.dashed-hover-underline.tooltip_trigger(tabindex="0" role="button" data-container="#query_examples" data-toggle="popover" data-trigger="click focus" data-popover-config='[{"target_id":"show_query_example","content_id":"example_content","placement": "auto bottom"}]' data-tooltip-class="tt_query_example" style="color: #005D99;") example
+            |  to fill in the boxes for the individual query.
+            div#query_examples
+        //-Up
+        #upreg-genes-col.col-xs-12.col-sm-6.pad-right-0
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-up"></i> UP-regulated genes
+            .list-upload-header
+                button.btn.btn-xs.btn-secondary.lowercase.load-list-up Load from my lists
+                p.list-upload-instructions Enter 10-150 genes <wbr>for <wbr>optimal results.
+            .col-xs-12.query-module-up_tag_div.div-input(data-validation=".query-module-up_tag_div_num_valid"  contentEditable="true" data-text="Enter gene IDs or Entrez gene symbols by pasting a list or dragging a plain text file").margin-top-5.query-input
+                div
+                    br
+
+        //- Down
+        #downreg-genes-col.col-xs-12.col-sm-6.pad-right-0
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-down"></i> DOWN-regulated genes&nbsp;
+                span(style="font-weight: 200;").hidden-md (optional)
+                span(style="font-weight: 200;").hidden-xs.hidden-sm.hidden-lg (opt.)
+            .list-upload-header
+                button.btn.btn-xs.btn-secondary.lowercase.load-list-down Load from my lists
+                p.list-upload-instructions Please note that 150 <wbr>is a technical limit.
+            .col-xs-12.query-module-dn_tag_div.div-input(data-validation=".query-module-dn_tag_div_num_valid"  contentEditable="true").margin-top-5.query-input
+                div
+                    br
+        p.col-xs-12.query-module-query_key(style="padding-top: 12px")
+            i.fa.fa-minus-circle(style='font-size:14px;padding-left:4px;padding-right:6px; color:#DB2023;')
+            | Invalid gene
+            i(style="color: lightgray")
+                |  Not valid HUGO symbol or Entrez ID, not used in query
+            br
+            i.fa.fa-check-circle(style='font-size:14px; padding-left:4px;padding-right:6px; color:#4A90E2;')
+            | Valid gene
+            i(style="color: lightgray")
+                |  Valid HUGO symbol or Entrez ID and part of BING space, used in query
+            br
+            i.fa.fa-circle-o(style='font-size:14px; padding-left:4px;padding-right:6px; color:#4A90E2;')
+            | Valid but not used in query
+            i(style="color: lightgray")
+                |  Valid HUGO symbol or Entrez ID not part of BING space, not used in query
+            br
+            | More information can be found in
+            a(href="/connectopedia/finding_valid_gene_names" target="_blank")  this Connectopedia article
+    .form-group.query-module-review#review
+        p.col-xs-12.pad-left-0
+            | 4) Review and submit. Only valid genes will be used in your query.
+        .row.form-group
+            .col-xs-12.margin-top-8
+                button.query-module-submit.query-submit-class#submit(value="Submit" tabindex="-1").btn-primary Submit
+.row.query-module-queryp_form(autocomplete="off" style="display: none")
+    .row.form-group.pad-right-15
+        p.col-xs-12.query-module-query_tip#queryp_tip(style="white-space:pre; white-space: pre-line;max-width:560px;")
+            | 3) Load a collection of CCLE IDs or Cell names from Listmaker for up-regulated cell sets (and optionally a collection for down-regulated cell sets). At any time you may choose an&nbsp;
+            span#show_queryp_example.dashed-hover-underline.tooltip_trigger(tabindex="0" role="button" data-container="#queryp_examples" data-toggle="popover" data-trigger="click focus" data-popover-config='[{"target_id":"show_queryp_example","content_id":"example_content_p","placement": "auto bottom"}]' data-tooltip-class="tt_query_example" style="color: #005D99;") example
+            |  to fill in the boxes for the individual query.
+            div#queryp_examples
+        //-Up
+        #upreg-genesp-col.col-xs-12.col-sm-6.pad-right-0
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-up"></i> UP-regulated cell set
+            .list-upload-header
+                button.btn.btn-xs.btn-secondary.lowercase.load-list-up Load from my lists
+                p.list-upload-instructions Enter 3-489 cells <wbr>for <wbr>optimal results.
+            .col-xs-12.query-module-up_tag_div.div-input(data-validation=".query-module-up_tag_div_num_valid"  contentEditable="true" data-text="Enter CCLE IDs or Cell names by pasting a list or dragging a plain text file").margin-top-5.query-input
+                div
+                    br
+
+        //- Down
+        #downreg-genesp-col.col-xs-12.col-sm-6.pad-right-0
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-down"></i> DOWN-regulated cell set&nbsp;
+                span(style="font-weight: 200;").hidden-md (optional)
+                span(style="font-weight: 200;").hidden-xs.hidden-sm.hidden-lg (opt.)
+            .list-upload-header
+                button.btn.btn-xs.btn-secondary.lowercase.load-list-down Load from my lists
+            .col-xs-12.query-module-dn_tag_div.div-input(data-validation=".query-module-dn_tag_div_num_valid"  contentEditable="true").margin-top-5.query-input
+                div
+                    br
+        p.col-xs-12.query-module-query_key(style="padding-top: 12px")
+            i.fa.fa-minus-circle(style='font-size:14px;padding-left:4px;padding-right:6px; color:#DB2023;')
+            | Invalid cell
+            i(style="color: lightgray")
+                |  Not valid CCLE name or cell name, not used in query
+            br
+            i.fa.fa-check-circle(style='font-size:14px; padding-left:4px;padding-right:6px; color:#4A90E2;')
+            | Valid cell
+            i(style="color: lightgray")
+                |  Valid CCLE name or cell name, used in query
+            br
+            i.fa.fa-circle-o(style='font-size:14px; padding-left:4px;padding-right:6px; color:#4A90E2;')
+            | Valid but not used in query
+            i(style="color: lightgray")
+                |  Valid CCLE ID or Cell name, not used in query
+            br
+    .form-group.query-module-review#reviewp
+        p.col-xs-12.pad-left-0
+            | 4) Review and submit. Only valid cells will be used in your query.
+        .row.form-group
+            .col-xs-12.margin-top-8
+                button.query-module-submit.query-submit-class#submitp(value="Submit" tabindex="-1").btn-primary Submit
+.query-module-query_formBatch(autocomplete="off" style="display: none")
+    .row.form-group.margin-bottom-0
+        p.query-module-query_tipBatch(style="white-space:pre; white-space: pre-line;max-width:560px;")
+            | 3) Load a collection of Entrez Gene IDs from
+            a(href="/listmaker" target="listmaker")  Listmaker
+            |  for up-regulated gene sets (and optionally a collection for down-regulated gene sets).
+    .row.form-group
+        .col-xs-12.col-sm-6.col-md-6.pad-left-0.pad-bottom-12
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-up"></i> UP-regulated genes
+            button(style="width: 100%").btn.load-list-upBatch Load collection
+            .or-divider
+                .mid-line
+                .or or
+                .mid-line
+            div.dragUp.form-control.drag-over-form
+                p.dragUp Drag and drop a GMT/GMX file
+            // ---------- FILE UPLOAD FEEDBACK DUMMY ----------
+            .file-uploaded-slot(style="display:none")
+                .fa.fa-file-text
+                .file-uploaded-name.batch-up-name Please upload a collection
+                //.fa.fa-trash.pull-right
+            row.file-uploaded-lists-preview
+                .col-xs-fourhalf.pad-left-8.pad-right-0.batch-up-count
+                .col-xs-sevenhalf.pad-right-0.geneset-lists-icons.batch-up-icons
+            // -------------------------------------------------
+            div.query-module-batch_up_status(style="color: red")
+        .col-xs-12.col-sm-6.col-md-6.pad-left-0.pad-bottom-12
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-up"></i> DOWN-regulated genes
+            button(style="width: 100%").btn.load-list-downBatch Load collection
+            .or-divider
+                .mid-line
+                .or or
+                .mid-line
+            div.dragDown.form-control.drag-over-form
+                p.dragDown Drag and drop a GMT/GMX file
+            // ---------- FILE UPLOAD FEEDBACK DUMMY ----------
+            .file-uploaded-slot(style="display:none")
+                .fa.fa-file-text
+                .file-uploaded-name.batch-down-name Please upload a collection
+                //.fa.fa-trash.pull-right
+            row.file-uploaded-lists-preview
+                .col-xs-fourhalf.pad-left-8.pad-right-0.batch-down-count
+                .col-xs-sevenhalf.pad-right-0.geneset-lists-icons.batch-down-icons
+            // -------------------------------------------------
+            div.query-module-batch_down_status(style="color: red")
+    .row.form-group.query-module-query_report(style="display: none")
+        hr
+        .query-error_report_errors.margin-top-5(style="color: red")
+        .query-error_report_warnings.margin-top-5(style="color: orange")
+        button.btn-secondary.query-error_report_btn.margin-top-12
+            i.fa.fa-download
+            |  &nbsp;Download warnings/errors
+        hr
+    .row.form-group.query-module-reviewBatch
+        p.col-xs-12.pad-left-0
+            | 4) Review and submit. Only valid genes will be used in your query.
+        .row.form-group
+            .col-xs-12.margin-top-8
+                button.query-module-submitBatch.query-submit-class(value="Submit" tabindex="-1").btn-primary#submitBatch Submit
+.query-module-queryp_formBatch(autocomplete="off" style="display: none")
+    .row.form-group.margin-bottom-0
+        p.query-module-query_tipBatch(style="white-space:pre; white-space: pre-line;max-width:560px;")
+            | 3) Load a collection of CCLE IDs or cell names from
+            a(href="/listmaker" target="listmaker")  Listmaker
+            |  for up-regulated cell sets (and optionally a collection for down-regulated cell sets).
+    .row.form-group
+        .col-xs-12.col-sm-6.col-md-6.pad-left-0.pad-bottom-12
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-up"></i> UP-regulated cell set
+            button(style="width: 100%").btn.load-list-upBatch Load collection
+            .or-divider
+                .mid-line
+                .or or
+                .mid-line
+            div.dragUp.form-control.drag-over-form
+                p.dragUp Drag and drop a GMT/GMX file
+            // ---------- FILE UPLOAD FEEDBACK DUMMY ----------
+            .file-uploaded-slot(style="display:none")
+                .fa.fa-file-text
+                .file-uploaded-name.batch-up-name Please upload a collection
+                //.fa.fa-trash.pull-right
+            row.file-uploaded-lists-preview
+                .col-xs-fourhalf.pad-left-8.pad-right-0.batch-up-count
+                .col-xs-sevenhalf.pad-right-0.geneset-lists-icons.batch-up-icons
+            // -------------------------------------------------
+            div.query-module-batch_up_status(style="color: red")
+        .col-xs-12.col-sm-6.col-md-6.pad-left-0.pad-bottom-12
+            h4(style="white-space: nowrap;") <i class="fa fa-arrow-circle-up"></i> DOWN-regulated cell set
+            button(style="width: 100%").btn.load-list-downBatch Load collection
+            .or-divider
+                .mid-line
+                .or or
+                .mid-line
+            div.dragDown.form-control.drag-over-form
+                p.dragDown Drag and drop a GMT/GMX file
+            // ---------- FILE UPLOAD FEEDBACK DUMMY ----------
+            .file-uploaded-slot(style="display:none")
+                .fa.fa-file-text
+                .file-uploaded-name.batch-down-name Please upload a collection
+                //.fa.fa-trash.pull-right
+            row.file-uploaded-lists-preview
+                .col-xs-fourhalf.pad-left-8.pad-right-0.batch-down-count
+                .col-xs-sevenhalf.pad-right-0.geneset-lists-icons.batch-down-icons
+            // -------------------------------------------------
+            div.query-module-batch_down_status(style="color: red")
+    .row.form-group.query-module-query_report(style="display: none")
+        hr
+        .query-error_report_errors.margin-top-5(style="color: red")
+        .query-error_report_warnings.margin-top-5(style="color: orange")
+        button.btn-secondary.query-error_report_btn.margin-top-12
+            i.fa.fa-download
+            |  &nbsp;Download warnings/errors
+        hr
+    .row.form-group.query-module-reviewBatch
+        p.col-xs-12.pad-left-0
+            | 4) Review and submit. Only valid cells will be used in your query.
+        .row.form-group
+            .col-xs-12.margin-top-8
+                button.query-module-submitBatch.query-submit-class(value="Submit" tabindex="-1").btn-primary#submitBatchp Submit
+.query-module-query_formProt(autocomplete="off" style="display: none")
+    .row.form-group
+        p.col-xs-12.pad-left-0
+            | 3) Upload a GCT file.  Your data must be saved as a GCT (P100 or GCP analytes in the rows, samples in the columns).
+        p.prot-textblock Query your data to find out which of our reference perturbagens are most similar (or dissimilar) to your samples. Your data must be saved as a GCT (P100 or GCP analytes in the rows, samples in the columns).
+        p.prot-textblock Try an&nbsp;
+            a.tooltip_trigger#show_query_example_prot(tabindex="0" role="button" data-container="#query_examples_prot" data-toggle="popover" data-trigger="click focus" data-popover-config='[{"target_id":"show_query_example_prot","content_id":"example_content_prot","placement": "auto right"}]' data-tooltip-class="tt_query_example") example.
+            div#query_examples_prot
+        h4.col-xs-12.pad-left-0 Molecular Profiles (P100, GCP, or L1000)
+        .col-xs-12.col-sm-6.col-md-6.pad-left-0.pad-bottom-12
+            input.col-xs-12.form-control.input_file_cmapfile#input_file_cmapfile(type="file" name="input_file-cmapfile" style="display: none")
+            label(for="input_file_cmapfile" style="width:100%;")
+                div.dragGCT.form-control.drag-over-form.drag-over-formGCT(style="height: 100px; width:100%; padding: 10px;border: dashed 2px #CECECE; border-radius: 2px")
+                    p.dragGCT Drag and drop a GCT file
+            //div#file_label.file_label No file chosen
+            // ---------- FILE UPLOAD FEEDBACK DUMMY ----------
+            .file-uploaded-slot(style="display:none")
+                .fa.fa-file-text
+                #file_label(style="max-width:  100%;overflow-wrap: break-word;").file_label.file-uploaded-name Please select a file
+                //.fa.fa-trash.pull-right
+            // ------------------------------------------------
+        .col-xs-12.col-sm-6.col-md-6.pad-left-12.pad-bottom-12
+            p.col-xs-12.pad-top-8.pad-left-0
+                | Are there replicates in your data? &nbsp;
+            .col-xs-12
+                input(type="radio" name="replicates" value="Yes")#prot_query_2.input-right.rep_check_Yes
+                |  Yes
+                input(type="radio" name="replicates" value="No" checked).input-right.input-left.rep_check_No
+                |  No
+            .col-xs-12
+                span.prot_metadata(style="display:none;height:25px;font-size:14px;vertical-align:middle;")
+                    p.prot-subtext Select the metadata fields to group replicates.
+                    select.form-control.fields_to_aggregate(multiple="multiple",style="width: 100%")
+    .row.form-group.col-xs-12.pad-left-0
+        button.submitProt.query-submit-class(type="submit" value="Submit" tabindex="-1").btn-primary Submit
+
+.row
+    .query-module-clue-errors.col-xs-12(style="display:none;color:#d0021b")
+.row.form-group
+        div.query-module-clue-result(style="display:none;color:rgb(0,128,0);height:25px;font-size:14px;vertical-align:middle;")
+            |  Query '
+            span.query-module-submit-name
+            | ' successfully submitted!
+            br
+            | The results will be viewable to you from the History table once complete.
+
+.row.form-group
+    .query-module-clue-bug.col-xs-12.col-sm-10.col-md-8(style="display:none;")
+        p.cmap-center-text.col-xs-12.query-module-bug_code#bug_code
+        p.cmap-center-text.col-xs-12
+            | Please email
+            a(href="mailto:clue@broadinstitute.org")  clue@broadinstitute.org
+            |  for help.

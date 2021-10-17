@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>ProtQuery@2x Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="36" height="36"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="36" height="36" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ProtQuery@2x-Icon">
+            <use id="Rectangle-17-Copy-8" stroke="#F15A22" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            <circle id="Oval-23" stroke="#F15A22" cx="18" cy="18" r="13"></circle>
+            <path d="M16.0247564,7.02475644 C12.3851461,10.6643667 12.3851461,16.565341 16.0247564,20.2049513 C20.0461484,16.1835594 25.3693143,10.8603934 29.2049513,7.02475644 C25.565341,3.38514613 19.6643667,3.38514613 16.0247564,7.02475644 Z" id="Oval-1-Copy" fill="#F15A22" style="mix-blend-mode: multiply;" transform="translate(21.250000, 12.250000) scale(-1, 1) rotate(-45.000000) translate(-21.250000, -12.250000) "></path>
+        </g>
+    </g>
+</svg>

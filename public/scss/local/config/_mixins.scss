@@ -1,0 +1,297 @@
+// Gradients
+    // Horizontal gradient, from left to right
+    // Vertical gradient, from top to bottom
+    // gradient-directional
+    // gradient-horizontal-three-colors
+    // gradient-vertical-three-colors
+    // gradient-radial
+    // gradient-striped
+
+// Half-size column grid size for bootstrap
+
+// Custom Bootstrap grids: 
+    // (Bootstrap grid for toolbars or any other grid)
+        // Margins
+        // Column widths 
+    // Bootstrap grid for buttongroups (special because has negative margin)
+
+// Section themes
+
+
+
+
+// -------------------------------------------------------
+
+
+
+.app-search-widget {
+    color: #808080;
+}
+
+// GRADIENTS - taken from https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/mixins/_gradients.scss
+
+
+
+// Horizontal gradient, from left to right
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-horizontal($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(left, $start-color $start-percent, $end-color $end-percent); // Opera 12
+  background-image: linear-gradient(to right, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down
+}
+
+// Vertical gradient, from top to bottom
+//
+// Creates two color stops, start and end, by specifying a color and position for each color stop.
+// Color stops are not available in IE9 and below.
+@mixin gradient-vertical($start-color: #555, $end-color: #333, $start-percent: 0%, $end-percent: 100%) {
+  background-image: -webkit-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient(top, $start-color $start-percent, $end-color $end-percent);  // Opera 12
+  background-image: linear-gradient(to bottom, $start-color $start-percent, $end-color $end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down
+}
+
+@mixin gradient-directional($start-color: #555, $end-color: #333, $deg: 45deg) {
+  background-repeat: repeat-x;
+  background-image: -webkit-linear-gradient($deg, $start-color, $end-color); // Safari 5.1-6, Chrome 10+
+  background-image: -o-linear-gradient($deg, $start-color, $end-color); // Opera 12
+  background-image: linear-gradient($deg, $start-color, $end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+@mixin gradient-horizontal-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: -o-linear-gradient(left, $start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient(to right, $start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=1); // IE9 and down, gets no color-stop at all for proper fallback
+}
+@mixin gradient-vertical-three-colors($start-color: #00b3ee, $mid-color: #7a43b6, $color-stop: 50%, $end-color: #c3325f) {
+  background-image: -webkit-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: -o-linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-image: linear-gradient($start-color, $mid-color $color-stop, $end-color);
+  background-repeat: no-repeat;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($start-color)}', endColorstr='#{ie-hex-str($end-color)}', GradientType=0); // IE9 and down, gets no color-stop at all for proper fallback
+}
+@mixin gradient-radial($inner-color: #555, $outer-color: #333) {
+  background-image: -webkit-radial-gradient(circle, $inner-color, $outer-color);
+  background-image: radial-gradient(circle, $inner-color, $outer-color);
+  background-repeat: no-repeat;
+}
+@mixin gradient-striped($color: rgba(255,255,255,.15), $angle: 45deg) {
+  background-image: -webkit-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+  background-image: linear-gradient($angle, $color 25%, transparent 25%, transparent 50%, $color 50%, $color 75%, transparent 75%, transparent);
+}
+
+//--------------------------------------------------
+
+
+// Half-size column grid size for bootstrap (with 15px gutter)
+
+@mixin col-half($number){
+  width:(8.33333333% * $number) + 4.16666665%;
+  float:left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  }
+
+
+  .col-xs-twohalf {
+    @include col-half(2);
+  }
+  .col-xs-fourhalf {
+    @include col-half(4);
+  }
+  .col-xs-sevenhalf {
+    @include col-half(7);
+  }
+  .col-xs-ninehalf {
+    @include col-half(9);
+  }
+
+@mixin offset-half($number) {
+    margin-left:(8.33333333% * $number);
+  }
+
+  .col-md-offset-half {
+    @include offset-half(.5);
+  }
+  .col-md-offset-onehalf {
+    @include offset-half(1.5);
+  }
+
+
+
+
+
+// Custom Bootstrap grids: 
+// Margins
+
+  @mixin gridMargins($i, $grid-spacing: 8px, $outer: 0px) {
+
+    $i: 1;
+    $temp: calc(#{$i} - 12);
+
+
+    margin-right: 0;
+    &:first-child,
+    &:first-of-type {
+        margin-left: $outer !important;
+        &.pull-right {
+          margin-left: $grid-spacing !important;
+        }
+      }
+    
+    &:last-child {
+      margin-right: $outer;
+      &.pull-right {
+        margin-right: $grid-spacing;
+      }
+    }
+
+    @for $i from 1 to 11 {
+      &.col-xs-#{$i} {
+          margin-left: $grid-spacing;
+      }
+    }
+    &.col-xs-12 {
+      margin-left: $outer;
+      margin-right: $outer;
+    }
+
+    @media (min-width: $screen-sm-min) {
+      @for $i from 1 to 11 {
+        &.col-sm-#{$i} {
+            margin-left: $grid-spacing;
+        }
+      }
+      &.col-sm-12 {
+        margin-left: $outer;
+        margin-right: $outer;
+      }
+    }
+    @media (min-width: $screen-md-min) {
+      @for $i from 1 to 11 {
+        &.col-md-#{$i} {
+            margin-left: $grid-spacing;
+        }
+      }
+      &.col-md-12 {
+        margin-left: $outer;
+        margin-right: $outer;
+      }
+    }
+    @media (min-width: $screen-lg-min) {
+      @for $i from 1 to 11 {
+        &.col-lg-#{$i} {
+            margin-left: $grid-spacing;
+        }
+      }
+      &.col-lg-12 {
+        margin-left: $outer;
+        margin-right: $outer;
+      }
+    }
+  }
+
+
+
+// Bootstrap grid: Column widths (used in toolbars)
+
+
+@mixin columnWidths($i, $grid-spacing: 4px) {
+  $i: 1;
+  
+  @for $i from 1 to 12 {
+      &.col-xs-#{$i} {
+          width: calc((100% / (12 / #{$i})) - (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+      }
+  }
+  @media (min-width: $screen-sm-min) {
+      @for $i from 1 to 12 {
+           &.col-sm-#{$i}{
+              width: calc((100% / (12 / #{$i})) - (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+          }
+      }
+  }
+  @media (min-width: $screen-md-min) {
+      @for $i from 1 to 12 {
+           &.col-md-#{$i}{
+              width: calc((100% / (12 / #{$i})) - (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+          }
+      }
+  }
+  @media (min-width: $screen-lg-min) {
+      @for $i from 1 to 12 {
+           &.col-lg-#{$i}{
+              width: calc((100% / (12 / #{$i})) - (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+          }
+      }
+  }
+}
+
+// Bootstrap grid for buttongroups
+//- Special because has nehative margins (needs improvement)
+
+
+@mixin btngroupWidths($i, $grid-spacing: 1px) {
+  $i: 1;
+  @for $i from 1 to 12 {
+      &.col-xs-#{$i} {
+          width: calc(100% / (12 / #{$i})); 
+      }
+  }
+
+  @media (min-width: $screen-sm-min) {
+      @for $i from 1 to 12 {
+           &.col-sm-#{$i}{
+              width: calc((100% / (12 / #{$i})) + (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+          }
+      }
+  }
+  @media (min-width: $screen-md-min) {
+      @for $i from 1 to 12 {
+           &.col-md-#{$i}{
+              width: calc((100% / (12 / #{$i})) + (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+          }
+      }
+  }
+  @media (min-width: $screen-lg-min) {
+      @for $i from 1 to 12 {
+           &.col-lg-#{$i}{
+              width: calc((100% / (12 / #{$i})) + (#{$grid-spacing} * (12 - #{$i}) / 12)); 
+          }
+      }
+  }
+}
+
+
+
+// SECTION THEMES
+@mixin sectionTheme($section-color: $orange) {
+  .inline-nav {a {color: $section-color; }}
+	h1 {
+		color: $section-color;
+		border-color: $section-color;
+	}
+	.inline-nav + h1,
+	.inline-nav + section > h1,
+	p.intro + h1,
+	p.intro + section > h1 {
+		border-color: $section-color;
+	}
+	//h2.alt {
+		//color: $section-color;
+	//}
+	ul, ol {li {color: $section-color;}}
+  hr.thick {background-color: $section-color;}
+  
+
+  //- TO DO: Add TOC nav items
+}

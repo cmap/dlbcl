@@ -1,0 +1,25 @@
+- var app = { title:'DLBCL' }
+include includes/header_deprecated
+
+block header
+
+
+block content
+.container-fluid.app-container-fluid
+	.clue-app-margin-top
+	.row.pad-top-16
+		//- left column
+		.col-xs-12.col-sm-4.col-md-3.depad.pad-left-0
+
+			//- filters
+			.row#filters(style="display:flex;")
+				.visible-xs(style="width:15px;")
+
+				.filter-group.col-sm-offset-1.col-xs-11.col-sm-10(style="display:block;")
+					//- Perturbagen type
+					.filter-group-title.border-top
+						| #{pbrant}
+
+include includes/footerapp.jade
+
+				

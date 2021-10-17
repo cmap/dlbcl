@@ -1,0 +1,56 @@
+.footer
+	//Logos and Links
+	.row.margin-right-0.pad-left-15
+		//Logos
+		.col-sm-7.col-md-offset-1.col-md-6.col-lg-7
+			.row
+				.col-xs-10.col-sm-12.col-md-8(style="display:flex;")
+					div(style="width:140px")
+						a(href="http://www.broadinstitute.org")
+							img(src="//assets.clue.io/clue/public/img/logos/broad-logo-white.svg")
+
+					div.pad-top-8(style="width: 150px; padding-left:16px;")
+						a(href="https://broad.io/pattern" target="_blank")
+							img(src="//assets.clue.io/clue/public/img/logos/pattern-logo-WHITE.svg" width=150)
+		//Links - hidden-lg
+		.col-xs-11.col-sm-4.col-md-4
+			.footer-menu#footermenu
+				.column
+					.footer-title About
+					a(href="/cmap") CMap
+					br
+					a(href="/about") CLUE
+					br
+					a(href="/team") Team
+					br
+					a(href="/careers") Careers
+					br
+					a(href="/acknowledgements") Acknowledgements
+
+				.column
+					.footer-title Support
+					a(data-toggle='modal', data-target='#contactModal') Contact Us
+					br
+					a(href="/connectopedia" data-turbolinks="false") Connectopedia: Clue Knowledge Base
+					br
+					a(href="/office-hours" data-turbolinks="false") Office hours
+
+				.column
+					a(href="https://twitter.com/CMap_Broad")
+						i.fa.fa-twitter
+
+
+	//Copyright
+	.row.footer-copyright.margin-right-0.pad-left-15
+		.col-md-offset-1.col-md-10.hidden-xs
+			| Copyright &copy; #{new Date().getFullYear()} Broad Institute. All rights reserved. <a href="privacy">Privacy</a> | <a href="terms">Terms of Use</a>
+		.col-md-offset-1.col-md-10.visible-xs.pad-top-12
+			| Copyright &copy; #{new Date().getFullYear()} Broad Institute. All rights reserved. 
+			wbr
+			a(href="/privacy") Privacy | <a href="/terms">Terms of Use</a>
+
+	//Technical Info
+	.row.technical.margin-right-0
+		.col-md-offset-1.col-md-10.footer-technical
+			| Release Information
+	//script(src="/public/js/local/mouseflow/mouseflow.js")

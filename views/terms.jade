@@ -1,0 +1,111 @@
+extends ../templates/page_layout_static.jade
+
+- var app = { title:'Terms' }
+
+block content
+	.container-fluid.static-page
+		.row
+			// hero
+			block hero
+		.row
+			//- add some spacing
+			div(style="height: 20px")
+		.row
+			.col-sm-offset-1.col-md-offset-2.col-xs-12.col-sm-10.col-md-8
+				.max-wide-962.margin-h-auto
+					.page-title  Terms and Conditions
+
+					.inline-nav
+						.fa.fa-arrow-right
+						| &nbsp Jump to: &nbsp
+						a(href="#disclaimer" data-turbolinks="false") Disclaimer
+						span  |&nbsp
+						a(href="#site" data-turbolinks="false") Site Access
+						span  |&nbsp
+						a(href="#trademark" data-turbolinks="false") Trademarks and Logos
+						span  |&nbsp
+						a(href="#data" data-turbolinks="false") Data Access
+						span  |&nbsp
+						a(href="#publication" data-turbolinks="false") Publication Policy
+
+					p.intro By choosing to use the CLUE web site, you acknowledge and agree to these Terms and Conditions and to our Privacy Policy. We encourage you to read them. We reserve the right to modify these terms and policies and recommend that you periodically review them, because your continued use of this site signifies your agreement with these terms.
+
+					section
+						h1#disclaimer Disclaimer
+
+						p The CLUE website is intended to provide gene expression data and analysis tools for use in research. This site is not an attempt to provide specific medical advice, and should not be used to make a diagnosis or to replace or overrule a qualified health care provider's judgment. Users should consult with a qualified healthcare professional for answers to personal questions.
+
+						p You assume full responsibility for using the information on this site, and you understand and agree that the Broad Institute is not responsible or liable for any claim, loss, or damage resulting from its use by you or any user. While we try to keep the information on the site as accurate as possible, we disclaim any warranty concerning its accuracy, timeliness, and completeness, and any other warranty, express or implied, including warranties of merchantability or fitness for a particular purpose. The Broad Institute also does not warrant that access to the site will be error- or virus-free.
+
+					section
+						h1#site Site Access
+
+						p Your access to and use of this site, and these terms and conditions, are governed by the laws of the Commonwealth of Massachusetts and applicable U.S. federal laws. You consent to the jurisdiction and venue of the state and federal courts located within Massachusetts and agree that any action related to your access to or use of this site and these terms and conditions must be brought in a state or federal court located within Massachusetts.
+
+					section
+						h1#trademark Trademarks and Logos
+
+						p Nothing on this site grants any license or right to use any trademarks, logos or other names, including but not limited to those identifying CLUE, CMAP, the Broad Institute or any officer, director, employee, affiliated investigator, or agent of the Broad Institute, without express written consent of the Broad Institute or other such owner.
+
+					section
+						h1#data Data Access
+
+						p.
+							<i>Access Keys, Code, and Data Files</i> are provided on the following terms:
+
+						ul.two-column-text
+							column
+								li
+									span.
+										<i>Access Keys, Code, and Data Files</i> are single user and assigned to the particular named individual on the registration form.
+								li
+									span.
+										If anyone else in your group seeks access, please have them fill out the request form and we will be glad to provide them a personalized key.
+								li
+									span.
+										You agree to not redistribute <i>Access Keys, Code, and Data Files</i>.
+								li
+									span.
+										Access to these resources is restricted to use by you within your research group. Please do not redistribute them.
+							column
+								li
+									span.
+										If you have a derivative work that is significantly different from what we provide and you would like to distribute it, please contact us with the details. Our goal is to encourage significant improvements while maintaining provenance and reproducible research standards.
+								li
+									span.
+										Any discoveries you make in the data are yours.
+								li
+									span.
+										We encourage you to publish results from analyses of these data. Please see "Publication Policy" below.
+								li
+									span.
+										<i>Access Keys, Code, and Data Files</i> are for research use only.
+								li
+									span.
+										Usage of <i>Access Keys, Code, and Data Files</i> are restricted to academic use within not-for-profit institutions.
+
+					section
+						h1#publication Publication Policy
+
+						p We are glad if you have found the CLUE data to be useful and would like to incorporate it into your publications. You do not need to include us as authors when you publish your CLUE analysis results. The only exception to this is a paper describing the overall contours of the LINCS dataset (i.e., the manuscript that we at the Broad are working on in collaboration with LINCS). If your paper needs a citation to our work on L1000 or LINCS, please contact us at clue@broadinstitute.org.
+
+							h3 Examples of groups that have published their work on this basis include:
+
+							ul.list-publications.two-column-text
+								li Santagata S, Mendillo ML, Tang YC, Subramanian A, Perley CC, Roche SP, Wong B, Narayan R, Kwon H, Koeva M, Amon A, Golub TR, Porco JA Jr., Whitesell L,Lindquist S. <strong>Tight coordination of protein translation and HSF1 activation supports the anabolic malignant state.</strong> <i>Science</i>. 2013/7/19. 341(6143), (2013).
+									//a(target="_blank" href="//s3.amazonaws.com/publications.clue.io/scientific_publications/Science-2013-Santagata-Mendillo.pdf")
+										i.fa.fa-download
+								li Johannessen CM, Johnson LA, Piccioni F, Townes A, Frederick DT, Donahue MK, Narayan R, Flaherty KT, Wargo JA, Root DE, Garraway LA. <strong>A melanocyte lineage program confers resistance to MAP kinase pathway inhibition.</strong> <i>Nature</i>. 2013/12/5. 504(7478):138-42, (2013).
+									a(target="_blank" href="//s3.amazonaws.com/publications.clue.io/scientific_publications/nature12688.pdf")
+										i.fa.fa-download
+								li
+									|Gustafsdottir SM, Ljosa V, Sokolnicki KL, Wilson JA, Walpita D, Kemp MM, Seiler KP, Carrel HA, Golub TR, Schreiber SL, Clemons PA, Carpenter AE, Shamji AF. <strong>Multiplex cytological profiling assay to measure diverse cellular states.</strong> <i>PLoS One</i>. 2013/12/2;8(12):e80999, (2013).
+									a(target="_blank" href="//s3.amazonaws.com/publications.clue.io/scientific_publications/journal.pone.0080999.pdf")
+										i.fa.fa-download
+								li
+
+									|Wawer, MJ, Jaramillo DE, Dancik V, Fass DM, Haggarty SJ, Shamji AF, Wagner BK, Schreiber SL, Clemons PA, et al. <strong>Automated Structure-Activity Relationship Mining: Connecting chemical structure to biological profiles</strong>. <i>J. Biomol. Screen</i>. 2014/4/7, (2014).
+									//a(target="_blank" href="//s3.amazonaws.com/publications.clue.io/scientific_publications/J_Biomol_Screen-2014-Wawer-738-48.pdf")
+										i.fa.fa-download
+		div.hidden-xs(style="height: 4rem")
+		div.visible-xs(style="height: 20px")

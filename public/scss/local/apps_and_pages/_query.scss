@@ -1,0 +1,954 @@
+#query-app,
+#history {
+    &,
+    p {
+        font-size: 12px;
+    }
+    h4 {
+        font-size: 13px;
+    }
+}
+.load-list-up, .load-list-down {
+    margin-top: 7px;
+}
+
+/*.slick-bordered-table.slick-hover-table {*/
+    /*width: 100% !important;*/
+/*}*/
+
+
+
+#everyjob {
+        position: absolute;
+        top: 8px;
+        right: 20px;
+}
+#everyjob label {
+    font-weight: 400;
+}
+#everyjob label input{
+    position: relative;
+    top: 1px;
+    margin-right: 1px;
+}
+#history.row {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 0px;
+    // Small devices (tablets, 768px and up)
+    @media (min-width: $screen-sm-min) { 
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 8px;
+    }
+}
+
+
+h4 {
+    font: 15px 'Open Sans', sans-serif;
+    font-weight: 700;
+}
+
+
+
+
+/***** Query Results Column *****/
+
+#query_section_intro {
+    padding-bottom: 16px;
+}
+
+.query-results-stack {
+    font-family: 'Istok Web', 'Open Sans', sans-serif;
+    font-size: 12px;
+    line-height: 15px;
+    
+    @media (max-width: $screen-sm-min) {
+        padding: 10px 5px;
+        z-index: -10; //avoids blocking interactivity on .history-grid 
+        h4 {
+            margin-bottom: 4px;
+        }
+    }
+    padding-bottom: 15px;
+}
+
+#query_section_list {
+    padding-bottom: 24px;
+}
+
+.query_box_ind,
+.query_box_batch,
+.qbb_dummy1,
+.qbb_dummy2 {
+    background-color: white;
+    border: 1px solid #BCBCBB;
+    border-radius: 4px;
+    height: 32px;
+
+    margin-top: 3px;
+    padding: 8px;
+
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 12px;
+    color: #717171;
+
+}
+
+.query_box_ind, .query_box_batch {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.qbb_stack {
+    position: relative;
+    width: 100%;
+}
+
+.qbb_dummy1 {
+    width: 100%;
+    z-index: -1;
+
+}
+
+.qbb_dummy2 {
+    position: absolute;
+    width: 100%;
+    left: 3px;
+    top: 1px;
+    z-index: 0;
+}
+
+.query_box_batch {
+    position: absolute;
+    width: 100%;
+    left: 6px;
+    top: 5px;
+    z-index: 1;
+}
+
+/* Not sure why this isn't working. Worked when typed in the inspector... */
+.query_section_list {
+    .qbb_stack & .query_box_ind:first-of-type {
+        /* Adjusts spacing when batch stack is above individual query box*/
+        margin-top: 11px;
+    }
+}
+
+
+#outgoing {
+    margin-top: 8px;
+}
+
+#outgoing .btn {
+    width: 100%;
+    margin-bottom: 2px;
+    text-align: left;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+#outgoing .btn span {
+    margin-left: 2px;
+}
+
+
+
+
+/***** New Query Drawer *****/
+
+/* Layout and transitions */
+
+.sidenav {
+    margin-top: 50px;
+    height: calc(100% - 50px);
+    
+    position: fixed;
+    z-index: 50;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    -webkit-transition: all 260ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition:         all 260ms cubic-bezier(0.47, 0, 0.745, 0.715); 
+
+    -webkit-box-shadow: 10px 2px 37px 0px rgba(202,202,202,1);
+    -moz-box-shadow: 10px 2px 37px 0px rgba(202,202,202,1);
+    box-shadow: 10px 2px 37px 0px rgba(202,202,202,1);
+}
+
+.sidenav.closed {
+    width: 0;
+}
+.sidenav.open {
+    // mobile
+    padding-right: 8px;
+    padding-left: 8px;
+    width: 98%;
+    // Small devices (tablets, 768px and up)
+    @media (min-width: 400px) { 
+        width: calc(100vw - 30px);
+    }
+    @media (min-width: 978px) { 
+        padding-right: 30px;
+        padding-left: 30px; 
+    }
+    // Medium devices (desktops, 992px and up)
+    @media (min-width: $screen-md-min) { 
+        width: 44vw;//54vw;
+        padding-right: 10px;
+        padding-left: 10px; 
+    }
+    // Large devices (large desktops and up)
+    @media (min-width: 1125px) { 
+        width: 41vw;
+    }
+    @media (min-width: 1200px) { 
+        padding-right: 22px;
+        padding-left: 22px; 
+    }
+    // Extra-large devices (large desktops, tv monitors, 1500px and up)
+    @media (min-width: $screen-xl-min) { 
+        padding-right: 30px;
+        padding-left: 30px; 
+    }
+}
+.sidenav.open .query-drawer{
+    opacity: 1;
+    -webkit-transition: all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition:         all 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+}
+.sidenav.closed .query-drawer{
+    opacity: 0;
+}
+.sidenav .row.query-drawer {
+    margin: 0;
+}
+
+.vertical {
+    transform: rotate(90deg);
+    transform-origin: left top 0;
+}
+#vert-nav-to-history {
+    width: 100vh;
+    height: 30px;
+    background-color: white;
+    font-size: 13px;
+    font-weight: 600;
+    color: $gray6;
+    padding: 5px 8px;
+    position: fixed;
+    top: 46px;
+    //- margin-left animated with js
+
+    opacity: 0;
+    @media (min-width: 400px) {
+        opacity: 1;
+    }
+    @media (min-width: $screen-md-min) {
+        opacity: 0
+    }
+
+}
+#vert-nav-to-history.hidden {
+    opacity: 0;
+}
+
+/* Inside elements */
+.sidenav .closebtn {
+    //abstract this into drawer styling
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    //margin-left: 50px;
+    height: 26px;
+    width: 26px;
+    background-color: #F2F2F2;
+    border-radius: 50%;
+
+    font-size: 24px;
+    font-weight: 200;
+    color: $gray4;//#BCBCBB;
+    text-align: center;
+    line-height: 24px;
+
+    &:hover,
+    &:active {
+        color: $white;
+        background-color: $gray2;
+    }
+}
+.sidenav h2 {
+    /* Need to abstract this style to be app-global */
+    font-weight:200;
+    font-size:16px;
+    line-height: 22px;
+    white-space:pre; 
+    white-space: pre-line;
+    margin: 0;
+    /*max-width:560px;*/
+}
+
+
+
+
+/***** Query History Column *****/
+
+/*#main.fullwidth {
+    margin-left: 0;
+    width: 100vw;
+}
+#main.compact {
+    margin-left: 40vw;
+    width: 60vw;
+}*/
+
+.history-grid {
+    padding: 0 5px 10px 0;
+    @media (min-width: $screen-sm-min) { 
+        padding: 0 15px;
+    }
+
+}
+.history-grid.col-sm-offset-5 {
+    -webkit-transition: margin-left width 300ms cubic-bezier(0.47, 0, 0.745, 0.715);
+    transition:         margin-left width 300ms cubic-bezier(0.47, 0, 0.745, 0.715); 
+
+    
+    // Medium devices (desktops, 992px and up)
+    @media (min-width: $screen-md-min) { 
+        padding-left: 40px;
+        padding-right: 6px;
+    }
+    // Large devices (large desktops and up)
+    @media (min-width: 1125px) { 
+        padding-left: 15px;
+        padding-right: 15px;
+        
+    }
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+// Query Module
+.query-drawer {
+    .drop-over {
+        border: 2px dashed #bbb;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        color: #bbb;
+    }
+    
+    .thumb {
+        height: 75px;
+        border: 1px solid #000;
+        margin: 10px 5px 0 0;
+    }
+    
+    #progress_bar {
+        margin: 10px 0;
+        padding: 3px;
+        border: 1px solid #000;
+        font-size: 14px;
+        clear: both;
+        opacity: 0;
+        -o-transition: opacity 1s linear;
+        -moz-transition: opacity 1s linear;
+        -webkit-transition: opacity 1s linear;
+        -ms-transition: opacity 1s linear;
+    }
+    
+    #progress_bar.loading {
+        opacity: 1.0;
+    }
+    
+    #progress_bar .percent {
+        background-color: #99ccff;
+        height: auto;
+        width: 0;
+    }
+    
+    #byte_content {
+        margin: 5px 0;
+        max-height: 100px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    #byte_range {
+        margin-top: 5px;
+    }
+    
+    input + input {
+        margin-left: 30% !important;
+    }
+    
+    .select2 {
+        width: 100% !important;
+    }
+
+    .query-module-query_form {
+        padding: 0; 
+    }
+    .query-module-queryp_form{
+        padding: 0;
+    }
+    #upreg-genes-col,
+    #upreg-genesp-col,
+    #downreg-genesp-col,
+    #downreg-genes-col {
+        h4 {
+            margin: 0;
+        }
+    }
+    .load-list-up {
+        margin-top: 10px;
+    }
+
+}
+
+.form-group.query-intro,
+.form-group.query-module-nameDiv,
+.form-group.query-module-parameters,
+.query-module-review
+ {
+    margin-bottom: 10px;
+}
+.form-group.query-module-parameters P {
+    margin-bottom: 6px;
+}
+
+.form-group.query-module-nameDiv {
+    p {
+        margin-bottom: 6px;
+    }
+    input#rpt {
+        height: 30px;
+        font-size: 12px;
+        color: black;
+        font-weight: 400;
+        border-color: #9B9B9B;
+    }
+    input#rpt:focus {
+        border-color: #00C6F5;
+    }
+
+}
+.introspectRow,
+.fastRow {
+    margin-bottom: 0px;
+    form-group{
+        margin-top: 2px;
+        margin-bottom: 0;
+    }
+    #fastTip {
+        font-size: 11px;
+    }
+    label {
+        font-weight: 400;
+        font-size: 11px;
+        input {
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+.form-group.query-module-parameters {
+    border-bottom: solid 1px #E5E6E7;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+
+.list-upload-header {
+    display: flex;
+}
+
+
+
+p.list-upload-instructions {
+    margin: 7px 0 0 0;
+    line-height: 11px;
+    font-size: 11px !important; 
+    padding-right: 0px;
+    padding-left: 8px;
+    padding-top: 2px;
+
+    @media (min-width: 287px) { 
+        padding-top: 8px;
+    }
+    @media (min-width: 768px) { 
+        padding-top: 2px;
+    }
+    // Medium devices (desktops, 992px and up)
+    @media (min-width: $screen-md-min) { 
+        font-size: 9px !important; 
+    }
+    // Large devices (large desktops and up)
+    //- @media (min-width: 1125px) { }
+    @media (min-width: 1300px) { 
+        font-size: 11px !important; 
+    }
+}
+
+.query-input:before {
+    content: attr(data-text);
+    color: #9B9B9B;
+    font-family: $sans;
+    position: relative;
+    top: 8px;
+    font-size: 11px;
+    line-height: 14px;
+}
+
+#upreg-genes-col,
+#upreg-genesp-col,
+#downreg-genesp-col,
+#downreg-genes-col {
+    margin-top: 4px;
+}
+/* 
+#upreg-genes-col .query-input:before {
+    content: "Paste, load a list, or drag in a plain text file"
+}
+#downreg-genes-col .query-input:before {
+    content: "Enter gene IDs or Entrez gene symbols by pasting a list or dragging a plain text file"
+} */
+
+.clue-valid:before {
+	color: #4A90E2;
+	content: "\f058";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	position: relative;
+	left: -8px;
+}
+
+.clue-not-used:before {
+	color: #4A90E2;
+	content: "\f10c";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	position: relative;
+	left: -8px;
+}
+
+.clue-show-hidden {
+	
+};
+.clue-to-top {
+	padding-left: 4px;
+}
+
+.clue-invalid:before {
+	color: #DB2023;
+	content: "\f056";
+	font-family: FontAwesome;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	position: relative;
+	left: -8px;
+}
+
+.div-input {
+	font-family: $condensed;
+    border: dashed 1px #828282;
+	border-radius: 2px;
+	//margin-right: 15px;
+	height: 160px;
+	overflow: auto;
+
+	/*margin:5px 0 0 0;*/
+	outline: 0 none;
+	resize: none;
+	padding-left: 15px;
+    padding-top: 4px;
+    &::-webkit-scrollbar {
+        width: 0px;
+        background: transparent; /* make scrollbar transparent */
+    }
+}
+
+.or-divider {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    text-align: center;
+    color: #717171;
+    height: 16px;
+    font-size: 12px;
+    margin-top: -8px;
+    .or {
+        padding: 0 8px;
+    }
+    .mid-line {
+        height: 10px;
+        min-width: 60px;
+        width: auto;
+        border-bottom: 1px solid #E5E6E7;
+    }
+}
+
+.dragUp.form-control.drag-over-form,
+.dragDown.form-control.drag-over-form{
+    border: dashed 2px #CECECE;
+    border-radius: 2px;
+    height: 100px; 
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+button.query-submit-class {
+    width: 160px;
+}
+
+
+.file-uploaded-slot {
+    display: flex;
+    align-items: flex-start;
+    border: solid 1px $gray5;
+    border-radius: 4px;
+    padding: 6px 8px;
+    margin-bottom: 4px;
+
+    .fa.fa-file-text {
+        font-size: 13px;
+        color: $gray5;
+        margin-top: 2px;
+        &:hover {
+            pointer-events: none;
+        }
+    }
+    .file-uploaded-name {
+        font-weight: 600;
+        padding: 0 4px;
+        flex-grow: 1;
+    }
+    .fa.fa-trash {
+        align-self: flex-end;
+        font-size: 16px;
+        color: $gray6;
+
+        &:hover,
+        &:active {
+            color: $gray8;
+            }
+        }
+}
+
+.file-uploaded-lists-preview {
+    padding-top: 4px;
+    font-size: 11px;
+    .geneset-lists-icons {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    .fa.fa-list-alt,
+    span.icon-list-alt-regular {
+        margin: 0 0 1px 2px;
+        font-size: 11px;
+    }
+    .pass {
+        color: #5D9AE0;
+    }
+    .has-warning {
+        color: #E78F00;
+    }
+    .has-error {
+        color: #D0021B;
+    }
+    .over-limit {
+        color: $gray5;
+    }
+}
+
+
+/* To combine with dropdowns */
+.select2-results {
+    font-size: 12px;
+}
+
+
+
+
+
+//------------------------- Query History Table -----------------------------
+
+.history-grid {
+    .slick-table[style] {
+        // TODO: second value needs to be adjusted for filters open in the header
+        //height: calc(100vh - 200px) !important;
+        @media (min-width: $screen-sm-min){
+            //height: calc(100vh - 185px) !important;
+        }
+    }
+}
+
+
+
+@mixin slick-grid-clmn-width-setter-important ($width, $min-width:width, $max-width:width){
+    width: $width !important;
+    min-width: $min-width !important;
+    max-width: $max-width !important;
+}
+@mixin slick-grid-clmn-width-setter ($width, $min-width:width, $max-width:width){
+    width: $width;
+    min-width: $min-width;
+    max-width: $max-width ;
+}
+
+
+//-- Column widths for both views
+
+
+//-- Full width table
+
+.history-grid.fullwidth {
+    .slick-table[style] {
+        width: calc(100vw - 35px)  !important;
+        @media (min-width: 768px) {
+            width: calc(83.33333333vw - 64px)  !important;
+        }
+    }
+
+    .slick-cell {
+        margin-left: -8px;
+    }
+    .check-clmn-header[style]{
+        @include slick-grid-clmn-width-setter-important (24px);
+    }
+    .check-clmn-cells {
+        @include slick-grid-clmn-width-setter (22px);
+        margin-left: 0;
+    }
+
+}
+
+
+//-- Compact table
+
+.history-grid.compact {
+
+
+    .dropdown-select {
+        display: none;
+    }
+
+
+    .check-clmn-header[style]{
+        @include slick-grid-clmn-width-setter-important (24px);
+    }
+    .check-clmn-cells {
+        @include slick-grid-clmn-width-setter (22px);
+    }
+    .status-icon-clmn-cells {
+        left: 22px;
+    }
+    .qname-clmn-cells {
+        left: 46px;
+    }
+
+    .date-clmn-cells {
+        font-family: $condensed;
+        .slick-cell-wrapper {
+            text-overflow: clip;
+        }
+    }
+    .data-clmn-cells {
+        .slick-cell-wrapper {
+            text-overflow: clip;
+        }
+    }
+    .id-clm-header[style],
+    .id-clmn-cells {
+        @include slick-grid-clmn-width-setter-important (230px);
+    }
+
+
+
+    @mixin history-grid-compact-clmns (
+        // Set variable per media query
+        $date-clm-width: 60px,
+        $data-clm-header-width: 25px,
+        $data-clm-cell-width:  21px,
+        
+        $history-grid-padding: 30px,
+        $set-clm-widths: 84px // can alter this depending on whether JobID column should be displayed, or if custom scrollbar is added to the table
+        ){
+
+            // Calculations:
+
+            // Widths
+            $history-grid-width: calc(41.66666667vw - #{$history-grid-padding});
+            $variable-clm-widths: calc(#{$date-clm-width} + #{$data-clm-header-width});
+            $qname-clm-width: calc(#{$history-grid-width} - (#{$set-clm-widths} + #{$variable-clm-widths}));
+
+            // Positions
+            $date-clmn-left: calc(46px + #{$qname-clm-width});
+            $data-clmn-left: calc(#{$date-clmn-left} + #{$date-clm-width});
+            $id-clmn-left: calc(#{$data-clmn-left} + #{$data-clm-cell-width});
+
+
+            .slick-table[style] {
+                width: calc(#{$history-grid-width} - 12px) !important;
+            }
+            .slick-header-columns[style] {
+                //width: 2000px !important;
+                width: calc(#{$set-clm-widths} + (#{$qname-clm-width} + (#{$variable-clm-widths} + 1200px))) !important;
+            }
+
+
+            .qname-clmn-header[style]{
+                @include slick-grid-clmn-width-setter-important ($qname-clm-width);
+            }
+            .qname-clmn-cells {
+                @include slick-grid-clmn-width-setter ($qname-clm-width);
+            }
+            .date-clmn-header[style] {
+                @include slick-grid-clmn-width-setter-important ($date-clm-width);
+            }
+            .date-clmn-cells {
+                left: $date-clmn-left !important;
+                @include slick-grid-clmn-width-setter (calc(#{$date-clm-width} - 1px));
+            }
+            .data-clmn-header[style] {
+                width: $data-clm-header-width !important;
+            }
+            .data-clmn-cells {
+                left: $data-clmn-left !important;
+
+                @include slick-grid-clmn-width-setter ($data-clm-cell-width);
+            }
+            .id-clmn-cells {
+                left: $id-clmn-left !important;
+            }
+    }
+    @include history-grid-compact-clmns (60px, 25px, 21px, 30px, 96px);
+
+    @media (min-width: $screen-md-min) {
+        @include history-grid-compact-clmns (60px, 25px, 21px, 46px, 96px);
+    }
+    @media (min-width: 1125px) {
+        @include history-grid-compact-clmns (60px, 25px, 21px, 30px, 96px);
+    }
+    @media (min-width: 1260px) {
+        @include history-grid-compact-clmns (60px, 50px, 48px, 30px, 96px);
+    }
+    @media (min-width: 1340px) { 
+        @include history-grid-compact-clmns (60px, 46px, 44px, 30px, 96px);
+    }
+    @media (min-width: 1520px) {
+        @include history-grid-compact-clmns (120px, 46px, 44px, 30px, 96px);
+        .date-clmn-cells {font-family: $istok;}
+    }
+
+    .data-clmn-header,
+    .id-clmn-header {
+        font-family: "FontAwesome";
+        visibility: hidden;
+        position: relative;
+        &:before {
+            font-family: "FontAwesome";
+            display: inline-block;
+            visibility: visible;
+            color: $gray6;
+            margin-left: 4px;
+        }
+    }
+    .data-clmn-header:before {
+        content:"\f1c0";
+    }
+    .id-clmn-header:before {
+        //content:"\f02a";
+        content:"\f084";
+    }
+    // Sorting Icon columns
+.check-clmn-header,
+.data-clmn-header,
+.status-icon-clmn-header,
+.id-clmn-header {
+    .slick-sort-indicator {
+        position: absolute;
+        left: 15px;
+        visibility: visible;
+    }
+    &.slick-header-column-sorted {
+        overflow: visible;
+        .slick-column-name {
+            color:$gray9;
+        }
+        &:before {color: $gray9;}
+    }
+}
+}
+
+
+//- Styles
+//- Checkbox column is styled in _tables.scss
+
+.status-icon-clmn-header {
+    .slick-column-name{ 
+        color: $gray6;
+    }
+    &.slick-header-column-sorted {
+        overflow: visible;
+        .slick-column-name {
+            color:$gray9;
+        }
+        .slick-sort-indicator {
+            margin-left: 1px;
+        }
+    }
+}
+.status-icon-clmn-cells {
+    .fa.fa-circle {
+        margin-bottom: 4px;
+    }
+}
+
+.date-clmn-cells {
+    text-transform: lowercase;
+    font-family: $istok;
+}
+
+.id-clmn-cells {
+    font-family: $condensed;
+    font-weight: 300;
+    color: $gray5;
+}
+
+
+
+
+
+

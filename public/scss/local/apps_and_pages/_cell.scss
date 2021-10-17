@@ -1,0 +1,90 @@
+.cell-app-page {
+    .extent {
+        stroke: #fff;
+        fill-opacity: .125;
+        shape-rendering: crispEdges;
+    }
+
+    .bar {
+        fill: #057089;
+        /* need to be 8px wide */
+    }
+
+    .node {
+        stroke-width: 0.5px;
+        stroke: LightGrey;
+    }
+
+    .axis {
+        font-size: 11px;
+        color: #babcbe;
+    }
+
+    .axis path {
+        stroke-width: 0.5px;
+        stroke: #999;
+        fill: none;
+    }
+
+    .axis line {
+        shape-rendering: crispEdges;
+        stroke: #000;
+    }
+
+    .cell-graph-heading {
+        font-weight: 600;
+        padding-bottom: 10px;
+    }
+
+    .link {
+        stroke: #ccc;
+    }
+
+    .node text {
+        pointer-events: none;
+        font: 10px sans-serif;
+    }
+    .orange {
+        margin-bottom:0px;
+    }
+
+    .cell-placeholder {
+        font-weight: 700;
+        padding: 50px;
+        color: red;
+    }
+
+    .body-copy {
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 400;
+        font-size: 14px;
+        font-style: italic;
+        padding-left: 16px;
+        padding-right: 15px;
+        color: #333;
+    }
+
+}
+
+#cellTreemap {
+    position: relative;
+    height: 300px;
+}
+.node {
+    box-sizing: border-box;
+    overflow: hidden;
+    position: absolute;
+    white-space: pre;
+    background: #ddd;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 6px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    background: white;
+    border: 0.5px solid grey;
+    pointer-events: none;
+}

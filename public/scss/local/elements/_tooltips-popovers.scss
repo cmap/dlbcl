@@ -1,0 +1,139 @@
+//
+// TOOLTIPS
+/*
+http://stackoverflow.com/questions/16303636/how-can-i-make-twitter-bootstrap-tooltips-look-like-the-popovers-without-the-ti
+$tooltipArrowWidth: 5px;
+$tooltipArrowOuterWidth:  $tooltipArrowWidth + 1;
+$tooltipArrowOuterColor:  rgba(0,0,0,.25);
+$popoverArrowOuterColor: black;
+$tooltipArrowColor: white;
+
+Making arrow sqwished (needs to be accompanied with size and position adjustments: 
+.tooltip-arrow{
+    -moz-transform:scale(1, .5); 
+    -webkit-transform:scale(1, .5);
+    }
+*/
+
+
+// 
+// POPOVERS
+//
+
+
+//Widths
+//phone
+.popover {
+    max-width: 450px;
+    .popover-content {
+        padding: 15px;
+    }
+    &.fig-preview {
+        max-width: 400px;
+    }
+}
+
+//ipad portrait
+@media screen and (min-width: $screen-sm-min) {
+    .popover {
+        max-width: 450px;
+        .popover-content {
+            padding: 25px;
+        }
+        &.fig-preview {
+            max-width: 650px;
+        }
+    }
+}
+@media screen and (min-width: $screen-md-min) {
+    .popover {
+        max-width: 450px;
+        &.fig-preview {
+            max-width: 750px;
+        }
+    }
+}
+
+
+.popover {
+    border: solid 1px black;
+    border-radius: 0;
+    font-family: $sans;
+
+}
+.popover-title, .popover-heading, .popover-content > h1 {
+    font-family: $sans;
+    font-weight: 600;
+}
+.popover-content {
+    max-width: 100%;
+    img {
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+.popover {
+
+    &.top > .arrow{
+        border-top-color: black;
+        &:after {
+        }
+    }
+
+    &.right > .arrow {
+        border-right-color: black;
+        &:after {
+        }
+    }
+
+    &.bottom > .arrow{
+        border-bottom-color: black;
+        &:after {
+        }
+    }
+
+    &.left > .arrow{
+        border-left-color: black;
+        &:after {
+            
+        }
+    }
+}
+
+//
+// COACHING TIPS
+//
+
+.coaching_tips_text {
+    background: #fce57c !important;
+    font-family: "Open Sans", Arial, sans-serif !important;
+    font-size: 13px !important;
+    padding: 5px !important;
+    line-height: 1.4 !important;
+    color: black !important;
+}
+
+.coaching_tips {
+    background: #fce57c !important;
+    font-family: "Open Sans", Arial, sans-serif !important;
+    font-size: 13px !important;
+    color: black !important;
+}
+
+.popover.coaching_tips {
+    &.right .arrow:after {
+        border-right-color: #fce57c !important;
+    }
+    &.left .arrow:after {
+        border-left-color: #fce57c !important;
+    }
+    &.top .arrow:after {
+        border-top-color: #fce57c !important;
+    }
+    &.bottom .arrow:after {
+        border-bottom-color: #fce57c !important;
+    }
+}

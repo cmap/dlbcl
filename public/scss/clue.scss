@@ -1,0 +1,73 @@
+//Import vendors
+//This is what clue.all.min.css does for now
+//@import 'lib/filename';
+
+//Import configs
+@import 'local/config/colors';
+@import 'local/config/fonts';
+@import 'local/config/base';
+@import 'local/config/icons';
+@import 'local/config/family'; //helper mixins from https://lukyvj.github.io/family.scss/
+@import 'local/config/mixins'; //anything not covered by bootstrap, including extra media queries
+
+//Import layout helpers
+
+@import 'local/layout helpers/layout'; //may split into smaller files, may need to be imported last to work without !importants
+@import 'local/layout helpers/flexbox';
+
+//Import elements
+@import 'local/elements/typography';
+@import 'local/elements/scrollbar';
+@import 'local/elements/buttons';
+@import 'local/elements/dropdowns';
+@import 'local/elements/select2';
+@import 'local/elements/forms';
+@import 'local/elements/jquerysteps';
+@import 'local/elements/datepicker';
+@import 'local/elements/icons';
+@import 'local/elements/modals';
+@import 'local/elements/tooltips-popovers';
+@import 'local/elements/tables';
+@import 'local/elements/search';
+@import 'local/elements/tabs';
+@import 'local/elements/icons';
+
+//Import modules
+@import 'local/modules/facets';
+@import 'local/modules/header';
+@import 'local/modules/header-dropdown';
+@import 'local/modules/footer';
+@import 'local/modules/loadscreen';
+@import 'local/modules/sitemenu';
+@import 'local/modules/pageTOC';
+@import 'local/modules/signup';
+@import 'local/modules/metadatacard';
+@import 'local/modules/commandline';
+
+//Import dashboard graphics: elements, data viz and graphs
+@import 'local/modules/graphics';
+	
+//Import apps and pages (unique styles)
+@import 'local/apps_and_pages/home';
+@import 'local/apps_and_pages/dynamic_homepage';
+@import 'local/apps_and_pages/errorpages';
+@import 'local/apps_and_pages/query';
+@import 'local/apps_and_pages/touchstone';
+@import 'local/apps_and_pages/morpheus';
+@import 'local/apps_and_pages/repurposing_page';
+@import 'local/apps_and_pages/contests.scss';
+@import 'local/apps_and_pages/proteomics';
+@import 'local/apps_and_pages/command';
+@import 'local/apps_and_pages/connectopedia';
+@import 'local/apps_and_pages/data';
+@import 'local/apps_and_pages/dev';
+@import 'local/apps_and_pages/announcements';
+@import 'local/apps_and_pages/listmaker';
+@import 'local/apps_and_pages/cell';
+
+//Import figures
+@import 'local/figures/dose-timepoint';
+@import 'local/figures/replicate-collapse';
+@import 'local/figures/tas-explainer';
+@import 'local/figures/enrichment-explainer';
+@import 'local/figures/platemaptool';

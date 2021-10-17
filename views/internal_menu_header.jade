@@ -1,0 +1,61 @@
+.hidden-xs.hidden-sm
+    span.click-me.toolbar-menu-header.header-menu-font#header-internal(onclick="showInternal();") Internal
+    div.header-arrow-down.internal-arrow(style="display: none")
+    div.toolbar-menu(style="display:none;")#menu-internal-modal
+        .header-dropdown(style="top: 50px;right: 90px;")
+            //include ./menu-internal.jade
+            .modal-content#menu-internal-modal-content(style="width: 250px")
+                .modal-dialog
+                    .modal-content.unshadow
+                        .modal-body
+                            .row
+                                .col-xs-12
+                                    div.subheading Internal Tools
+                                    .row#internal_section
+                                        .col-xs-12.team-buttons
+                                            .row.team_workbench
+                                                div.col-xs-6.col-md-12.hero-menu-item
+                                                    div.code-box
+                                                        a(href="/workbench" data-turbolinks="false") WORKBENCH
+                                            if(doc.role === "ADMIN")
+                                                .row.admin_panel
+                                                    div.col-xs-6.col-md-12.hero-menu-item
+                                                        div.code-box
+                                                            a(href="/admin/users" data-turbolinks="false") ADMIN PANEL
+                                    div.subheading Utilities
+                                    .row
+                                        .col-xs-12#utility_section
+        script.
+            var showInternal = function () {
+                $('#menu-internal-modal').toggle();
+                $(".internal-arrow").toggle();
+                $(".toolbar-menu").not($('#menu-internal-modal')).hide();
+                $(".header-arrow-down").not(".internal-arrow").hide();
+
+                clue.getUserKey(function (key, err) {
+                    clue.getApps(function (err, result) {
+                        var cards = [];
+                        if (result.cards) {
+                            cards = result.cards;
+                            cards.sort(compare);
+                        }
+
+                        var utilAppsElt_tools = $('#utility_section');
+
+                        utilAppsElt_tools.empty();
+
+                        async.each(cards, function (card, callback) {
+                            if (card.category === APP_UTILITY_TYPE) {
+                                var app_module = "<div class='row'><a href='" + card.url + "' data-turbolinks='false' class='col-xs-12 app-link-text'>" + card.title + "</a></div>";
+                                utilAppsElt_tools.append(app_module);
+                            }
+                            return callback();
+                        }, function (err) {
+                            if (err) {
+                                console.log("ERROR: " + err);
+                                return;
+                            }
+                        });
+                    })
+                })
+            }

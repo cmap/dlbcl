@@ -1,0 +1,85 @@
+// Builds card (DATA APP)
+// Has alternative styling: no border, condensed font throughout
+.metadata-card-vert-container.builds-card
+
+
+    // ------------- CARD HEADER -------------
+    // No underline in Data App Header
+    
+    .metadata-card-header
+        // Card type and symbol
+        // Data types: L1000/PRISM/Cell Painting
+        .card-type
+            span.pert-info-pert-chip
+                .fa.fa-database
+            | &nbsp;
+            span.pert-info-pert-type
+                | L1000
+        .card-title-and-icon
+            .metadata-card-title
+                | PBIOA-pooled
+
+            .favorite-indicator
+                .fa.fa-star-o
+        // Description
+        .description L1000 and pL1000 profiles of compounds with historic (e.g PubChem-based) annotations of bioactivity and lack thereof
+
+    // ------------------------------------------
+
+
+    // Graphic
+    .metadata-section.graphic(style="height:90px; border: solid 1px gray; margin: 15px;") t-SNE plot?
+
+
+    // Build Details
+
+    .metadata-section.build-details-section.light-border-bottom
+        .col-sm-5.contents
+            .span.oe 5,689 OE Genes
+            .span.kd 678 KD Genes
+            .span.cp 4,731 Compounds
+            .span.cells 6 Cell lines
+        .col-sm-7.details
+            .col-xs-7.values
+                .value 5002 x 978
+                .value 02/23/16
+                .value 03/15/14
+            col-xs-5.labels
+                .label Matrix
+                .label Last Modified
+                .label Created
+
+
+    // Data Processing
+
+    .metadata-section.light-border-bottom
+        //.metadata-section-h1 Data Types
+        //.metadata-line
+            span.value L1000, PRISM, Cell Painting
+        .metadata-section-h1 Data Processing
+        .value.ul 
+            li Metadata curated
+            li Vocabulaty harmonized
+            li Expression data normalized
+
+
+    // Data Source/Branding
+
+    .metadata-section.light-border-bottom
+        .source-logo
+            img(src="//assets.clue.io/clue/public/img/logos/cmap-logo-cloud.svg")
+        .metadata-section-h1 Data Source
+        .metadata-line
+            |CMap Team
+            br
+            |Broad Institute
+        .metadata-line
+            span.label Contact:
+            span.value foo@bar.org
+        .metadata-line
+            span.label DOI:
+            a() http://dx.doi.org/10.1016/j.cels.2015.12.004
+        .metadata-line
+            span.label Terms of use:
+            span.value Publicly accessible
+

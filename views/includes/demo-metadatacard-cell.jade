@@ -1,0 +1,153 @@
+// metadata card
+.metadata-card-vert-container.cell-card
+
+    // --------------- CARD HEADER ---------------
+    
+    .metadata-card-header
+
+        // Card type and symbol
+        .card-type
+            span.pert-info-pert-chip
+                .fa.fa-circle-o
+            | &nbsp;
+            span.pert-info-pert-type
+                | Tumor
+        .card-title-and-icon
+            .metadata-card-title
+                | HCC1428
+            .favorite-indicator
+                .fa.fa-star-o
+
+        // Alternative names
+        
+        .metadata-line.alt-names
+            span.label Synonym:
+            span.value HCC1428_BREAST (CCLE), HCC1428
+
+    // -----------------------------------------
+
+
+    // ID Section
+    .metadata-card-tabs.metadata-card-id-section
+        ul.nav.nav-tabs
+            li
+                .nav-label ID:
+            li.active
+                a(data-toggle="tab" href=".Cell-ID") Cell ID
+            li
+                a(data-toggle="tab" href=".CCLE-ID") CCLE
+            li
+                a(data-toggle="tab" href=".Huron-ID") Pool
+
+    .tab-content.small-print
+        .metadata-line.Cell-ID.TC.tab-pane.active
+            span.value HCC1428
+        .metadata-line.CCLE-ID.TC.tab-pane
+            a(href="" target="source") HCC1428_BREAST
+        .metadata-line.Huron-ID.TC.tab-pane
+            span.label Pool:
+            span.value P916
+            span.label Mini pool:
+            span.value PRISM pool 037
+
+        .graphic(style="height:100px; background: LightGray;")
+
+
+    // Biological characteristics
+
+    .metadata-section.collapsible.light-border-bottom
+        a(role="button" data-toggle="collapse" data-target=".bioinfo.cell").metadata-section-h1 Biological characteristics
+        .bioinfo.cell.collapse.in
+            .metadata-line
+                span.label Growth:
+                span.value Adherent in RPMI-164 medium , doubling in 2 days.
+
+            .metadata-line
+                span.label Surface marker:
+                span.value
+            .metadata-line
+                span.label Gene variants:
+                span.value
+
+    // Profile Status Section
+
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target=".profiled-cell").metadata-section-h1 Profile status
+        .profiled-cell.collapse.in
+
+            //table.metadata-card-table.profile-table
+                    thead
+                        tr
+                            th.row-name Assay
+                            th.profiled
+                                a(data-toggle="tooltip" title="L1000").tooltip-link L1
+                            th.profiled
+                                a(data-toggle="tooltip" title="PCCSE").tooltip-link PC
+                            th
+                                a(data-toggle="tooltip" title="CellPainting").tooltip-link CP
+                            th
+                                a(data-toggle="tooltip" title="PRISM").tooltip-link PR
+                            th
+                                a(data-toggle="tooltip" title="Achilles").tooltip-link Ac
+                            th
+                                a(data-toggle="tooltip" title="CCLE").tooltip-link CC
+            table.metadata-card-table.profile-table
+                thead
+                    tr
+                        //th.row-name Assay
+                        th.profiled
+                            a(data-toggle="tooltip" title="L1000").tooltip-link L1000
+                        th.profiled
+                            a(data-toggle="tooltip" title="PCCSE").tooltip-link PCCSE
+                        th
+                            a(data-toggle="tooltip" title="CellPainting").tooltip-link CPaint
+                        th
+                            a(data-toggle="tooltip" title="PRISM").tooltip-link PRISM
+                        th
+                            a(data-toggle="tooltip" title="Achilles").tooltip-link Achilles
+                        th
+                            a(data-toggle="tooltip" title="CCLE").tooltip-link CCLE
+
+
+
+    // Source Information
+
+    .metadata-section.collapsible.light-border-bottom
+        a(role="button" data-toggle="collapse" data-target=".donorinfo").metadata-section-h1 Source
+        .donorinfo.collapse.in
+            .metadata-line
+                span.label Lineage:
+                span.value breast
+            .metadata-line
+                span.label Disease:
+                span.value adenocarcinoma (metastatic)
+            .metadata-line
+                span.label Metastatic site:
+                span.value pleural_effusion
+        
+            .metadata-line
+                span.label Donor:
+                span.value Caucasian female, age 49.  Disease onset at age 45 and lasted for 4 years.
+
+            .metadata-line
+                span.label Gonosome code:
+                span.value
+            .metadata-line
+                span.label Vendor:
+                span.value ATCC
+                a.value(href="https://atcc.org/" target="source") (CRL-2327)
+
+    // Comments Section
+
+    .metadata-section.metadata-comments-section.light-border-bottom
+        .metadata-section-h1 Comments
+        .metadata-line
+            span.label *
+            span.value Identical lines: 253J and 253J-BV share high SNP identity.
+        .metadata-line
+            span.label **
+            span.value PRISM observed growth pattern: suspension.
+        .metadata-line
+            span.label ***
+            span.value Isolated from the same donor tissue as Hs 294T
+

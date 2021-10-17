@@ -1,0 +1,27 @@
+.loading-box {
+    height: 60vh;
+    text-align:center; 
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+}
+
+.loading {
+    position: relative;
+    top: 50%;
+    //-webkit-transform: translateY(-50%);
+    //-ms-transform: translateY(-50%);
+    //transform: translateY(-50%);
+    color: rgb(1, 59, 74);
+       
+}
+
+.load-message-title {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+	margin-bottom: 20px;
+}
+.load-message-p {
+   
+}

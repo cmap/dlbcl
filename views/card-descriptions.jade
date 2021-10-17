@@ -1,0 +1,191 @@
+extends ../templates/page_layout_static.jade
+
+- var app = { title:"Card Descriptions" }
+
+block content
+    .container-fluid.static-page
+        .row
+            // hero
+            block hero
+        .row
+            //- add some spacing
+            div(style="height: 20px")
+        .row
+            .col-sm-offset-1.col-md-offset-2.col-xs-12.col-sm-10.col-md-8
+                .max-wide-962.margin-h-auto
+                    .page-title Card Descriptions
+
+                    .inline-nav
+                        .fa.fa-arrow-right
+                        | &nbsp Jump to: &nbsp
+                        a(href="#clue" data-turbolinks="false") CLUE Card Descriptions
+                        span  |
+                        a(href="#class" data-turbolinks="false") CMap Class Card Descriptions
+
+                    h1#clue CLUE Card Descriptions
+
+                    h2 Baseline Expression
+                    p Z score expression levels in core cell lines
+                    p
+                        | Baseline expression of this gene in each cell line is represented as a z-score (top numbers). Scores were calculated using robust z-score formula:
+                    p(style="margin-left: 25px")
+                        | z-score
+                        i
+                            sub i
+                        |  = (
+                        i  x
+                            sub i
+                        |  -
+                        i  median
+                        | (
+                        i  X
+                        |  ) )/(
+                        i  MAD
+                        | (
+                        i  X
+                        |  ) * 1.4826 ),
+                    p
+                        | where:
+                        p(style="margin-left: 25px")
+                            i x
+                                sub i
+                            |  is expression value of a given gene in
+                            i  i
+                            | -th cell line
+                        p(style="margin-left: 25px")
+                            i X
+                            |  = [
+                            i  x
+                                sub 1
+                            | ,
+                            i  x
+                                sub 2
+                            |  ...
+                            i  x
+                                sub n
+                            |  ] is a vector of expression values for a given gene across n cell lines
+                        p(style="margin-left: 25px")
+                            i MAD
+                            | (
+                            i  X
+                            |  ) is a median absolute deviation of
+                            i  X
+                        p(style="margin-left: 25px")
+                            | 1.4826 is a constant to rescale the score as if the standard deviation of
+                            i  X
+                            |  instead of
+                            i  MAD
+                            |  was used
+                    p
+                        | Median and MAD  expression values were calculated  using RNA-Seq profiles from a total of 1022 cell lines, comprising data from the Cancer Cell Line Encyclopedia (CCLE; Barretina, et al.) and cell lines nominated by the CMap team. Plots show z-score values only for the core LINCS lines used by CMap in L1000 experiments. Light red or light blue regions indicate positive or negative outlier expression, respectively, of the gene relative to the other lines shown; z-score of a positive outlier in the corresponding cell line is in dark red and a negative outlier is in dark blue.
+
+                    h2 Average Transcriptional Impact
+                    p Transcriptional impact summarized across core cell lines
+                    p
+                        | Impact is assessed as a transcriptional activity score, which is calculated as a mean value of median replicate correlation and median signature strength of a perturbagen across multiple cell lines and doses. The score describes a perturbagen’s transcriptional activity, relative to all other perturbagens, as derived from its replicate reproducibility and magnitude of differential gene expression.
+                    p(style="margin-left: 25px")
+                        i PCT
+                            span(style="display: inline-block; text-align: center")
+                                sup(style="display: block") CC
+                                sub(style="display: block") i
+                        |  =
+                        | &nbsp
+                        span(style="display: inline-block; text-align: center")
+                            i
+                                sup(style="border-bottom: 2px solid black") rank( median( CC
+                                    sub i
+                                    |  ) )
+                            sub(style="display: block") N
+                    p(style="margin-left: 25px")
+                        i PCT
+                            span(style="display: inline-block; text-align: center")
+                                sup(style="display: block") SS
+                                sub(style="display: block") i
+                        |  =
+                        | &nbsp
+                        span(style="display: inline-block; text-align: center")
+                            i
+                                sup(style="border-bottom: 2px solid black") rank( median( SS
+                                    sub i
+                                    |  ) )
+                            sub(style="display: block") N
+                    p(style="margin-left: 25px")
+                        i TAS
+                            sub i
+                        |  =
+                        | &nbsp
+                        span(style="display: inline-block; text-align: center")
+                            sup(style="border-bottom: 2px solid black")
+                                i PCT
+                                    span(style="display: inline-block; text-align: center")
+                                        sup(style="display: block") CC
+                                        sub(style="display: block") i
+                                |  +
+                                i  PCT
+                                    span(style="display: inline-block; text-align: center")
+                                        sup(style="display: block") SS
+                                        sub(style="display: block") i
+                            sub(style="display: block") 2
+                    p
+                        | where:
+                    p(style="margin-left: 25px")
+                        i TAS
+                            sub i
+                        |  is the transcriptional impact score for the
+                        i  i
+                        | -th perturbagen
+                    p(style="margin-left: 25px")
+                        i PCT
+                            span(style="display: inline-block; text-align: center")
+                                sup(style="display: block") CC
+                                sub(style="display: block") i
+                        |  is the percentile, relative to all other perturbagens, of the
+                        i  i
+                        | -th perturbagen’s median replicate correlation coefficient (CC) across all of its signatures
+                    p(style="margin-left: 25px")
+                        i PCT
+                            span(style="display: inline-block; text-align: center")
+                                sup(style="display: block") SS
+                                sub(style="display: block") i
+                        |  is the percentile, relative to all other perturbagens, of the
+                        i  i
+                        | -th perturbagen’s signature strength (SS) across all of its signatures
+                    p(style="margin-left: 25px")
+                        i N
+                        |  is the total number of perturbagens
+
+                    h2 Profile Status
+                    p Profiled in Broad assays
+                    p
+                        | Colored bar indicates the extent to which this perturbagen has been profiled using the Broad assays shown. For compounds profiled by L1000, cell lines and doses for which signatures are available are indicated by gray bars.
+
+                    h2 Introspect
+                    p Cell Line-specific responses to perturbagens
+                    p
+                        | Black bars signify Transcriptional Activity Scores greater than or equal to 0.5; gray bars denote scores less than 0.5. Absence of a bar means no data available. Colored lines signify similar connectivity scores between cell lines; red for positive connectivity scores of 80-100 (pale to intense color according to the score); blue for negative connectivity.
+
+                    h1#class CMap Class Card Descriptions
+
+                    p
+                        | CMap Classes refer to groups of pharmacologic or genetic perturbagens that share annotations and whose gene expression signatures are similar in CMap data. The current set of compound classes are based on MoA or molecular target; members of genetic classes are part of the same molecular pathway or gene family. Importantly, the CMap signatures of the class members exhibit strong connectivity to the other members of the group.  Currently there are 88 PCLs, each of which have at least 3 members.
+                    p
+                        | To view Class Cards, start on a search results page in the Connections app. In the  "Perturbagen Type" filter at the top left, check the box next to the blue diamond for “CMap Class”, and then click on any item in the table below to reveal its class card on the right side of the window (Fig 1.).
+                    figure
+                        img(src="//assets.clue.io/clue/public/img/support/classcard.png" height="500")
+                        figcaption Fig. 1 Class card for the Estrogen Agonist pharmacologic class (PCL).
+                    br
+                    p
+                        | The top of the card contains curated information about compound structures and biological functions, followed by three visualizations describing CMap connectivity data for this class.
+                    p
+                        b Summary class connectivity
+                        |  shows a
+                        a(href="https://www.mathworks.com/help/stats/boxplot.html" target="boxplot")  boxplot
+                        |  that summarizes the connectivity of a class. Each data point, shown as a light gray dot, represents the median value of connectivity of one member to the other class members. (This corresponds to the median for each row, excluding the main diagonal, in the heatmap shown below.) The box is the distribution of those data points, where the box boundary represents the interquartile range, the vertical line within the box is the median, and the whiskers reflect the minimum and maximum values of the data (exclusive of extreme outliers, which may appear beyond the whiskers).
+                    p
+                        b Connectivity between members of class
+                        |  is a standard heat map of the connectivity scores, summarized across cell lines, between members of the class, where dark red represents the highest positive scores and deep blue the highest negative scores. Individual scores are revealed to the left below the map by hovering over each cell of the map.
+                    p
+                        b Class inter-cell line connectivity
+                        |  is a plot of the median (black line) and Q25-Q75 connectivity scores (blue area around black line) for each cell line as well as the summary scores across cell lines. In some cases perturbations have not been tested in every cell line; the absence of data is indicated by a “0” for that cell line. The example above in Fig.1 shown reveals that these estrogen agonists show the strongest connectivity to each other in MCF7, a human breast cancer cell line that expresses the estrogen receptor.
+        div.hidden-xs(style="height: 4rem")
+        div.visible-xs(style="height: 20px")

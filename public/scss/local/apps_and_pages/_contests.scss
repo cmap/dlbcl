@@ -1,0 +1,66 @@
+
+.contest-hero {
+    border-bottom: solid $light-blue-gray 1px;
+    padding-top: 36px;
+    padding-bottom: 36px;
+    @media (min-width: $screen-sm-min){
+        padding-top: 15px;
+    }
+    @media (min-width: $screen-md-min){
+        padding-top: 40px;
+    }
+    @media (min-width: $screen-xl-min) {
+        padding-top: 46px;
+    }
+    .contest-title {
+        
+        font-size: 2.4rem;
+        padding-top: 0;
+        @media (min-width: $screen-sm-min) {
+            //font-size: 2.6rem;
+            //padding-top: 2vh;
+        }
+        @media (min-width: $screen-md-min) {
+            //font-size: 3rem;
+            //padding-top: 3.5vh;
+        }
+        @media (min-width: $screen-lg-min) {
+            //padding-top: 5vh;
+            }
+    }
+}
+.hero-sidebar {
+    font-family: $sans;
+    color: $blue;
+    font-size: 1.3rem;
+
+	.dates {
+		font-size: 32px;
+        font-weight:300;
+        letter-spacing: -1px;
+		line-height: 42px;
+		padding-bottom: 12px;
+        border: none;
+		@media (min-width: $screen-xxl-min){padding-bottom: 30px;}
+		span {
+			font-size: 30px;
+			font-weight: 200;
+		}
+	}
+	.links{
+		font-weight:400;
+	}
+}
+.logo-banner {
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+
+    img {
+        max-height: 60px;
+        width: auto;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}

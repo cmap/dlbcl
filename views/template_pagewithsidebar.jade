@@ -1,0 +1,30 @@
+- var app = { title:'' }
+extends ../templates/page_layout.jade
+block content
+	.container-fluid.static-page#static-content
+		.row 
+			block hero
+
+		.row
+			block spacing 
+			//- add some spacing
+
+		//.row
+			//- page TOC
+			.col-xs-12.col-md-push-8.col-md-3
+				block sidebar
+			//- main content
+			.col-xs-12.col-md-pull-3.col-md-offset-1.col-md-7
+				block mainbar  
+		.row
+			//- main content
+			.main-content.col-xs-12.col-md-offset-1.col-md-7
+				block mainbar
+
+			//- page TOC
+			.sidebar.col-xs-12.col-md-offset-half.col-md-2
+				block sidebar	
+
+		div.hidden-xs(style="height: 4rem")
+		div.visible-xs(style="height: 20px")
+	.container-fluid#dynamic-content

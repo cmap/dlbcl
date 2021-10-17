@@ -1,0 +1,23 @@
+//included in .header-dropdown
+.modal-content
+	h4#dropdown-name
+	div#dropdown-email
+	a#dropdown-account-settings.toolbar-menu-header
+		| Account Settings
+	a#dropdown-hide-account-settings(style="display:none;").toolbar-menu-header
+		| Hide Settings
+	.account-detail#account-details(style="display:none").toolbar-menu-header
+		.label.toolbar-menu-header
+			|Institution
+		div#account-institution.account-detail.toolbar-menu-header
+		.label.toolbar-menu-header
+			|API Key
+		div#account-apiKey.account-detail.toolbar-menu-header
+		.label.toolbar-menu-header
+			|Roles
+		div#account-roles.account-detail.toolbar-menu-header
+
+	hr
+
+	a.signout(href = "/signout")
+		| Sign out

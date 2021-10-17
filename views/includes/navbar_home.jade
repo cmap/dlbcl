@@ -1,0 +1,30 @@
+doctype
+html( lang="en" )
+	//include head.jade
+	body.homepage
+		include header_deprecated
+		.container-fluid
+			.row
+				.col-md-offset-1.col-md-3.col-sm-4.col-xs-6.pad-top-20
+					//div
+						img(src="//assets.clue.io/clue/public/img/logos/cmap-logo-broad.svg").maxwide-250.hidden-xs
+						img(src="//assets.clue.io/clue/public/img/logos/cmap-logo-broad.svg" style="max-width: 140px;").hidden-sm.hidden-md.hidden-lg
+						
+			//block content
+			
+		//include app_menu.jade
+		//include login_signup_menu.jade
+
+		//script.
+			clue.analytics();
+			$(document).ready(function () {
+				$('#login_button').on('click',function(evt) {
+					$('#loginModal').modal('show')
+				});
+				$('#hamburger_button').on('click',function(evt) {
+					$('#appMenuModal').modal('show')
+				});
+				scarpa.appLaunch();
+			});
+
+

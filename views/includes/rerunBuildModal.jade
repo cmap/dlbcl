@@ -1,0 +1,84 @@
+link(rel="stylesheet" href="/public/css/local/testBuildRequest/main.css")
+link(rel="stylesheet" href="/public/css/local/testBuildRequest/normalize.css")
+
+#rerunModal.modal.fade.data-library(tabindex='false', role='dialog', aria-labelledby='rerunModal', aria-hidden='true' style="z-index: 66")
+    .row
+        .col-md-3.col-sm-4.col-xs-12
+            .row(style="display:flex;")
+                .visible-xs(style="width:15px;")
+                .col-sm-offset-1.col-xs-11.col-sm-10(style="display:block;")
+
+        .col-md-6.col-sm-7.col-xs-11(style='max-width:674px;')
+            .modal-dialog
+                .modal-content
+                    .modal-headerblue
+                        .div#contactClose(style='padding-left:15px ; padding-right:15px')
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                span(aria-hidden="true")
+                                    | &times;
+                        .div
+                            img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg")
+                            img(src="//assets.clue.io/clue/public/img/logos/banner-cmap2_0.svg" style="height: 22px")
+
+                    .modal-title-copy-headline
+                        | Add/Re-run Tools
+                    .modal-body
+                         .form-group
+                            label.control-label Sig Tools&nbsp;
+                            br
+                            #addhocbuilddiv.addhocbuilddiv
+                                div(style="padding-left: 15px")
+                                    input#mtsr.mtsr.sigToolRerun(type='checkbox', name='mts', value='mts')
+                                    label.control-label(for='mtsr') &nbsp; Biomarker
+                                    br
+                                    input#autolistr.autolistr.sigToolRerun(type='checkbox', name='autolist', value='autolist')
+                                    label.control-label(for='autolistr') &nbsp; Auto List
+                                    br
+                                    input#build_synopsisr.build_synopsisr.sigToolRerun(type='checkbox', name='build_synopsis', value='build_synopsis')
+                                    label.control-label(for='build_synopsisr') &nbsp; Build Synopsis
+                                    br
+                                    input#calibr.calibr.sigToolRerun(type='checkbox', name='calib', value="calib")
+                                    label.control-label(for='calibr') &nbsp; CALIB
+                                    br
+                                    .form-group
+                                        label.control-label(for='calibCollectionr') Sig Calib collection&nbsp;
+                                        i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                        data-popover-config='[{"target_id":"i_calib_collectionr","content_id":"tt_calib_collection","placement": "auto right"}]'
+                                        data-tooltip-class="" style="color: #005D99;")#i_calib_collectionr
+                                        a(target="_blank" href="//assets.clue.io/clue/public/resources/sig_calib_default.gmt") download sample GMT file
+                                        select#calibCollectionr.col-xs-4.form-control.calib_collectionr(name="calib_collection", required='' style="width: 100%")
+                                            option(disabled='', selected='', value='')
+                                    input#gutc_backgroundr.gutc_backgroundr.sigToolRerun(type='checkbox', name='gutc_background', value="gutc_background")
+                                    label.control-label(for='gutc_backgroundr') &nbsp; GUTC Background
+                                    br
+                                    input#gutcmatchedr.gutcmatchedr.sigToolRerun(type='checkbox', name='gutc_matched', value="gutc_matched")
+                                    label.control-label(for='gutcmatchedr') &nbsp; GUTC (Matched)
+                                    br
+                                    input#gutcunmatchedr.gutcunmatchedr.sigToolRerun(type='checkbox', name='gutc_unmatched', value="gutc_unmatched")
+                                    label.control-label(for='gutcunmatchedr') &nbsp; GUTC (UnMatched)
+                                    br
+                                    input#arfs_per_pertr.arfs_per_pertr.sigToolRerun(type='checkbox', name='arfs_per_pert', value='arfs_per_pert')
+                                    label.control-label(for='arfs_per_pertr') &nbsp; GUTC (UnMatched) - ARFs per perturbagen
+                                    br
+                                    input#introspect_gctx_to_gctr.introspect_gctx_to_gctr.sigToolRerun(type='checkbox', name='introspect_gctx_to_gct', value='introspect_gctx_to_gct')
+                                    label.control-label(for='introspect_gctx_to_gctr') &nbsp; Introspect GCTX to GCT
+                                    br
+                                    input#introspectr.introspect_selfr.sigToolRerun(type='checkbox', name='introspect_self', value='introspect_self')
+                                    label.control-label(for='introspectr') &nbsp; Introspect Self as Bkgd
+                                    br
+                                    input#introspect_tsr.introspect_tsr.sigToolRerun(type='checkbox', name='introspect_ts', value='introspect_ts')
+                                    label.control-label(for='introspect_tsr') &nbsp; Introspect Touchstone as Bkgd
+                                    br
+                                    input#pcar.pcar.sigToolRerun(type='checkbox', name='pca', value='pca')
+                                    label.control-label(for='pcar') &nbsp; PCA
+                                    br
+                                    input#tsner.tsner.sigToolRerun(type='checkbox', name='tsne', value='tsne')
+                                    label.control-label(for='tsner') &nbsp; t-SNE
+                                    br
+                                br
+                    .modal-footer
+                        .col-xs-12#errortextrerun(style="color: red")
+                        .btn-group.pull-right(style='margin-top:5px')
+                            button#requestRerun.btn.btn-primary
+                                i.fa.fa-check
+                                |  Save

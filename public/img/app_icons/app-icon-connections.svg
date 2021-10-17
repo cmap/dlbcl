@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="36" height="36"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="36" height="36" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Connections@2x">
+            <g id="Group">
+                <use id="Rectangle-17-Copy-8" stroke="#00B9F2" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <path d="M29.9828351,27.7473392 C24.3355072,33.3946671 15.1793796,33.3946671 9.53205174,27.7473392 C3.88472385,22.1000113 3.88472385,12.9438837 9.53205174,7.29655582 C15.7717634,13.5362675 24.0313464,21.7958505 29.9828351,27.7473392" id="Oval-1-Copy-2" stroke="#00B9F2" transform="translate(17.639695, 19.639695) rotate(-3.000000) translate(-17.639695, -19.639695) "></path>
+                <path d="M9.06644255,7.06644255 C3.41911466,12.7137704 3.41911466,21.869898 9.06644255,27.5172259 C15.3061542,21.2775143 23.5657372,13.0179312 29.5172259,7.06644255 C23.869898,1.41911466 14.7137704,1.41911466 9.06644255,7.06644255 Z" id="Oval-1-Copy" fill="#00B9F2" style="mix-blend-mode: multiply;" transform="translate(17.174086, 15.174086) rotate(-356.000000) translate(-17.174086, -15.174086) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

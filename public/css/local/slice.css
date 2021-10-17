@@ -1,0 +1,88 @@
+input[type="text"],.select-container,textarea,.icon-container{
+  border:0;
+  padding:10px;
+  margin: 10px;
+  border-radius:3px;
+  margin:5px 0;
+  outline:medium none;
+  resize: none;
+}
+.find_sigs{
+  display:block;
+  padding:10px;
+  background:#50BFA4;
+  border:0;
+  border-radius:3px;
+  font-weight:bold;
+  color:#fff;
+  cursor:pointer;
+}
+
+.submit{
+  display:block;
+  padding:10px;
+  background:#CD78A7;
+  border:0;
+  border-radius:3px;
+  font-weight:bold;
+  color:#fff;
+  cursor:pointer;
+}
+
+select{
+  display:block;
+  background:transparent;
+  border:0;
+  width: 100%;
+  border-radius:3px;
+  color:#838383;
+  outline: none;
+    -webkit-appearance: none;
+   -moz-appearance:    none;
+   appearance:         none;
+
+}
+.select-container{
+    background: url(down_arrow_select.png) no-repeat right #EAE6E1;
+}
+
+.parameter-tag{
+    background: #E89F19;
+    color:#FFFFFF;
+}
+.service-tag{
+    background: #CD78A7;
+    color:#FFFFFF;
+}
+.URL-tag{
+    background: #CD78A7;
+    color:#FFFFFF;
+}
+.data-tag{
+    background: #3E71B0;
+    color:#FFFFFF;
+}
+.value-input{
+    background:#EAE6E1;
+    color:#838383;
+}
+.parameter-tag::-webkit-input-placeholder { /* WebKit browsers */
+    color:    rgba(255, 255, 255, 0.7);
+}
+.parameter-tag:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:    #999;
+}
+.parameter-tag::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:    #999;
+}
+.parameter-tag:-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:    #999;
+}
+.label-text{
+	font-family:Memphis LT Std;
+	font-weight: bold;
+	font-size: 13pt;
+	color: #444444;
+	text-transform: uppercase;
+    padding:10px;
+}

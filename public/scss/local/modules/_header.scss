@@ -1,0 +1,298 @@
+// HEADER
+
+header{
+    height:$header-height;
+    display: inline-block;
+	//z-index: 9;
+	
+    .container-fluid: {
+            height:$header-height;
+            display: block;
+        //height:$header-height;
+        //width: 100vw;
+    }
+
+}
+
+
+/*
+.nav-bar-strip {
+    width: 100%;
+    height: 8px;
+    background-color: #003B4B;
+}
+
+.nav-bar-app-title {
+    color: white;
+
+    font-family: 'Roboto Slab', serif;
+    font-weight:400;    
+    font-size: 20px;
+    letter-spacing: 0.03em;
+    height: 32px;
+    background-color: #003B4B;
+}
+
+.nav-bar-menu-login-container {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #003B4B; 
+}
+
+.nav-bar-menubox {
+    color: white;
+    height: 32px;
+    background-color: #003B4B;
+    min-width: 40px;
+    max-width: 100px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+span#login, .menulink-text {
+    font-family: 'Istok Web', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+.nav-bar-menu-login-container a {
+    color: #003B4B;
+}
+
+.nav-bar-menu-login-container a:hover, #login_button:hover {
+    color: #0072bc;
+}
+
+#hamburger_button:hover {
+    background-color:  #003B4B;
+    color: #b3ddf9;
+}
+*/
+
+/* New header June 2016 */
+.header-container {
+	z-index: 100; //-1000;
+}
+#header-bar.header-dark {
+	background-color: $dark-blue-base;//#053B49;
+}
+#header-bar.header-dark * {
+    color: #FFF
+}
+
+.header-menu-font {
+	font-size: 16px !important;
+}
+
+#header-bar.header-dark .dropdown-menu {
+	margin-top: 2px;
+	margin-right: 4px;
+	border-radius: 0;
+    border: 1px solid #979797;
+    background-color: $off-white;
+    box-shadow: $soft-shadow;
+
+	//background-color: white;
+    color: black;
+	a {
+		color: black;
+    	background-color: $off-white;
+	}
+	a:hover {
+		//background-color: $gray2;
+		text-decoration: underline;
+	}
+}
+#header-bar.header-light *  {
+    background-color: #FFF;
+    color: $dark-blue-base;//#053B49;
+}
+#header-app-location {
+	display: block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+#header-app-location > * {
+	width:100%;
+}
+
+.header-bar-buttons {
+	& > div { 
+		margin-top: 0 !important;
+		height: 20px;
+		padding-right: 5px;
+		@media (min-width: $screen-sm-min) {
+			padding-right:20px; 
+			}
+	}
+	& > #header-announcement {
+		@media (min-width: $screen-sm-min) {
+		padding-right:5px; 
+		}
+	}
+	
+}
+#header-bar * .header-login {
+	border-radius: 3px;
+	background-color: $dark-blue-base;//#053B49;
+}	
+.not-loggedin {
+		padding: 2px 8px;
+		width: 61px;
+		background-color: rgb(241, 90, 34);
+		color: white;
+	}
+
+#header-menu {
+	padding-right: 5px;
+	display: flex;
+	align-items: center;	
+}
+#header-menu-label {
+	padding-left:5px;
+	display: none; //hides on all pages except homepage
+    
+}
+.pipe {
+	margin-left: 5px;
+	padding-right: 4px !important;
+	@media (min-width: $screen-md-min) { 
+		margin-left: -5px;
+		padding-right: 10px !important;
+	}
+}
+.hidden-xxs {
+	@media (max-width: 350px) {
+		display: none!important;
+	} 
+}
+.account-name {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+
+	.fa.fa-angle-down {
+		
+	}
+}
+body.homepage #header-menu-label {
+	display: inline-block;
+}
+
+#header-thin-bar {
+    height: 5px;
+    background-color: #053B49;
+}
+
+#header-bar * .clue_app {
+    font-family: 'Open Sans';
+    font-size: 14pt;
+	padding-left: 12px;
+	font-weight: 300;
+	letter-spacing: .8px;
+}
+
+
+#header-vertical-bar {
+    padding-left:10px;
+    border-right: 1px solid #FFF;
+}
+#header-bar {
+	height:$header-height;
+	
+	
+	.flex-end {
+		align-items:center;
+		height:$header-height;
+		padding-right:10px;
+		@media (min-width: $screen-lg-min) {padding-right:65px; }
+	}
+	
+	.flex {
+		display:flex;
+		flex-direction:row;
+		align-items:center;
+		justify-content:flex-start;
+		align-content:center;
+	}
+	
+	.app_name {
+		font-family: $sans;
+		font-weight: bold;
+		color: #FFD500;
+		font-size: 14pt;
+	}
+	
+	/*[data-app-title="L1000 QUERY"] {
+    	color:$app-Query;
+	}
+	[data-app-title="QUERY"] {
+		color:$app-Query;
+	}
+	[data-app-title="TOUCHSTONE"] {
+    	color:$app-Touchstone;
+	}
+
+	[data-app-title="MORPHEUS"] {
+		color:$app-Morpheus;
+	}
+
+	//doesn't exist?
+	[data-app-title="CELL BROWSER"] {
+		color:$app-CellBrowser;
+	}
+
+	[data-app-title="HISTORY"] {
+		color:$app-History;
+	}
+
+	[data-app-title="CONNECTIONS"] {
+		color:$app-Connections;
+	}
+
+	[data-app-title="REPURPOSING APP"] {
+		color:$app-Repurposing;
+	}
+
+	[data-app-title="ICV"] {
+		color:$app-ICV;
+	}
+
+	//doesn't exist?
+	[data-app-title="CELL QUERY"] {
+		color:$app-CellQuery;
+	}
+	
+	[data-app-title="THE DRUG REPURPOSING HUB"] {
+		color:#407987;
+		font-size: 14px;
+		opacity: 0.6;
+	}
+	[data-app-title="PROTEOMICS"] {
+		color:#a685c1;
+	}
+	[data-app-title="PROTEOMICS QUERY"] {
+		color:#a685c1;
+	}
+
+	//command, data, and proteomics need to have colors/have their current colors reflected in their logos*/
+}
+
+
+
+#account-details > p {
+    font-size: 10pt;
+}
+
+.account-detail {
+    padding-top:2px;padding-bottom:2px;
+}
+
+#branch-watermark {
+	position: absolute;
+	top: 0;
+	left: 10px;
+	font-size: 24px;
+	text-shadow: 3px 3px 8px #000000;
+	font-family: 'Roboto Condensed';
+}

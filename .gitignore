@@ -1,0 +1,14 @@
+.DS_Store
+.idea/
+node_modules
+.bower-cache
+.bower-registry
+.settings
+config/local.json
+local.json
+*~
+**/.sccs
+.sass-cache
+uploads
+package-lock.json
+bower_components/

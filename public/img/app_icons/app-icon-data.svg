@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>DataApp@2x Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="36" height="36"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="36" height="36" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="DataApp@2x-Icon">
+            <g id="Group-Copy" transform="translate(17.500000, 18.000000) rotate(-180.000000) translate(-17.500000, -18.000000) translate(-1.000000, -0.000000)">
+                <use id="Rectangle-17-Copy-8" stroke="#00B9F2" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                <ellipse id="Oval-7" stroke="#00B9F1" cx="22" cy="18" rx="5" ry="5"></ellipse>
+                <path d="M11.0664425,10.0664425 C5.41911466,15.7137704 5.41911466,24.869898 11.0664425,30.5172259 C17.3061542,24.2775143 25.5657372,16.0179312 31.5172259,10.0664425 C25.869898,4.41911466 16.7137704,4.41911466 11.0664425,10.0664425 Z" id="Oval-1-Copy" fill="#00B9F2" style="mix-blend-mode: multiply;" transform="translate(19.174086, 18.174086) rotate(-45.000000) translate(-19.174086, -18.174086) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,89 @@
+#contactModal.modal.fade.in(role='dialog', aria-labelledby='contactModal', aria-hidden='true' style="overflow-y: auto")
+    .modal-dialog
+        .modal-content
+            form#contactForm2.form-horizontal(method='post', enctype='multipart/form-data', data-toggle='validator')
+                .modal-headerblue
+                    .div#contactClose(style='padding-left:15px ; padding-right:15px')
+                        button.close(type="button" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true")
+                                | &times;
+                    .div
+                        img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg")
+                        img(src="//assets.clue.io/clue/public/img/logos/banner-cmap2_0.svg" style="height: 22px")
+
+                .modal-title-copy-headline
+                    | Contact Us
+
+                .modal-body
+                    .row.pad-bottom-12
+                        .col-xs-12
+                            | Send us your questions or suggestions.
+                    .row
+                        .col-xs-12
+                            .form-group
+                                .text-warning#messageTextContact
+
+                    .row(style='padding-left:15px ; padding-right:15px')
+                        .col-xs-6
+                            .form-group(style='padding-right:10px;')
+                                input.form-control#contactmodal_firstname(name="firstname" type="text" placeholder="First Name" data-error="First name required" required)
+                                .help-block.with-errors
+                        .col-xs-6
+                            .form-group(style='padding-left:10px;')
+                                input.form-control#contactmodal_lastname(name="lastname" type="text" placeholder="Last Name" data-error="Last name required" required)
+                                .help-block.with-errors
+                        .col-xs-12
+                            .form-group
+                                input.form-control#contactmodal_email(name="email" type="email" placeholder="Email (please use only your institutional email, no personal emails)" data-error="Invalid email address" required)
+
+                    .row.pad-bottom-12(style='padding-left:0; padding-right:0')
+                        .col-xs-12
+                            b When reporting an error, please provide a screenshot below.
+
+                    .row(style='padding-left:15px ; padding-right:15px')
+                        .col-xs-12
+                            .form-group
+                                input.form-control#subject(name="subject" type="subject" placeholder="Subject" data-error="Subject required" required)
+                                .help-block.with-errors
+
+                            .form-group
+                                 textarea#help_message.form-control(name='comments', placeholder='Your message', value='', required='', data-error='Message is required' , style='height:200px')
+                                .help-block.with-errors
+
+                    .row#captchaInstructionRow
+                        .col-xs-12.pad-bottom-12
+                            b Please type the text you see in the image
+                    .row#captchaRow(style="display: none;padding-left:15px ; padding-right:15px")
+                        .col-xs-6
+                            .form-group
+                                img#captcha_image(src="/connectopedia/tickets2/captcha.jpg")
+                        .col-xs-6
+                            .form-group
+                                input.form-control#captcha_response(type="text" name="captcha")
+                                br
+                    .row(style='padding-right:15px')
+                        .col-xs-6
+                            .form-group
+                                #draganddrop.box(style="padding-left: 15px")
+                                    .box__input
+                                        input.col-xs-12.form-control.box__file#filechooser(type='file', accept='image/*', name='screenshot', data-multiple-caption='{count} files selected', multiple='' style="display: none")
+                                        label.code-box-edited(for="filechooser")
+                                            i.fa.fa-upload(style="padding-right: 5px")
+                                            span#filechooser_label Upload screenshot files
+                                        //input#file.box__file(type='file', accept='image/*', name='screenshot', data-multiple-caption='{count} files selected', multiple='')
+                        .col-xs-6
+                            .form-group.pull-right
+                                button#send_btn.btn-primary
+                                    i.fa.fa-send
+                                    | Send
+
+                    hr
+                    .row.pad-bottom-12
+                        .col-xs-12
+                            | For general information, see the
+                            a(target="_blank" href="/connectopedia" data-turbolinks="false") &nbsp;Connectopedia knowledge base.
+                            | &nbsp;If you would prefer to talk to a member of our team, please join our
+                            a(target="_blank" href="/office-hours" data-turbolinks="false") &nbsp;office hours
+                            | &nbsp;every Tuesday from 1:00-2:00pm EST.
+
+

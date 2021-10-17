@@ -1,0 +1,41 @@
+- var app = { title:'App Template' }
+extends ../templates/page_layout.jade
+
+block content
+    .container-fluid.tabbed-app.demo
+        ul.nav.nav-tabs.app-tabs
+           
+
+
+        .tab-content
+
+            #tab2.tab-pane
+                    
+            // Layout 3 - Data App
+
+            #tab3.tab-pane
+                    div(name="left").col-xs-12.col-sm-4.col-md-3
+                        .demo-block Facets
+                    //- middle column
+                    div(name="center").col-xs-11.col-sm-8.col-md-6.pad-right-0
+                        .demo-block Table
+                    //- right uber column
+                    div(name="right").col-xs-6.col-sm-4.col-md-3
+                        include includes/demo-metadatacard-builds.jade
+
+
+            
+
+
+
+
+           
+                            
+    include includes/selected_signatures_modal.jade
+
+// .tabbed-app class needed to extend border to the bottom of screen
+block footer
+    .tabbed-app
+        include includes/footerapp.jade
+
+                

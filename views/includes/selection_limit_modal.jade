@@ -1,0 +1,19 @@
+.modal.fade#tslimit(tabindex='-1', role='dialog', aria-hidden='true')
+	.modal-dialog.modal-lg
+		.modal-content.white(style="max-width: 800px; border-radius:0; padding-bottom:32px;")
+			.container-fluid
+					.row.model-header
+						.col-xs-offset-10.col-xs-2
+							button.close(type='button', data-dismiss='modal')
+								.pad-top-8 &times;
+							
+			.modal-body
+				.container-fluid
+					.row
+						.col-xs-12
+							.title-copy
+								| Selection Limit Exceeded
+					.row.pad-top-8
+						.col-xs-12
+							.body-copy(style="color: #333")
+								#limitnum

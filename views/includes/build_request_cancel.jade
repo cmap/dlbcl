@@ -1,0 +1,11 @@
+#cancelModal.modal.fade.involvedModal(tabindex='-1', role='dialog', aria-labelledby='cancelModalLabel', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true')
+                h3#confirmModalLabel Cancel
+            .modal-body
+                p Are you sure you want to discard all changes?
+            .modal-footer
+                button#dismissCancel.btn(aria-hidden='true') No, stay here
+                button#cancelConfirm.btn(aria-hidden='true')  Yes, cancel form

@@ -1,0 +1,71 @@
+/* tsTable.css */
+.glyphicon.glyph-cp {
+    font-size: 11px;
+}
+
+.glyphicon.glyph-oe {
+    font-size: 11px;
+}
+
+.glyphicon.glyph-kd {
+    font-size: 11px;
+}
+
+/*.slick-row {*/
+    /*font-size: 12px;*/
+    /*line-height: 14px;*/
+/*}*/
+
+.slick-hover-table .slick-row:hover {
+    background-color: rgba(223, 221, 213, 0.25);
+}
+
+/*.slick-cell.selected {*/
+/*background-color: #ff4630;*/
+/*}*/
+
+
+/**/
+.table-row-pert-type-background-cp { background-color: rgba(245, 166,  35, 0.8); }
+.table-row-pert-type-background-kd { background-color: rgba(203, 124, 206, 0.8); }
+.table-row-pert-type-background-oe { background-color: rgba(111, 189, 221, 0.8); }
+.table-row-pert-type-background-cc { background-color: rgba(0, 93,  153, 0.8); }
+
+.slick-row.table-row-pert-type-background-cp > .slick-cell { background-color: rgba(245, 166,  35, 0.8); }
+.slick-row.table-row-pert-type-background-kd > .slick-cell { background-color: rgba(203, 124, 206, 0.8); }
+.slick-row.table-row-pert-type-background-oe > .slick-cell { background-color: rgba(111, 189, 221, 0.8); }
+.slick-row.table-row-pert-type-background-cc > .slick-cell { background-color: rgba(0, 93, 153, 0.8); }
+
+/**/
+.table-row-selected-000 { background-color: rgba( 14,  52, 105, 0.50); }
+.table-row-selected-001 { background-color: rgba(244, 188,  78, 0.50); }
+
+.table-row-selected-002 { background-color: rgba(238,  82,  51, 0.50); }
+.table-row-selected-003 { background-color: rgba(225,  56, 126, 0.50); }
+
+.table-row-selected-004 { background-color: rgba(183, 203, 150, 0.50); }
+.table-row-selected-005 { background-color: rgba(126, 203, 192, 0.50); }
+
+.table-row-selected-006 { background-color: rgba(149, 112, 170, 0.50); }
+.table-row-selected-007 { background-color: rgba(175, 153, 121, 0.50); }
+
+.table-row-selected-008 { background-color: rgba(130, 119, 117, 0.50); }
+.table-row-selected-009 { background-color: rgba(240, 200, 221, 0.50); }
+
+.slick-row.table-row-selected-000 > .slick-cell { background-color: rgba( 14,  52, 105, 0.50); }
+.slick-row.table-row-selected-001 > .slick-cell { background-color: rgba(244, 188,  78, 0.50); }
+
+.slick-row.table-row-selected-002 > .slick-cell { background-color: rgba(238,  82,  51, 0.50); }
+.slick-row.table-row-selected-003 > .slick-cell { background-color: rgba(225,  56, 126, 0.50); }
+
+.slick-row.table-row-selected-004 > .slick-cell { background-color: rgba(183, 203, 150, 0.50); }
+.slick-row.table-row-selected-005 > .slick-cell { background-color: rgba(126, 203, 192, 0.50); }
+
+.slick-row.table-row-selected-006 > .slick-cell { background-color: rgba(149, 112, 170, 0.50); }
+.slick-row.table-row-selected-007 > .slick-cell { background-color: rgba(175, 153, 121, 0.50); }
+
+.slick-row.table-row-selected-008 > .slick-cell { background-color: rgba(130, 119, 117, 0.50); }
+.slick-row.table-row-selected-009 > .slick-cell { background-color: rgba(240, 200, 221, 0.50); }
+
+
+

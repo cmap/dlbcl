@@ -1,0 +1,151 @@
+doctype
+html( lang="en" )
+    include head.jade
+
+    body
+        header
+            include menu_modal.jade
+            include login_signup_menu.jade
+            .container-fluid.header-container.navbar-fixed-top.col-xs-12(style="padding-left:0px;padding-right:0px;padding-top:-1px;")
+                .row(style="margin:0")
+                    .col-xs-12(id="header-thin-bar" style="display:none")
+                .row(style="margin:0")
+                    .col-xs-12(id="header-bar" style="padding-left:0;padding-right:0;")
+                        .col-xs-5.col-sm-6.col-md-9
+                            //Used in app header
+                            .flex(id="main-header-bar" style="display:none;")
+                                a(href="/")
+                                    img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg" style="padding-right:5px;")
+                                span.clue_app.hidden-xs(id="header-app-location" style="display:none;")
+                                    span(id="header-clue-app" style="display:none;") CLUE APP&nbsp;
+                                    span.app_name(id="header-app-title" style="display:none")
+                            //Used in dynamic homepage
+                            div#icons2(style="display:none").pad-top-12
+                                include navbar_home2.jade
+
+                        .col-xs-7.col-sm-6.col-md-3
+                            .flex-end
+                                .click-me(id='header-menu')
+                                    span.fa.fa-bars
+                                    span(id='header-menu-label') Menu 
+                                        span.pipe |
+                                span
+                                    span.click-me.header-login.not-loggedin(id='header-login')
+                                    span.click-me.fa.fa-angle-down.header-pop-down(style="margin-left: -5px;display:none;" id="header-pop-down")
+                                    div(id="header-drop-down" style="display:none;")
+                                        .header-dropdown
+                                            include header-drop-down.jade
+                                
+
+                                span(id="header-question" style="display:none;")
+                                    span(id="header-vertical-bar")
+                                    a(data-toggle="dropdown" style="padding-left:10px" id="help-dropdown-link").fa.fa-question-circle
+                                    ul.dropdown-menu.dropdown-menu-right
+                                        //include header-help-dropdown.jade
+                                        
+
+
+
+
+                script(src="/public/js/local/utils/header.js")
+
+                script.
+                    $(document).ready(function () {
+                        $('#help-dropdown-link').on('click',function(evt) {
+                            clue.hideAccountDropDown();
+                        });
+
+                        var pageTitle = "#{title}";
+                        var pageCategory = "#{category}";
+
+
+                        var path = window.location.pathname;
+                        var navBar = new NavBar(pageTitle, path, pageCategory);
+                        var loginBox = $('#header-login');
+                        var settingsModal = $('#header-drop-down');
+
+                        $('#header-menu').on('click', function (evt) {
+                            evt.preventDefault();
+                            showMenu();
+                        });
+
+                        loginBox.on('click', function (evt) {
+                            if (!scarpa.isLoggedIn()) {
+                                $('#loginModal').modal('show');
+                            }
+                        });
+
+                        var showSettingsDropDown = function() {
+                            var userInfo = clue.getUserInfo();
+                            $('#dropdown-email').text(userInfo.email);
+                            $('#dropdown-name').text(userInfo.fullName);
+                            settingsModal.toggle();
+                        }
+
+                        loginBox.on('clue-login', function (event, username) {
+                            loginBox.text(username);
+                            loginBox.css('background-color', '');
+                            loginBox.removeClass('not-loggedin');
+                            loginBox.css('color','');
+                            $('#header-pop-down').show();
+                            loginBox.on('click', function (evt) {
+                                showSettingsDropDown();
+                            });
+                        });
+
+                        $(".header-pop-down").on('click', function (evt) {
+                            showSettingsDropDown();
+                        });
+
+                        $('#dropdown-account-settings').on('click', function (evt) {
+                            evt.preventDefault();
+                            $.ajax({url: '/settings'}).
+                                    done(function (result) {
+                                        $('#account-institution').text(result.institution);
+                                        $('#account-apiKey').text(result.apiKey);
+                                        $('#account-roles').text(result.roles);
+                                        $('#account-details').show();
+                                        $('#dropdown-account-settings').hide();
+                                        $('#dropdown-hide-account-settings').show();
+                                    });
+                        });
+
+                        $('#dropdown-hide-account-settings').on('click', function (evt) {
+                            evt.preventDefault();
+                            $('#account-details').hide();
+                            $('#dropdown-hide-account-settings').hide();
+                            $('#dropdown-account-settings').show();
+                        });
+
+                        var numModals = 0;
+                        $(document).on('shown.bs.modal',function() {
+                            numModals++;
+                        });
+                        $(document).on('hidden.bs.modal',function() {
+                            setTimeout(function() {
+                                numModals--;
+                            },
+                            200);
+                        });
+
+                        $(document).keyup(function(e) {
+                            if (e.keyCode == 27) {
+                                if (numModals === 0) {
+                                    if (settingsModal.is(':visible')) {
+                                        settingsModal.hide();
+                                    }
+                                }
+                            }
+                        });
+
+                    });
+
+                script.
+
+                    $(document).ready(function () {
+                        var currentTitle = document.getElementById('cluecmap').innerHTML;
+
+                        document.getElementById('cluecmap').innerHTML = currentTitle + " [" + window.location.hostname + "]";
+                        scarpa.appLaunch();
+                        clue.analytics();
+                    });

@@ -1,0 +1,25 @@
+doctype
+html( lang="en" )
+    head
+        include ../views/includes/head.jade
+    body
+        block cmap_header
+            include ../views/includes/header
+        block body
+            .container-fluid.tabbed-app
+                ul.nav.nav-tabs.app-tabs(role='navigation')
+                    block tabs
+                        //li
+                            a(data-toggle="tab" href="#tab1") Tab example
+                                button.close
+                                    span &times
+                .tab-content
+                    block tabcontent
+                    
+        block footer
+            // .tabbed-app class needed to extend border to the bottom of screen
+            .tabbed-app
+                include ../views/includes/footerapp.jade
+        block scripts
+            include ../views/includes/clue_js.jade
+                

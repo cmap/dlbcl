@@ -1,0 +1,230 @@
+/* The grid: Four equal columns that floats next to each other */
+figure.img_column {
+    float: left;
+    padding: 10px;
+}
+figure {
+    /*text-align: center;*/
+}
+.isDisabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+a[aria-disabled="true"] {
+    color: currentColor;
+    display: inline-block;  /* For IE11/ MS Edge bug */
+    pointer-events: none;
+    text-decoration: none;
+}
+figure figcaption {
+    border: 1px dotted blue;
+    /*text-align: center;*/
+}
+.thumbnail {
+    background-color: black;
+    margin-bottom: 0px !important;
+
+    /*width: 250px;*/
+}
+/* Style the images inside the grid */
+.img_column img {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.img_column img:hover {
+    opacity: 1;
+}
+/* Clear floats after the columns */
+.img_row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* The expanding image container */
+.img_container {
+    position: relative;
+    display: none;
+}
+
+/* Expanding image text */
+#imgtext {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    color: white;
+    font-size: 20px;
+}
+/* Closable button inside the expanded image */
+.imgclosebtn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+.lasso path {
+    stroke: #828282;
+    stroke-width: 2px;
+}
+.lasso .drawn {
+    fill-opacity: .05;
+}
+.lasso .loop_close {
+    fill: none;
+    stroke-dasharray: 3,3;
+}
+.lasso .origin {
+    fill: #ffffff;
+    fill-opacity: 0;
+}
+.not_possible {
+    stroke: none;
+    stroke-width: 0;
+}
+.possible {
+    stroke: #000000;
+    stroke-width: 2px;
+}
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    padding: 6px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 12px;
+    background: white;
+    border: 0.5px solid grey;
+    pointer-events: none;
+}
+.zoomVsSelect, .zoomVsSelect-umap {
+    display: inline-block;
+    font-size: 16px;
+}
+.zoomVsSelect label, .zoomVsSelect-umap label {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+}
+.zoomVsSelect input[type="radio"], .zoomVsSelect-umap input[type="radio"] {
+    display: none;
+}
+.zoomVsSelect input[type="radio"] + label span, .zoomVsSelect-umap input[type="radio"] + label span {
+    display: inline-block;
+    padding: 3px 6px;
+    border: 1px solid #CCC;
+    text-align: center;
+    margin: 0 5px 0 0;
+    width: 34px;
+}
+.zoomVsSelect input[type="radio"]:hover + label span, .zoomVsSelect-umap input[type="radio"]:hover + label span {
+    background: PowderBlue;
+}
+.zoomVsSelect input[type="radio"]:checked + label span, .zoomVsSelect-umap input[type="radio"]:checked + label span {
+    background: SkyBlue;
+}
+.clickBtn {
+    padding: 3px 6px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+    display: inline-block;
+    margin: 0 5px 0 0;
+    vertical-align: top;
+    outline: none;
+    width: 34px;
+    font-size: 16px;
+    color: black;
+    height: 30px;
+    background-color: white;
+}
+.clickBtn:hover {
+    background: PowderBlue;
+}
+.clickBtn:active {
+    background: SkyBlue;
+}
+.umap-visual, .umap-legend {
+    display: inline-block;
+    vertical-align: top;
+    height: 400px;
+}
+ .umap-legend {
+    overflow-y: scroll;
+    position: absolute;
+    top: 0;
+    left: 400px;
+}
+.umap-legend svg {
+    display: block;
+}
+.legend {
+    cursor: pointer;
+}
+.searchbar {
+    width: 248px;
+    height: 25px;
+    border: 1px solid black;
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-group {
+    display: inline-block;
+    vertical-align: middle;
+}
+.btn-group button {
+    padding: 3px 6px;
+    border: 1px solid #CCC;
+    cursor: pointer;
+    z-index: 90;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    outline: none;
+    height: 25px;
+}
+.btn-group button:hover:enabled {
+    background: PowderBlue;
+}
+.btn-group button:active:enabled {
+    background: SkyBlue;
+}
+.umap-selection {
+    color: #888888;
+    font-size: 12px;
+    text-align: right;
+    width: 500px;
+}
+.umap-row {
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+.umap-row2 {
+    width: 500px;
+    text-align:right;
+}
+.highlight-controls, .buttons, .umap-dropdowns {
+    vertical-align: bottom;
+    margin-top: auto;
+}
+.umap-dropdowns p {
+    margin: 0;
+    padding: 0;
+}
+select {
+    height: 25px;
+}
+.umap-plot {
+    margin-top: 10px;
+    position: relative;
+}
+
+

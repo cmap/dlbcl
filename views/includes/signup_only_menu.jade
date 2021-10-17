@@ -1,0 +1,189 @@
+//section 1: name, email, and institution
+//section 2: read tos and agree
+//section 3: password, primary role, and academic training
+
+link(rel="stylesheet" href="/public/css/local/testBuildRequest/main.css")
+link(rel="stylesheet" href="/public/css/local/testBuildRequest/normalize.css")
+
+#signupModal.modal.fade.data-library.involvedModal(tabindex='false', role='dialog', aria-labelledby='addModal', aria-hidden='true' style="z-index: 50; overflow-y: auto")
+    .row
+        .modal-dialog
+            .modal-content
+                form#requestForm.form-horizontal(data-toggle='validator' style="padding-top: 15px")
+                    .modal-header.modal-headerblue
+                        .div#signupClose
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                span(aria-hidden="true")
+                                    | &times;
+                        .div
+                            img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg")
+                            img(src="//assets.clue.io/clue/public/img/logos/banner-cmap2_0.svg" style="height: 22px")
+                        //- Sign up
+                       .modal-title#signup-title(style="display:none;")
+                           .modal-title-copy-headline
+                               | Sign up
+                       //- privacy policy
+                       .modal-title#policy-title(style="display:none;")
+                           .modal-title-copy-headline
+                               | Privacy Policy
+                       //- terms of use
+                       .modal-title#termsOfUse-title(style="display:none;")
+                           .modal-title-copy-headline
+                               | Terms and Conditions
+                       //- terms of use
+                       .modal-title#account-creation-success-title(style="display:none;")
+                           .modal-form-copy#success-message-from-server(style="padding:30px;")
+                    .modal-body
+                        .form-group(style="display:none;" name="messageGroup")
+                            .text-warning#messageText(name="messageText")
+                        //include signup_form.jade
+
+                        //- Signup
+                        form.modal-form-copy#signup-form(name="signup-form" data-form-type="signup" role="form" method="post")
+                            style.
+                                .twitter-typehead,
+                                .twitter-typeahead, .tt-query,
+                                .twitter-typeahead, .tt-hint {
+                                    margin-bottom: 0;
+                                    display: block !important;
+                                    width: 100%;
+                                }
+
+                                .tt-input {
+                                    width: 100%;
+                                }
+
+                                .tt-hint {
+                                    display: block;
+                                    width: 100%;
+                                    height: 34px;
+                                    padding: 6px 12px;
+                                    font-size: 14px;
+                                    line-height: 1.42857143;
+                                    color: #999;
+                                    background-color: #fff;
+                                    background-image: none;
+                                    border: 1px solid #ccc;
+                                    border-radius: 4px;
+                                    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                                    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+                                    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+                                    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                                    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+                                }
+
+                                .tt-dropdown-menu {
+                                    min-width: 160px;
+                                    width: 100%;
+                                    margin-top: 2px;
+                                    padding: 5px 0;
+                                    background-color: #ffffff;
+                                    border: 1px solid #cccccc;
+                                    border: 1px solid rgba(0, 0, 0, 0.15);
+                                    border-radius: 4px;
+                                    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                                    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+                                    background-clip: padding-box;
+                                }
+
+                                .tt-suggestion {
+                                    display: block;
+                                    padding: 3px 20px;
+                                }
+
+                                .tt-suggestion.tt-is-under-cursor {
+                                    color: #fff;
+                                    background-color: #428bca;
+                                }
+
+                                .tt-suggestion.tt-is-under-cursor a {
+                                    color: #fff;
+                                }
+
+                                .tt-suggestion p {
+                                    margin: 0;
+                                    font-weight: 300;
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                    max-width: 570px;
+                                    white-space: pre;
+                                    white-space: pre-line;
+                                }
+
+                                .light-text {
+                                    font-weight: 400;
+                                }
+
+                            #signupMessages
+                            #signupSteps
+                                h3 Personal Information
+                                section.row.margin-left-0(style='overflow-y:scroll')
+                                    .col-xs-12
+                                        b Public access to the Connectivity Map is free for all individuals. For information on how to collaborate with CMap, please
+                                            a(data-toggle="modal" data-target="#contactModal" data-dismiss="modal")  contact us
+                                            | .
+                                    fieldset.col-sm-12
+                                        .col-xs-6
+                                            .form-group
+                                                input.form-control#first-name(name="firstName" type="text" placeholder="First Name" data-error="First name required" required)
+                                                .help-block.with-errors
+                                        .col-xs-6
+                                            .form-group
+                                                input.form-control#last-name(name="lastName" type="text" placeholder="Last Name" data-error="Last name required" required)
+                                                .help-block.with-errors
+                                        .col-xs-12
+                                            .form-group
+                                                input.form-control#email(name="email" type="email" placeholder="Email (please use only your institutional email, no personal emails)" data-error="Invalid email address" required)
+                                                .help-block.with-errors#emailErrors
+                                        .col-xs-12
+                                            .form-group#instituteEntry
+                                                input.form-control#institution(name="institution" placeholder="Institution" data-error="Institution required" required)
+                                                .help-block.with-errors#institutionErrors
+                                        .col-xs-12
+                                            .form-group
+                                                input.form-control#password(name="password" type="password" placeholder="Password" required data-error="Password must be at least 4 characters, numbers, or symbols." data-minlength="4")
+                                                .help-block.with-errors
+                                            .form-group
+                                                input.form-control#password-confirm(name="password-confirm" type="password" placeholder="Confirm password" data-match="#password" data-match-error="Passwords don't match" data-error="Password must be at least 4 characters, numbers, or symbols." required)
+                                                .help-block.with-errors
+                                        .col-xs-6
+                                            .form-group
+                                                .modal-form-copy-bold
+                                                    | Primary Research Role
+                                                div#researchRolesSignup
+                                                .help-block.with-errors(style="padding-left:10px;margin-top:0px;margin-bottom:0px;font-family: 'Istok Web', sans-serif;color: #a94442;font-size: 13px;font-weight:400;")
+
+                                        .col-xs-6
+                                            .form-group
+                                                .modal-form-copy-bold
+                                                    | Academic Training
+                                                div#academicTrainingSignup
+                                                .help-block.with-errors#academicTrainingErrors(style="padding-left:0px;padding-top:5px;margin-top:0px;margin-bottom:0px;font-family: 'Istok Web', sans-serif;color: #a94442;font-size: 13px;font-weight:400;")
+                                h3 Terms of Service
+                                section.row.margin-left-0(style='overflow-y:scroll')
+                                    .col-xs-12
+                                        | By choosing to use the CLUE web site, you acknowledge and agree to these Terms and Conditions and to our Privacy Policy. We encourage you to read them. We reserve the right to modify these terms and policies and recommend that you periodically review them, because your continued use of this site signifies your agreement with these terms.
+                                    .col-xs-12(style="padding-top: 12px; padding-bottom: 12px")
+                                        div#tosBox(style="height: 300px; overflow-y: scroll; border: 1px lightgray solid; padding: 10px")
+                                            include tosBoxContent
+                                    fieldset.col-xs-12
+                                        .row#nonProfitAttestation
+                                            .col-xs-12
+                                                .form-group
+                                                    .modal-form-copy
+                                                        label.light-text(for="non-profit-affiliation")
+                                                            input#non-profit-affiliation(type="checkbox" data-error="Please certify that you have read our terms and conditions" required disabled)
+                                                            |  I certify I have read the
+                                                            a(href="/terms" target="_blank")  Terms and Conditions
+                                                            | .
+                                                    .help-block.with-errors(style="padding-left:10px;margin-top:0px;margin-bottom:0px;")
+                            .row.pad-bottom-15
+                                .col-xs-12.pull-left
+                                    div(style="padding-bottom:33px;")
+                                    .modal-form-copy-light
+                                        a(data-toggle="modal" data-target="#loginModal" data-dismiss="modal")
+                                            | Login with existing account
+                                        | &nbsp;|&nbsp;
+                                        a(href="/terms" target="_blank") Terms of Use
+                                        | &nbsp;|&nbsp;
+                                        a(href="/privacy" target="_blank") Privacy Policy

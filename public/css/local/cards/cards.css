@@ -1,0 +1,27 @@
+.tooltip_trigger {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.tooltip_trigger.gene-KD{
+    color: #B438BE;
+}
+
+.tooltip_trigger.gene-OE {
+    color: #27AAE0;
+}
+
+.tooltip_content {
+}
+
+a.pjax.pjax-card:visited {
+    color: #4A4A4A;
+    cursor: default;
+}
+
+a.pjax.pjax-card:link {
+    text-decoration: none;
+    color: #4A4A4A;
+    cursor: default;
+}

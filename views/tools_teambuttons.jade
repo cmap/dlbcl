@@ -1,0 +1,9 @@
+.row.team_workbench
+    div.col-xs-6.col-md-12.hero-menu-item
+        div.code-box
+            a(href="/workbench" data-turbolinks="false") WORKBENCH
+if(doc.role === "ADMIN")
+    .row.admin_panel
+        div.col-xs-6.col-md-12.hero-menu-item
+            div.code-box
+                a(href="/admin/users" data-turbolinks="false") ADMIN PANEL

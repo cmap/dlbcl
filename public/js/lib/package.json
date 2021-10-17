@@ -1,0 +1,20 @@
+{
+  "name": "clue",
+  "title": "clue",
+  "description": "clue JavaScript Library",
+  "version": "0.0.1",
+  "author": {
+    "name": "CMAP team"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-cache-breaker": "^2.0.1",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-copy": "~0.4.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "~0.9.0",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}

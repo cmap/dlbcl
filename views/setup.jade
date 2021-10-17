@@ -1,0 +1,16 @@
+- var app = { title:'Setup CLUE' }
+extends ../templates/page_layout.jade
+
+block content
+    .container
+        .col-sm-6.col-sm-offset-3
+            h1 Scan this QR Code in Google Authenticator
+            img(src='#{qrImage}')
+
+            p - or enter this key manually into the Google Authenticator App
+            b #{key}
+
+            h1 - then follow this link
+                a(href="/login-otp")  to enter your authenticator code.
+
+block footer

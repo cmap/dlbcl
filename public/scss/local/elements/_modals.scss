@@ -1,0 +1,232 @@
+
+.modal-headerblue {
+	background-color: $dark-blue-base;
+	min-height: unset;
+	height: 37px;
+	padding-top: 0;
+	margin-bottom:12px;
+	
+	button.close {
+		padding-top: 10px;
+	}
+	img {
+		padding-left: 8px;
+		padding-right:5px;
+	}
+}
+.modal-close {
+    padding-left:15px; 
+}
+.modal-headerblue {
+    .modal-close {
+        padding-right:15px;
+    }
+}
+.modal-body {
+    .modal-close {
+        margin-top: -5px;
+        margin-right: -15px;
+    }
+}
+.close {
+    color: #86a9b2;
+    opacity: 1;
+    font-weight:300;
+    text-shadow: none;
+}
+button.close:hover, button.close:focus, button.close:active {
+    color: #b3ddf9;
+    opacity: 1;
+    background: none;
+}
+.unshadow {
+    /*outline: none;*/
+    /*border: none !important;*/
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+/*(style="border-radius: 0; border-style: solid; border-width: thin; border-color: white; background-color: white;border:0;")*/
+.modal {
+    z-index: 200;
+}
+.modal-dialog {
+    //z-index: 100;
+}
+.modal-dialog.small-dialog,
+.utility-dialog {
+    width: 500px;
+    @media (min-height: 400px) {  margin-top: 100px; }
+    @media (min-height: 500px) {  margin-top: 160px; }
+    @media (min-height: 600px) {  margin-top: 200px; }
+    //@media (min-height: 900px) {  margin-top: 220px; }
+}
+.modal-backdrop {
+    background-color: white;
+    opacity: 0.9 !important;
+    z-index: 10;
+}
+.modal-content {
+    border-radius: 0;
+    border: 1px solid #86a9b2;
+    background-color: $off-white;
+    box-shadow: $soft-shadow;
+}
+
+.modal-content.white {
+    background-color: white;
+}
+.modal-dialog, .modal-lg {
+    max-width: 640px;
+}
+.modal-click-target {
+    cursor: pointer;
+}
+
+/*.modal-title-copy-headline {
+    padding-left:15px;
+    padding-top:20px;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:700;
+    font-size: 20px;
+}*/
+.modal-title,
+.modal-title-copy-headline {
+    padding-left:30px;
+    padding-top:20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:100;
+    font-size: 28px;
+}
+
+.small-dialog .modal-title,
+.small-dialog .modal-title-copy-headline,
+.utility-dialog .modal-title {
+    font-size: 25px;
+    padding-top: 10px;
+}
+.modal-body .modal-title {
+    padding-bottom: 8px;
+}
+.modal-title-copy {
+    font-family: 'Istok Web', sans-serif;
+    font-weight:700;
+    font-size: 14px;
+}
+.modal-body {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.modal-form-copy {
+    font-size: 12px;
+	font-weight: 400;
+}
+.mfc{
+    font-family: 'Istok Web', sans-serif !important;
+    font-size: 13px !important;
+    line-height: 23px !important;
+}
+p.mfc {
+    font-weight:300 !important;
+    padding-bottom: 7px;
+    padding-top: 2px;
+}
+
+.modal-body * .form-group > .help-block {
+    padding-left:15px;
+}
+
+.modal-body p {
+    font-family: $sans;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.modal-form-copy-light {
+
+    font-family: 'Istok Web', sans-serif;
+    font-weight:400;
+    font-size: 13px;
+    color: #c1c1c1;
+}
+
+.modal-form-copy-bold {
+
+    font-family: 'Istok Web', sans-serif;
+    font-weight:700;
+    font-size: 13px;
+    line-height: 20px;
+}
+
+//---  Disclaimer overlay modal
+.modal-dialog.modal-disclaimer{
+	background-color: white;
+	opacity: 0.8;
+}
+
+.modal-footer .btn+.btn {
+    margin-bottom: 8px !important;
+    margin-left: 5px
+}
+
+.modal-header {
+    .modal-title-copy-headline,
+    .modal-title {
+        padding-left: 15px;
+    }
+}
+.modal-body {
+    .modal-title-copy-headline,
+    .modal-title {
+        padding-left: 0px;
+    }
+}
+//--- Login modal
+
+
+    .modal-title {
+        .modal-title-copy-headline {
+            padding-left: 0;
+            padding-top: 0;
+        }
+    }
+
+
+
+
+
+//--- Build request modal
+
+#requestForm, #requestFormSignup {
+    #saveDraft,
+    #loadPreset {
+        align-self: flex-start;
+    }
+    .spacer {
+        width: 65px;
+    }
+    #resulttextadd {
+        padding: 0 2px;
+        //padding-bottom: 8px;
+    }
+
+    .col-sm-12 > .col-sm-6 {
+        width: calc(50% + 22px);
+    }
+    .form-group,
+    .form-horizontal .form-group {
+        margin-bottom: 2px;
+
+        margin-left: 0;
+        margin-right: 0;
+    }
+    fieldset {
+        .form-group,
+    .form-horizontal .form-group {
+
+        margin-left: -15px;
+        margin-right: -15px;
+    }
+    }
+}

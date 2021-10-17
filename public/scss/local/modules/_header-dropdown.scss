@@ -1,0 +1,186 @@
+
+#header-bar {
+	.header-dropdown * {
+		background-color: white;//$off-white;
+		color: black;
+		#account-details {
+			font-size: 10px;
+			max-width: 18em; //fits the API key
+			overflow-wrap: break-word;
+  			word-wrap: break-word;
+			.label {
+				display: block;
+				text-align: left;
+				padding: 0;
+				margin-left: 0;
+				margin-top: 12px;
+				font-size: 12px;
+				color: $gray6;
+				font-weight: 400;
+			}
+			#account-apiKey {
+				//font-family: $condensed;
+			}
+		}
+	}
+}
+
+#header-bar {
+	#help-dropdown * {
+		background-color: white;
+		
+	}
+	.header-dropdown {
+		position: absolute;
+		background-color: white;
+		top: 32px; //applies on home page
+		right:32px; //applies on home page
+		width: auto;
+		min-width: 14em; 
+		height: 100%;
+		z-index: 20;
+		
+		.modal-content {
+			padding:15px;
+			border-color:#979797;
+			overflow-x:auto;
+			font-size: 12px;
+			box-shadow: $soft-shadow;
+			z-index: 20;
+
+			#dropdown-name {
+				margin-top: 5px;
+				margin-bottom: 5px;	
+			}
+
+			#dropdown-email {
+				color: $gray6;
+				padding-bottom: 12px;
+			}
+			#dropdown-account-settings, dropdown-hide-account-settings {}
+			dropdown-hide-account-settings {
+				text-align: right;
+			}
+			hr {
+				border-color:#979797;
+				margin:10px 0;}
+			a.signout {
+				color: $happy-sky;
+			}
+		}
+	}
+}
+#header-bar.header-dark {
+	.header-dropdown {
+		top: 38px;
+		right:25px;
+		
+		@media (min-width: $screen-lg-min) { 
+			right:80px;
+		}
+
+	}
+}
+
+
+.notification-dropdown {
+	width: 290px !important;
+	//height: 400px !important;
+	
+	.modal-content {
+		padding: 0 0 8px 0 !important;
+		border-color: #979797;
+		height: 500px !important;
+		@media (min-height: 570px) {
+			height: 540px !important;
+		 }
+		overflow: auto  !important;
+	}
+	.notification-dropdown-top {
+		display: flex;
+		justify-content: space-between;
+		padding: 8px 15px 3px 15px;
+	}
+	
+
+	.notification-dropdown-title {
+		color: #d90124; 
+		font-size: 14px; 
+		font-family: 'Open Sans', Arial, sans-serif;
+		font-weight: 600;
+		
+	}
+	.notifications-all {
+		padding-top: 3px;
+		font-size: 12px;
+		color: $link !important;
+	}
+
+	.notification-message {
+		border-top: 1px solid #E5E6E7;
+		padding: 10px 15px;
+		font-size: 12px;
+		color: #4A4A4A;
+	}
+	.notification-message.new {
+		border-left: 4px solid #d90124;
+	}
+}
+
+.badge-notify {
+	background: #d90124 !important;
+	color: white !important;
+	position: relative;
+	top: -6px;
+	left: -7px;
+	font-size: 8px;
+	padding: 3px 5px !important;
+	font-family: "Open Sans", Arial, sans-serif !important;
+	font-weight: 700 !important;
+	user-select: none;
+}
+
+.notification-message:hover {
+	background: #f2f2f2 !important;
+}
+
+a.message-container:hover {
+	text-decoration: none !important;
+}
+
+#notification-modal-content::-webkit-scrollbar {
+	width: 5px;
+}
+
+#notification-modal-content::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+}
+
+#notification-modal-content::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.header-arrow-down {
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 10px 0 10px;
+		border-color: #003B4A transparent transparent transparent;
+
+		
+		position: relative;
+		top: 13px;
+		margin-left: auto;
+		margin-right: auto;
+		left: 0;
+		right: 0;
+		background-color: transparent !important;
+		color: transparent !important;
+		z-index: 30;
+		//margin-left: 10px;
+
+		
+	}
+

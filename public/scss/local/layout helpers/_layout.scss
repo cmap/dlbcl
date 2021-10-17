@@ -1,0 +1,640 @@
+// Layout variables are in _base.scss
+
+// ------------------------------------------------------
+
+// LAYOUT MIXINS:
+    // apptab-content
+// CONTAINERS:
+    // App Container
+    // Tabbed App Container
+    // Static Page Container
+// VERTICAL PADDING & CENTERING
+// PAGE ELEMENTS:
+    // Columns
+    // 5-column layout
+    // Table Container
+// LAYOUT HELPERS:
+    // margin
+    // padding
+    // media query baded padding
+    // width
+    // z-index
+
+
+//Half-size column grid size for bootstrap : see _mixins.scss
+
+// ------------------------------------------------------
+
+// LAYOUT MIXINS
+
+@mixin apptab-content($app-tabcontent-padtop) {
+    $app-tabcontent-height: calc(#{$body-height} - #{$app-tabcontent-padtop} - #{$app-footer-height});
+    .tabbed-app>.tab-content {
+        padding-top:$app-tabcontent-padtop;
+        min-height: $app-tabcontent-height;
+    }
+    .demo-block, .metadata-card-vert-container {
+        height: calc(100vh - 108px); //fallback for Safari
+        @media (min-width: 1441px) {
+            height: calc(100vh - 125px); //fallback for Safari
+        }
+        height: $app-tabcontent-height;}
+
+}
+
+@media (max-width: 1440px){
+    @include apptab-content(15px);
+
+}
+@media (min-width: 1441px){
+    @include apptab-content(35px)
+}
+
+
+
+// CONTAINERS
+
+.container-fluid {
+    width: 100%;
+}
+
+// App Container
+
+.container-fluid.app-container-fluid {
+    flex:1;
+    width: 100%;
+    height: 100%;
+    margin:0;
+    font-family: $sans;
+    font-size: 13px;
+
+    &.vert-centered-app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .row {
+            width: 100%;
+            padding-bottom: 20%;
+        }
+    }
+}
+
+.full-width-section {
+	width: calc(100vw - 30px) ;
+    position: relative;
+    left: -16px;
+
+    @media (min-width: $screen-sm-min) { 
+        //for page without sidebar
+        width: 100vw;
+        left: calc(-1 * (100vw - 100%) / 2);
+    }
+    padding: 0px; 
+}
+.main-content .full-width-section {
+    @media (min-width: $screen-md-min) { 
+        //for page with sidebar
+        left: calc(-8.33333333vw - 15px);
+    }
+}
+
+
+// Tabbed App Container
+
+// Must be used with footerapp wrapped in a .tabbed-app div in order to extend the left and right borders to the bottom of the viewport
+
+.container-fluid.tabbed-app {
+    padding: 0;
+    height: calc(#{$bh} - 62px);
+    @media (min-width: 425px) {
+        //height: calc(#{$bh} - 47px);
+    }
+    @media (min-width: 769px) {
+        height: $body-height;
+        }
+
+    margin: 0;
+
+    div[name="left"] {
+        @media (min-width: 1441px) {padding-left: 45px; }
+    }
+    //div[name="center"] {}
+    div[name="right"] {
+        @media (min-width: 1441px) {
+            padding-right: 45px; }
+        @media (min-width: $screen-xl-min) {
+            padding-left: 35px; }
+    }
+}
+
+.tabbed-app {
+    border-left: solid 2px $tab-background;
+    border-right: solid 2px $tab-background;
+}
+
+// Static Page Container - must be applied to all static pages
+
+.container-fluid.static-page {
+    padding-left: 15px;
+    padding-right: 15px;
+    flex:1;
+    height: 100%;
+    min-height: calc({$bh} - {$footer-height});
+    margin:0;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    /*@media (max-width: $screen-md-min) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }*/
+
+    .vert-centered-p {
+        width: 100vw;
+        align-self: center;
+        flex: 1;
+        //margin-top: auto;
+        //margin-bottom: auto;
+    }
+    .auto-grow {
+        height: auto;
+        flex: auto;
+    }
+}
+
+// VERTICAL PADDING (needs work/cleanup)
+
+.clue-app-margin-top {
+    //margin-top: 36px; //needs to be removed when body is set to display:flex - this was a Safari issue. Check if still buggy
+    @media (min-width: $screen-sm-min){
+        height: 20px;
+    }
+    @media (min-width: $screen-md-min){
+        height: 30px;
+    }
+}
+
+.responsive-padding { //class created to experiment without breaking existing layouts that use .clue-app-margin-top
+    @media (min-width: $screen-sm-min){
+        height: 15px;
+    }
+    @media (min-width: $screen-md-min){
+        height: 30px;
+    }
+    @media (min-width: $screen-xl-min) {
+        height: 40px;
+    }
+}
+
+
+// VERTICAL CENTERING (may need linting)
+
+.vert-centered {
+    position: relative;
+    top: 50%;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.vertalign {
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+// PAGE ELEMENTS
+
+
+// Columns
+
+.onesixth {width: 14.28%;}
+.onethird {width: 31.4%;}
+.half {width: 47.8%;}
+.twothird {width: 65.7%;}
+.fivesixth {width: 82.85%;}
+
+.onesixth, .onethird, .half, .twothird, .fivesixth {float:left;margin-right: 30px;}
+.last {margin-right: 0;}
+
+
+
+// Table Container
+
+//.app-table-container {
+    //height: $table-height + $slicktable-header-height;
+
+//}
+
+
+.init-hidden {
+    display: none;
+}
+
+
+// LAYOUT HELPERS
+
+// Margin helpers
+
+.margin-auto {
+    margin: auto;
+}
+.margin-v-auto {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+.margin-h-auto {
+    margin-right: auto;
+    margin-left: auto;
+}
+.margin-top-0 {
+    margin-top: 0 !important;
+}
+.margin-top-2 {
+    margin-top: 2px;
+}
+
+.margin-top-3 {
+    margin-top: 3px;
+}
+
+.margin-top-4 {
+    margin-top: 4px;
+}
+
+.margin-top-5 {
+    margin-top: 5px;
+}
+.margin-top-12 {
+    margin-top: 12px;
+}
+.margin-top-25 {
+    margin-top: 25px;
+}
+.margin-top-36 {
+    margin-top: 36px;
+}
+.margin-top-50 {
+    margin-top: 50px;
+}
+
+.margin-left--5 {
+    margin-left: -5px;
+}
+
+.margin-left-0 {
+    margin-left: 0px;
+}
+.margin-left-4 {
+    margin-left: 4px !important;
+}
+.margin-left-5 {
+    margin-left: 5px;
+}
+.margin-left-15 {
+    margin-left: 15px;
+}
+.margin-left-30 {
+    margin-left: 30px;
+}
+.margin-right-0 {
+    margin-right: 0px;
+}
+.margin-right-8 {
+    margin-right: 8px;
+}
+.margin-right-30 {
+    margin-right: 30px;
+}
+.margin-left--15 {
+    margin-left: -15px;
+}
+.margin-right--15 {
+    margin-right: -15px;
+}
+
+.margin-bottom-0 {
+    margin-bottom: 0;
+}
+
+.full-width {
+    width: 100%;
+}
+
+
+// Padding helpers
+
+.pad-0 {
+    padding: 0 !important;
+}
+
+
+.pad-15 {
+    padding: 15;
+}
+.pad-bottom-2 {
+    padding-bottom: 2px;
+}
+@media screen and (min-width: 768px) {
+    .depad {
+        padding-left: 0;
+    }
+}
+.pad-bottom-4 {
+    padding-bottom: 4px;
+}
+.pad-bottom-6 {
+    padding-bottom: 6px;
+}
+.pad-bottom-8 {
+    padding-bottom: 8px;
+}
+.pad-bottom-12 {
+    padding-bottom: 12px;
+}
+.pad-bottom-15 {
+    padding-bottom: 15px;
+}
+.pad-bottom-16 {
+    padding-bottom: 16px;
+}
+
+.pad-bottom-24 {
+    padding-bottom: 24px;
+}
+
+.pad-bottom-32 {
+    padding-bottom: 32px;
+}
+
+.pad-bottom-64 {
+    padding-bottom: 64px;
+}
+
+.pad-bottom-128 {
+    padding-bottom: 128px;
+}
+
+.pad-top-0 {
+    padding-top: 0px;
+}
+.pad-top-2 {
+    padding-top: 2px;
+}
+.pad-top-4 {
+    padding-top: 4px;
+}
+
+.pad-top-5 {
+    padding-top: 5px;
+}
+
+.pad-top-6 {
+    padding-top: 6px;
+}
+
+.pad-top-8 {
+    padding-top: 8px;
+}
+.pad-top-12 {
+    padding-top: 12px;
+}
+
+.pad-top-16 {
+    padding-top: 16px;
+}
+.pad-top-20 {
+    padding-top: 20px;
+}
+.pad-top-24 {
+    padding-top: 24px;
+}
+
+.pad-top-32 {
+    padding-top: 32px;
+}
+
+.pad-top-48 {
+    padding-top: 48px;
+}
+
+.pad-top-64 {
+    padding-top: 64px;
+}
+
+.pad-top-128 {
+    padding-top: 128px;
+}
+
+.pad-left-0 {
+    padding-left: 0 !important;
+}
+
+.pad-left-2 {
+    padding-left: 2px;
+}
+
+.pad-left-4 {
+    padding-left: 4px;
+}
+.pad-left-5 {
+    padding-left: 5px;
+}
+
+.pad-left-8 {
+    padding-left: 8px;
+}
+
+.pad-left-15 {
+    padding-left: 15px;
+}
+.pad-left-16 {
+    padding-left: 16px;
+}
+
+.pad-left-24 {
+    padding-left: 24px;
+}
+
+.pad-left-32 {
+    padding-left: 32px;
+}
+
+.pad-left-40 {
+    padding-left: 40px;
+}
+
+.pad-left-64 {
+    padding-left: 64px;
+}
+
+.pad-left-72 {
+    padding-left: 72px;
+}
+
+.pad-left-128 {
+    padding-left: 128px;
+}
+
+.pad-left-256 {
+    padding-left: 256px;
+}
+
+.pad-right-0 {
+    padding-right: 0 !important;
+}
+
+.pad-right-2 {
+    padding-right: 2px;
+}
+
+.pad-right-4 {
+    padding-right: 4px;
+}
+
+.pad-right-8 {
+    padding-right: 8px;
+}
+.pad-right-15 {
+    padding-right: 15px;
+}
+.pad-right-16 {
+    padding-right: 16px;
+}
+
+.pad-right-24 {
+    padding-right: 24px;
+}
+
+.pad-right-32 {
+    padding-right: 32px;
+}
+
+
+
+// Media query based padding
+.pad-right-xs-0 {
+    @media (max-width: $screen-sm-min) {
+        padding-right: 0;
+    }
+}
+
+
+// Width helpers
+
+.wide-8 {
+    width: 8px;
+    min-width: 8px;
+}
+
+.wide-16 {
+    width: 16px;
+    min-width: 16px;
+}
+
+.wide-32 {
+    width: 32px;
+    min-width: 32px;
+}
+
+.wide-64 {
+    width: 64px;
+    min-width: 64px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.wide-160 {
+    width: 160px;
+    min-width: 160px;
+}
+
+.wide-256 {
+    width: 256px;
+    min-width: 256px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.wide-240 {
+    width: 240px;
+}
+.wide-20 {
+    width: 20%;
+}
+
+.wide-30 {
+    width: 30%;
+}
+
+.wide-40 {
+    width: 40%;
+}
+
+.maxwide-250 {
+    max-width: 250px;
+}
+.maxwide-650 {
+    max-width: 650px;
+}.max-wide-560 {
+    max-width: 560px;
+}
+.max-wide-650 {
+    max-width: 650px;
+}
+.max-wide-680 {
+    max-width: 680px;
+}
+.max-wide-962 {
+    max-width: 962px;
+}
+
+// z-index helpers
+
+.z-0 {
+    z-index: 0;
+}
+.z-5 {
+    z-index: 5;
+}
+.z-10 {
+    z-index: 10;
+}
+
+
+@media (min-width: $screen-sm-min) {
+    .pull-right-sm {
+        float: right !important;
+    }
+}
+@media (min-width: $screen-md-min) {
+    .pull-right-md {
+        float: right !important;
+    }
+}
+@media (min-width: $screen-lg-min) {
+    .pull-right-lg {
+        float: right !important;
+    }
+}
+
+//For use with absolute-positioned elements:
+@media (min-width: $screen-sm-min) {
+    .pos-right-sm {
+        right: 0;
+        left: auto;
+    }
+}
+@media (min-width: $screen-md-min) {
+    .pos-right-md {
+        right: 0;
+        left: auto;
+    }
+}
+@media (min-width: $screen-lg-min) {
+    .pos-right-lg {
+        right: 0;
+        left: auto;
+    }
+}

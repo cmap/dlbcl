@@ -1,0 +1,592 @@
+//
+// Site Menu
+
+// For TOC styles see _pageTOC.scss
+
+$menu-subheading-color: $teal1;
+$menu-text-size: 13px;
+$menu-text-lineheight: 18px;
+$menu-link-color: black;
+$menu-link-color2: $link;
+$menu-disabled-link-color: $gray4;
+
+#menu-tools-modal-content, #menu-projects-modal-content, #menu-partnering-modal-content, #menu-developers-modal-content, #menu-internal-modal-content, #menu-help-modal-content {
+	.modal-backdrop {
+		//opacity: .6;
+	}
+	.modal-dialog {
+		margin: 0 auto;
+	}
+	.modal-content {
+		background: white;
+		border-radius: 0;
+		border-width: 0;
+		padding: 0 auto;
+	}
+	.subheading {
+		margin-bottom: 6px;
+		color: $menu-subheading-color;
+		font-size: $menu-text-size + 1.5px;
+		font-weight: 600;
+	}
+	.modal-form-copy {
+		font-size: $menu-text-size;
+		line-height: $menu-text-lineheight;
+		padding-bottom: 4px;
+		color: $gray7;
+	}
+	.hero-menu-app-with-icon a {
+		white-space: normal;
+	}
+	//.team-buttons {
+	//	margin-top: 60px;
+	//}
+	.code-box {
+		background: #f6f6f6;
+	}
+	.code-box a {
+		background-color: transparent;
+	}
+	.modal-body {
+		padding: 0;
+	}
+}
+
+#menu-tools-modal-content .modal-dialog {
+	height: 600px;
+}
+
+#analysis_section a {
+	align-items: flex-start;
+}
+
+#menu-projects-modal-content, #menu-partnering-modal-content, #menu-developers-modal-content, #menu-internal-modal-content, #menu-help-modal-content {
+	.modal-dialog {
+		max-width: 210px;
+	}
+}
+
+//#utility_apps, #developer_apps {
+#utility_apps {
+	padding-top: 8px;
+	font-size: $menu-text-size + 2px;
+}
+
+#developer_apps i {
+	color: $menu-subheading-color !important;
+}
+
+@media screen and (max-width: 991px) {
+	#menu-tools-modal-content {
+		.col-xs-12 {
+			float: none;
+		}
+		.modal-dialog {
+			max-width: 500px;
+		}
+		hr {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#menu-tools-modal-content {
+		.modal-form-copy {
+			display: none;
+		}
+	}
+}
+
+.width-clear {
+	width: auto !important;
+}
+
+#hero-menu-modal {
+	.modal-content {
+		background: white;
+	}
+
+	font-size: $menu-text-size;
+	line-height: $menu-text-lineheight;
+	color: $menu-disabled-link-color;
+	a {
+		color: $menu-link-color;
+	}
+	.modal-form-copy-bold {
+		padding-bottom: 6px;
+		color: black;
+	}
+	.modal-form-copy{
+		font-size: $menu-text-size;
+		line-height: $menu-text-lineheight;
+		padding-bottom: 4px;
+		ul {
+			padding: 0;
+			line-height: $menu-text-lineheight - 2px;
+		}
+		ul li {
+			margin-bottom: 10px;
+			margin-left: 0;
+			list-style: none;
+		}
+	}
+	.hero-menu-item {
+		padding-bottom:20px;
+
+
+	}
+}
+#team_workbench .hero-menu-item, #team_workbench_tools .hero-menu-item {
+	padding-bottom:10px;
+}
+
+.app-link-text {
+	font-size: $menu-text-size;
+	padding-bottom: 4px;
+}
+.app-title.app-link-text {
+	font-weight: 600;
+	font-size: $menu-text-size + 1px;
+	padding-bottom: 2px;
+}
+
+ #hero-menu-modal * hr {
+							 margin-top: 4px;
+							 margin-bottom: 4px;
+							 padding-bottom: 0;
+							 border-style: solid;
+							 border-color: $menu-subheading-color;
+							 border-width: 1px 0 0 0;
+						 }
+ #hero-menu-modal .modal-body {
+						   padding-top: 2px;
+					   }
+/*#hero-menu-modal * */ .login-section, .tools_login_area {
+							display:flex;
+							justify-content:center;
+							align-items:center;
+							flex-direction:column;
+							padding-top:20px;
+							padding-bottom:20px;
+							color: black;
+							a {
+								color:$menu-link-color2;
+								cursor: pointer;
+							}
+							@media (min-width: $screen-md-min) {padding-top:75px; }
+						}
+
+/* #hero-menu-modal > * */ .login-section > .please-login, .tools_login_area > .please-login {
+							   font-size:34px;
+							   font-weight:100;
+							   padding-bottom:20px;
+						   }
+
+/* #hero-menu-modal > * */ .login-section > .login-text, .tools_login-area > .login_text {
+							   font-size:14px;
+							   font-weight: 400;
+						   }
+
+#hero-menu-modal * .reference-items > * a {
+	white-space: nowrap;
+}
+
+@media screen and (max-width: 991px) {
+	#team_workbench, #admin_panel {
+		width: 50%;
+	}
+}
+@media screen and (max-width: 767px) {
+	#team_workbench, #admin_panel {
+		width: 100%;
+	}
+}
+
+// Subheading styling
+
+#Apps, #AppsList > .row{
+	margin-bottom: 14px;
+	color: $menu-subheading-color;
+	font-size: $menu-text-size + 2px;
+}
+//#ReferenceApps, #UtilityApps, #DeveloperApps {
+#ReferenceApps, #UtilityApps {
+	padding-top: 8px;
+	font-size: $menu-text-size + 2px;
+}
+
+
+// Analysis apps section
+
+#Apps > * > .row {
+	margin-top: 8px;
+	padding-bottom: 8px;
+}
+.hero-menu-app-with-icon  {
+	padding-top:5px;
+	a {
+		display:flex;
+		justify-content:flex-start;
+		align-items:center;
+		white-space: nowrap;
+
+		img {
+			width:36px;
+			height:36px;
+			padding-top: 4px;
+		}
+
+		.app-title {
+			padding-left:7px;
+		}
+
+		i.fa.fa-info-circle {
+			padding-right: 8px;
+			width: unset;
+		}
+		.tooltip {
+			//z-index: 20;
+			//overflow: visible; these dont solve anything
+			max-width: 285px;
+			@media (min-width: $screen-sm-min) {
+				//left: 300px !important; // DEV
+				left: 310px !important; // QA
+			}
+			@media (min-width: $screen-md-min) {
+				//left: 115px !important; // DEV
+				left: 125px !important; // QA
+			}
+			top: unset;
+		}
+
+
+		// .arrow is outer, .arrow:after is inner
+
+		.tooltip .tooltip-arrow,
+		.tooltip .tooltip-arrow:after {
+			position: absolute;
+			display: block;
+			width: 0;
+			height: 0;
+			border-color: transparent;
+			border-style: solid;
+		}
+		.tooltip .tooltip-arrow {
+			border-width: 10px;
+
+		}
+		.tooltip .tooltip-arrow:after {
+			border-width: 9px;
+			content: "";
+		}
+		.tooltip {
+
+			&.left .tooltip-arrow {
+				//top: 50%;
+				right: -4px; //-$tooltipArrowOuterWidth;
+				margin-top: -9px; //-$tooltipArrowOuterWidth;
+				border-right-width: 0;
+				border-left-color: black;
+				-moz-transform:scale(1, .9);
+				-webkit-transform:scale(1, .9);
+
+				&:after {
+					right: 1px;
+					top: -9px;
+					border-right-width: 0;
+					border-left-color:white; //$tooltipArrowColor;
+					//bottom: 5px;
+				}
+			}
+
+		}
+		.tooltip-inner {
+			text-align: left;
+			font-family: $sans;
+			color: black;
+			background-color: white;
+			border: solid 1px black;
+			border-radius: 0;
+			padding: 15px;
+			box-shadow: 0 5px 10px rgba(0,0,0,.2);
+		}
+	}
+	a:hover {
+		text-decoration: none;
+		.app-title{
+			text-decoration: underline;
+		}
+	}
+	a:hover > i.fa.fa-info-circle:hover {
+		color: $happy-sky !important;
+	}
+}
+
+
+.hero-menu-app-with-icon:last-of-type {
+	.tooltip {
+		//top: -67px!important; //DEV
+		top: -77px !important;  // QA
+		&.left .tooltip-arrow {
+			top: unset !important;
+			//bottom: 12px; //DEV
+			bottom: 18px; // QA
+			margin-top: -9px; //-$tooltipArrowOuterWidth;
+		}
+	}
+}
+
+
+//Deprecated or not?
+
+.modal-menu-close {
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.modal-header-copy {
+	font-family: 'PT Sans', sans-serif;
+	font-size: 17px;
+	color: white;
+}
+
+a.modal-menu-app-selection-link-label {
+	color: white;
+}
+
+.modal-menu-app-selection-link-label {
+
+	border-bottom-style: solid;
+	border-bottom-width: thin;
+	border-bottom-color: grey;
+}
+
+.modal-menu-app-selection-link-label:hover,
+.modal-menu-app-selection-link-label:focus,
+.modal-menu-app-selection-link-label:active  {
+	border-color: white;
+	cursor: pointer;
+}
+
+.modal-body-copy {
+	font-family: 'Istok Web', sans-serif;
+	font-size: 16px;
+}
+
+.modal-body-container {
+	min-height: 512px;
+}
+
+.modal-body-container a {
+	text-decoration: none;
+}
+
+.modal-body-container a:link{
+	color: #777777;
+}
+
+.modal-body-container a:visited{
+	color: #777777;
+}
+
+.modal-body-container a:hover{
+	color: white;
+}
+
+.modal-body-container a:active{
+	color: white;
+}
+
+.research-projects {
+	font-size: 24px;
+}
+
+.learning-support {
+	font-size: 24px;
+}
+
+/* Old styles - deprecated */
+/*
+	.app-menu {
+		background-color: #053b49;
+		color: #aec6cc;
+		border-color: #86a9b2;
+	}
+	.app-menu-body {
+		min-height:590px;
+		text-align: center;
+		padding-top: 0px;
+	}
+	@media screen and (min-width: 768px) {
+		.app-menu-body {
+			padding-left: 42px;
+			padding-right: 42px;
+		}
+	}
+	.app-menu-body a{
+		color: #aec6cc;
+		text-decoration: none;
+	}
+
+	.app-menu-hr{
+		margin-top:5px;
+		margin-bottom:5px;
+		border-color: #567279;
+	}
+	.app-menu-hr2{
+		margin-top:24px;
+		margin-bottom:24px;
+		border-color: #567279;
+	}
+	.menu-categories {
+		display: flex;
+		padding-bottom: 6px;
+	}
+	.menu-categories.hidden-xs {
+		justify-content: space-between;
+		padding-left: 55px;
+		padding-right:55px;
+	}
+	.menu-categories.hidden-sm.hidden-md.hidden-lg, .menu-categories.menu-bottom {
+		justify-content: center;
+		padding-left: 15px;
+		padding-right:15px;
+		padding-top: 4px;
+	}
+	.app-menu-section-label {
+		font-weight:400;
+		font-size: 12px;
+		letter-spacing: 0.3px;
+	}
+	.padded-labels-12 {
+		padding-left: 12px;
+		padding-right: 12px;
+	}
+	.app-menu-body a:hover,
+	.app-menu-body a:focus,
+	.app-menu-section-label:hover,
+	.app-menu-section-label:focus,
+	.app-menu-section-label:active  {
+		cursor: pointer;
+		color: white;
+	}
+
+	//.app-menu-section-label-unselected  {
+		//color: #01384a;
+		//background-color: white;}
+
+	.app-menu-section-label-selected  {
+		color: white;
+
+	}
+
+	#app_selection_menu_button {
+		color:  white;
+	}
+
+	#app_selection_menu_button:hover,
+	#app_selection_menu_button:focus,
+	#app_selection_menu_button:active  {
+		cursor: pointer;
+	}
+
+	.appRow {
+		justify-content:center;
+		display:flex;
+		align-content: space-around;
+		align-items: flex-start;
+		width: 90%;
+	}
+	.app-container {
+		padding-left: 35px;
+		padding-right: 35px;
+		padding-top:20px;
+		padding-bottom:8px;
+		width: 120px;
+	}
+	.flagship-card{
+		margin-left: 24px;
+		margin-right: 24px;
+	}
+	.launchedapp-card {
+		padding-left:15px;
+		padding-right:15px;
+	}
+	.app-card {
+		justify-content:center;
+		display:flex;
+		align-items:center;
+		flex-direction:column;
+	}
+
+	.flagship-app-name {
+		font-size: 16px;
+		font-weight: 400;
+		text-transform: uppercase;
+	}
+	.appText {
+		padding-top: 10px;
+		width: 200px;
+	}
+
+	.launched-app-name {
+		padding-top: 10px;
+		font-size: 14px;
+		font-weight: 400;
+		width: 100px;
+		padding-bottom: 4px;
+	}
+
+
+	.subsection {
+		padding-bottom: 20px;
+		font-size: 11px;
+		line-height: 18px;
+	}
+	.subsection-icon {
+		font-size: 40px;
+	}
+	.subsection-title {
+		font-size: 16px;
+		font-weight: 200;
+		letter-spacing: 0.5px;
+		padding-top: 8px;
+		padding-bottom: 8px;
+		margin-bottom: 8px;
+		margin-left:auto;
+		margin-right: auto;
+		//flex-grow: auto;
+	}
+	.subsection-title.border-bottom {
+		border-bottom: 1px solid #567279;
+		display: inline-block;
+		padding-left: 44px;
+		padding-right: 44px;
+	}
+	.subsection-list {
+		font-size: 14px;
+		font-weight: 200;
+		line-height: 22px;
+		padding-top: 4px;
+		padding-bottom: 16px;
+		margin-bottom: 8px;
+		letter-spacing: 0.3px;
+	}
+	.app-menu-warn-h1 {
+
+	}
+	.app-menu-warn-copy {
+
+	}
+	.app-menu-bottom {
+		position: absolute;
+		bottom:  15px;
+		right:42px;
+		left:42px;
+		margin-left:0;
+		margin-right:0;
+	}
+
+*/

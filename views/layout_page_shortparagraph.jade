@@ -1,0 +1,17 @@
+- var app = { title:'' }
+include includes/header_deprecated
+
+// layout for sparcely contented pages with roughly just one paragraph of text in the middle
+
+body
+	.container-fluid.static-page
+		.row.auto-grow
+		.row.vert-centered-p
+			.col-sm-offset-1.col-md-offset-2.col-xs-12.col-sm-10.col-md-8
+				.max-wide-962.margin-h-auto
+					block content  
+		.row.auto-grow
+
+footer
+	include includes/footer.jade
+block scripts

@@ -1,0 +1,23 @@
+#memberModal.modal.fade.in.data-library(role='dialog', aria-labelledby='memberModal', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-headerblue
+                .div#memberClose(style='padding-left:15px ; padding-right:15px')
+                    button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true")
+                            | &times;
+                .div
+                    img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg")
+                    img(src="//assets.clue.io/clue/public/img/logos/banner-cmap2_0.svg" style="height: 22px")
+
+            .modal-title-copy-headline
+                span Members for&nbsp;
+                span.member-label
+
+            .modal-body
+                div(style='padding-left:15px; padding-right:15px; overflow-y: scroll; max-height: 200px; border: 1px solid gray')
+                    div#memberList(style="padding: 15px")
+                hr
+                span Users listed here have access to the datasets marked with the&nbsp;
+                span.member-label
+                span  label.

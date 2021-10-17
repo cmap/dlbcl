@@ -1,0 +1,295 @@
+#interactiveReplicateCollapse {
+
+    /* RESET WITHIN THIS ID */
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, font, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        outline: 0;
+        font-weight: inherit;
+        font-style: inherit;
+        font-size: 100%;
+        font-family: inherit;
+        vertical-align: baseline;
+    }
+    /* remember to define focus styles! */
+    :focus {
+        outline: 0;
+    }
+    body {
+        line-height: 1;
+        color: black;
+        background: white;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    /* tables still need 'cellspacing="0"' in the markup */
+    table {
+        border-collapse: separate;
+        border-spacing: 0;
+    }
+    caption, th, td {
+        text-align: left;
+        font-weight: normal;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: "";
+    }
+    blockquote, q {
+        quotes: "" "";
+    }
+
+    /* STRUCTURE */
+
+    font-family: "Open Sans", sans-serif;
+    width: 500px;
+
+    #bottomLeft {
+        width: 160px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    #bottomRight {
+        /*width: 240px;*/
+        width: 320px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+        /*margin-bottom: 20px;*/
+        margin-left: 10px;
+    }
+    #repContainer {
+        width: 155px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+    #arrow {
+        width: 30px;
+        height: 20px;
+        display: inline-block;
+        position: relative;
+        margin-top: 190px;
+        margin-right: -20px;
+    }
+    #sigContainer {
+        width: 80px;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+    #rankContainer {
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+    }
+    .repID {
+        width: 30px;
+        height: 27px;
+        margin: 0 0 9px 0;
+        display: inline-block;
+    }
+    .replicate, .signature {
+        display: inline-block;
+        margin: 0;
+    }
+    .repLabels {
+        display: inline-block;
+        margin-right: 10px;
+        height: 11px;
+    }
+    .numBox, .sigBox {
+        background-color: white;
+        width: 32px;
+        height: 28px;
+        margin: 0;
+        border: 1px solid gray;
+        transition: background-color 0.5s;
+    }
+    .repLabel {
+        height: 28px;
+        margin: 0;
+        border: 1px solid white;
+    }
+    .repLabelHeader {
+        height: 20px;
+    }
+    #repCorr {
+        position: relative;
+    }
+    #averaging {
+        margin-bottom: 30px;
+    }
+    #rankVis {
+        width: 60px;
+        height: 280px;
+    }
+    #normWeight {
+        margin-left: 216px;
+    }
+
+    /* TYPE */
+    p {
+        font-size: 12px;
+        line-height: normal;
+        max-width: none;
+    }
+    h5 {
+        line-height: normal;
+    }
+    .bold {
+        font-weight: 700;
+    }
+    #presets p {
+        margin: 12px 0;
+    }
+    #bottomLeft h5 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0 0 5px 0;
+    }
+    #repContainer h5 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0 0 5px 47px;
+    }
+    #sigContainer h5 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0 0 23px 0;
+    }
+    #rankContainer h5 {
+        font-size: 14px;
+        font-weight: 700;
+        margin: 0 0 41px 0;
+    }
+    .numBox p, .sigBox p {
+        color: black;
+        text-align: center;
+        margin: 5px 0 0 0;
+        user-select: none;
+    }
+    .repID p, .repLabelHeader p {
+        font-size: 13px !important;
+        font-weight: 600;
+        margin: 0;
+        text-align: center;
+    }
+    .repLabel p {
+        font-weight: 700;
+        font-size: 15px !important;
+        margin: 5px 0 0 0;
+    }
+    .numBox p {
+        cursor: ew-resize;
+    }
+    .sigBox p {
+        cursor: default;
+    }
+    .clabel {
+        font-size: 13px;
+        font-weight: 600;
+    }
+    /*.wlabel {
+        font-size: 20px;
+    }*/
+    .cvalue, .wvalue {
+        font-size: 13px;
+        font-weight: 700;
+    }
+    #bottomLeft p {
+        margin: 0 0 5px 0;
+    }
+    #bottomLeft label {
+        font-size: 13px;
+    }
+    i {
+        color: #497fce;
+    }
+    h5 span {
+        color: #497fce;
+    }
+
+    /* STYLES */
+    input {
+        width: 12px;
+        margin: 0 10px 0 0;
+    }
+    .rep1 {
+        border-bottom: 10px solid #14b6f1;
+    }
+    .rep2 {
+        border-bottom: 10px solid #ecb010;
+    }
+    .rep3 {
+        border-bottom: 10px solid #2f9145;
+    }
+    .bgBar {
+        fill: #d2d2d2;
+    }
+    .sp12 {
+        background: repeating-linear-gradient(-45deg, #14b6f1, #14b6f1 6px, #ecb010 6px, #ecb010 12px);
+    }
+    .sp13 {
+        background: repeating-linear-gradient(-45deg, #14b6f1, #14b6f1 6px, #2f9145 6px, #2f9145 12px);
+    }
+    .sp23 {
+        background: repeating-linear-gradient(-45deg, #ecb010, #ecb010 6px, #2f9145 6px, #2f9145 12px);
+    }
+    .btn-group {
+        display: flex;
+    }
+    .btn {
+        margin: 0 10px 8px 0;
+        font-size: 10px;
+        white-space: initial;
+        height: auto;
+    }
+    .btn:focus {
+        outline: 0;
+    }
+    .arrow {
+        position: absolute;
+        box-sizing: border-box;
+    }
+    #arrow-01 {
+        width: 50%;
+        top: 30%;
+        right: 0;
+        transform: rotate(45deg);
+        border: 2px solid #b3b3b3;
+    }
+    #arrow-02 {
+        width: 50%;
+        top: 70%;
+        transform: rotate(-45deg);
+        right: 0;
+        border: 2px solid #b3b3b3;
+    }
+    #arrow-03 {
+        width: 94%;
+        top: 50%;
+        left: 0;
+        border: 2px solid #b3b3b3;
+    }
+    div.tooltip {
+        position: absolute;
+        text-align: left;
+        width: 150px;
+        /*height: 28px;*/
+        padding: 5px;
+        font: 12px sans-serif;
+        background: white;
+        border: 1px solid gray;
+        pointer-events: none;
+    }
+}

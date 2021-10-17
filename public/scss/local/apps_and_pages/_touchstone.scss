@@ -1,0 +1,34 @@
+
+//MAKE SURE THESE DONT CAUSE ISSUES OUTSIDE OF TS
+
+.title-copy {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    
+}
+
+.body-copy {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    font-style: italic;
+    padding-left: 16px;
+    padding-right: 15px;
+    color: #333;
+}
+
+.border-box {
+    border-style: solid;
+    border-width: thin;
+    border-color: red;
+}
+#app_version_string {
+    font-family: Roboto Mono; 
+    font-size: 9px; 
+    font-weight: 600; 
+    
+    @media (min-width: $screen-sm-min) { 
+        margin-top: -12px;
+    }
+}

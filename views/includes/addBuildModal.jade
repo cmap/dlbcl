@@ -1,0 +1,211 @@
+//link(rel="stylesheet" href="/public/css/local/testBuildRequest/jquery.steps.css")
+link(rel="stylesheet" href="/public/css/local/testBuildRequest/main.css")
+link(rel="stylesheet" href="/public/css/local/testBuildRequest/normalize.css")
+
+#addModal.modal.fade.data-library.involvedModal(tabindex='false', role='dialog', aria-labelledby='addModal', aria-hidden='true' style="z-index: 50")
+    .row
+
+        .modal-dialog
+                .modal-content
+                    form#requestForm.form-horizontal(data-toggle='validator')
+                        .modal-header
+                            .div#contactClose
+                                button.close(type="button" data-dismiss="modal" aria-label="Close")
+                                    span(aria-hidden="true")
+                                        | &times;
+
+                            .modal-title-copy-headline
+                                | Build Request
+                        
+                        .modal-body
+                            #resulttextadd
+                            h3 Project
+                            section.row.margin-left-0(style='overflow-y:scroll')
+                                fieldset.col-sm-12
+                                    .form-group
+                                        label.control-label(for='projectAdd') Project
+                                        select#projectAdd.col-xs-4.form-control.projects(name="projects",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                    .form-group
+                                        label.control-label(for='nameAdd') Abbreviation/Build Code&nbsp;
+                                        i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                        data-popover-config='[{"target_id":"i_data_build_code","content_id":"tt_data_build_code","placement": "auto right"}]'
+                                        data-tooltip-class="" style="color: #005D99;")#i_data_build_code
+                                        input#nameAdd.form-control(type='text', name='name', data-error="Code is required and must be unique and filename-compatible (e.g. no periods or spaces)", placeholder='Unique code for this build (e.g. ALS_C)', required='', pattern="[0-9A-Za-z-_]*")
+                                        .help-block.with-errors
+                                    .form-group
+                                        label.control-label(for='displayNameAdd') Display Name
+                                        input#displayNameAdd.form-control(type='text', name='display_name', data-error="Display Name is required and must be unique", placeholder='Unique name of build', required='')
+                                        .help-block.with-errors
+                                    .form-group
+                                        input#idAdd.form-control(type='hidden', name='id')
+                                    .form-group
+                                        label.control-label(for='descriptionAdd') Description
+                                        input#descriptionAdd.form-control(type='text', data-error="Description is required", name='description', placeholder='Brief description', required='')
+                                        .help-block.with-errors
+                                    .form-group
+                                        label.control-label(for='assayAdd') Data Assay
+                                        select#assayAdd.col-xs-4.form-control.assays(name="assays", data-error="At least one data assay is required", required='', style="width: auto" multiple="multiple")
+                                        .help-block.with-errors
+                                    .form-group
+                                        label.control-label(for='sourceAdd') Data Source
+                                        select#sourceAdd.col-xs-4.form-control.sources(name="sources", data-error="At least one data source is required", required='', style="width: 100%" multiple="multiple")
+                                        .help-block.with-errors
+                                fieldset.col-sm-12.pad-left-0.pad-right-0
+                                    .form-group.col-sm-6(style='margin-right:0px')
+                                        label.control-label(for='settingAdd') Privacy Setting
+                                        select#settingAdd.col-xs-4.form-control.settings(name="settings",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                    .form-group.col-sm-6
+                                        label.control-label(for='private_reasonAdd') &nbsp;
+                                        select#private_reasonAdd.col-xs-4.form-control.private_reasons(name="private_reasons",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                fieldset.col-sm-12
+                                    .form-group
+                                        label.control-label(for='needed_byAdd') Select Needed-By Date
+                                        input#needed_byAdd.form-control(type='text', data-error="Select Date", rows="5" name='needed_by', placeholder='Select a date')
+                                        .help-block.with-errors
+                            h3 Type
+                            section(style='overflow-y:scroll')
+                                .form-group
+                                    label.control-label Build Type&nbsp;
+                                    i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                    data-popover-config='[{"target_id":"i_build_type","content_id":"tt_build_type","placement": "auto right"}]'
+                                    data-tooltip-class="" style="color: #005D99;")#i_build_type
+                                    br
+                                    select#buildTypeAdd(name='buildTypeAdd')
+                                        option
+                                .form-group
+                                    #sigtoolsdivQuick.sigtoolsdiv(style="display: none")
+                                        label.control-label Sig Tools
+                                        div(style="padding-left: 15px")
+                                            input#buildfQuick.buildf.sigToolAdd(type='checkbox', name='build', value="Build" disabled)
+                                            label.control-label(for='buildfQuick') &nbsp; Build
+                                    #sigtoolsdivCTG.sigtoolsdiv(style="display: none")
+                                        .form-group
+                                            label.control-label(for='s3CTGFolderAdd') CTG build Name
+                                            input#s3CTGFolderAdd.form-control(type='text', name='ctg_name', placeholder='Unique name of CTG build, if different from build name')
+                                            .help-block.with-errors
+                                    #sigtoolsdivMerino.sigtoolsdiv(style="display: none")
+                                        label.control-label Sig Tools
+                                        div(style="padding-left: 15px")
+                                            input#buildfMerino.buildf.sigToolAdd(type='checkbox', name='build', value="Build" disabled)
+                                            label.control-label(for='buildfMerino') &nbsp; Build
+                                            br
+                                            input#mtsfMerino.mtsf(type='checkbox', name='mts', value="MTS", checked)
+                                            label.control-label(for='mtsfMerino') &nbsp; MTS
+                                            br
+                                            input#introspect_selffMerino.introspect_selff.sigToolAdd(type='checkbox', name='introspect_self', value='INTROSPECT_SELF')
+                                            label.control-label(for='introspect_selffMerino') &nbsp; Introspect Self as Bkgd
+                                            br
+                                            input#pcafMerino.pcaf.sigToolAdd(type='checkbox', name='pca', value='PCA')
+                                            label.control-label(for='pcafMerino') &nbsp; PCA
+                                            br
+                                            input#tsnefMerino.tsnef.sigToolAdd(type='checkbox', name='tsne', value='t-SNE')
+                                            label.control-label(for='tsnefMerino') &nbsp; t-SNE
+                                    #sigtoolsdiv.sigtoolsdiv(style="display: none")
+                                        label.control-label Sig Tools
+                                        div(style="padding-left: 15px")
+                                            input#buildf.buildf.sigToolAdd(type='checkbox', name='build', value="Build" disabled)
+                                            label.control-label(for='buildf') &nbsp; Build
+                                            br
+                                            input#build_synopsisf.build_synopsisf.sigToolAdd(type='checkbox', name='build_synopsis', value='Build Synopsis')
+                                            label.control-label(for='build_synopsisf') &nbsp; Build Synopsis
+                                            br
+                                            input#autolistf.autolistf.sigToolAdd(type='checkbox', name='autolist', value='Autolist')
+                                            label.control-label(for='autolistf') &nbsp; AutoList
+                                            br
+                                            input#calibf.calibf.sigToolAdd(type='checkbox', name='calib', value="CALIB")
+                                            label.control-label(for='calibf') &nbsp; CALIB
+                                            br
+                                            .form-group
+                                                label.control-label(for='calibCollectionAdd') Sig Calib collection&nbsp;
+                                                i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                                data-popover-config='[{"target_id":"i_calib_collection","content_id":"tt_calib_collection","placement": "auto right"}]'
+                                                data-tooltip-class="" style="color: #005D99;")#i_calib_collection
+                                                a(target="_blank" href="//assets.clue.io/clue/public/resources/sig_calib_default.gmt") download sample GMT file
+                                                select#calibCollectionAdd.col-xs-4.form-control.calib_collection(name="calib_collection",required='' style="width: 100%")
+                                                    option(disabled='', selected='', value='') ''
+                                            input#introspect_tsf.introspect_tsf.sigToolAdd(type='checkbox', name='introspect_ts', value='INTROSPECT_TS')
+                                            label.control-label(for='introspect_tsf') &nbsp; Introspect Touchstone as Bkgd
+                                            br
+                                            input#introspect_selff.introspect_selff.sigToolAdd(type='checkbox', name='introspect_self', value='INTROSPECT_SELF')
+                                            label.control-label(for='introspect_selff') &nbsp; Introspect Self as Bkgd
+                                            br
+                                            input#gutc_matchedf.gutc_matchedf.sigToolAdd(type='checkbox', name='gutc_matched', value="GUTC Matched")
+                                            label.control-label(for='gutc_matchedf') &nbsp; GUTC Matched
+                                            br
+                                            input#gutc_unmatchedf.gutc_unmatchedf.sigToolAdd(type='checkbox', name='gutc_unmatched', value="GUTC Unmatched")
+                                            label.control-label(for='gutc_unmatchedf') &nbsp; GUTC Unmatched
+                                            br
+                                            input#arfs_per_pertf.arfs_per_pertf.sigToolAdd(type='checkbox', name='arfs_per_pert', value='ARFS_PER_PERT')
+                                            label.control-label(for='arfs_per_pertf') &nbsp; GUTC Unmatched - ARFs per perturbagen
+                                            br
+                                            input#pcaf.pcaf.sigToolAdd(type='checkbox', name='pca', value='PCA')
+                                            label.control-label(for='pcaf') &nbsp; PCA
+                                            br
+                                            input#tsnef.tsnef.sigToolAdd(type='checkbox', name='tsne', value='t-SNE')
+                                            label.control-label(for='tsnef') &nbsp; t-SNE
+                                            br
+                                            .form-group
+                                                label.control-label(for='featureSpaceAdd') Feature Space&nbsp;
+                                                i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                                data-popover-config='[{"target_id":"i_feature_space","content_id":"tt_feature_space","placement": "auto right"}]'
+                                                data-tooltip-class="" style="color: #005D99;")#i_feature_space
+                                                select#featureSpaceAdd.col-xs-4.form-control.feature_spaces(name="feature_spaces",required='' style="width: 100%")
+                                                    option(disabled='', selected='', value='') ''
+                                    br
+                            h3 Params
+                            section(style='overflow-y:scroll')
+                                #lastpage(style="display:none")
+                                    .form-group
+                                        label.control-label(for='brew_prefixesAdd') Set of Brew Prefixes
+                                        textarea#brew_prefixesAdd.form-control(type='text', data-error="Enter at least one brew prefix", rows="5" name='brew_prefixes', placeholder='Enter at least one brew prefix', required='',data-remote="/validate-sf-name")
+                                        .help-block.with-errors
+                                    .form-group
+                                        label.control-label(for='l1000_groupbyAdd') Field to group replicates by (L1000)&nbsp;
+                                        i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                        data-popover-config='[{"target_id":"i_l1000_groupby","content_id":"tt_l1000_groupby","placement": "auto right"}]'
+                                        data-tooltip-class="" style="color: #005D99;")#i_l1000_groupby
+                                        select#l1000_groupbyAdd.col-xs-4.form-control.l1000_groupby(name="l1000_groupby",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                    .form-group
+                                        label.control-label(for='brewRootAdd') Brew Root&nbsp;
+                                        i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                        data-popover-config='[{"target_id":"i_brew_root","content_id":"tt_brew_root","placement": "auto right"}]'
+                                        data-tooltip-class="" style="color: #005D99;")#i_brew_root
+                                        select#brewRootAdd.col-xs-4.form-control.brew_root(name="brew_root",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                    .form-group
+                                        label.control-label(for='doseListAdd') Dose List&nbsp;
+                                        i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                        data-popover-config='[{"target_id":"i_dose_list","content_id":"tt_dose_list","placement": "auto right"}]'
+                                        data-tooltip-class="" style="color: #005D99;")#i_dose_list
+                                        select#doseListAdd.col-xs-4.form-control.dose_list(name="dose_list",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                    .form-group
+                                        label.control-label(for='columnFilterCollectionAdd') Column filter collection&nbsp;
+                                        i.fa.fa-question-circle-o.question-text.question-icon.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                                        data-popover-config='[{"target_id":"i_column_filter_collection","content_id":"tt_column_filter_collection","placement": "auto right"}]'
+                                        data-tooltip-class="" style="color: #005D99;")#i_column_filter_collection
+                                        select#columnFilterCollectionAdd.col-xs-4.form-control.column_filter_collection(name="column_filter_collection",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                #lastpageMerino(style="display:none")
+                                    .form-group
+                                        label.control-label(for='brew_prefixesAddMerino') Set of Plate Names
+                                        textarea#brew_prefixesAddMerino.form-control(type='text', data-error="Enter at least one plate name", rows="5" name='brew_prefixes', placeholder='Enter at least one plate name', required='',data-remote="/validate-sf-name")
+                                        .help-block.with-errors
+                                    .form-group
+                                        label.control-label(for='l1000_groupbyAdd') Field to group replicates by&nbsp;
+                                        select#l1000_groupbyAddMerino.col-xs-4.form-control.l1000_groupby(name="l1000_groupby",required='' style="width: 100%")
+                                            option(disabled='', selected='', value='') ''
+                                    .form-group
+                                        label.control-label(for='assay_typeAddMerino') Assay type&nbsp;
+                                        select#assay_typeAddMerino.col-xs-4.form-control.assay_type(name="assay_type",required='' style="width: 100%")
+                                    .form-group
+                                        label.control-label(for='thresholdAddMerino') Invariant Threshold
+                                        input#thresholdAddMerino.form-control(type='text', name='inv_threshold', placeholder='Invariant threshold')
+                                        .help-block.with-errors
+                                    .form-group
+                                        input#repf(type='checkbox', name='rep', value="TRUE")
+                                        label.control-label(for='repf') &nbsp; Replicate map

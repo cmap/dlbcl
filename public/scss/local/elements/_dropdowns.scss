@@ -1,0 +1,696 @@
+// TOC:
+
+// Caret and dropdown toggles
+// Basic Dropdown
+// Active & hover states
+// Dropdown with headings
+//          some global dropdown styles
+
+// Bootstrap-select ----------------------------
+//          multiple selections (checkmarks)
+//          single selection
+//          multiple selections (checkboxes)
+//          button margins
+//          Special elements inside dropdown menu (searchbox, actionbox)
+
+// Morpheus dropdowns ---------------------------
+
+
+
+// CUSTOM BUTTONS -------------------------------
+//          Slickgrid cog column picker dropdown
+
+// Button focus
+
+// (See _header.scss for header dropdowns)
+
+
+
+
+
+
+
+
+// Caret and dropdown toggles
+
+.caret, .bs-caret {
+    width: 10px;
+    //height: 10px;
+    border: none;
+    display:inline;
+    border-bottom: 0 !important;
+}
+
+.caret:before {
+    content: "\f107";
+    font-family: FontAwesome;
+    
+    margin-left: 2px;
+}
+
+
+.dropdown-toggle{
+    padding-right: 7px;
+    padding-left: 7px;
+}
+.dropdown-toggle.btn-xs {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 2px;
+    
+}
+.bootstrap-select > .dropdown-toggle {
+    padding-right: 20px;
+}
+.dropdown-toggle > .caret {
+    margin-top: 0;
+    padding-bottom: 8px;
+    color: $gray7;
+    &:hover {
+        color: $gray12;
+    }
+}
+.btn .caret {
+    margin-left: 10px;
+}
+.bs-caret {
+    display: inline-block;
+    padding: 2px;
+    height: 14px;
+    //width:14px;
+    .caret {
+        top: 35%;
+    }
+}
+.bootstrap-select.btn-group .dropdown-toggle .caret {
+    margin-top: -8px;
+}
+.bootstrap-select.btn-group .dropdown-toggle.btn-sm .caret {
+    margin-top: -7px;
+}
+
+.bootstrap-select.btn-group.fit-width .dropdown-toggle .caret {
+    position: absolute;
+}
+/* COVERED IN BUTTONS
+.dropdown-toggle > .fa.fa-square-o, 
+.dropdown-toggle > .fa-check-square-o, 
+.dropdown-toggle > .fa-minus-square-o {
+    padding-top: 3px;
+    //- margin-left:2px;
+    color: $gray7;
+    &:hover {
+        color: $gray12;
+    }
+    & + span {
+        margin-left: 4px;
+    }
+} */
+
+
+
+
+
+.bootstrap-select.btn-group.fit-width .dropdown-menu {
+    width: 100%;//calc(100% + 30px);
+    min-width: 180px;
+}
+
+
+// Basic Dropdown
+
+
+ul.dropdown-menu {
+    padding-left: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+
+    li {
+        padding-right: 0px;
+        font-size: 12.5px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+
+        max-width: 100%;
+        color: black; //bullet color
+        a {
+            white-space: normal;
+        }
+    }
+
+    li span {
+        font-family: $sans;
+        font-size: 12.5px; /*makes the font size normal*/
+        line-height: 12.5px;
+        vertical-align: baseline;//sub;
+        color: black;
+        padding-bottom: 3px;
+        &.fa,
+        &.caret,
+        &.check-mark {
+            font-family: FontAwesome;
+            vertical-align: baseline;//sub;
+            width: 10px;
+        }
+        &.glyphicon {
+            font-family: 'Glyphicons Halflings';
+        }
+    }
+}
+
+
+
+// Dropdown position
+/* @media (min-width: $screen-sm-min) {
+    ul.dropdown-menu.pos-right-sm {
+        right: 0;
+        left: auto;
+    }
+}
+@media (min-width: $screen-md-min) {
+    ul.dropdown-menu.pos-right-md {
+        right: 0;
+        left: auto;
+    }
+}
+@media (min-width: $screen-lg-min) {
+    ul.dropdown-menu.pos-right-lg {
+        right: 0;
+        left: auto;
+    }
+} */
+
+
+
+// Active & hover states
+.dropdown-menu>.active>a, 
+.dropdown-menu>.active>a:focus, 
+.dropdown-menu>.active>a:hover {
+    background-color: $gray105; 
+}
+
+// Dropdown with headings
+
+ul.dropdown-menu {
+
+    h6, p {
+        font-family: $sans;
+        font-weight: 400;
+        padding-right: 24px;
+        padding-left: 24px;
+        margin-bottom: 0;
+        color: $gray6;
+    }
+    h6 {
+        padding-top: 5px;
+    }
+    a h6, a p {
+        color: $black;
+    }
+    h6 {
+        padding-top: 5px;
+    }
+    li h6 {
+        padding-top: 0;
+    }
+    li h6, h6 {
+        font-size: 15px;
+        margin-bottom: 5px;
+    }
+    li p, p {
+        font-family: $sans;
+        font-size: 11.5px;
+        line-height: 15px;
+    }
+    p {
+        margin-bottom: 5px;
+    }
+    li + li.divider {
+        margin-top: 5px;
+    }
+    li h6, li p {
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+    li span {
+        padding-left: 24px;
+    }
+    li.disabled {
+        a, h6, p, a h6, a p {
+            color: $gray10; //opacity controlled further down
+            pointer-events: none;
+            font-weight: 400;
+        }
+        p {
+            font-style: italic;
+        }
+    }
+}
+.dropdown-with-headings {
+    .dropdown-menu {
+        width: 230px;
+    }
+    p + li:first-of-type  {
+        padding-top: 0px;
+    }
+    & .dropdown-menu:first-child, 
+    & .dropdown-menu li:first-child, 
+    & .dropdown-menu li:first-of-type {
+        padding-top: 0px;
+    }
+    li.divider {
+        margin: 0;
+    }
+    //- ADD BULLET???
+    a.active > h6:before {
+        font-family: FontAwesome;
+        display: inline-block;
+        padding-right: 11px;
+        margin-left: -15px;
+        vertical-align: middle;
+        font-size: 5px;
+        color: $gray4;
+        content: "\f111";
+    }
+}
+.dropdown-with-headings.subheading-options {
+    .dropdown-menu {
+        padding-bottom: 10px !important;
+    }
+    a {
+        font-size: 13px;
+        font-weight: 600;
+        p {
+            font-weight: 400;
+        }
+    }
+    a.active:before {
+        font-family: FontAwesome;
+        display: inline-block;
+        padding-right: 11px;
+        margin-left: -15px;
+        vertical-align: middle;
+        font-size: 5px;
+        color: $gray4;
+        content: "\f111";
+    }
+}
+.dropdown-menu {
+    // TO DO: MAKE THIS FOR BOTTOM DROPDOWNS ONLY !!!!!
+    margin-top: -5px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.dropdown-menu {
+    padding-top: 0;//10px;
+    padding-bottom: 0;//10px;
+    background-color: $gray05; //- white;
+    color: black;
+
+    &,
+    & li span {
+        font-size: 12.5px;
+        font-family: $sans;
+        //line-height: 14.5px;
+    }
+
+    .fa {
+        font: normal normal normal 14px/1 FontAwesome;
+    }
+
+
+    &:first-child,
+    & li:first-child,
+    & li:first-of-type {
+        padding-top: 10px;
+    }
+    &:last-child {
+        padding-bottom: 10px;
+    }
+
+    .dropdown-menu.inner {
+        & li:first-child {
+            padding-top: 0;
+        }
+    }
+
+    .dropdown-header,
+    li.dropdown-header {
+        font-size: 13px;
+        min-height: 0;
+        border: none;
+        &,
+        span {
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: $gray7;
+            padding: 0;
+        }
+        & {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        span:empty,
+        &:empty {
+            display: none;
+        }
+        
+    }
+    .divider + .dropdown-header {
+        border: none;
+    }
+    ul li {
+        //overrides for static page list styling
+        padding: 0;
+        margin: 0;
+        span {
+            font-family: $sans;
+            font-size: 12.5px;
+        }
+    }
+    li.dropdown-header + li {
+        margin-top: 4px;
+    }
+    
+    li a {
+        &:hover{
+            background-color: $gray105;
+        }
+        // Bootstrap-select: multiple selections (checkmarks)
+        .fa.fa-check.check-mark,
+        .glyphicon.check-mark {
+            position: absolute;
+            display: inline-block;
+            left: -16px; //7px;
+            margin-top: 5px;
+            margin-right: 4px;
+            margin-left: 3px;
+            font-size: 9px;
+            color: $gray7;
+        }
+
+
+
+    }
+}
+
+.dropdown-with-headings li a {
+    &, &.opt {
+        padding-left: 24px; //2.25em;
+    }
+}
+.bootstrap-select.btn-group.select-single li a,
+.bootstrap-select.btn-group.show-tick li a {
+    &, &.opt {
+        padding-left: 12px;//2.7em;
+    }
+}
+// Bootstrap-select: single selection
+.bootstrap-select.btn-group.select-single {
+    .dropdown-menu li.selected a {
+        &,
+        &:focus,
+        &:active {
+             // Bootstrap-select: single selection
+             outline: none;
+             background-color: $gray1; 
+             border: 1px solid $gray4;
+             border-radius: 15px;
+             margin: 2px 10px;
+             //match alignment to the rest of the list
+             padding: 3px 17px;
+         }
+         span.text {
+             display: inline-block;
+             padding-left: 8px;
+         }
+         .fa.fa-check.check-mark,
+        .glyphicon.check-mark {
+            display: none;
+        }
+    }
+
+}
+
+
+
+
+
+.bootstrap-select.btn-group {
+    .dropdown-menu.inner {
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+}
+.bootstrap-select.btn-group .dropdown-menu li a.opt {
+    //padding-left: 2.45em;
+}
+.bootstrap-select.btn-group .dropdown-menu li a {
+    span.text {
+        display: block;
+        min-width: 10px;
+        width: 100%;
+        text-indent: -10px;
+    }
+}
+
+
+
+// Bootstrap-select: multiple selections (checkboxes)
+.bootstrap-select.btn-group.show-tick {
+    .dropdown-menu.inner {
+        padding-top: 15px;
+    }
+    .dropdown-menu li a {
+        &:focus,
+        &:active {
+            outline: none;
+        }
+
+        span.text:before {
+            // Checkbox
+            position: relative;
+            left: -7px;
+            top: 1px;
+            font-family: FontAwesome;
+            content: "\f096";
+            padding-left: 0px;
+        }
+    }
+}
+.bootstrap-select.btn-group.show-tick {
+    .dropdown-header,
+    li.dropdown-header {
+        padding-left: 10px;
+    }
+    .dropdown-menu li a {
+        &:focus,
+        &:active {
+            background-color: $gray105;
+            border: none;
+            border-radius: 0;
+            margin: 0;
+            //-padding-left: 2.15em;
+        }
+        span.text {
+            position: relative;
+            line-height: 14.5px;
+        }
+        span.text:before {
+            //icon
+            color: $gray3;
+        }
+        
+    }
+    .dropdown-menu li.selected a {
+        span.check-mark {
+            position: absolute;
+            display: inline-block;
+            left: 15px;
+            top: -1px;;
+            margin-top: 5px;
+            margin-right: 4px;
+            font-size: 9px;
+            color: $gray7;
+            padding-left: 2px;
+        }
+    }
+
+}
+
+
+
+
+
+// Button margins
+
+.bootstrap-select.btn-group:not(.input-group-btn) {
+    //override for bootstrap default margin
+    margin-left: 5px;
+}
+.bootstrap-select.btn-group 
+    .dropdown-toggle 
+        .filter-option {
+            width: calc(100% - 5px);
+            text-overflow: ellipsis;
+}
+.btn-group {
+    //reverts to no margin for cases where these dropdowns are in an actual button group (not just the kind used to wrap each button)
+    .bootstrap-select.btn-group:not(.input-group-btn) {
+        margin-left: 0;
+        &:nth-child(1) {
+
+        }
+        &:not(:nth-child(1)) {
+            margin-left: -1px;
+        }
+    }
+}
+
+//  Special elements inside dropdown menu
+.dropdown-menu {
+    .bs-searchbox {
+        input.form-control {
+            border-radius: 5px;
+            height: 28px;
+        }
+    }
+    .bs-searchbox,
+    .bs-actionsbox {
+        padding: 12px 12px 0 12px;
+        & + .dropdown-menu.inner {
+            padding-top: 8px;
+        }
+        .btn-group.btn-group-sm.btn-block {
+            button {
+                margin-bottom: 0;
+                line-height: 1.4;
+                border-color: $gray4;
+            }  
+            .btn-select-all {
+
+            }
+            .btn-deselect-all {
+
+            }
+        }
+    }
+}
+.bootstrap-select.btn-group {
+    li.no-results {
+        padding: 3px 15px;
+        margin: 0;
+    }
+}
+.bootstrap-select.btn-group.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+}
+li.disabled {
+    opacity: 0.3;
+    pointer-events: none;
+    .text:before {
+        //- hide checkbox
+        opacity: 0.7;
+    }
+}
+
+
+
+
+
+// Morpheus dropdown
+
+.dropdown.morpheus-menu {
+    ul.dropdown-menu {
+        width: 250px;
+        margin-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    ul.dropdown-menu li {
+        
+    }
+    ul.dropdown-menu li span {
+        padding-left: 0;
+    }
+    a.morpheus-menu-item {
+        span.fa.morpheus-menu-item-icon {
+            color: $gray7;
+            font-size: 13px;
+        }
+    }
+  }
+  
+  .dropdown-menu > li > a.morpheus-menu-item {
+    padding: 3px 10px 3px 30px;
+  }
+  
+  .morpheus-menu-item-icon {
+    margin-top: 3px;
+    margin-left: -21px;
+    float: left;
+  }
+
+
+
+//---------------- CUSTOM BUTTONS -----------------
+
+// Slickgrid cog column picker dropdown
+.slick-table {
+    .dropdown-menu li a{
+        padding-left: 25px;
+        padding-right: 15px;
+    }
+    .dropdown-header {
+        padding-left: 10px;
+    }
+}
+
+.dropdown-select {
+    li.dropdown-header {
+        padding-left: 12px;
+    }
+    .dropdown-menu li a {
+        padding-left: 22px;
+        &:before {
+            // Checkbox
+            position: relative;
+            left: -8px;
+            top: 1px;
+            font-family: FontAwesome;
+            content: "\f096";
+            color: $gray3;
+        }
+        .fa.fa-check.check-mark {
+            margin-left: 7px;
+            margin-bottom: 2px;
+        }
+    }
+}
+
+.column-picker-dropdown.dropdown-menu {
+    max-height:400px;
+    width:200px;
+    padding-top: 8px;
+    top: 29px;
+    overflow-y:auto;
+
+    li.dropdown-header {
+        padding-top: 8px;
+    }
+}
+
+
+
+
+
+
+// Button focus
+
+.bootstrap-select.btn-group {
+    .dropdown-toggle:focus {
+        outline: -webkit-focus-ring-color auto 2px!important;
+        //outline: $happy-sky auto 1px!important;
+    }
+}

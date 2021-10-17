@@ -1,0 +1,72 @@
+o.modal.fade#loginModal(tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true")
+    .modal-dialog
+        .modal-content
+            .modal-header.modal-headerblue
+                .div#loginClose
+                    button.close(type="button" data-dismiss="modal" aria-label="Close")
+                        span(aria-hidden="true")
+                            | &times;
+                .div
+                    img(src="//assets.clue.io/clue/public/img/logos/banner-logo.svg")
+                    img(src="//assets.clue.io/clue/public/img/logos/banner-cmap2_0.svg" style="height: 22px")
+            //- Logout title
+            .modal-title#logout-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Log out
+            //- Login title
+            .modal-title#login-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Log in
+            //- Forgot password title
+            .modal-title#forgot-password-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Forgot password?
+                .modal-form-copy#forgotPasswordInstructions(style="padding-left:30px;")
+                    | To reset your password, enter your email address and click Submit.
+            //- Sign up
+            .modal-title#signup-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Sign up
+            //- Check your email
+            .modal-title#check-your-email-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Check your email
+            .modal-title#account-activated-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Your account has been activated.  Please log in.
+            //- Your password has been reset.
+            .modal-title#password-reset-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Your password has been reset!
+            //- Check your email
+            .modal-title#settings-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Settings
+            //- privacy policy
+            .modal-title#policy-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Privacy Policy
+            //- terms of use
+            .modal-title#termsOfUse-title(style="display:none;")
+                .modal-title-copy-headline
+                    | Terms and Conditions
+            //- terms of use
+            .modal-title#account-creation-success-title(style="display:none;")
+                .modal-form-copy#success-message-from-server(style="padding:30px;")
+            .modal-body
+                include logout_form.jade
+                include login_form.jade
+                include forgot_password_form.jade
+                include signup_form.jade
+                include settings_form.jade
+                include privacy_policy.jade
+                include terms_of_use.jade
+                //- Check your email
+                .row#check-your-email-body(style="display:none;")
+                    .col-xs-12
+                        | We've sent an email to bob@acme.com, from clue@broadinstitute.org.
+                        | Click the link in the email to reset your password.
+                //- Your password has been reset.
+                .row#password-reset-body(style="display:none;")
+                    .col-xs-12
+                        | Go to CMap homepage.

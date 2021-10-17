@@ -1,0 +1,375 @@
+.form-group {
+    label + textarea {
+        display: block;
+    }
+}
+.has-error .help-block ul li {
+    padding-left:0px;
+    padding-top:5px;
+    margin-top:0px;
+    margin-bottom:0px;
+    font-family: 'Istok Web', sans-serif;
+    color: #a94442;
+    font-size: 13px;
+    font-weight:400;
+}
+
+.unshadow, .form-control {
+    /*outline: none;*/
+    /*border: none !important;*/
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
+}
+
+.text-warning {
+    color: rgba(153, 48, 49, 1);
+}
+
+// remove automatic yellow color fill in chrome
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+        background-color: white !important;
+        //box-shadow:  0 0 0 1000px white inset !important;
+		-webkit-box-shadow: 0 0 0 1000px white inset !important;
+	}
+
+#resulttextadd, #resulttextedit {
+  color: $error-bright;
+  display: none;
+  font-size: 12px;
+  font-weight: 600;
+  //text-align: center;
+}
+
+.list-group-item {
+  word-wrap: break-word;
+}
+
+.input-sm {
+    height: 26px;
+}
+
+select {
+    margin-left: 4px;
+    border: solid 1px $gray6;
+    border-radius: 4px;
+    min-width: 120px;
+    padding: 4px;
+}
+.static-page,
+.app-container-fluid,
+.modal-open,
+* {
+    form {
+
+        // Paddings
+        & > .form-title, h1, h2, h3, h4, h5, h6,
+        & > p, & > b, & > .help-block, legend {
+            font-family: $sans;
+            padding: 4px 15px 6px 15px;
+            margin: 0 0 8px 0;
+        }
+        
+        fieldset,
+        .form-group {
+            .btn-toolbar {
+                padding: 0 15px;
+            }
+            .form-title, h1, h2, h3, h4, h5, h6,
+            p, b, .help-block, legend{
+                padding-left: 0;
+            }
+        }
+        .form-group.has-error {
+            //margin-bottom: 0 !important;
+            
+        }
+        fieldset.form-group [class*="col-"] {
+            padding-left: 5px;
+            padding-right: 5px;
+            &.col-xs-12 {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            @include columnWidths(1, 0px);
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            @media (max-width: $screen-sm-min) {
+                &.col-xs-12 {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+        }
+        .form-group > .form-group {
+            margin-bottom: 0; //prevents margin stacking
+        }
+
+        // Text elements
+
+        
+        &,
+        p { 
+            font-family: $sans;
+            font-size: 14px;
+            line-height: 22px;
+        }
+        
+        legend {
+            font-size: 14px;
+            font-weight: 700;
+            border-bottom: none;
+
+            line-height: 20px;
+        }
+
+        label {
+            font-weight: 400;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        p {
+            font-family: $sans;
+            margin: 0 0 8px 0;
+        }
+        h1,
+        .form-title {
+            color: black;
+            border: none;
+            font-size: 28px;
+            font-weight: 100;
+            padding-top: 20px;
+        }
+        //h2 {
+            //text-transform: none;
+        //}
+        h3 {
+            font-size: 22px;
+            margin-top: 10px
+        }
+        h4 {
+            font-size: 18px;
+        }
+        h5 {
+            font-size: 16px;
+        }
+        h6 {
+            text-transform: uppercase;
+            font-weight: 400;
+            font-size: 14px;
+        }
+
+        //Inputs
+
+        // redundant with typography: 416
+        ::placeholder {
+            color: $placeholder-text;
+            opacity: 1;
+        }
+        ::-webkit-input-placeholder{
+            color: $placeholder-text;
+            opacity: 1;
+        }
+        ::-moz-placeholder{
+            color: $placeholder-text;
+            opacity: 1;
+        }
+        :-moz-placeholder {
+            color: $placeholder-text;
+            opacity: 1;
+        }
+        .form-control, 
+        textarea {
+            opacity: 1;
+            border-color: #aaa;
+            font-size: 12px;
+            border-radius: 4px;
+            height: 28px;
+            line-height: 28px;
+        }
+        .form-control {
+            padding: 6px 8px;
+            margin-bottom: 8px;
+        }
+        .form-control + .help-block {
+            margin-top: -8px;
+        }
+
+        .has-error form .form-control,
+        .has-error form textarea,
+        .has-error .form-control,
+        .has-error textarea,
+        .has-error.help-block ul li {
+            border-color: $error !important;
+            color: $error !important;
+        }
+
+
+		textarea {
+			resize: none;
+			//color: $gray10;
+			//opacity: 0.5;
+            padding: 6px 12px;
+            width: 100%;
+            min-height: 75px;
+            line-height: 20px;
+            font-size: 14px;
+            transition: none;
+            background: transparent;
+        }
+        textarea.droppable {
+            height: 100px;
+            color: $gray3 !important;
+            border: $gray3 2px dashed;
+            width: 300px;
+        }
+        ul.input-list {
+            padding-left: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            list-style: none;
+            li {
+                padding-right: 5px;
+                font-size: 0.6rem; /*makes the bullet small*/
+                padding-bottom: 0.6rem;
+                margin-bottom: 0.6rem;
+                max-width: 44rem;
+            }
+            li span {
+                font-family: $sans;
+                color: $gray11;
+                font-size: 16px;
+                line-height: 1.6rem;
+                letter-spacing: 0.5px;
+                margin-bottom: 0.8rem;
+                margin-top: 0;
+                padding-top: 10px;
+                text-transform: none;
+                font-weight: 400;
+                margin-left: 16px;
+            }
+            li:hover {
+                cursor: pointer;
+            }
+            li:hover span, li:hover i {
+                color: $happy-sky;
+            }
+        }
+        .li-clickable, 
+        .li-input {
+            .icongrp {
+                display: inline-block;
+                vertical-align: top;
+            }
+            i {
+                color: $gray7;
+                font-size: 0.8rem;
+                vertical-align: middle;
+            }
+            .icongrp i {
+                display: block;
+                margin-bottom: 16px;
+            }
+        }
+
+
+        .radio-inline,
+        .checkbox-inline {
+            //display: flex;
+            //justify-content: flex-start;
+            label {
+                margin-right: 40px;
+            }
+        }
+
+
+        // Errors and help blocks
+        .help-block {
+            //margin-bottom: 0;
+            padding: 0;
+        }
+        .help-block ul,
+        .help-block ol {
+            padding: 0;
+            margin: 0;
+        }
+        .help-block ul li {
+            padding-left:0px;
+            padding-top:5px;
+            margin-top:0px;
+            margin-bottom:0px;
+            font-family: 'Istok Web', sans-serif;
+            font-size: 13px;
+            font-weight:400;
+            
+        }
+        .has-error .help-block ul li{
+            color: $error;//#a94442;
+        }
+
+        // Select2 arrow
+        .select2-container--default .select2-selection--single .select2-selection__arrow b {
+            padding: 0;
+        }
+
+
+    }
+}
+
+.file-upload-box-input {
+    label {
+        border-radius: 2px;
+        font-weight: 500;
+        font-size: 12px;
+        height: 25px;
+        font-family: "Istok Web", "Open Sans", sans-serif;
+        border: 1px solid $button-border;
+        color: $gray9;
+        padding: 4px 12px 6px 12px;
+        line-height: 1.42857143;
+
+        //background-color: inherit;
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#faf7f7+0,eaeaea+100 */
+        background: #faf7f7; /* Old browsers */
+        background: -moz-linear-gradient(top, #faf7f7 0%, #eaeaea 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #faf7f7 0%,#eaeaea 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #faf7f7 0%,#eaeaea 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#faf7f7', endColorstr='#eaeaea',GradientType=0 ); /* IE6-9 */
+
+        i.fa {
+            padding-right: 5px;
+        }
+    }
+}
+
+.file-upload-group {
+    font-size: 12px;
+    line-height: 18px;
+    .file-upload-box-input label {
+        width: 100%;
+        text-align: center;
+    }
+}
+.form-control.drag-over-form {
+    border: dashed 2px #CECECE !important;
+    border-radius: 2px !important;
+    height: 100px !important; 
+    width: 100%;
+    margin-bottom: 4px !important;
+    p {
+        font-size: 12px;
+        font-weight: 400;
+        color: #717171;
+    }
+}
+
+
+

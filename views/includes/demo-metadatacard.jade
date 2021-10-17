@@ -1,0 +1,381 @@
+// metadata card
+.metadata-card-vert-container
+
+    // left-right button group
+    //.btn-group.left-right-btns
+        button.btn.btn-secondary
+            .fa.fa-angle-left
+        button.btn
+            .fa.fa-angle-right
+
+    // ----------------------- CARD HEADER -------------------------
+    .metadata-card-header
+
+        // Card type and symbol
+        .card-type
+            span.pert-info-pert-chip
+                .glyphicon.glyphicon-adjust
+            | &nbsp;
+            span.pert-info-pert-type
+                | Card Type
+            span.pipe
+            span.pert-use pert_use/measure_type
+
+        .card-title-and-icon
+            .metadata-card-title
+                | Card Title
+            .favorite-indicator
+                .fa.fa-star-o
+
+        // Alternative names
+        
+        .metadata-line.alt-names
+            span.label Synonym:
+            span.value
+                a(href="" target="source") Name1 (Source)
+            span.dev-instructions (No redundancies, show in some apps, limit to one line)
+
+        // Description
+        
+        .description 
+            span.description-concat Description is to be limited to two lines of text, with overflow followed by ellipsis and then a link...
+                a().more-less-toggle  [ More&nbsp
+                        span.fa.fa-angle-down
+                        |&nbsp]
+            span.dev-instructions A class (.cp-card, .oe-card, .kd-card, or .cell-card) is added to .metadata-card-vert-container - this controls the colors in the header.
+            .description-full.hidden A macrolide produced by the bacterium Streptomyces hygroscopicus, Sirolimus has immunosuppressant functions in humans and is used to prevent rejection in organ transplantation. Sirolimus is also used as a coronary stent coating.
+                a().more-less-toggle  [ Less&nbsp
+                    span.fa.fa-angle-up
+                    |&nbsp]
+
+    // ---------------- TABBED SECTION -------------------
+    .metadata-card-tabs.sample-tabs
+        span Tabs
+        ul.nav.nav-tabs
+            li.active
+                a(data-toggle="tab" href="Sample1") 1
+            li
+                a(data-toggle="tab" href="Sample2") 2
+            li
+                a(data-toggle="tab" href="Sample3") 3
+
+
+    .tab-content.sample-tab-content
+        #Sample1.tab-pane.active
+        
+            // ID Section
+            
+            .metadata-card-tabs.metadata-card-id-section
+                ul.nav.nav-tabs
+                    li
+                        .nav-label ID:
+                    li.active
+                        a(data-toggle="tab" href=".exampleID1") Example ID 1
+                    li
+                        a(data-toggle="tab" href=".exampleID2") Example ID 2
+                    li
+                        a(data-toggle="tab" href=".exampleID3") ID Group
+
+            .tab-content.small-print
+                .metadata-line.exampleID1.tab-pane.active
+                    span.value #######
+                .metadata-line.exampleID2.tab-pane
+                    a(href="" target="source") ##########
+                .metadata-line.exampleID3.tab-pane
+                    span.label ID:
+                    span.value ########
+                    span.label ID:
+                    span.value ########
+                    span.label ID:
+                    span.value ########
+
+            // Overview Section
+
+            .metadata-section(style="margin:0;")
+                .dev-instructions (Overview Section - no heading. Includes intrinsic properties and an image)
+
+                // Graphic Placeholder
+                .graphic.placeholder
+                    .dev-instructions ( .placeholder class is for demo only and is to be removed in real apps)
+
+                .dev-instructions CSS class combinations:
+                .metadata-line
+                    span.label Label:
+                    span.value value
+                    span.sup *
+
+                .metadata-line
+                    span.label Label:
+                    span.value value
+                    span.sup **
+
+                .metadata-line
+                    span.label Label:
+                    span.value value 1
+                        br.hide-widescreen
+                        span.metadata-keep-line-widescreen
+                    span.label Label:
+                    span.value value 2
+
+                .metadata-line
+                    span.label Pipe Separated:
+                    span.value Value 1
+                        span.pipe
+                        | Value 2
+                        span.pipe
+                        | Value 3
+                        span.pipe
+                        | Value 4
+
+                .metadata-line
+                    span.label Label:
+                    a(href="" target="source").value Link
+                .metadata-line
+                    span.label Label:
+                    span.value.pipe-after Value
+                        a() (Link)
+                    span.value value
+                        a() (Link)
+                .metadata-line
+                    span.label Label:
+                    a.value.pipe-after() Link
+                    a.value() Link
+
+    // ---------------- END OF TABBED SECTION ----------------
+    //               (Sample-independent metadata)
+
+    // Biological Function Section
+
+    .metadata-section.collapsible.biological-function
+        a(data-toggle="collapse" data-target=".biological").metadata-section-h1 Biological function
+        .biological.collapse.in
+            .metadata-line
+                span.label MOA:
+                span.value.abreviation mTOR inhibitor, mTOR inhibitor, mTOR inhibitor, mTOR inhibitor, mTOR inhibitor...
+                sup.sup-citation
+                    a() [1]
+
+            .metadata-line
+                span.label CMap class:
+                span.value.abreviation mTOR inhibitor
+                
+            .metadata-line
+                .label Protein target
+
+            // Table and Legend
+            
+            .metadata-card-table-and-legend
+                table.metadata-card-table.icon-table
+                    thead
+                        tr
+                            th.row-name Target
+                            th.border-left.row-name(colspan="5") External source
+                            th.border-left.row-name(colspan="3") Broad data
+                        tr
+                            th
+                            th.border-left
+                                a(data-toggle="tooltip" title="ChEMBL") Ch
+                            th
+                                a(data-toggle="tooltip" title="DrugBank") Dr
+                            th
+                                a(data-toggle="tooltip" title="IUPHAR") IU
+                            th
+                                a(data-toggle="tooltip" title="TTD") TT
+                            th
+                                a(data-toggle="tooltip" title="Pharmacoprojects") Ph
+                            th.border-left
+                                a(data-toggle="tooltip" title="L1000") L1
+                            th
+                                a(data-toggle="tooltip" title="Proteomics") Pr
+                            th
+                                a(data-toggle="tooltip" title="PRISM") PR
+
+                    tbody
+                        tr
+                            th.row-name mTOR
+                            th.border-left
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th.border-left
+                            th
+                            th
+
+                        tr
+                            th.row-name FKBP1A
+                            th.border-left
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th.border-left
+                            th
+                            th
+                                .cmap.cmap-icons_target
+
+                        tr
+                            th.row-name FGF2
+                            th.border-left
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th
+                            th.border-left
+                            th
+                                .cmap.cmap-icons_target
+                            th
+
+            .metadata-line
+                .label Targeting Compound:
+                span.value Lonafarnib
+                sup.sup-citation
+                    a() [2]
+
+    // Profile Status Section
+    
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target=".profiled.demo").metadata-section-h1 Profile status
+        .profiled.demo.collapse.in
+            table.metadata-card-table.profile-table
+                thead
+                    tr
+                        //th.row-name Assay
+                        th.profiled
+                            a(data-toggle="tooltip" title="L1000") L1000
+                        th.profiled
+                            a(data-toggle="tooltip" title="PCCSE") PCCSE
+                        th
+                            a(data-toggle="tooltip" title="CellPainting") CPaint
+                        th
+                            a(data-toggle="tooltip" title="PRISM") PRISM
+                        th
+                            a(data-toggle="tooltip" title="Achilles") Achilles
+                        th
+                            a(data-toggle="tooltip" title="CCLE") CCLE
+                        //th
+                            a(data-toggle="tooltip" title="Huron") Hu
+            .metadata-section
+                .metadata-line.pad-top-8.pad-bottom-4
+                    span.label L1000 profiling
+                .metadata-line
+                    span.label Cell line:
+                    span.vaue.abreviation A375
+                        span.comma ,
+                            |A549 etc
+                .metadata-line
+                    span.label Variant:
+                    span.vaue -
+                .metadata-line
+                    span.label Dose (&mu;M):
+                    span.vaue -
+                .metadata-line
+                    span.label Time point (hr):
+                    span.vaue 2, 4
+
+                // Graphic Placeholder
+                .graphic.placeholder
+                        .dev-instructions graphic will replace cell line, dose and timepoint
+
+                .metadata-line
+                    span.label Transcriptional impact:
+                    span.vaue N
+
+                // Graphic Placeholder
+                .graphic.tas-chart(id="card_tas_chart_cp").placeholder
+
+
+
+    // Clinical Information Section
+
+    .metadata-section.light-border-bottom.collapsible
+        a(data-toggle="collapse" data-target=".clinical").metadata-section-h1 Clinical information
+        .clinical.collapse.in
+            .metadata-line
+                span.label Status:
+                span.value Launched (Source)
+            .metadata-line
+                span.label FDA Orange Book:
+                span.value sirolimus
+            .metadata-line
+                span.label Drugs@FDA:
+                span.value rapamune, sirolimus
+
+            .pad-top-8
+                .label Indication:
+            .metadata-line
+                a().value organ rejection (transplant)
+            .metadata-line
+                a().value lymphangioleiomyomatosis (pulmonary)
+
+
+    // Donor Information/Source Section
+
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target=".source").metadata-section-h1 Source
+        .source.collapse.in
+            .metadata-line
+                span.label Organism of origin:
+                span.value Human, Female, Caucasian
+            .metadata-line
+                span.label Age:
+                span.value 49
+            .metadata-line
+                span.label Age of disease onset:
+                span.value -
+            .metadata-line
+                span.label Disease duration:
+                span.value -
+
+
+    // Comments Section
+
+    .metadata-section.metadata-comments-section.collapsible
+        a(data-toggle="collapse" data-target=".comments").metadata-section-h1 Comments
+        .comments.collapse.in
+            .metadata-line
+                span.label *
+                span.value PRISM observed growth pattern: suspension.
+            .metadata-line
+                span.label **
+                span.value Another example comment. Needs to be capitalized in the database.
+
+    // Citations Section
+
+    .metadata-section.metadata-citations-section.collapsible
+        a(role="button" data-toggle="collapse" data-target=".citations").metadata-section-h1 Citations
+        .citations.collapse.in
+            .metadata-line
+                span.label [1]
+                span.value Lorem ipsum
+            .metadata-line
+                span.label [2]
+                span.value Lorem ipsum
+
+
+    // Data Source Section - DATA APP ONLY
+    
+    //.metadata-section.light-border-bottom
+        .source-logo.demo-block Logo space
+            img(src="//assets.clue.io/clue/public/img/logos/cmap-logo-cloud.svg")
+        .metadata-section-h1 Data Source/Branding
+        .metadata-line
+            | Team
+            br
+            |Institution
+        .metadata-line
+            span.label Contact:
+            span.value foo@bar.org
+        .metadata-line
+            span.label DOI:
+            a() http://dx.doi.org/10.1016/j.cels.2015.12.004
+        .metadata-line
+            span.label Terms of use:
+            span.value Publically accessible/Proprietary
+

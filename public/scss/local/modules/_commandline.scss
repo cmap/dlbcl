@@ -1,0 +1,343 @@
+
+.cmap-commandline {
+
+    @media (min-width: $screen-xl-min) {
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+    .commandline-box {
+        width: 100%;
+        height: 40px;
+        background-color: #F8F9F9;
+
+        border: 2px solid #083B48;
+        @media (min-width: $screen-xl-min) {
+            height: 45px;
+        }
+        position: relative;
+    }
+    .commandline-tick {
+        height: 6px;
+        width: 1px;
+        display: block;
+        z-index: 10;
+        background-color: #083B48;
+        position: absolute;
+        top: 0;
+        left: 35px;
+        @media (min-width: $screen-xl-min) {
+            height: 7px;
+            left: 40px;
+        }
+    }
+    .commandline-tick.command-tick {
+        left: 41px;
+        @media (min-width: $screen-xl-min) {
+            left: 50px;
+        }
+    }
+    .commandline-input {
+        padding: 8px 12px;
+        font-family: $mono;
+        font-weight: 600;
+        font-size: 14px;
+        color: #000000;
+        @media (min-width: $screen-xl-min) {
+            font-size: 18px;
+        }
+    }
+    .commandline-hints {
+        font-family: $istok;
+        font-size: 10px;
+        padding: 12px;
+        @media (min-width: $screen-xl-min){
+            font-size: 13px;
+        }
+    }
+     .commandline-separator {
+         font-family: $mono;
+         font-size: 10px;
+         color: #D4D4D4;
+         height: 10px;
+         overflow: hidden;
+         @media (min-width: $screen-xl-min) {
+             font-size: 14px;
+         }
+    }
+    .commandline-version-links {
+        font-family: $mono;
+        font-size: 9px;
+        font-weight: 600;
+        padding: 12px 10px;
+        @media (min-width: $screen-xl-min) {
+            font-size: 11px;
+        }
+    }
+}
+#announcements {
+    padding-top: 22px;
+    font-family: $sans;
+    @media (min-width: $screen-xl-min) {
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+    .subheading {
+        font-size: 16px;
+        padding-bottom: 10px;
+        @media (min-width: $screen-xl-min) {
+            font-size: 20px;
+        }
+    }
+    a.news-item {
+        font-size: 13px;
+        border-bottom: 1px solid #E5E6E7;
+        min-height: 32px;
+        padding-left: 12px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        color: black;
+        display: block;
+        @media (min-width: $screen-xl-min) {
+            font-size: 15px;
+        }
+    }
+    a.news-item:last-child {
+        border: none;
+    }
+    a.news-item:focus, a.news-item:hover {
+        background-color: #F2F2F2;
+        text-decoration: none;
+    }
+}
+
+#logos {
+    .col-xs-12{
+        display: flex;
+        flex-direction: column;
+        //flex-direction: row;
+        //justify-content: space-between;
+        @media (min-width: 400px) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+   
+    
+    .logo-cmap {
+        width: 100%;
+        max-width: 246px;
+    }
+    .logo-broad {
+        max-width: 120px;
+        align-self: flex-start;
+        @media (min-width: $screen-sm-min) {
+            max-width: 160px;
+            margin: 0 -8px 11px 0;
+            align-self: flex-end;
+            }
+    }
+}
+.cmap-dashboard.dashboard-home {
+    margin-top: 2vh;
+}
+.cmap-dashboard {
+    font-family: $condensed;
+    display: flex;
+    flex-direction: row;
+
+    /* ADDED BY ANDREW */
+    min-height: 715px;
+    /* END ADDED BY ANDREW */
+
+    .cmap-dashboard-section {
+        margin-top: 22px;
+        min-width: 260px;
+        margin-bottom: 15px;
+        @media (max-width: $screen-sm-min) {
+            margin-top: 30px;
+        }
+        @media (max-width: $screen-md-min) {
+            max-width: 300px;}
+                
+        @media (min-width: $screen-sm-min) { 
+            @media (max-width: $screen-md-min) {
+                position: absolute;
+                right: 15px;
+            }
+        }
+
+        
+        .dashboard-border-top {
+            border-top: 1px dashed #BCBCBB;
+            border-left: 1px dashed #BCBCBB;
+            border-right: 1px dashed #BCBCBB;
+            height: 8px;
+        }
+        .dashboard-border-bottom {
+            border-bottom: 1px dashed #BCBCBB;
+            border-left: 1px dashed #BCBCBB;
+            border-right: 1px dashed #BCBCBB;
+            height: 8px;
+            margin-bottom: 8px;
+        }
+    }
+    .dashboard-title-box {
+        background: white;
+        width: 140px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -24px;
+        margin-bottom: 24px;
+        @media (min-width: $screen-xl-min) {
+            width: 160px;
+        }
+    }
+	.dashboard-title {
+        font-family: $istok;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: 0.5px;
+        @media (min-width: $screen-xl-min) {
+            font-size: 17px;
+        }
+    }
+	.dashboard-subtitle {
+        font-family: $condensed;
+        font-size: 12px;
+        text-align: center;
+        letter-spacing: 0.2px;
+        margin-top: -2px;
+        @media (min-width: $screen-xl-min) {
+            font-size: 13px;
+        }
+    }
+    .dashboard-subsection {
+        padding: 0 10px 10px 10px;
+        margin: 0 10px 10px 10px;
+        border-bottom: 1px solid #E5E6E7;
+    }
+    .dashboard-subsection.last {
+        border-bottom: none;
+        margin-bottom: 0;
+    }
+    .subsection-content {
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+    .dashboard-subsection-title {
+        font-family: $istok;
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        
+        @media (min-width: $screen-xl-min) {
+            font-size: 14px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+         }
+    }
+    .dashboard-number {
+        font-family: $mono;
+        font-weight: 600;
+        font-size: 16px;
+        padding-right: 5px;
+        @media (min-width: $screen-xl-min) { 
+            font-size: 18px;
+        }
+    }
+    .dashboard-label {
+        font-size: 12px;
+        @media (min-width: $screen-xl-min) { 
+            font-size: 13px;
+        }
+    }
+    .viz {
+        
+        width: 100%;
+        display: block;
+        margin-top: 2px;
+        
+        background-color: $CP;
+        height: 5px;
+        @media (min-width: $screen-xl-min) {
+            height: 8px;
+            margin-top: 3px;
+        }
+    }
+    .color-chip {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        margin-left: -15px;
+        margin-right: 8px;
+        @media (min-width: $screen-xl-min) {
+            width: 8px;
+            height: 8px;
+            margin-bottom: 2px;
+        }
+    }
+    .color-chip.cp {
+        background-color: $CP;
+    }
+    .color-chip.genetic {
+        background-color: $genetic;
+    }
+
+    .dashboard-footnote {
+        font-size: 12px;
+        padding-left: 8px;
+        @media (min-width: $screen-xl-min) {
+            font-size: 13px;
+            padding-left: 15px;
+            padding-top: 5px
+        }
+    }
+    p {
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 30px;
+        @media (min-width: $screen-xl-min) {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+.commandline-subheader {
+    background-color: #F2F2F2;
+    //margin-right: -2px;
+    //margin-bottom: 0;
+    //margin-left: -2px;
+    margin-top: 0;
+    padding-top: 8px;
+    .commandline-box {
+        background-color: white;
+    }
+
+}
+.cmd-message {
+    margin-top: 30px;
+    @media (min-width: $screen-sm-min){
+         margin-top: 60px;
+    }
+    margin-right: auto;
+    margin-left: auto;
+    width: calc(100vw - 44px);
+    max-width: 500px;
+    word-wrap: break-word;
+
+    h1 {
+        font-weight: 100;
+        font-size: 36px;
+        padding-bottom: 20px;
+    }
+    p {
+        font-size: 16px;
+    }
+
+    li.code-box {
+        margin-left: -40px;
+    }
+}
+         

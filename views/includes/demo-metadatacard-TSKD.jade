@@ -1,0 +1,110 @@
+include metadata-includes.jade
+
+// metadata card  - Touchstone (Over-expression and Knock-down)
+
+.metadata-card-vert-container.kd-card
+
+
+    // --------------- CARD HEADER -----------------
+
+    .metadata-card-header
+        .card-type
+            span.pert-info-pert-chip
+                .glyphicon.glyphicon-minus-sign
+            | &nbsp;
+            span.pert-info-pert-type
+                | KD
+            span.pipe.demo-only
+            // Landmark/BING/Other
+            span.value.measure-type.demo-only Landmark
+        .card-title-and-icon
+            .metadata-card-title
+                | KRAS
+            .favorite-indicator
+                .fa.fa-star-o
+        .metadata-line.alt-names
+            span.label Synonym:
+            span.value v-Ki-ras2 Kirsten rat sarcoma viral oncogene homolog
+        .description
+            //75 character cutoff
+            span.description-concat The protein product of the normal KRAS gene performs an essential function in normal tissue signaling, and the mutation of a KRAS gene is an essential step in the development of many cancers.
+            a(onclick="toggleDesc('more')").more-less-toggle  [ More&nbsp
+                span.fa.fa-angle-down
+                |&nbsp]
+            span.description-full The protein product of the normal KRAS gene performs an essential function in normal tissue signaling, and the mutation of a KRAS gene is an essential step in the development of many cancers.
+            a(onclick="toggleDesc('less')").more-less-toggle  [ Less&nbsp
+                span.fa.fa-angle-up
+                |&nbsp]
+
+    // ---------------------------------------------
+
+
+    //ID Section
+
+    .metadata-section.metadata-card-id-section.light-border-bottom
+        .metadata-line
+            span.label Entrez Gene ID:
+            a().value CGS001-3845
+
+
+    // Overview Section
+
+    .metadata-section.light-border-bottom
+        .metadata-section-h1 Baseline expression
+        .pert-info-body-image
+            // Image Mockup:
+            img(src="//assets.clue.io/clue/public/img/base_exp_ABCF1_v2.png").dev-instructions
+
+
+    // Biological Function Section
+    
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target=".biological-TSKD").metadata-section-h1 Biological function
+        .biological-TSKD.collapse.in
+            .metadata-line
+                span.label Gene family:
+                span.vaue RAS subfamily (one or list of four)
+            .metadata-line
+                span.label CMap class:
+                span.vaue (pert class - one or list of four)
+            .metadata-line
+                span.label Targeting compound:
+                span.value Lonafarnib
+                span.dev-instructions (Phase 2)
+
+
+    // Profile Status Section
+
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target=".profiled-TSKD").metadata-section-h1 Profile status
+        .profiled-TSKD.collapse.in
+            .metadata-line
+                span.label Profiled in:
+            table.metadata-card-table.profile-table
+                thead
+                    tr
+                        //th.row-name Assay
+                        th.profiled
+                            a(data-toggle="tooltip" title="L1000") L1000
+                        th.profiled
+                            a(data-toggle="tooltip" title="PCCSE") PCCSE
+                        th
+                            a(data-toggle="tooltip" title="CellPainting") CPaint
+                        th
+                            a(data-toggle="tooltip" title="PRISM") PRISM
+                        th
+                            a(data-toggle="tooltip" title="Achilles") Achilles
+                        th
+                            a(data-toggle="tooltip" title="CCLE") CCLE
+                        th
+                            a(data-toggle="tooltip" title="Huron") Hu
+            .metadata-section
+                .metadata-line.pad-top-8.pad-bottom-4.demo-only
+                    span.label L1000 profiling
+
+                .metadata-section-h1 Average transcriptional impact
+                .metadata-line
+                    span.label Transcriptional impact summarized across core cell lines
+
+                .graphic.metadata-section
+                    .tas-chart(id="card_tas_chart_gen" style="height:200px;")

@@ -1,0 +1,23 @@
+.introspect-vis {
+    margin: 0 auto;
+    width: 100%;
+}
+
+.introspect-vis div {
+    float: left;
+    position: relative;
+}
+
+.cp-vis {
+    display: inline-block;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.labels {
+    font-family: 'Roboto Condensed' !important;
+    font-size: 11px !important;
+    fill: #000000 !important;
+    letter-spacing: -1px;
+    cursor: pointer;
+}

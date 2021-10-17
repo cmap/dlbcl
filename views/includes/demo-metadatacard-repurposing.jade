@@ -1,0 +1,370 @@
+// metadata card - Repurposing
+.metadata-card-vert-container.cp-card
+
+    // ---------------- CARD HEADER ------------------
+    
+    .metadata-card-header
+
+        // Card type and symbol
+        .card-type
+            span.pert-info-pert-chip
+                .glyphicon.glyphicon-adjust
+            | &nbsp;
+            span.pert-info-pert-type
+                | CP
+            span.pipe
+            span.pert-use Launched
+
+        .card-title-and-icon
+            .metadata-card-title
+                | Sirolimus
+            .favorite-indicator
+                .fa.fa-star-o
+
+        // Alternative names
+        
+        .metadata-line.alt-names
+            span.label Synonym:
+            span.value Rapamune,
+                | Rapamycin
+        
+        // Description
+        
+        .description
+            span.description-concat.hidden A macrolide produced by the bacterium Streptomyces hygroscopicus, Sirolimus...
+                a().more-less-toggle  [ More&nbsp
+                    span.fa.fa-angle-down
+                    |&nbsp]
+            .description-full A macrolide produced by the bacterium Streptomyces hygroscopicus, Sirolimus has immunosuppressant functions in humans and is used to prevent rejection in organ transplantation. Sirolimus is also used as a coronary stent coating.
+                a().more-less-toggle  [ Less&nbsp
+                    span.fa.fa-angle-up
+                    |&nbsp]
+
+
+
+    // -------------- TABBED SECTION -----------------
+    
+    .metadata-card-tabs.sample-tabs
+        span Sample
+        ul.nav.nav-tabs
+            li.active
+                a(data-toggle="tab" href=".Sample1") 1
+            li
+                a(data-toggle="tab" href=".Sample2") 2
+            li
+                a(data-toggle="tab" href=".Sample3") 3
+
+
+    .tab-content.sample-tab-content
+        .Sample1.tab-pane.active
+        
+            // ID Section
+            
+            //.metadata-section.metadata-card-id-section
+                .metadata-line
+                    span.label Broad ID:
+                    span.value BRD-K84937637-001-09-9
+                .metadata-line
+                    span.label PubChem CID:
+                    a(href="" target="source") 5284616
+                        br.hide-widescreen
+                    span.metadata-keep-line-widescreen
+                    span.label ChEMBL ID:
+                    a(href="" target="source") 429892
+                
+            // ID Section
+            .metadata-card-tabs.metadata-card-id-section
+                ul.nav.nav-tabs
+                    li
+                        .nav-label ID:
+                    li.active
+                        a(data-toggle="tab" href=".Broad-ID.rep") Broad
+                    li
+                        a(data-toggle="tab" href=".PubChem-ID.rep") PubChem
+                    li
+                        a(data-toggle="tab" href=".ChEMBL-ID.rep") ChEMBL
+                    li
+                        a(data-toggle="tab" href=".InChIKey.rep") InChIKey
+                    li
+                        a(data-toggle="tab" href=".SMILES.rep") SMILES
+
+            .tab-content.small-print
+                .metadata-line.Broad-ID.rep.tab-pane.active
+                    //span.label Broad ID:
+                    span.value BRD-K84937637-001-09-9
+                .metadata-line.PubChem-ID.rep.tab-pane
+                    //span.label PubChem:
+                    a(href="" target="source") 5284616
+                .metadata-line.ChEMBL-ID.rep.tab-pane
+                    //span.label ChEMBL:
+                    a(href="" target="source") 429892
+                .metadata-line.InChIKey.rep.tab-pane
+                    //span.label InChIKey:
+                    span#pert-info-inchi-key.value QFJCIRLUMZQUOT-HPLJOQBZSA-N
+                .metadata-line.SMILES.rep.tab-pane
+                    //span.label SMILES:
+                    span#pert-info-smiles.value CO[C@@H]1C[C@H](C[C@@H](C)[C@@H]2CC(=O)[C@H](C)\C=C(C)\[C@@H](O)[C@@H](OC)C(=O)[C@H](C)C[C@H](C)\C=C\C=C\C=C(C)\[C@H](C[C@@H]3CC[C@@H](C)[C@@](O)(O3)C(=O)C(=O)N3CCCC[C@H]3C(=O)O2)OC)CC[C@H]1O
+
+
+
+            // Overview Section
+
+            .pert-info-body-image
+                img(src="https://s3.amazonaws.com/data.clue.io/trimmed_perts/BRD-A79768653.png")
+
+
+            .metadata-section
+                .metadata-line
+                    span.label MW:
+                    span.value 913.555
+                .metadata-line.purity
+                    span.label Purity:
+                    span.value 95.47
+                    a().internal.value (PASS)
+                    //a().cmap.cmap-icons_qc-graph
+                .metadata-line.metadata-card-vendor
+                    span.label Vendor:
+                    span.value Selleck
+                    a(href="http://www.selleckchem.com/products/Rapamycin.html" target="source") (S1039)
+
+
+
+        .Sample2.tab-pane
+            // ID Section
+            .metadata-card-tabs.metadata-card-id-section
+                ul.nav.nav-tabs
+                    li
+                        .nav-label ID:
+                    li.active
+                        a(data-toggle="tab" href=".Broad-ID.rep") Broad
+                    li
+                        a(data-toggle="tab" href=".PubChem-ID.rep") PubChem
+                    li
+                        a(data-toggle="tab" href=".ChEMBL-ID.rep") ChEMBL
+                    li
+                        a(data-toggle="tab" href=".InChIKey.rep") InChIKey
+                    li
+                        a(data-toggle="tab" href=".SMILES.rep") SMILES
+
+            .tab-content.small-print
+                .metadata-line.Broad-ID.rep.tab-pane.active
+                    //span.label Broad ID:
+                    span.value BRD-A79768653-001-12-0
+                .metadata-line.PubChem-ID.rep.tab-pane
+                    //span.label PubChem:
+                    a(href="" target="source") 5374464
+                .metadata-line.ChEMBL-ID.rep.tab-pane
+                    //span.label ChEMBL:
+                    a(href="" target="source") 429892
+                .metadata-line.InChIKey.rep.tab-pane
+                    //span.label InChIKey:
+                    span#pert-info-inchi-key.value QFJCIRLUMZQUOT-XWBLMERNSA-N
+                .metadata-line.SMILES.rep.tab-pane
+                    //span.label SMILES:
+                    span#pert-info-smiles.value COC1CC(CC(C)C2CC(=O)C(C)\C=C(C)\C(O)C(OC)C(=O)C(C)CC(C)\C=C\C=C\C=C(C)\C(CC3CCC(C)C(O)(O3)C(=O)C(=O)N3CCCCC3C(=O)O2)OC)CCC1O
+            .pert-info-body-image
+                img(src="https://s3.amazonaws.com/data.clue.io/repurposing/structure_images/BRD-A79768653-001-12-0.png")
+            .metadata-section
+                .metadata-line
+                    span.label MW:
+                    span.value 913.555
+                .metadata-line.purity
+                    span.label Purity:
+                    span.value 88.64
+                    a().internal.value (PASS)
+                    //a().cmap.cmap-icons_qc-graph
+                .metadata-line.metadata-card-vendor
+                    span.label Vendor:
+                    span.value MicroSource
+                    a(href="" target="source") (1504008)
+        
+        .Sample3.tab-pane(style="height:318px;")
+
+
+
+    // ------------ END OF TABBED SECTION -----------
+
+
+
+    // Biological Function Section
+
+    .metadata-section.collapsible.biological-function
+        a(data-toggle="collapse" data-target=".biological-rep").metadata-section-h1 Biological function
+        .biological-rep.collapse.in
+            .metadata-line
+                span.label MOA:
+                span.value.abreviation mTOR inhibitor
+
+            .metadata-line
+                .label Protein target
+            
+            
+            // Table and Legend
+            
+            .metadata-card-table-and-legend
+                table.metadata-card-table.icon-table
+                    thead
+                        tr
+                            th.row-name Target
+                            th.border-left.row-name(colspan="5") External source
+                            th.border-left.row-name(colspan="3") Broad data
+                        tr
+                            th
+                            th.border-left
+                                a(data-toggle="tooltip" title="ChEMBL").tooltip-link Ch
+                            th
+                                a(data-toggle="tooltip" title="DrugBank").tooltip-link Dr
+                            th
+                                a(data-toggle="tooltip" title="IUPHAR").tooltip-link IU
+                            th
+                                a(data-toggle="tooltip" title="TTD").tooltip-link TT
+                            th
+                                a(data-toggle="tooltip" title="Pharmacoprojects").tooltip-link Ph
+                            th.border-left
+                                a(data-toggle="tooltip" title="L1000").tooltip-link L1
+                            th
+                                a(data-toggle="tooltip" title="Proteomics").tooltip-link Pr
+                            th
+                                a(data-toggle="tooltip" title="PRISM").tooltip-link PR
+
+                    tbody
+                        tr
+                            th.row-name mTOR
+                            th.border-left
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th.border-left
+                            th
+                            th
+
+                        tr
+                            th.row-name FKBP1A
+                            th.border-left
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th.border-left
+                            th
+                            th
+                                .cmap.cmap-icons_target
+
+                        tr
+                            th.row-name FGF2
+                            th.border-left
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th
+                            th.border-left
+                            th
+                                .cmap.cmap-icons_target
+                            th
+
+
+                //.metadata-table-legend
+                    .metadata-section-h3 Sources
+                        span.dev-instructions &nbsp(For export version only - Phase 2)
+                    ol.metadata-list.inline-list
+                        li
+                            a() ChEMBL
+                        li
+                            a() DrugBank
+                        li
+                            a() IUPHAR
+                        li
+                            a() TTD
+
+
+    // Profile Status Section
+
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target=".profiled-rep").metadata-section-h1.collapsed Profile status
+        .profiled-rep.collapse.in
+        
+            table.metadata-card-table.profile-table
+                thead
+                    tr
+                        //th.row-name Assay
+                        th.profiled
+                            a(data-toggle="tooltip" title="L1000").tooltip-link L1000
+                        th.profiled
+                            a(data-toggle="tooltip" title="PCCSE").tooltip-link PCCSE
+                        th
+                            a(data-toggle="tooltip" title="CellPainting").tooltip-link CPaint
+                        th
+                            a(data-toggle="tooltip" title="PRISM").tooltip-link PRISM
+                        th
+                            a(data-toggle="tooltip" title="Achilles").tooltip-link Achilles
+                        th
+                            a(data-toggle="tooltip" title="CCLE").tooltip-link CCLE
+                        //th
+                            a(data-toggle="tooltip" title="Huron").tooltip-link Hu
+            .metadata-section
+                .metadata-line.pad-top-8.pad-bottom-4
+                    span.label L1000 profiling
+
+                .metadata-line
+                    span.label Cell line:
+                    span.vaue A375
+                        span.comma ,
+                        |A549
+                        span.comma ,
+                        |HCC515
+                        span.comma ,
+                        |HEPG2
+                        span.comma ,
+                        |HT29
+                .metadata-line
+                    span.label Dose (&mu;M):
+                    span.vaue 0.04, 0.12, 0.33, 0.37, 1.11, 3.33, 10
+                .metadata-line
+                    span.label Timepoint (hrs):
+                    span.vaue 2, 4
+
+
+                // Graphic Placeholder
+                .graphic.placeholder
+                    .dev-instructions graphic will replace cell line, dose and timepoint
+
+            .metadata-line
+                span.label Transcriptional impact:
+                span.vaue N
+                
+                // Graphic Placeholder
+                .graphic.tas-chart(id="card_tas_chart_cp").placeholder
+
+
+
+    // Clinical Information Section
+
+    .metadata-section.light-border-bottom.collapsible
+        a(data-toggle="collapse" data-target=".clinical-rep").metadata-section-h1 Clinical information
+        .clinical-rep.collapse.in
+            .metadata-line
+                span.label Clinical status:
+                span.value Launched
+            .metadata-line
+                span.label FDA Orange Book:
+                span.value sirolimus
+            .metadata-line
+                span.label Drugs@FDA:
+                span.value rapamune, sirolimus
+
+            .pad-top-8
+                .label Indication:
+            .metadata-line
+                a().value organ rejection (transplant)
+            .metadata-line
+                a().value lymphangioleiomyomatosis (pulmonary)
+    
+
+

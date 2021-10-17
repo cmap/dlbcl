@@ -1,0 +1,11 @@
+#startModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='startModalLabel', aria-hidden='true')
+    .modal-dialog
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-hidden='true')
+                h3#startModalLabel Start Build
+            .modal-body
+                p Would you like to start the build at this time?  Please note that if you select no, you will have to start it manually later.  The option to do so is available in the dataset's detailed view in Data Library.
+            .modal-footer
+                button#dismissStart.btn(data-dismiss='modal', aria-hidden='true') No, do not start
+                button#startConfirm.btn(data-dismiss='modal', aria-hidden='true')  Yes, start build

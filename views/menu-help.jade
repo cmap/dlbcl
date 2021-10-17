@@ -1,0 +1,17 @@
+.modal-content#menu-help-modal-content(style="width: 250px")
+    .modal-dialog
+        .modal-content.unshadow
+            .modal-body
+                .row
+                    .col-xs-12
+                        div.subheading Helpful Links
+                        .row#help_section
+                            .col-xs-12
+                                .row
+                                    a.tooltip_trigger.no-tip.col-xs-12.app-link-text(data-container="body" data-toggle="popover" data-trigger="click focus" accesskey="H")#coaching_tip_trigger Coaching tips
+                                .row
+                                    a(href="/connectopedia" target="connectopedia" data-turbolinks="false").col-xs-12.app-link-text Connectopedia
+                                .row
+                                    a(href="/office-hours" target="officehours" data-turbolinks="false").col-xs-12.app-link-text  Office hours
+                                .row
+                                    a(data-toggle='modal', data-target='#contactModal').col-xs-12.app-link-text Contact us

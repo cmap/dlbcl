@@ -1,0 +1,174 @@
+// ------------------------------------------------------
+
+// Media Queries
+// Layout variables
+// html and body styles 
+// Links
+// Box Shadows
+// Demo elements
+
+// ------------------------------------------------------
+
+
+
+
+
+//  MEDIA QUERIES
+
+$screen-xxl-min: 1700px; // custom size
+$screen-xl-min: 1500px; // custom size
+$screen-lg-min: 1200px;
+$screen-md-min: 992px;
+$screen-sm-min: 768px; //ipad portrait
+$screen-xs-lndscp-min: 480px; //iphone landscape
+//320px - iphone portrait
+// See http://www.websitedimensions.com/
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Sass Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+//@media (min-width: $screen-sm-min) { }
+
+
+/* Medium devices (desktops, 992px and up) */
+//@media (min-width: $screen-md-min) { }
+
+/* Large devices (large desktops, 1200px and up) */
+//@media (min-width: $screen-lg-min) { }
+
+/* Extra-large devices (large desktops, tv monitors, 1500px and up) */
+//@media (min-width: $screen-xl-min) { }
+
+ 
+// LAYOUT VARIABLES
+
+$header-height: 50px;
+$footer-height: auto;
+$app-footer-height: 30px;
+
+$table-width: 100%;
+$table-height: 628px;
+$slicktable-header-height: 77px; // - Used in _layout.scss
+$bh: calc(100vh - #{$header-height});
+
+$body-height: calc(#{$bh} - #{$app-footer-height});
+     
+$app-tabcontent-padtop: 15px !default;
+
+
+
+// html and body styles
+
+html {
+    font-size: 16px;
+	//position: relative;
+	height: 100%;
+	
+	
+	@media screen and (min-width : $screen-xl-min) {
+  		font-size: 17px; 
+	}
+}
+body {
+	margin:0;
+	width: 100%;
+	
+	min-height: 100%;
+	display:flex;
+	flex-direction: column;
+	
+	font-family: $sans;
+	font-weight: 400;
+	color: black; /*#383838;*/
+	/*padding-bottom: 10rem;*/
+}
+
+
+figure img {
+    width: 100%;
+}
+// LINKS (more in _buttons.scss)
+
+a:hover, .fa:hover, .cmap:hover, i:hover{
+        text-decoration: none;
+        cursor: pointer;
+    }
+a.cmap:hover{
+    text-decoration: none !important;
+}
+a.fa:hover {
+    text-decoration: none !important;
+}
+
+a.not-active {
+    pointer-events: none;
+    cursor: default;
+    color: inherit;
+}
+
+a:hover {
+    color: $link-hover;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.app-container-fluid {
+    a:hover, a:focus, a:active {
+        text-decoration: none;
+    }
+}
+a.internal:hover {
+    text-decoration: none;
+}
+a.external:hover, a:hover > span.external {
+    text-decoration: underline !important;
+    
+    //border-bottom: 1px $link dotted;
+}
+
+a.tooltip-link {
+    text-decoration: none;
+    cursor: default;
+}
+
+
+// BOX SHADOWS
+
+$soft-shadow:0 0 1px rgba(0,0,0,.04),0 2px 8px rgba(0,0,0,.1);
+
+
+
+// DEMO ELEMENTS
+
+.dev-instructions {
+    display: none;
+}
+.demo-only {
+    display: none !important;
+}
+
+.container-fluid {
+    .demo-only {
+        display: inline;
+    }
+    .dev-instructions {
+    font-style: italic;
+    color: $gray3;
+    border-bottom: none !important;
+    display: inline
+}
+
+    .demo-block {
+        border: solid 1px gray;
+        background:  rgba(204,204,204,0.3);
+        display: block;
+    }
+    .graphic.placeholder {
+        border: solid 1px gray;
+        padding: 10px;
+        min-height: 100px;
+    }
+}

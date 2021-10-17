@@ -1,0 +1,91 @@
+.ui-autocomplete {
+  max-height: 600px;
+  overflow-y: hidden;
+  // prevent horizontal scrollbar
+  overflow-x: hidden;
+  border: thin solid #4A4A4A;
+  z-index: 10;
+}
+
+.app-search-widget {
+  color: #808080;
+}
+
+input.rep-ubersearch, .search-input {
+  color: black;
+  font-size: 14px;
+  font-family: $sans;
+  border-radius: 0;
+  border-color: $gray6;
+  /* Leave this until after launch - not possible out of the box
+  .qualifier {
+      margin-right: 4px;
+      color: $gray6;
+  }
+  */
+}
+.searchbox-lg {
+  height: 34px;
+}
+.rep-ubersearch { //applies to Repurposing uber search
+  margin-bottom: 20px;
+  border-color: $teal3;
+  color: $gray7;
+  height: 34px;
+
+  //max-width: 61.8%;
+  //border-width: 2px;
+}
+
+.search-menu {
+  font-family: $condensed;
+  background-color: white;
+  padding-bottom: 6px;
+  border-color: $gray4;
+  border-top: none;
+  //box-shadow
+  box-shadow: $soft-shadow;
+  .search-item {
+    margin: 0;
+    padding-left: 20px;
+    border: none;
+    color: black; //$blue;
+    font-weight: 400;
+    &:hover {
+      background-color: $gray2;
+      color: $gray12;
+    }
+    .ui-state-active {
+      background-color: $gray2;
+      color: $gray12;
+    }
+    .span {
+      font-weight: 400 !important;
+    }
+
+    .search-qualifier-field {
+      font-weight: 400;
+      color: $teal3; //$gray12;
+      padding-right: 4px;
+    }
+  }
+
+  .search-qualifier.search-item.ui-menu-item {
+    //Need to assign a class to this element only when .ui-menu-item.search-item follows
+    border-top: solid 1px $gray3;
+    margin-top: 8px;
+    //These should be kept for all instances
+    font-weight: 300;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    color: $blue;
+    .search-qualifier-field {
+      font-weight: 700;
+      color: $gray12;
+      padding-right: 4px;
+    }
+  }
+  .search-qualifier-range {
+    color: $gray7;
+  }
+}

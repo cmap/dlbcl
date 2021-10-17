@@ -1,0 +1,42 @@
+
+.list-type-legend-label {
+    margin-left: 8px;
+    font-size: 12px;
+}
+
+#list_tags {
+    list-style-type: none;
+}
+
+#list_tags li {
+    background-color: #dddddd;
+    display: inline-block;
+    margin-right: 4px;
+    padding: 2px 5px;
+    border-radius: 6px;
+    border: 1px solid #aaaaaa;
+    font-size: 12px !important;
+}
+
+.addmarginbottom {
+    margin-bottom: 20px;
+}
+
+#list_content li {
+    font-size: 13px !important;
+}
+
+#list_name {
+    display: inline-block;
+}
+
+.card-type {
+    display: inline-block !important;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.card-title-and-icon {
+    display: inline-block !important;
+    vertical-align: middle;
+}

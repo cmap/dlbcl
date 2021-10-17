@@ -1,0 +1,292 @@
+// metadata card - Touchstone (Compound)
+- var url = "/cards/compound/" + card.pert_id
+
+include cards-layout.jade
+
+    // --------------- CARD HEADER ---------------
+    .metadata-card-header
+        // Card type and symbol
+        .card-type
+            span.pert-info-pert-chip
+                .glyphicon.glyphicon-adjust
+            | &nbsp;
+            span.value.pert-info-pert-type
+                | CP
+            //span.pipe
+            //span.pert-use.value Launched
+        .card-title-and-icon
+            .metadata-card-title
+                | #{card.pert_iname}
+            //.favorite-indicator
+                .fa.fa-star-o
+
+        // Alternative names
+
+        .metadata-line.alt-names
+            span.label Synonym:
+            if(card.alt_name)
+                - for(var i = 0; i < card.alt_name.length; i ++)
+                    input.name_field(value="#{card.alt_name[i]}" type="hidden")
+                span.value#alt_cp
+            else
+                span.value -
+
+        // Description
+
+        .description
+            if(card.description)
+                - var desc_concat = card.description.substr(0, 76) + "..."
+                if card.description.length > 75
+                    span.description-concat #{desc_concat}
+                    a(onclick="toggleDesc('more')").more-less-toggle  [ More&nbsp
+                        span.fa.fa-angle-down
+                        | &nbsp]
+                    span.description-full(style="display: none") #{card.description}
+                    a(onclick="toggleDesc('less')" style="display: none").more-less-toggle  [ Less&nbsp
+                        span.fa.fa-angle-up
+                        | &nbsp]
+                else
+                    span.description-concat #{card.description}
+            else
+                span.description-concat -
+
+    // ------------------------------------------
+
+
+    // ID Section
+
+    .metadata-card-tabs.metadata-card-id-section
+        ul.nav.nav-tabs
+            li
+                .nav-label ID:
+            li.active
+                a(data-toggle="tab" href=".Broad-ID.TC") Broad
+            li
+                a(data-toggle="tab" href=".PubChem-ID.TC") PubChem
+            li
+                //a(data-toggle="tab" href=".ChEMBL-ID.TC") ChEMBL
+                a(style="opacity: 0.5; cursor: default") &nbsp ChEMBL
+            li
+                a(data-toggle="tab" href=".InChIKey.TC") InChIKey
+            li
+                a(data-toggle="tab" href=".SMILES.TC") SMILES
+
+    .tab-content.small-print
+        .metadata-line.Broad-ID.TC.tab-pane.active
+            //span.label Broad ID:
+            span.value #{card.pert_id}
+        .metadata-line.PubChem-ID.TC.tab-pane
+            //span.label PubChem:
+            if(card.pubchem_cid)
+                - var pubchem_url = "https://pubchem.ncbi.nlm.nih.gov/compound/";
+                - var full_pubchem_url = pubchem_url + card.pubchem_cid;
+                a(href="#{full_pubchem_url}" target="pubchem") #{card.pubchem_cid}
+            else
+                a(href="#") -
+        .metadata-line.ChEMBL-ID.TC.tab-pane
+            //span.label ChEMBL:
+            //put conditional here when chembl available
+            a(href="" target="source") 429892
+        .metadata-line.InChIKey.TC.tab-pane
+            //span.label InChIKey:
+            if(card.inchi_key)
+                span#pert-info-inchi-key.value #{card.inchi_key}
+            else
+                span#pert-info-inchi-key.value -
+        .metadata-line.SMILES.TC.tab-pane
+            //span.label SMILES:
+            if(card.canonical_smiles)
+                span#pert-info-smiles.value #{card.canonical_smiles}
+            else
+                span#pert-info-smiles.value -
+
+    // Overview Section
+
+    .pert-info-body-image.graphic
+        if(card.structure_url)
+            img(src="#{card.structure_url}")
+        else
+            img(src="//assets.clue.io/clue/public/img/clue-placeholder-comingsoon.png" style="max-width: 100%")
+
+    // Biological Function Section
+
+    .metadata-section.collapsible.biological-function
+        a(data-toggle="collapse" data-target="#cp-bio").metadata-section-h1 Biological function
+        #cp-bio.biological-TSCP.collapse.in
+            .metadata-line
+                span.label MOA:
+                if(card.moa)
+                    - for(var i = 0; i < card.moa.length; i ++)
+                        input.moa_field(value="#{card.moa[i]}" type="hidden")
+                        span.value.abreviation#moa_cp
+                else
+                    span.value.abreviation -
+
+            .metadata-line
+                span.label CMap class:
+                if(card.pcls && card.pcls.length > 0)
+                    - for(var i = 0; i < card.pcls.length; i ++)
+                        input.pcl_field(value="#{card.pcls[i].name}" type="hidden")
+                        span.value.abreviation#pcls_cp
+                else
+                    span.value.abreviation -
+
+            .metadata-line
+                span.label Protein target:
+                if(card.target && card.target.length)
+                    - for(var i = 0; i < card.target.length; i ++)
+                        input.target_field(value="#{card.target[i]}" type="hidden")
+                        span.value#target_cp
+                else
+                    span.value -
+
+            // Table and Legend
+
+            //.metadata-card-table-and-legend
+                table.metadata-card-table.icon-table
+                    thead
+                        tr
+                            th.row-name Target/Source
+                            th
+                                a(data-toggle="tooltip" title="ChEMBL") Ch
+                            th
+                                a(data-toggle="tooltip" title="DrugBank") Dr
+                            th
+                                a(data-toggle="tooltip" title="IUPHAR") IU
+                            th
+                                a(data-toggle="tooltip" title="TTD") TT
+                            th
+                                a(data-toggle="tooltip" title="Pharmacoprojects") Ph
+                            th.border-left
+                                a(data-toggle="tooltip" title="L1000") L1
+                            //th
+                                a(data-toggle="tooltip" title="Proteomics") Pr
+                            //th
+                                a(data-toggle="tooltip" title="PRISM") PR
+
+                    tbody
+                        tr
+                            th.row-name mTOR
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th.border-left
+                            //th
+                            //th
+
+                        tr
+                            th.row-name FKBP1A
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th.border-left
+                            //th
+                            //th
+                                .cmap.cmap-icons_target
+
+                        tr
+                            th.row-name FGF2
+                            th
+                            th
+                                .cmap.cmap-icons_target
+                            th
+                            th
+                            th
+                            th.border-left
+
+    // Profile Status Section
+
+    .metadata-section.collapsible
+        a(data-toggle="collapse" data-target="#cp-profiled").metadata-section-h1 Profile status
+        #cp-profiled.profiled-TSCP.collapse.in
+
+
+            .metadata-line
+                i.fa.fa-question-circle-o.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                data-popover-config='[{"target_id":"q_cp_profile","content_id":"tt_profile","placement": "auto left"}]'
+                data-tooltip-class="tt_profile" style="color: #F5A623;")#q_cp_profile
+                | &nbsp
+                span.label Profiled in:
+
+                table.metadata-card-table.profile-table
+                    thead
+                        tr
+                            //th.row-name Assay
+                            //will need to get the actual data for this
+                            //standin for this card, touchstone perts don't have this data yet
+                            - var assay = ["cmap"];
+                            p(style="display: none")#assays #{assay}
+                            th
+                                a(data-toggle="tooltip" title="L1000") L1000
+                            th
+                                a(data-toggle="tooltip" title="PCCSE") PCCSE
+                            th
+                                a(data-toggle="tooltip" title="CellPainting") CPaint
+                            th
+                                a(data-toggle="tooltip" title="PRISM") PRISM
+            .metadata-section
+                //.metadata-line.pad-top-8.pad-bottom-4
+                    span.label L1000 profiling
+
+                .metadata-section-h1
+                    //no plot description
+                    i.fa.fa-question-circle-o.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                    data-popover-config='[{"target_id":"q_cp_dose","content_id":"tt_dose","placement": "auto left"}]'
+                    data-tooltip-class="tt_dose" style="color: #F5A623;")#q_cp_dose
+                    | &nbsp
+                    span Dose
+                //no tagline?
+                //.metadata-line
+                    span.label Dose
+
+                .graphic
+                    .vis-container
+                        .chartAndTooltips
+                            #chart_cp.dose-timepoint
+
+                .metadata-section-h1
+                    i.fa.fa-question-circle-o.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                    data-popover-config='[{"target_id":"q_cp_tas","content_id":"tt_tas","placement": "auto left"}]'
+                    data-tooltip-class="tt_tas" style="color: #F5A623;")#q_cp_tas
+                    | &nbsp
+                    span Average transcriptional impact
+                .metadata-line
+                    span.label Transcriptional impact summarized across core cell lines
+
+                .graphic.metadata-section
+                    #card_tas_chart_cp.tas-chart(style="height:200px;")
+
+                .metadata-section-h1
+                    i.fa.fa-question-circle-o.tooltip_trigger(data-container="body" data-toggle="popover" data-trigger="click focus"
+                    data-popover-config='[{"target_id":"q_cp_introspect","content_id":"tt_introspect","placement": "auto left"}]'
+                    data-tooltip-class="tt_introspect" style="color: #F5A623;")#q_cp_introspect
+                    | &nbsp
+                    span Introspect
+                .metadata-line
+                    span.label Cell Line-specific responses to perturbagens
+                    // Graphic
+                    #intro_cp.introspect-vis(style="height: 200px;")
+
+script.
+    $(document).ready(function () {
+
+        clue.getUserKey(function () {
+            doseChart("#chart_cp", "#{card.pert_iname}");
+            introspectSetup("#{card.pert_id}", "#intro_cp");
+            clue.loadTasChart("#{card.pert_id}", "#{card.pert_type}", 'card_tas_chart_cp');
+            iterateFields("#alt_cp", ".name_field");
+            iterateFields("#moa_cp", ".moa_field");
+            iterateFields("#target_cp", ".target_field");
+            iterateFields("#pcls_cp", ".pcl_field");
+            profiledIn($("#assays").text());
+        });
+    });

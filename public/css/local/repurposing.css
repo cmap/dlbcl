@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,300&display=swap');
+
+/* REPURPOSING PAGE */
+.re-hero {
+	background-color:#66A3E0;
+	color:#FFFFFF;
+	height: 250px;
+	background-position: right top;
+	background-repeat:no-repeat;
+	background-image: url("/public/js/local/repurposing/sunburst.svg");
+}
+
+.re-hero-nav {
+	background-color:#0041B3;
+	opacity: 0.8;
+	display: block;
+}
+ul.re {
+	background-color:#0041B3;
+}
+
+
+
+/* FONTS */
+h1, h2, h3, h4, p, label, span, text, th, tr, table {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+  font-size: 36px
+}
+
+h2 {
+  font-size: 26px
+}
+
+li.re.active, li.re.active > a {
+	background-color: none;
+	color:#FFFFFF;
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+}
+
+/* BELOW CLASSES WERE ADDED FOR REVAMP OF COMPOUND VIEW */
+#single-compound-background {
+  display: none;
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgba(28, 28, 28, 0.4);
+}
+
+#single-compound-viewer {
+  position: fixed;
+  z-index: 9999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 1);
+  padding: 30px;
+  overflow: scroll;
+  border-radius: 5px;
+}
+
+.sample-holder {
+  width: 100%;
+  margin-bottom: 80px
+}
+
+.app-container-fluid {
+  overflow-x: hidden;
+}
+
+.single-sample {
+  border: solid 1px gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px;
+}
+
+  .modal-close {
+    float: right;
+    color: rgb(104, 104, 104);
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 5px
+  }
+
+  .bar-charts-holder {
+    padding: 10px;
+    margin: 0px auto;
+  }
+
+  .purity-bar-chart-holder {
+    padding-bottom: 20px;
+    margin-top: 0px;
+    height: 100px
+}
+
+.skeleton-title {
+    border-radius: 3px;
+    height: 24px;
+    width: 30%;
+    margin-top: 1rem; 
+}
+
+.skeleton-text {
+    border-radius: 3px;
+    height: 16px;
+    width: 40%;
+    margin-top: 1rem; 
+}
+
+.skeleton-block {
+    border-radius: 3px;
+    width: 100%;
+    margin-top: 1rem; 
+    margin-right: 30px
+}
+
+.static-skel {
+  background: #d8d8d8;
+  background-image: linear-gradient(to right, #d8d8d8 0%, #bdbdbd 20%, #d8d8d8 40%, #d8d8d8 60%);
+  background-repeat: no-repeat;
+  background-size: 800px 304px;
+  position: relative;
+
+}
+
+.loading-skel {
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: forwards;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+    background: #d8d8d8;
+    background-image: linear-gradient(to right, #d8d8d8 0%, #bdbdbd 20%, #d8d8d8 40%, #d8d8d8 60%);
+    background-repeat: no-repeat;
+    background-size: 800px 304px;
+    position: relative
+}
+
+@-webkit-keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0
+    }
+    100% {
+        background-position: 468px 0
+    }
+}
+
+@-webkit-keyframes prideShimmer {
+    from {
+        background-position: top left
+    }
+    to {
+        background-position: top right
+    }
+}
+
+  hr.section-divider {
+    border: 1px solid #707070
+  }
+
+  .img-border {
+    border: 1px solid #707070
+  }
+
+  .single-compound-image-holder {
+    max-width: 400px;
+    max-height: 400px
+  }
+
+  .sample-image-holder {
+    max-width: 200px;
+    max-height: 200px
+  }
+
+  .single-compound-structure-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*magic*/
+  }
+
+  .c-entry {
+    margin-top: 20px
+  }
+
+  .sample-table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  .sample-table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  .sample-table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  .sample-table th,
+  .sample-table td {
+    padding: .425em;
+    text-align: center;
+  }
+  
+  .sample-table th {
+    font-size: 1em;
+    letter-spacing: .1em;
+    /* text-transform: uppercase; */
+  }
+  
+  .sample-table tr:nth-child(even) {background-color: #ffffff;}
+  
+  @media screen and (max-width: 1000px) {
+    h1 {
+      font-size: 42px
+    }
+
+    table {
+      border: 0;
+    }
+
+    .sample-table {
+      border: none
+    }
+
+    tbody {
+      border: 0;
+    }
+    
+    .sample-table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    .sample-table tr {
+      border-bottom: 3px solid #ddd;
+      border-radius: 15px;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    .sample-table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: 1em;
+      text-align: right;
+    }
+    
+    .sample-table td::before {
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      /* text-transform: uppercase; */
+    }
+    
+    .sample-table td:last-child {
+      border-bottom: 0;
+    }
+
+    .sample-table .sample-image-holder {
+      text-align: right;
+      height: 125px;
+      float: right;
+    }
+
+    .sample-table .structure-row {
+      height: 135px
+    }
+
+    .sample-table .single-compound-structure-image {
+      width: 120px;
+      height: 120px;
+      object-fit: cover; /*magic*/
+    }
+  }
+
+  .circle-after-label {
+    background-color: gray;
+    border-color: white;
+    border-radius: 50%;
+    border-width: 5px;
+    height: 8px;
+    width: 8px;
+    line-height: 10px;
+    margin: 2px;
+    display: inline-block
+  }
+  
+  .legend-label {
+    font-size: 12px
+  }
+
+  .compound-content {
+    margin-top: -10px;
+    margin-bottom: 0px
+  }
+
+  .targets-scrollable {
+    overflow-y: auto;
+    height: 80px;
+    margin-right: 20px
+  }
+
+  .targets-scrollable-sidecard {
+    overflow-y: auto;
+    height: 40px;
+  }
+
+  .tableview-rowcount {
+    font-family: 'Open Sans', sans-serif
+  }
+
+  /* VIZ CLASSES */
+  #rep_clinical_phase .y-axis .tick line {
+    opacity: 0
+  }
+
+  .sunburst-tooltip {
+    position: absolute;
+    text-align: center;
+    width: 60px;
+    height: 12px;
+    padding: 8px;
+    margin-top: -20px;
+    font: 10px sans-serif;
+    background: #ddd;
+    pointer-events: none;
+  }
+
+  .rep-graph-heading {
+    font-size: 12px;
+    margin-bottom: 0px;
+    padding-bottom: -10px;
+    color: #333
+  }
+
+  .y-axis text {
+    fill: #707070
+  }
+
+  .x-axis text {
+    fill: #707070
+  }
+
+  .x-axis path {
+    stroke: #707070
+  }
+
+  .y-axis path {
+    stroke: #707070
+  }
+
+  .y-axis line {
+    stroke: #707070
+  }
+
+  #rep-clinical-phase .y-axis .tick line {
+    opacity: 0
+  }
+
+  #rep-clinical-phase .x-axis .tick line {
+    opacity: 0
+  }
+
+  #rep-purity .y-axis .tick line {
+    stroke: #707070;
+  }
+
+  #rep-purity .x-axis .tick line {
+    stroke: #707070;
+  }
+
+  .repo-annotation-label {
+    font-size: 10px;
+    font-weight: 600;
+    fill: #707070
+  }
+
+  .modal-close {
+    font-size: 18px
+  }
+
+  #search-bar-holder {
+    position: relative
+  }
+
+  #search-bar-holder i {
+    position: absolute;
+    z-index: 1;
+    left: 35px;
+    top: 13px;
+    font-size: 22px;
+    color: #7B7B7B;
+    cursor:pointer;
+    width: 0;
+    display: none
+  }
+
+  input.rep-ubersearch {
+    display: inline-block;
+    width: 100%;
+    border-radius: 30px;
+    background-color: #EFEDED;
+    font-size: 18px;
+    height: 50px;
+    padding-left: 50px;
+    position: relative
+  }
+
+  .btn-holder {
+    margin: 0 auto;
+    width: 150px;
+    height: 100px;
+    /* margin-bottom: 100px */
+  }
+
+  #cpd-launch {
+    width: 100%;
+    white-space: normal;
+    padding: 0;
+    border: none;
+    background: none;
+    text-decoration: underline;
+    color: rgb(36, 161, 238);
+    font-size: 18px;
+    margin: 0;
+    padding: 10px;
+    
+  }
+
+  .override-filter-header {
+    position: relative;
+    margin-left: 45%;
+    margin-top: -20px;
+    padding: 0px;
+    width: 140px;
+  }
+
+  /* position the ## available labels in the header of a filter accordion */
+  .list-counter {
+    position: relative;
+    float: right;
+    margin-right: 5%;
+    margin-top: -15px;
+    padding: 0px;
+    width: 100px;
+    font-size: 12px;
+    color:rgb(62, 62, 62)
+  }
+
+  /* hide the number in parentheses for all Select All filter boxes */
+  [data-name="count"] {
+    display: none
+  }
+
+  .repurposing-app-page .slick-header.ui-state-default {
+    margin-top: 25px
+  }
+
+  /* PERT CARD CLASSES */
+
+  .span-bold {
+    font-weight: 600
+  }
+
+  #pert-card-holder {
+    width: 100%;
+    margin-bottom: 50px;
+    height: 100%;
+    margin-top: 30px
+  }
+
+  #ghostcard {
+    height: 100%;
+    margin-bottom: 60px;
+  }
+
+  #pert-info-height-override {
+    min-height: 100%;
+    max-height: 100%
+  }
+
+  .empty-card {
+    border: 1px solid gray;
+    border-radius: 35px;
+    position: relative;
+  }
+
+  .empty-card-instructions {
+    height: 100%;
+    background-color: white;
+    opacity: 0.7;
+    border: 0px solid gray;
+    border-radius: 35px;
+    position: absolute;
+  }
+
+  .pert-info-container h4 {
+    margin-bottom: 0px;
+  }
+
+  .pert-info-container {
+    max-width: 100%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    border-radius: 35px;
+    padding: 20px;
+    padding-top: 0px;
+  }
+
+  /* @media (max-height: 800px) {
+    .empty-card {
+      height: 100px
+    }
+  } */
+
+  @media screen and (max-width: 600px) {
+    /* .empty-card {
+      height: 600px
+    } */
+
+    .viz-row {
+      margin-top: 90px
+    }
+
+    .app-container-fluid {
+      padding-top: 20px;
+    }
+  }
+
+  .pert-info-headline {
+    padding: 10px
+  }
+
+  .table-hider {
+    padding-left: 10px;
+  }
+
+  .col-xs-12 {
+    position:relative
+  }
+
+  /* input.rep-ubersearch {    
+    background: url("http://kodyrabatowe.wp.pl/img/ico/search_gr.png") top left no-repeat;
+    padding-left:25px;   
+    } */

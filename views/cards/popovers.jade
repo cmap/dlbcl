@@ -1,0 +1,454 @@
+div(style="display: none")
+
+    // data library
+    div.tooltip_content#tt_tsne_definition
+            p
+                | A dimensionality reduction technique particularly well suited for visualizing data. (For references, see&nbsp;
+                a(href="https://lvdmaaten.github.io/tsne" target="blank") https://lvdmaaten.github.io/tsne
+                | )
+    div.tooltip_content#tt_tsne_parameters
+        p
+            | The parameters that were used for running t-SNE here are: 50 initial dimensions, perplexity of 30, and theta of 0.5. For datasets with <= 5000 samples, the standard t-SNE algorithm is used. For larger datasets, the Barnes-Hut algorithm is employed.
+    div.tooltip_content#tt_pca_definition
+        p
+            | A dimensionality reduction technique in which the two principal components are chosen to have the largest possible variance.
+
+    //proteomics landing page
+    div.tooltip_content#tt_prot_landing
+        p.coaching_tips_text
+            | To analyze relationships between perturbations, we utilize the framework of connectivity. A connectivity score between two perturbations quantifies the similarity of the cellular responses evoked by these perturbations. A score of 1 means that these two perturbations are more similar to each other than 100% of other perturbation pairs. A score of -1 means that these two perturbations are more dissimilar to each other than 100% of other perturbation pairs.
+    div.tooltip_content#tt_prot_explore
+        p.coaching_tips_text
+            | See a heatmap of connections between individual perturbagens in cell lines and all other perturbagens used for the P100 assay or the GCP assay. The tutorial describes the features of the heatmap.
+    div.tooltip_content#tt_prot_query
+        p.coaching_tips_text
+            | Bring data, in GCT format, from your own P100 or GCP studies to query against our datasets.
+
+    //proteomics query page
+    div.tooltip_content.prot_query_coaching_tips#tt_prot_query_1
+        p.coaching_tips_text
+            | Introspect means querying your dataset against itself. Make sure to "Include Introspect" if you would like to see connections within your dataset (in addition to connections between your dataset and Touchstone-P).
+    div.tooltip_content.prot_query_coaching_tips#tt_prot_query_2
+        p.coaching_tips_text
+            | In computing connectivity, biological or technical replicates can be aggregated together. Please select which metadata fields should be used to recognize replicates. For example, if you wish to distinguish between different doses of the same compound, make sure to select "pert_dose" (or something similar) as one of the metadata fields by which to group replicates. The possible metadata fields by which to group replicates only appear after you have upload your GCT and selected "Yes" for "Are there replicates in your data?".
+
+    //build request page
+    div.tooltip_content#tt_gutc_mode
+        p
+            br
+            strong Matched mode:
+            |  When running GUTC, incorporates cell-line information to match
+            |   query data against matching cell types in Touchstone. Currently
+            |   this includes the following 9 cell types : [A375, A549,
+            |   HEPG2, HCC515, HA1E, HT29, MCF7, PC3, VCAP].
+            br
+            strong Unmatched mode (recommended):
+            |  When running GUTC, does not incorporate cell-line information when querying
+            |   the data against Touchstone signatures.
+    div.tooltip_content#tt_build_type
+        p
+            br
+            strong L-Build ("Light" Build):&nbsp;
+            |  All levels of L1000 data up to aggregated signatures.
+            br
+            strong Full Build:&nbsp;
+            |  All levels of L1000 data up to aggregated signatures, as well as all relevant additional analyses
+            |   of the data (Introspect, t-SNE, PCA, etc.).
+    div.tooltip_content#tt_feature_space
+        p
+            | When querying Touchstone, Feature Space determines what set of genes to query against.
+            | When perturbagens are profiled on the L1000 platform,
+            strong &nbsp;Landmark&nbsp;
+            | is recommended. When the queries you wish to use are not landmarks, use
+            strong &nbsp;BING&nbsp;
+            | instead.
+    div.tooltip_content#tt_brew_root
+        p
+            | Root location within a brew folder that contains the instance matrices and the brew_group folder. Default is brew/pc
+    div.tooltip_content#tt_dose_list
+        p
+            | List of expected treatment doses in micromolar as a listmaker list.
+            |  If provided, dose discretization is applied to the pert_dose metadata field to
+            |  generate a canonicalized pert_idose field. Note this assumes that the pert_dose
+            |  annotations are in micromolar.
+    div.tooltip_content#tt_calib_collection
+        p
+            | Generates TAS plots and connectivity heatmap of preliminary callibration plates to
+            |  identify the most suitable experimental conditions of specified parameters. Tool
+            |  should be run on small pilot experiments, with a variety of experimental parameters
+            |  such as seeding density and time point. Plots can also be decoupled by parameters
+            |  such as cell id.
+    div.tooltip_content#tt_column_filter_collection
+        p
+            | Column filter to sig_build_tool as a listmaker collection
+    div.tooltip_content#tt_data_build_code
+        p
+            | The name of the build used when generating all associated files and folders
+            | (e.g. &lt;BUILD_CODE&gt;_metadata). For this reason, the code must be filename compatible.
+    div.tooltip_content#tt_l1000_groupby
+        p
+            | When merging replicates for L1000, several versions of the merged data are made. This parameter
+            | determines which version to use when creating your build. by_rna_well is the default.
+            strong &nbsp;by_rna_well&nbsp;
+            | is recommended.
+    div.tooltip_content#tt_command_gex_version
+        p
+            | All data is from the&nbsp;
+            a(target="_blank" href="https://portals.broadinstitute.org/ccle") Cancer Cell Line Encyclopedia
+            | &nbsp;resource. Expression data was released 15-Aug-2017,
+            |  copy number data is dated 27-May-2014, and mutational
+            |  data is dated 15-Aug-2017.
+    div.tooltip_content#tt_command_gex_data_format
+        p
+            br
+            strong Feature Mapping:
+            |  Ensembl Ids from the source data were mapped to Entrez Gene Ids using&nbsp;
+            a(href="ftp://ftp.ncbi.nih.gov/gene/DATA/GENE_INFO/Mammalia/Homo_sapiens.gene_info.gz" target="_blank") gene annotations from NCBI
+            |  (downloaded on 02-Mar-2016).
+            br
+            strong Normalization:&nbsp;
+            |  RNAseq RPKM values were log
+            sub 2
+            |  transformed using log
+            sub 2
+            | (max(RPKM, eps)). The data were then normalized
+            |  such that the expression values were comparable across cell lines, by minimizing technical variation
+            |  and equalizing their distributions (for details of the normalization, see LISS and QNORM entries in the&nbsp;
+            a(href="/connectopedia/glossary" target="_blank") Connectopedia glossary
+            | ). Post-normalization, the expression values range between 4 and 15 log
+            sub 2
+            |  units, with 4 indicating that
+            |  a gene is minimally or not expressed and 15 indicating the maximum readout.
+            br
+            strong Z-scores:
+            |  The number of standard deviations that a gene is above or below the population mean is called its&nbsp;
+            a(href="https://en.wikipedia.org/wiki/Standard_score" target="_blank") z-score.
+            |  The "robust" z-score is resistant to outliers by using median instead of mean and&nbsp;
+            a(href="https://en.wikipedia.org/wiki/Median_absolute_deviation" target="_blank") median absolute deviation
+            |  (MAD) instead of standard deviation. The reference population used to compute the median and MAD for a
+            |  particular gene is all CCLE lines with data for that gene.
+            br
+            strong Z-scores Within Primary Site:
+            |  Similar to z-scores,
+            |  but the reference population used to compute the median and MAD is all CCLE lines
+            i  from the same lineage
+            |  with data for that gene.
+    div.tooltip_content#tt_command_gex_copy_number
+        p
+            | All scores indicated are in log 2 ratios to reference, binned using the heuristics described in&nbsp;
+            a(target="_blank" href="http://cnvkit.readthedocs.io/en/latest/cnvlib.html#cnvlib.call.absolute_threshold") CNVkit.
+            br
+            br
+            strong Deletion:&nbsp;
+            |  score &lt; -1.1
+            br
+            strong Loss:&nbsp;
+            |  -1.1 &le; score &le; -0.25
+            br
+            strong No change:&nbsp;
+            |  -0.25 &lt; score &lt; +0.2
+            br
+            strong Gain:&nbsp;
+            | +0.2 &le; score &lt; +0.7
+            br
+            strong Amplification:&nbsp;
+            | +0.7 &le; score
+
+    //homepage
+    div.tooltip_content.home_coaching_tips#tt_menu
+        p.coaching_tips_text
+            | Access a suite of analysis apps by clicking on the menu (or type command-K to open)
+    div.tooltip_content.home_coaching_tips#tt_search
+        p.coaching_tips_text
+            | Explore the Connectivity Map by typing here and pressing Enter (see instructions below the search box)
+
+    //query
+    div.tooltip_content.query_coaching_tips#tt_query_mode
+        p.coaching_tips_text
+            | Switch between running a single query and running a batch query.
+    div.tooltip_content.query_coaching_tips#tt_query_name
+        p.coaching_tips_text
+            | Give each query a descriptive name that will help you identify your results.
+    div.tooltip_content.query_coaching_tips#tt_query_tip
+        p.coaching_tips_text
+            | Tip: Each list can have a different number of genes; in fact, you can run a query with only one list (up OR down).
+    div.tooltip_content.query_coaching_tips#tt_query_submit
+        p.coaching_tips_text
+            | Your query will take about 5 minutes to process; check the History section in the Menu for your results!
+    div.tooltip_content.query_coaching_tips#tt_query_genes
+        p.coaching_tips_text
+            | Valid genes used in the query have HUGO symbols or Entrez IDs and are well-inferred or directly measured by L1000 (member of the BING gene set).
+            |  Valid genes not used in a query are those that have a valid HUGO or Entrez identifier but are not part of the BING set. Invalid genes do not have HUGO or Entrez IDs.
+    div.tooltip_content.query_coaching_tips#tt_query_name_batch
+        p.coaching_tips_text
+            | Give each query a descriptive name that will help you identify your results.
+    div.tooltip_content.query_coaching_tips#tt_query_submit_batch
+        p.coaching_tips_text
+            | Your query will take about 5 minutes to process; check the History section in the Menu for your results!
+    div.tooltip_content#tt_query_fast_tip
+        p
+            | The sig_fastgutc_tool is a reimplementation of our query algorithm that enables faster query results, especially at larger batch sizes.  It is the result of crowd-sourced
+            a(href="/contest" target="contest")  contest
+            | .  It is currently in beta mode.
+
+    //data
+    div.tooltip_content.query_coaching_tips#tt_data_filter
+        p.coaching_tips_text
+            | Filter datasets by category to see only those of interest.
+    div.tooltip_content.query_coaching_tips#tt_data_table
+        p.coaching_tips_text
+            | Data Icons identify published and proprietary datasets.
+    div.tooltip_content.query_coaching_tips#tt_data_click
+        p.coaching_tips_text
+            | Click on a row to see a summary of that dataset, including cell lines and treatment conditions, assay type, and dates.
+    div.tooltip_content.query_coaching_tips#tt_data_setting
+        p.coaching_tips_text
+            | Arrange the table to display the information most important for your work, and add  key datasets to favorites.
+    div.tooltip_content
+        div#example_content
+    div.tooltip_content
+        div#example_content_prot
+    div.tooltip_content
+        div#example_content_p
+    //repurposing
+    div.tooltip_content.repurposing_coaching_tips#rep_repurposing_landing_page
+        p.coaching_tips_text
+            | View details about the collection as a whole and about individual compounds.
+    div.tooltip_content.repurposing_coaching_tips#rep_repurposing_app_moa
+        p.coaching_tips_text
+            | View subsets of compounds based on mechanism, drug target, or known disease application.
+    div.tooltip_content.repurposing_coaching_tips#rep_repurposing_app_purity
+        p.coaching_tips_text
+            | Purity is assessed by ultra-performance liquid chromatography-mass spectrometry (UPLC-MS) of compounds after receipt from the vendor.
+    div.tooltip_content.repurposing_coaching_tips#rep_repurposing_app_clinical_phase
+        p.coaching_tips_text
+            | Status as of publication of this resource (March 2017). We will be updating this but let us know if you notice a discrepancy.
+    div.tooltip_content.repurposing_coaching_tips#rep_repurposing_app_table
+        p.coaching_tips_text
+            | Click on a compound to see details about its structure, mechanism, targets, approval status, and vendor.
+    div.tooltip_content.repurposing_coaching_tips#rep_repurposing_protein
+        p.coaching_tips_text
+            | Mouse over this graphic to see the classes of proteins targeted by drugs in the hub.
+
+    //touchstone
+    div.tooltip_content.touchstone_coaching_tips#tt_touchstone_table_search
+        p.coaching_tips_text
+            | Search CMap for connections. First, search for a perturbagen and check the box to select it. Then view its connections as a list or heatmap.
+    div.tooltip_content.touchstone_coaching_tips#tt_touchstone_table_rowcount
+        p.coaching_tips_text
+            | This is the current count of perturbagens in the reference (touchstone) dataset.
+    div.tooltip_content.touchstone_coaching_tips#tt_touchstone_pert_classes
+        p.coaching_tips_text
+            | Select data from perturbagens grouped by their MoA or role in the cell.
+    div.tooltip_content.touchstone_coaching_tips#tt_touchstone_pert_type_filter
+        p.coaching_tips_text
+            | Choose  a perturbagen type, or view them all.
+    div.tooltip_content.touchstone_coaching_tips#tt_touchstone_header-app-title
+        p.coaching_tips_text
+            | Touchstone is our reference dataset, made from well-annotated perturbagens profiled in a core set of 9 cell lines.
+
+    //history
+    //data-container="body" data-toggle="popover" data-trigger="hover" data-popover-config='[{"target_id":"viewHistogram","content_id":"tt_history_detailed_list","placement": "bottom"}]'
+    div.tooltip_content.history_coaching_tips#tt_history_detailed_list
+        p.coaching_tips_text
+            | Detailed List is unavailable for Touchstone v1.1.1.1. A new data visualization approach is in development, but to get results in a table format (similar to Detailed View), please click on Heat Map and download the dataset as a GCT file that can be viewed in Excel or similar apps.  Please see
+            a(href="/version-software#detailed_list_explanation")  here
+            |  for a detailed explanation.
+
+    //command
+    div.tooltip_content.command_coaching_tips#tt_command_search
+        p.coaching_tips_text
+            | Use the Command app to retrieve the most up-to-date CMap information.  Type a slash (/) to see the list of commands available. Select a command, and type the MoA, gene, perturbagen, or other keyword after it to specify your request.
+
+    //connectopedia
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_tags
+        p.coaching_tips_text
+            | Articles are tagged with topics. Click on a topic tag to see all related articles.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_glossary
+        p.coaching_tips_text
+            | Look it up! A quick reference guide of CMap terms and their meanings.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_contact
+        p.coaching_tips_text
+            | Email us with your questions.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_articles
+        p.coaching_tips_text
+            | Click on the heading to read all the articles in this section on a single page, or open each article separately.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_categories
+        p.coaching_tips_text
+            | Click on a heading to open a menu of articles.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_related
+        p.coaching_tips_text
+            | Articles with the same tag(s) as this article can be opened here. To see all articles associated with any tag, click on the tag from the list below.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_article_tags
+        p.coaching_tips_text
+            | Each article is tagged with key words that describe its content.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_content
+        p.coaching_tips_text
+            | Underlined words link to their definition in the CMap glossary.
+    div.tooltip_content.connectopedia_coaching_tips#tt_connectopedia_voting
+        p.coaching_tips_text
+            | Your feedback helps us make Connectopedia more useful.
+
+
+    //cards
+    div.tooltip_content.tt_tas#tt_tas
+        p
+            b Average transcriptional impact
+        p
+            | TAS is a metric that incorporates the signature strength (the number of significantly differentially expressed transcripts) and signature concordance (the reproducibility of those changes across biological replicates) to capture activity of a compound. The score is computed as the geometric mean of the signature strength and the 75th quantile of pairwise replicate correlations for a given signature. Prior to computing the geometric mean, the signature strength is multiplied by the square root of the number of replicates. This serves to mitigate score shrinkage with increasing replicate number and allows TAS values derived from signatures of different numbers of replicates to be compared with each other.
+
+        //p(style="margin-left: 25px")
+            i PCT
+                span(style="display: inline-block; text-align: center")
+                    sup(style="display: block") CC
+                    sub(style="display: block") i
+            |  =
+            | &nbsp
+            span(style="display: inline-block; text-align: center")
+                i
+                    sup(style="border-bottom: 2px solid black") rank( median( CC
+                        sub i
+                        |  ) )
+                sub(style="display: block") N
+        //br
+        //p(style="margin-left: 25px")
+            i PCT
+                span(style="display: inline-block; text-align: center")
+                    sup(style="display: block") SS
+                    sub(style="display: block") i
+            |  =
+            | &nbsp
+            span(style="display: inline-block; text-align: center")
+                i
+                    sup(style="border-bottom: 2px solid black") rank( median( SS
+                        sub i
+                        |  ) )
+                sub(style="display: block") N
+        //br
+        //p(style="margin-left: 25px")
+            i TAS
+                sub i
+            |  =
+            | &nbsp
+            span(style="display: inline-block; text-align: center")
+                sup(style="border-bottom: 2px solid black")
+                    i PCT
+                        span(style="display: inline-block; text-align: center")
+                            sup(style="display: block") CC
+                            sub(style="display: block") i
+                    |  +
+                    i  PCT
+                        span(style="display: inline-block; text-align: center")
+                            sup(style="display: block") SS
+                            sub(style="display: block") i
+                sub(style="display: block") 2
+        //br
+        //p
+            | where:
+        //p(style="margin-left: 25px")
+            i.code TAS
+                sub i
+            |  is the transcriptional impact score for the
+            i  i
+            | -th perturbagen
+        //p(style="margin-left: 25px")
+            i PCT
+                span(style="display: inline-block; text-align: center")
+                    sup(style="display: block") CC
+                    sub(style="display: block") i
+            |  is the percentile, relative to all other perturbagens, of the
+            i  i
+            | -th perturbagen’s median replicate correlation coefficient (CC) across all of its signatures
+       // p(style="margin-left: 25px")
+            i PCT
+                span(style="display: inline-block; text-align: center")
+                    sup(style="display: block") SS
+                    sub(style="display: block") i
+            |  is the percentile, relative to all other perturbagens, of the
+            i  i
+            | -th perturbagen’s signature strength (SS) across all of its signatures
+
+    div.tooltip_content.tt_introspect#tt_introspect
+        p
+            b Signature diversity
+        p
+            | Thick black bars signify Transcriptional Activity Scores greater than or equal to 0.5; thinner black bars denote scores less than 0.5. Absence of a bar means no data available. Colored lines (chords) signify similar connectivity scores between cell lines; red for positive connectivity scores of 80-100 (pale to intense color according to the score); blue for negative connectivity. Chords are only shown when TAS scores are > 0.5;  thus absence of a chord either means that the perturbagen TAS score is very low, or that no data is available. Chords for individual cell lines can be isolated from the rest of the figure by hovering over the cell line name.
+    div.tooltip_content.tt_be#tt_be
+        //h1 Baseline expression
+        p
+            b Baseline expression
+            |  of this gene in each cell line is represented as a z-score (top numbers). Scores were calculated using robust z-score formula:
+        p(style="margin-left: 25px")
+            | z-score
+            i
+                sub i
+            |  = (
+            i  x
+                sub i
+            |  -
+            i  median
+            | (
+            i  X
+            |  ) )/(
+            i  MAD
+            | (
+            i  X
+            |  ) * 1.4826 ),
+        p
+            | where:
+            p(style="margin-left: 25px")
+                i x
+                    sub i
+                |  is expression value of a given gene in
+                i  i
+                | -th cell line
+            p(style="margin-left: 25px")
+                i X
+                |  = [
+                i  x
+                    sub 1
+                | ,
+                i  x
+                    sub 2
+                |  ...
+                i  x
+                    sub n
+                |  ] is a vector of expression values for a given gene across n cell lines
+            p(style="margin-left: 25px")
+                i MAD
+                | (
+                i  X
+                |  ) is a median absolute deviation of
+                i  X
+            p(style="margin-left: 25px")
+                | 1.4826 is a constant to rescale the score as if the standard deviation of
+                i  X
+                |  instead of
+                i  MAD
+                |  was used
+        p
+            | Median and MAD  expression values were calculated  using RNA-Seq profiles from a total of 1022 cell lines, comprising data from the Cancer Cell Line Encyclopedia (CCLE; Barretina, et al.) and cell lines nominated by the CMap team. Plots show z-score values only for the core LINCS lines used by CMap in L1000 experiments. Light red or light blue regions indicate positive or negative outlier expression, respectively, of the gene relative to the other lines shown; z-score of a positive outlier in the corresponding cell line is in dark red and a negative outlier is in dark blue.
+    div.tooltip_content.tt_sum#tt_sum
+        p
+            b Summary class connectivity
+            |  shows a
+            a(href="https://www.mathworks.com/help/stats/boxplot.html" target="boxplot")  boxplot
+            |  that summarizes the connectivity of a class. Each data point, shown as a light gray dot, represents the median value of connectivity of one member to the other class members. (This corresponds to the median for each row, excluding the main diagonal, in the heatmap shown below.) The box is the distribution of those data points, where the box boundary represents the interquartile range, the vertical line within the box is the median, and the whiskers reflect the minimum and maximum values of the data (exclusive of extreme outliers, which may appear beyond the whiskers).
+    div.tooltip_content.tt_con#tt_conn
+        p
+            b Connectivity between members of class
+            |  is a standard heat map of the connectivity scores, summarized across cell lines, between members of the class, where dark red represents the highest positive scores and deep blue the highest negative scores. Individual scores are revealed to the left below the map by hovering over each cell of the map.
+    div.tooltip_content.tt_inter#tt_inter
+        p
+            b Class inter-cell line connectivity
+            |  is a plot of the median (black line) and Q25-Q75 connectivity scores (blue area around black line) for each cell line as well as the summary scores across cell lines. In some cases perturbations have not been tested in every cell line; the absence of data is indicated by a “0” for that cell line. The example shown reveals that these estrogen agonists show the strongest connectivity to each other in MCF7, a human breast cancer cell line that expresses the estrogen receptor.
+    div.tooltip_content.tt_profile#tt_profile
+        p
+            b Profile status
+        p
+            | Colored portion of top bar indicates the Broad assays in which this compound has been profiled.
+    div.tooltip_content.tt_dose#tt_dose
+        p
+            b L1000 cell/dose coverage
+        p
+            | For compounds profiled by L1000, cell lines and dose range for which signatures are available are indicated by dark gray bars (lighter gray bar indicates no data is available for that cell line/dose combination). A bar displayed one row above the 10 uM row indicates that doses higher than 10uM were tested. The 6 rows correspond to 6 canonical doses: 20 nM, 100 nM, 500 nM, 1 uM, 2.5 uM, and 10 uM.  (In some cases non-canonical doses were tested; these are rounded to the nearest canonical dose for the purpose of this display. For example, if the dose tested was 3.33uM, the 2.5uM bar is shown in dark gray here.)

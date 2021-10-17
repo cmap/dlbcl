@@ -1,0 +1,163 @@
+.swatch {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+td {
+    .swatch + span.swatch-label {
+        position: relative;
+        bottom: 6px;
+        line-height: 20px;
+    }
+}
+
+// App Colors
+$app-Query: #f15a22; //16
+$app-Touchstone: #ffd500; //50
+$app-ICV: #7ED321; //89
+$app-CellBrowser: #00A875; //162
+$app-Command: #27c49a; //164
+$app-Utility: #6a94a0; //193
+$app-Connections: #00B9F2; //194
+$app-Data: #00b9f2; //194
+$app-Repurposing: #DC5BBB; //315
+$app-Morpheus: #ED1C24; //358
+$app-Proteomics: #a685c1;
+
+//vacant colors (apps deprecated):
+$app-History: #F7941E; //Deprecate
+$app-CellQuery: #88D1ED; //Deprecate
+
+
+// Pert Colors
+$CP: #F5A623;
+$KD: #B438BE;
+$OE: #27AAE0;
+$cmap-class: #005D99;
+$cmap-moa: #005D99;
+$genetic: #54128E;
+$cell: #50b003;
+
+// Brand Colors
+
+
+$dark-blue-base:            #003B4A; 
+$orange:                    #F15A22;
+$happy-sky:                 #00C6F5; 
+$blue:                      #337ab7; 
+$red:                       #ff0000;
+
+
+
+// Grayscale NEW !!!!!!!!!!!!!!!!!!!
+
+$white:  #FFFFFF;
+ $gray05: #F5F5F5;
+$gray1:  #EEEEEE;
+ $gray105: #E5E5E5;
+$gray2:  #DDDDDD;
+$gray3:  #CCCCCC;
+$gray4:  #BBBBBB;
+$gray5:  #AAAAAA;
+$gray6:  #999999;
+$gray7:  #888888;
+$gray8:  #777777;
+$gray9:  #666666;
+$gray10: #555555;
+$gray11: #444444;
+$gray12: #333333;
+$gray13: #222222;
+$gray14: #111111;
+$black:  #000000;
+
+
+
+
+
+
+
+// UI Colors
+$teal4:                     $dark-blue-base; // header color
+$teal3:                     #135267; // slightly lighter than header, used in tab bar
+$teal2:                     #047089;
+$teal1:                     #2c8fae; 
+
+// Subtle UI colors
+$light-blue-gray:           #8aa7af;
+$off-white:                 #fdfefe; //#f9fbfc;
+
+
+$menu-hover-bg: $gray2;
+$menu-hover-text: $gray12;
+$header-color: $dark-blue-base;
+$tab-borders: #3a6f80;
+$tab-background: $teal3;
+$tab-light-borders: #BCBCBB;
+$tab-light-background: #E5E6E7;
+
+$button-border: #939393;//#777777;
+$button-background: #E5E6E7;
+$button-active-background: $gray2;
+$button-dialog-active-background: $gray3;
+
+$placeholder-text: $gray7;
+
+
+$link:                      $blue;
+//$link-ondark: ; // see navbar styles
+$link-hover:                 $happy-sky;
+$error:                      #a94442;
+$error-bright:               #C81D1F;
+$build:                      #cccccc;
+
+.text-warning, .warning-text {
+    color: #993031;
+}
+.clear-foreground-color {
+    color: rgba(255, 255, 255, 0.0);
+}
+
+// Section Colors
+$section-color: $orange !default;
+$section-color-teal: $teal1; //Used in Repurposing Page
+$section-color-orange: $orange;
+
+
+
+//Data Vis colors
+
+$data-yellow: #FFDB99;
+$data-blue: #3879D9;
+
+//Diverging unicolr scale
+
+$data-blue-red--6: #08519C;
+$data-blue-red--5: #3182BD;
+$data-blue-red--4: #6BAED6;
+$data-blue-red--3: #9ECAE1;
+$data-blue-red--2: #C6DBEF;
+$data-blue-red--1: #EFF3FF;
+$data-blue-red-0:  #FFFFFF;
+$data-blue-red-1:  #FEE5D9;
+$data-blue-red-2:  #FCBBA1;
+$data-blue-red-3:  #FC9272;
+$data-blue-red-4:  #FB6A4A;
+$data-blue-red-5:  #DE2D26;
+$data-blue-red-6:  #A50F15;
+
+
+// Diverging bicolor scale
+$data-bgyr--6: #08519C;
+$data-bgyr--5: #257A9C;
+$data-bgyr--4: #228D9C;
+$data-bgyr--3: #3BA7A1;
+$data-bgyr--2: #54C0A2;
+$data-bgyr--1: #B2DDCF;
+$data-bgyr-0: #FFFFFF;
+$data-bgyr-1: #FFEAAC;
+$data-bgyr-2: #FFDB58;
+$data-bgyr-3: #FAB045;
+$data-bgyr-4: #F68A1F;
+$data-bgyr-5: #CE5A2E;
+$data-bgyr-6: #A50F15;

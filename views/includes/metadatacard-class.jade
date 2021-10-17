@@ -1,0 +1,98 @@
+include metadata-includes.jade
+
+// metadata card - CMap Class
+
+.metadata-card-vert-container.cmap-class-card
+
+    // --------------- CARD HEADER ---------------
+    .metadata-card-header
+
+        // Card type and symbol
+        .card-type
+            span.pert-info-pert-chip
+                .fa.fa-stop.fa-cmap-class
+            | &nbsp;
+            span.value.pert-info-pert-type
+                | COMPOUND CLASS
+        .card-title-and-icon
+            .metadata-card-title
+                | Aurora Kinase Inhibitor
+            .favorite-indicator.demo-only
+                .fa.fa-star-o
+
+    // ------------------------------------------
+
+    // Overview Section
+
+    .metadata-line
+        span.label Class ID:
+        span.value BRD-???
+
+    .metadata-line
+        span.label Number of members:
+        span.value 14
+
+    //replace with carousel of members
+    .pert-info-body-image.graphic#crsl-cntr
+        div(data-interval="false")#crsl.carousel.slide
+            div(role="listbox").carousel-inner#crsl-inner
+                div.item.active
+                    img(src="https://static-s.aa-cdn.net/img/ios/1034197315/feb4a3e371d9504c2e317c8af011eb06" height="200px" width="200px")
+                    div(style="color: black").carousel-caption First Dog
+                div.item
+                    img(src="http://www.bestfrienddogtraining.co/image/106881697_scaled_256x256.jpg" height="200px" width="200px")
+                    div(style="color: black").carousel-caption Second Dog
+            //ol.carousel-indicators
+                li(data-target="#crsl" data-to-slide-to="0").active
+                li(data-target="#crsl" data-to-slide-to="1")
+            a(href="#crsl" role="button" data-slide="prev" style="background-image: linear-gradient(to left,rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%)").left.carousel-control
+                span(aria-hidden="true" style="color: #4a4a4a").glyphicon.glyphicon-chevron-left
+                span.sr-only Previous
+            a(href="#crsl" role="button" data-slide="next" style="background-image: linear-gradient(to right,rgba(0,0,0,.0001) 0,rgba(0,0,0,.1) 100%)").right.carousel-control
+                span(aria-hidden="true" style="color: #4a4a4a").glyphicon.glyphicon-chevron-right
+                span.sr-only Next
+
+    // Biological Function Section
+
+    .metadata-section.collapsible.biological-function
+        a(data-toggle="collapse" data-target="#class-bio").metadata-section-h1 Biological function
+        #class-bio.biological-TSCP.collapse.in
+            .metadata-line#trgts
+                span.label Protein targets:
+                span.value AURKA, AURKB, AURKC
+            .metadata-line#mmbrs
+                span.label Members:
+                span.value
+            .metadata-line#trgt-cmpds
+                span.label Targeting compounds:
+                span.value AURKA, AURKB, AURKC
+
+    // Class Member Connectivity Section
+
+    .metadata-section.collapsible.class-connectivity
+        a(data-toggle="collapse" data-target="#class-connectivity").metadata-section-h1 Class member connectivity
+        #class-connectivity.connectivity.collapse.in
+
+            .metadata-line
+                i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" onclick="showTooltip('#q_cc_sum', '#tt_sum')" style="color: #005D99;")#q_cc_sum
+                | &nbsp
+                span.label Summary class connectivity
+            .graphic.metadata-section
+                .classchart#class-summary-vis
+            .metadata-line
+                i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" onclick="showTooltip('#q_cc_conn', '#tt_conn')" style="color: #005D99;")#q_cc_conn
+                | &nbsp
+                span.label Connectivity between members of class
+            .graphic.metadata-section
+                div#class-heatmap
+                    div#class-heatmap-info
+                    div#class-heatmap-vis
+            .metadata-line
+                i.fa.fa-question-circle-o.tooltip_trigger(data-container="body.homepage" data-toggle="popover" data-placement="left" data-trigger="click focus" onclick="showTooltip('#q_cc_inter', '#tt_inter')" style="color: #005D99;")#q_cc_inter
+                | &nbsp
+                span.label Class inter-cell line connectivity
+            .graphic.metadata-section
+                div#class-celllines
+                    div#class-celllines-name
+                    div#class-celllines-info
+                    div#class-celllines-vis

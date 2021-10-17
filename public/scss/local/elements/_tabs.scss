@@ -1,0 +1,461 @@
+
+ul.nav.nav-tabs.app-tabs,
+ul.nav.nav-tabs.app-tabs-light,
+ul.nav.nav-tabs.morpheus-nav {
+    height: 27px;
+    letter-spacing: 0.6px;
+    font-family: $istok;
+    font-size: 12.4px;
+    line-height: normal;
+    padding: 0;
+
+    // workaround per https://stackoverflow.com/questions/2717480/css-selector-for-first-element-with-class/8539107#8539107
+    li.morpheus-sortable{
+        margin-left: -1px;
+    }
+    li.morpheus-sortable ~ li.morpheus-sortable {
+        margin-left: 0;
+    }
+
+    i, 
+    .fa {
+        float:left;
+        padding: 2px;
+    }
+
+    li a {
+        height: 27px;
+        width: auto;
+        min-width: 150px;
+        padding-top: 4.5px;
+        padding-bottom: 3px;
+        padding-right: 8px;
+        margin-right: 0;
+        border-radius: 0;
+
+        button.close, 
+        button.close>span{
+            font-family: $sans;
+            font-weight: 200;
+            font-size: 16px;
+            line-height: 16px;
+            padding-left: 12px;
+            margin: 0;
+            height: unset;
+        }
+
+        button.close>span{
+            border-radius: 50%;
+            width: 15px;
+            height: 15px;
+            margin-right: -6px;
+            padding: 0 6px;
+         }
+        button.close {
+            &:hover {
+                background-color: inherit;
+            }
+        }
+        
+    }
+    li:hover > a:hover {
+        color: $gray1;
+        button.close>span {
+            &:hover {
+                background-color: $light-blue-gray;
+                color: $gray1;
+            }
+        }
+    }
+    &>li.active>a, 
+    &>li.active>a:focus, &
+    li.active>a:hover {
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        padding-top: 5.5px;
+        margin-top: -1px;
+        height: 28px;
+        color: $dark-blue-base;
+        button.close>span {
+            &:hover {
+                background-color: $gray2;
+                color: $dark-blue-base;
+            }
+        }
+    }
+}
+
+
+ul.nav.nav-tabs.app-tabs,
+ul.nav.nav-tabs.morpheus-nav {
+    
+    font-weight: 500;
+    background-color: $tab-background;
+    border-bottom: none;
+    li a {
+        color: $light-blue-gray;
+        border-color: $tab-borders;
+        &:hover {
+            background-color: $tab-borders;
+        }
+        button.close, 
+        button.close>span{
+            color: $light-blue-gray;
+        }
+    }
+    &>li.active>a, 
+    &>li.active>a:focus, 
+    &li.active>a:hover {
+        
+        color: $tab-background;
+        border-color: $tab-borders;
+        border-bottom: none;
+        border-top-color: $header-color;
+        background-color: white;
+    }
+    
+}
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover {
+    color: $dark-blue-base;
+}
+
+
+ul.nav.nav-tabs.app-tabs-light {
+    margin: 0;
+    margin-left: -1px;
+    background-color: $tab-light-background;
+    border: solid 1px $tab-light-borders;
+    border-right-color: $tab-light-background;
+    border-bottom: none;
+    li a {
+        margin-top: -1px;
+        padding-left: 8px;
+        color: $light-blue-gray;
+        border-color: $tab-light-borders;
+        border-bottom: none;
+        &:hover {
+            background-color: $tab-light-borders;
+            color: white;
+            button.close, 
+            button.close>span{
+                color: white;
+                opacity: 0.9;
+                &:hover {
+                    opacity: 1;
+                    font-weight: 500;
+                    color: black;//$happy-sky;
+                    text-shadow: none;
+                }
+            }
+        }
+        button.close>span {
+            &:hover {
+                background-color: $gray3;
+            }
+        }
+    }
+    li:hover > a:hover {
+        color: white;
+        button.close>span {
+            &:hover {
+                background-color: $gray6;
+                color: $gray1;
+            }
+        }
+    }
+    & > li.active > a, 
+    & > li.active > a:focus, 
+    &li.active> a:hover {
+        height: 29px;
+        
+        color: $tab-background;
+        border: solid 2px $tab-background;
+        border-bottom: none;
+        background-color: white; 
+    }
+    & > li.active > a {
+        button.close, 
+        button.close>span{
+            color: $tab-background;
+        }
+    }
+    & > li.active > a:focus, 
+    & li.active > a:hover{
+        button.close, 
+        button.close>span{
+            color: $tab-background;
+            opacity: 1;
+        }
+        button.close>span {}
+    }
+    & > li.active:hover {
+        button.close, 
+        button.close>span{
+            color: $tab-background;
+            //font-weight: 500;
+            opacity: 1;
+            
+            &:hover {
+                opacity: 1;
+                font-weight: 500;
+                color:$teal3;
+            }
+        }
+        button.close:hover>span:hover {
+            background-color: $gray3;
+        }
+    }
+}
+.tabs-subheader {
+    margin-right: 0;
+    margin-left: -3px;
+    width:calc(100% + 5px);
+
+    .tab-content {
+        margin: 0;
+        margin-left: 3px;
+    }
+    .app-tabs-content>.tab-pane.active, .app-tabs-content.active {
+        border-top: solid 2px $tab-background;
+    }
+    .tab-content.app-tabs-content {
+        //overflow: hidden;
+    }
+}
+
+
+.dynamic-content.container-fluid {
+    ul.nav.nav-tabs.morpheus-nav {
+        margin-left: -15px !important;
+        margin-right: -15px !important;
+    }
+}
+ul.nav.nav-tabs.morpheus-nav {
+    margin-left: -15px !important;
+    margin-right: -15px !important;
+}
+.tabbed-app {
+    ul.nav.nav-tabs.morpheus-nav {
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+}
+
+ul.nav.nav-tabs.morpheus-nav.app-tabs-light {
+    margin-left: -1px !important;
+    margin-right: 0px !important;
+}
+
+
+
+//TABDROP
+
+.morpheus-tab-addon.tabdrop {
+    //margin-right: -1px;
+    position: absolute;
+    right: -5px;
+    margin-top: -1px;
+    &:hover,
+    &:focus,
+    &:active {
+        //background-color: #4990E2;
+        //color: white;
+    }
+    button.btn.morpheus-drop-tab-toggle.dropdown-toggle {
+        width: 29px;
+        height: 27px;
+        margin: 0;
+        padding: auto;
+        font-size: 16px;
+
+        text-align: center;
+        border: none;
+        &:hover,
+        &:focus,
+        &:active,
+        &[aria-expanded="true"] {
+            background-color: #4990E2;
+            border-top: solid 1px #4990E2;
+            border-right: solid 1px #4990E2;
+            color: white;
+        }
+        &[aria-expanded="true"] {
+            font-weight: 600;
+        }
+    }
+}
+ul.nav.nav-tabs.app-tabs,
+ul.nav.nav-tabs.morpheus-nav{
+    .morpheus-tab-addon.tabdrop {
+        button.btn.morpheus-drop-tab-toggle.dropdown-toggle {
+            color: #8aa7af;
+            background: none;
+            &:hover,
+            &:focus,
+            &:active,
+            &[aria-expanded="true"] {
+                color: white;
+                background-color: #4990E2;
+            }
+        }
+    }
+} 
+ul.nav.nav-tabs.app-tabs-light {
+    .morpheus-tab-addon.tabdrop {
+        button.btn.morpheus-drop-tab-toggle.dropdown-toggle {
+            //color: #8aa7af;
+            background: none;
+            &:hover,
+            &:focus,
+            &:active,
+            &[aria-expanded="true"] {
+                color: white;
+                background-color: #4990E2;
+            }
+        }
+    }
+}
+.morpheus-tab-addon.tabdrop {
+    ul.dropdown-menu {
+        margin-top: 8px;
+        margin-right: 8px;
+        background-color: #F2F2F2;
+        font-family: $istok;
+        width: 270px;
+        border-radius: 4px;
+        
+        li>a {
+            color: black;
+            font-weight: 300;
+        }
+        li.active>a {
+            color: black;
+            font-weight: 600;
+            background-color: #E1E1E1
+            ;
+        }
+        li.active:hover>a, li.active>a:hover {
+            background-color: #BCBCBB;
+            color: white;
+            
+        }
+    }
+}
+
+ul.nav.nav-tabs.morpheus-nav:empty {
+    background: none;
+}
+
+/*
+.tabdrop, li.tabdrop.active  {
+    width: 28px;
+    padding: 0;
+    margin-right: -2px; 
+    a.dropdown-toggle {
+        width: 28px;
+        min-width: 28px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        cursor: pointer;
+        
+        height: 27px !important;
+        color: #4A4A4A !important;
+        opacity: 1;
+        background-color: #E5E6E7 !important;
+        border: solid 1px #BCBCBB !important;
+        border-bottom: none !important;
+        &:hover {
+           
+            background-color: #BCBCBB !important;
+            font-weight: 500 !important;
+            .caret {
+                 color: white !important;
+            }
+        }
+        .caret {
+            margin: 0;
+        }
+        
+        .caret:before {
+            margin-left: 1px;
+        }
+        
+    }
+    ul.dropdown-menu {
+        background-color: #F2F2F2;
+        font-family: $istok;
+        width: 270px;
+        button.close {
+            display: none;
+        }
+        li>a {
+            color: black;
+            font-weight: 300;
+        }
+        li.active>a {
+            color: black;
+            font-weight: 600;
+            background-color: #E1E1E1
+            ;
+        }
+        li.active:hover>a, li.active>a:hover {
+            background-color: #BCBCBB;
+            color: white;
+        }
+        
+    }
+}
+.tabdrop.active.open {
+    a.dropdown-toggle {
+        
+        background-color: #4990E2 !important;
+        color: white !important;
+        //border: none !important;
+        border-color: #4990E2 !important;
+        
+        .caret {
+            color: white;
+        }
+    }
+    &:hover>a.dropdown-toggle, a.dropdown-toggle:hover {
+        border-color: #BCBCBB !important;
+    }
+}
+*/
+
+
+// TABBED APP CONTENT
+.app-tab-header,
+.commandline-tab-header {
+    background-color: $gray1;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 16px 8px 16px;
+}
+.app-tab-header {
+    @media (min-width: $screen-md-min) {
+        margin: 0;
+    }
+}
+.commandline-tab-header-options,
+.app-tab-header-options {
+    background-color: $gray1;
+    min-height: 30px;
+    border-bottom: solid 1px $gray2;
+    //border: solid 1px #000000;
+    font-family: 'Istok Web', sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+}
+.commandline-tab-title, 
+.app-tab-title {
+    word-wrap: break-word;
+    margin-top: 2px;
+    margin-bottom: 0;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18pt;
+}

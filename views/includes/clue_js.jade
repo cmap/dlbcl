@@ -1,0 +1,293 @@
+block head_scripts
+    //script(src='//d3js.org/d3.v3.min.js')
+    script(href='//cdn.jsdelivr.net/npm/promise-polyfill@6/dist/promise.min.js')
+    script(src="//cdnjs.cloudflare.com/ajax/libs/fetch/2.0.3/fetch.js")
+    script(src="/public/js/lib/clue.all.min.js")
+    script(src="/public/js/local/scarpa/common.js")
+    script(src="//cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.9.0/validator.min.js" integrity="sha256-GsK96iTc0mLT6IMCG1dLAR2GJb/XebZ19d3F/8KGWFk=" crossorigin="anonymous")
+
+    //from header.JADE
+    script(src="/public/js/local/utils/header.js")
+    script(src="/public/js/local/tooltips/tooltips-popovers.js")
+
+block header_scripts
+    script(src="/public/js/local/utils/contactmodal.js")
+    script(src="/public/js/local/menu/login_signup_menu.js")
+    script(src="/public/js/local/menu/toolsAndMainMenu.js")
+    script.
+        $(document).ready(function () {
+            populateToolsAndMainMenu();
+            $("#filechooser").change(function () {
+                var file_name = document.getElementById("filechooser").value;
+                if (file_name === "" || file_name === "undefined") {
+                    file_name = "No file chosen";
+                }
+                $("#filechooser_label").text(file_name.replace("C:\\fakepath\\", ""));
+            })
+
+            $(document).on('click', function (e) {
+                var $clicked = $(e.target);
+
+                if ($clicked.hasClass("tooltip_trigger")) {
+                    return;
+                }
+                else if ($('[aria-describedby]').length) {
+                    $('[aria-describedby]').each(function (i, el) {
+                        $(this).popover('hide');
+                    });
+                }
+                else if ($clicked.hasClass("toolbar-menu-header")) {
+                    return;
+                }
+                else {
+                    hideOtherMenus($("#foo-menu"), ".foo-class");
+                }
+            });
+
+            if (window.location.pathname.indexOf("connectopedia") > -1 && window.location.pathname !== "/connectopedia_votes") {
+                $("#header_search_area").show();
+            }
+            $('#contactModal').on('shown.bs.modal', function (e) {
+                fill_contact();
+            })
+
+
+            $("#contactModal").on('shown.bs.modal', function (e) {
+                if (!scarpa.isLoggedIn()) {
+                    $('#captchaRow').show();
+                    $('#captchaInstructionRow').show();
+                }
+                else
+                {
+                    $('#captchaRow').hide();
+                    $('#captchaInstructionRow').hide();
+                }
+            })
+
+            $('#send_btn').on("click", function (e) {
+                e.preventDefault();
+                $("#messageTextContact").text("");
+                if ($('#contactModal').validator('validate').has('.has-error').length) {
+                    $("#messageTextContact").text("There is one or more error in your form.  Please address all errors and try again.");
+                }
+                else {
+                    var data = {
+                        email: $("#contactmodal_email").val(),
+                        subject: $("#subject").val(),
+                        comment: $("#help_message").val(),
+                        firstname: $("#contactmodal_firstname").val(),
+                        lastname: $("#contactmodal_lastname").val(),
+                        captcha: $("#captcha_response").val()
+                    };
+
+                    if (scarpa.isLoggedIn()) {
+                        data.loggedIn = "TRUE";
+                    }
+
+                    $.ajax({
+                        url: "/connectopedia/tickets2",
+                        type: 'POST',
+                        data: data
+                    }).done(function (result) {
+                        $("#messageTextContact").text("");
+                        $('#contactModal').modal('toggle');
+                    }).fail(function (result) {
+                        console.log(result);
+                        $("#messageTextContact").text(result.responseText);
+                        var d = new Date();
+                        var unique = d.getMilliseconds();
+                        $('#captcha_image').attr('src', '/connectopedia/tickets2/captcha.jpg?' + unique);
+                    });
+                }
+            });
+
+            $("#header-tools").on("click", function () {
+                showTools();
+            })
+
+            $("#header-projects").on("click", function () {
+                showProjects();
+            })
+
+            $("#header-partnering").on("click", function () {
+                showPartnering();
+            })
+
+            $("#header-developer").on("click", function () {
+                showDevelopers();
+            })
+
+            /*$("#header-internal").on("click", function () {
+                showInternal();
+            })*/
+
+            $("#header-help").on("click", function () {
+                showHelp();
+            })
+
+            $("#header-announcement").on('click', function (evt) {
+                $("#message_area").empty();
+            });
+
+            $('#help-dropdown-link').on('click', function (evt) {
+                clue.hideAccountDropDown();
+            });
+
+            var pageTitle = "#{title}";
+            var pageCategory = "#{category}";
+            var url = "#{url}";
+            var path = url ? url : window.location.pathname;
+            var color = "#6a94a0";
+            if ("#{display_color}" && "#{display_color}" !== "") {
+                color = "#{display_color}";
+            }
+            var navBar = new NavBar(pageTitle, path, pageCategory, color);
+            var loginBox = $('#header-login');
+            var settingsModal = $('#header-drop-down');
+            var toolsModal = $('#menu-tools-modal');
+            var projectsModal = $('#menu-projects-modal');
+            var partneringModal = $('#menu-partnering-modal');
+            var developerModal = $('#menu-developer-modal');
+            var internalModal = $('#menu-internal-modal');
+            var helpModal = $('#menu-help-modal');
+
+            $('#header-menu').on('click', function (evt) {
+                evt.preventDefault();
+                //showMenu();
+                showMainMenu();
+            });
+
+            loginBox.on('click', function (evt) {
+                if (!scarpa.isLoggedIn()) {
+                    $('#loginModal').modal('show');
+                }
+            });
+
+            var showSettingsDropDown = function () {
+                var userInfo = clue.getUserInfo();
+                $('#dropdown-email').text(userInfo.email);
+                $('#dropdown-name').text(userInfo.fullName);
+                settingsModal.toggle();
+                hideOtherMenus(settingsModal);
+            }
+
+            var hideOtherMenus = function (id, cl) {
+                $(".toolbar-menu").not(id).hide();
+                $(".header-arrow-down").not(cl).hide();
+            }
+
+            var showTools = function () {
+                //showToolsMenu(function(error, success){
+                toolsModal.toggle();
+                $(".tools-arrow").toggle();
+                hideOtherMenus(toolsModal, ".tools-arrow");
+                //});
+            }
+
+            var showProjects = function () {
+                projectsModal.toggle();
+                $(".projects-arrow").toggle();
+                hideOtherMenus(projectsModal, ".projects-arrow");
+            }
+
+            var showPartnering = function () {
+                partneringModal.toggle();
+                $(".partnering-arrow").toggle();
+                hideOtherMenus(partneringModal, ".partnering-arrow");
+            }
+
+            var showDevelopers = function () {
+                developerModal.toggle();
+                $(".developer-arrow").toggle();
+                hideOtherMenus(developerModal, ".developer-arrow");
+            }
+
+            /*var showInternal = function () {
+                internalModal.toggle();
+                $(".internal-arrow").toggle();
+                hideOtherMenus(internalModal, ".internal-arrow");
+            }*/
+
+            var showHelp = function () {
+                helpModal.toggle();
+                $(".help-arrow").toggle();
+                hideOtherMenus(helpModal, ".help-arrow");
+            }
+
+
+            loginBox.on('clue-login', function (event, username) {
+                loginBox.text(username);
+                loginBox.css('background-color', '');
+                loginBox.removeClass('not-loggedin');
+                loginBox.css('color', '');
+                $('#header-pop-down').show();
+                loginBox.on('click', function (evt) {
+                    showSettingsDropDown();
+                });
+            });
+
+            $(".header-pop-down").on('click', function (evt) {
+                showSettingsDropDown();
+            });
+
+            $('#dropdown-account-settings').on('click', function (evt) {
+                evt.preventDefault();
+                clue.getSettings(function (err, result) {
+                    $('#account-institution').text(result.institution);
+                    $('#account-apiKey').text(result.apiKey);
+                    $('#account-roles').text(result.roles);
+                    $('#account-details').show();
+                    $('#dropdown-account-settings').hide();
+                    $('#dropdown-hide-account-settings').show();
+                });
+            });
+
+            $('#dropdown-hide-account-settings').on('click', function (evt) {
+                evt.preventDefault();
+                $('#account-details').hide();
+                $('#dropdown-hide-account-settings').hide();
+                $('#dropdown-account-settings').show();
+            });
+
+            var numModals = 0;
+            $(document).on('shown.bs.modal', function () {
+                numModals++;
+            });
+            $(document).on('hidden.bs.modal', function () {
+                setTimeout(function () {
+                        numModals--;
+                    },
+                    200);
+            });
+
+            $(document).on('hide.bs.modal', function () {
+                $('.help-block.with-errors', this).text('');
+                $('.has-error').removeClass('has-error')
+            });
+
+            $(document).keyup(function (e) {
+                if (e.keyCode == 27) {
+                    if (numModals === 0) {
+                        if (settingsModal.is(':visible')) {
+                            settingsModal.hide();
+                        }
+                    }
+                }
+            });
+
+            clue.getGitInfo(function (err, result) {
+                if (result) {
+                    var branch = result.branch;
+                    var SHA = result.SHA;
+                    var short = result.SHORT;
+                    var message = "Branch: " + branch + " Build Date: " + result.DATE + " Revision: " + SHA + " Short: " + short;
+                    $('.footer-technical').html(message);
+                }
+            });
+
+            var currentTitle = document.getElementById('cluecmap').innerHTML;
+            document.getElementById('cluecmap').innerHTML = currentTitle + " [" + window.location.hostname + "]";
+            scarpa.appLaunch();
+            clue.analytics();
+
+        });

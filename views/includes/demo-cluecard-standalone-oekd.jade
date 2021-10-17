@@ -1,0 +1,152 @@
+// Clue card - standalone, pdf export (Gene)
+
+include metadata-includes.jade
+
+.col-sm-12.col-md-offset-1.col-lg-offset-2.col-md-10.col-lg-8.metadata-card-hor-container.cp-card
+
+    // --------------- CARD HEADER ---------------
+    
+    .row.metadata-card-header
+        .col-sm-4
+            // Card type and symbol
+            .card-type
+                span.pert-info-pert-chip
+                    .glyphicon.glyphicon-adjust
+                | &nbsp;
+                span.value.pert-info-pert-type
+                    | KD 
+                span.pipe
+                span.value.measure-type Landmark
+            .metadata-card-title
+                    | KRAS
+            // Alternative names
+
+            .metadata-line.alt-names
+                span.label Synonym:
+                span.value v-Ki-ras2 Kirsten rat sarcoma viral oncogene homolog
+
+        .col-sm-4
+            
+
+        .col-sm-4
+            // ID Section
+            .metadata-section
+                .metadata-section.metadata-card-id-section.light-border-bottom
+                    .metadata-line
+                        span.label Entrez Gene ID:
+                        a().value CGS001-3845
+
+    //------------------- CARD BODY ---------------------
+    
+    .row.pad-top-12.metadata-card-body
+        .col-sm-4
+            // Overview Section
+            .metadata-section
+                // Description
+                .description
+                    span.description-full A macrolide produced by the bacterium Streptomyces hygroscopicus, Sirolimus has immunosuppressant functions in humans and is used to prevent rejection in organ transplantation. Sirolimus is also used as a coronary stent coating.
+
+                .pert-info-body-image.graphic
+                    img(src="//assets.clue.io/clue/public/img/mRNA_expr_mockup.png").dev-instructions
+
+
+
+
+        .col-sm-4
+            // Biological Function Section
+
+            .metadata-section
+                .metadata-section-h1 Biological function
+                .metadata-line
+                    span.label Gene family:
+                    span.vaue RAS subfamily (one or list of four)
+                .metadata-line
+                    span.label CMap class:
+                    span.vaue (pert class - one or list of four)
+                .metadata-line
+                    span.label Targeting compound:
+                    span.value Lonafarnib
+                    span.dev-instructions (Phase 2)
+
+            // Clinical Information Section
+            .metadata-section.demo-only
+                .metadata-section-h1 Clinical information
+
+                .metadata-line
+                    span.label Status:
+                    span.value Launched 
+                        a() (FDA Orange Book)
+                //.metadata-line
+                    span.label FDA Orange Book:
+                    span.value sirolimus
+                //.metadata-line
+                    span.label Drugs@FDA:
+                    span.value rapamune, sirolimus
+
+                .pad-top-4
+                    .label Indication:
+                .metadata-line
+                    a().value organ rejection (transplant)
+                .metadata-line
+                    a().value lymphangioleiomyomatosis (pulmonary)
+
+            // Profile Status Section
+            .metadata-section
+                .metadata-section-h1 Profile status
+                table.metadata-card-table.profile-table
+                    thead
+                        tr
+                            //th.row-name Assay
+                            th.profiled
+                                a(data-toggle="tooltip" title="L1000") L1000
+                            th.profiled
+                                a(data-toggle="tooltip" title="PCCSE") PCCSE
+                            th
+                                a(data-toggle="tooltip" title="CellPainting") CPaint
+                            th
+                                a(data-toggle="tooltip" title="PRISM") PRISM
+                            th
+                                a(data-toggle="tooltip" title="Achilles") Achilles
+                            th
+                                a(data-toggle="tooltip" title="CCLE") CCLE
+                            th
+                                a(data-toggle="tooltip" title="Huron") Hu
+
+                .metadata-line.pad-top-8.demo-only
+                    span.label L1000 profiling
+                // Graphic
+                .graphic.placeholder(style="height: 115px;").demo-only
+
+        .col-sm-4
+            // Transcriptional impact
+            .metadata-section
+                .metadata-section-h1 Average transcriptional impact
+
+                // Graphic
+                .graphic.placeholder(style="height: 115px; width: 300px")
+                    div(id="card_tas_chart_gen_full" style="height:100%; width:300px")
+
+    //------------------- CARD FOOTER ---------------------
+    
+    .row.pad-top-12.metadata-card-footer.demo-only
+        .col-sm-4
+            .metadata-section
+                .metadata-section-h1 Comments
+            .metadata-line
+                span.label *
+                span.value Comment one.
+            .metadata-line
+                span.label **
+                span.value Another example comment. Needs to be capitalized in the database.
+        .col-sm-4
+            .metadata-section
+                .metadata-section-h1 Citations
+            .metadata-line
+                span.label [1]
+                span.value Lorem ipsum
+            .metadata-line
+                span.label [2]
+                span.value Lorem ipsum
+        .col-sm-4
+            .metadata-section
+                .metadata-section-h1 (Brand Section)

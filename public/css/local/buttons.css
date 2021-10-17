@@ -1,0 +1,118 @@
+.text-button-copy {
+    color: rgb(73, 127, 206);
+}
+
+.text-button-copy:hover,
+.text-button-copy:focus,
+.text-button-copy:active  {
+    cursor: pointer;
+    font-weight: bolder;
+}.text-button-copy {
+    color: rgb(73, 127, 206);
+}
+
+.text-button-copy:hover,
+.text-button-copy:focus,
+.text-button-copy:active  {
+    cursor: pointer;
+    font-weight: bolder;
+}
+.click-me {
+    cursor: pointer;
+}
+
+#login_button {
+
+}
+
+.blue-btn {
+    border-radius:2px;
+    background-color:#4a90e2;
+    border-style: none;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    height: 25px;
+    padding-top: 4px;
+}
+.blue-btn:focus {
+    background-color: #286090;
+    border-color: #204d74;
+}
+.blue-btn:active {
+
+}
+
+.drk-btn {
+    border-radius:2px;
+    background-color:rgb(1, 59, 74);
+    border-style: none;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.25px;
+    height: 25px;
+    padding-top: 5px;
+    color:white;
+}
+.drk-btn-xs {
+	border-radius:2px;
+    background-color:rgb(1, 59, 74);
+    border-style: none;
+    font-family: 'Istok Web', sans-serif;
+    font-weight:500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1.21px;
+	margin-top: 1px;
+    height: 22px;
+    padding-top: 3px;
+    color:white;
+}
+.drk-btn:hover, .drk-btn-xs:hover, .drk-btn:focus, .drk-btn-xs:focus {
+    background-color:#4a90e2;
+    color: #ffffff;
+}
+.light-btn-xs{
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	font-weight:400;
+	margin-top: 1px;
+    height: 22px;
+	border-color: rgb(73, 127, 206); 
+	color: rgb(73, 127, 206);
+}
+.light-btn-xs:hover, .light-btn-xs:focus {
+	border-color: #497fce; 
+	color: #497fce;
+	background-color: #ddeafc;
+}
+
+
+/* Deprecated
+
+
+.button {
+	font-family: 'Open Sans', Helvetica, sans-serif;
+}
+.blue-text-btn-undrl {
+	border-radius: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+	
+	border-bottom: 1px solid #497fce;
+	color: #497fce;
+}
+.btn-undrl {
+	border-radius: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-top: none;
+	border-right: none;
+	border-left: none;
+}
+*/

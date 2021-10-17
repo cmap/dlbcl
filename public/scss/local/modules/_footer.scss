@@ -1,0 +1,188 @@
+.footer, .footerapp {
+    width: 100%;
+
+    height: $footer-height;
+    margin: 0;
+    align-self: flex-end; // needed to push the footer to the bottom, for this to work, the parent .container-fluid.static-page and .container-fluid.app-container-fluid classes are set to display:flex;
+    
+    font-family: $sans;
+    font-weight: 300;
+    font-size: 11px;
+    line-height: 140%;
+    color: #CCC;
+    
+    a {
+        text-decoration: none; 
+        color: $happy-sky;
+    }
+    
+    a:hover {
+        text-decoration: underline; 
+    }
+    
+    .footer-copyright {
+        white-space: nowrap;
+    }
+    .footer-technical {
+        font-weight: 400;
+        font-size: 9px;
+        color: #979797;//#295965; 
+        opacity: 0.5;
+        padding-bottom: 10px;
+    }
+    .technical {
+        width: 100%;
+        padding-left: 15px;
+    }
+}
+
+.footer {
+    padding-top: 8px;
+    
+    @media (min-width: $screen-sm-min) { 
+        $footer-height: 115px;
+        padding-bottom: 14px;  
+        }
+    background-color: $dark-blue-base;
+    
+    .footer-menu {
+        font-weight: 600;
+        padding-top: 10px;
+        @media (min-width: $screen-lg-min) {
+            width: 360px;
+        }
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+
+        .column {
+            margin-right: 26px;
+             @media (min-width: $screen-sm-min) {
+                 margin-right: 16px;
+             }
+
+        }
+        .footer-title {
+        letter-spacing: 1px;
+        line-height: 160%;
+        color: #fff;
+        }
+        a { 
+        text-decoration: none; 
+        color: #CCC;
+            &:hover {
+                color: $happy-sky;
+            }
+        } 
+       
+        .fa {
+            color: $happy-sky;
+            font-size: 18px;
+        }
+    }
+    .footer-copyright {
+        color: #CDCCCE;
+    }
+    .technical {
+        background-color: $dark-blue-base;
+    }
+    .footer-technical {
+        color: #979797; 
+    }
+}
+.footerapp {
+    @media (max-width: $screen-sm-min) {
+        padding-bottom: 12px;
+        padding-top: 14px;
+    }
+    @media (min-width: $screen-sm-min) { 
+        //$footer-height: 45px; 
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    border-top: solid 1px #E5E6E7;
+    background-color: white;
+    padding: 4px 15px;
+
+    .footer-copyright,
+    .footer-support {
+        color: #9b9b9b;
+        a {font-weight: 400;}
+        
+    }
+    .footer-technical {
+        color: #CDCCCE; 
+    }
+}
+.bordered-footer {
+    border-left: solid 2px #135267;
+    border-right: solid 2px #135267;
+    border-bottom: solid 2px #135267;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 30px;
+}
+
+/*.margin-responsive {
+        @media (min-width: $screen-lg-min) {
+            margin-right: 0 !important;
+            margin-left: 0;
+        } 
+    }
+
+/*
+.footer-faicons {
+    color: #00b9f2;
+    font-size: 18px;
+}
+
+.footer-lineabove {
+    border-top: 1px solid #828282;
+}
+.footer-tech-lineabove {
+    border-top: 1px solid #1e4b56;
+    padding-top: 6px;
+
+}
+.title-copy {
+    font-family: 'Roboto Slab', serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.footer_menu_area_top {
+    padding-top: 8px;
+    height: 80px;
+    background-color: #333333;
+}
+
+.footer_logo_area {
+    padding-top: 24px;
+    height: 200px;
+    background-color: #676767;
+}
+
+.footer_menu_area_bottom {
+    height: 200px;
+    background-color: #676767;
+}
+
+.footer_menu_area_top .image_link {
+    border-color: #333333;
+}
+
+.footer_logo_area .image_link {
+    border-color: #676767;
+}
+.footer_menu_area_bottom a {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    color: #eee;
+}
+*/
