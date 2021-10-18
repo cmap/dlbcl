@@ -41,7 +41,7 @@ npm install
 To start the app run the following:
 
 ```
-npm starting
+npm start
 ```
 
 In a browser, navigate to ``` http://localhost:9090 ``` to view the web app:
