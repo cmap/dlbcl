@@ -38,6 +38,12 @@ This only has to be done once
 cd  $KAFEJO_CHECKOUT
 npm install
 ```
+To start the app run the following:
+
+```
+npm starting
+```
+
 In a browser, navigate to ``` http://localhost:9090 ``` to view the web app:
 To view morpheus got to ``` http://localhost:9090/morpheus ```
 
