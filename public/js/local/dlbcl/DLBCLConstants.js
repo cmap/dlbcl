@@ -3,7 +3,7 @@ const PR500 = "PR500";
 const PR500P = "PR500P";
 const PR300 = "PR300";
 const PR300P = "PR300P";
-const dlbcl_public_data_url = '//s3.amazonaws.com/data.clue.io/prism/mts_downloads_1.json';
+const dlbcl_public_data_url = '//s3.amazonaws.com/data.clue.io/dlbcl/dlbcl_downloads.json';
 /**
  *
  * @param pert_type
